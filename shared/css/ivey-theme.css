@@ -251,3 +251,16 @@ html { color-scheme: light; }
   }
   .reveal .slides{ background: var(--bg); }
 }
+
+
+/* === SUPER-SIZED TITLE SLIDE === */
+/* Works whether you use `class: title-slide` or just the first slide */
+.reveal .title-slide h1,
+.reveal .slides > section:first-of-type h1:first-of-type {
+  /* ~4–5× bigger, responsive to viewport */
+  font-size: clamp(72px, 10vw, 140px);
+  line-height: 1.05;
+  letter-spacing: .005em;
+  margin: .1em 0 .2em;
+  color: var(--brand-primary);
+}
