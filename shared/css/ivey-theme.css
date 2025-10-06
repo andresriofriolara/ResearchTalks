@@ -1,4 +1,4 @@
-/* Ivey Minimal Theme + Top-Right Logo + Bottom-Left Controls + Minute Clock
+/* Ivey Minimal Theme + Top-Right Logo + Bottom-Right Controls + Minute Clock
    File: ivey-theme.css
 */
 
@@ -62,6 +62,28 @@
   color: var(--fg);
 }
 
+/* Body text justification (keep code/math left-aligned) */
+.reveal p,
+.reveal li,
+.reveal blockquote,
+.reveal table td,
+.reveal figcaption,
+.reveal small {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.reveal pre,
+.reveal code,
+.reveal kbd,
+.reveal samp,
+.reveal .katex,
+.reveal .MathJax,
+.reveal .math {
+  text-align: left;
+  hyphens: none;
+}
+
 .reveal code, .reveal pre, .reveal kbd, .reveal samp {
   font-family: var(--font-mono) !important;
 }
@@ -110,7 +132,12 @@
   min-height: 100%;
   text-align:center;
 }
-.reveal .title-slide h1{ font-size:2.6em; margin:.1em 0 .2em; }
+/* Main deck title ≈4× bigger */
+.reveal .title-slide h1{
+  font-size: 4em;           /* was ~2.6em */
+  line-height: 1.05;
+  margin:.1em 0 .2em;
+}
 .reveal .title-slide .midtitle {
   font-size: 2.4em;
   font-weight: 800;
@@ -142,10 +169,11 @@
   content: var(--footer-text);
   position:fixed;
   left:24px;
-  bottom:64px; /* leave room for bottom-left controls */
+  bottom:24px; /* controls are bottom-right now */
   font-size:14px;
   color:var(--muted);
   z-index: 9997;
+  right:96px;  /* keep clear of bottom-right controls on small screens */
 }
 
 /* ===== Logo (top-right on every slide) ===== */
@@ -180,16 +208,18 @@
 }
 .utpl-clock.hidden{ display:none; }
 
-/* ===== Controls bottom-left ===== */
+/* ===== Controls bottom-right (visible) ===== */
 .reveal .controls{
   position: fixed;
-  left: 16px;
-  right: auto;
+  right: 16px;
+  left: auto !important;
   bottom: 16px;
-  top: auto;
+  top: auto !important;
+  transform: none !important;
   z-index: 10000; /* above logo/footer */
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 /* ===== Print adjustments ===== */
@@ -221,8 +251,3 @@ html { color-scheme: light; }
   }
   .reveal .slides{ background: var(--bg); }
 }
-# from your project folder (e.g., UTPL_RiesgosFinancieros or ResearchTalks)
-git status                      # (optional) see what changed
-git add -A                      # stage all edits, new files, deletions
-git commit -m "Update slides: week02 agenda, images, fixes"   # write a useful message
-git push                        # send to GitHub
