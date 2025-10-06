@@ -210,3 +210,19 @@
   }
   .reveal .slides{ background:var(--bg); }
 }
+
+/* === Force light mode regardless of OS setting === */
+html { color-scheme: light; }
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#ffffff; --fg:#000000; --muted:#97999B; --code-bg:#f6f8fa;
+    --clock-bg: rgba(255,255,255,.85); --clock-fg:#111315;
+  }
+  .reveal .slides{ background: var(--bg); }
+}
+# from your project folder (e.g., UTPL_RiesgosFinancieros or ResearchTalks)
+git status                      # (optional) see what changed
+git add -A                      # stage all edits, new files, deletions
+git commit -m "Update slides: week02 agenda, images, fixes"   # write a useful message
+git push                        # send to GitHub
