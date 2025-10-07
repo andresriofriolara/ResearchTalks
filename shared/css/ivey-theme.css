@@ -90,7 +90,7 @@
 
 /* ===== Base ===== */
 .reveal .slides{ background:var(--bg); }
-.reveal h1{ font-weight:800; letter-spacing:.01em; }
+.reveal h1{ font-weight:2100; letter-spacing:.01em; }
 .reveal h2{ font-weight:700; }
 .reveal h3{ font-weight:600; }
 
@@ -134,8 +134,8 @@
 }
 /* Main deck title ≈4× bigger */
 .reveal .title-slide h1{
-  font-size: 4em;           /* was ~2.6em */
-  line-height: 1.05;
+  font-size: 12em;           /* was ~2.6em */
+  line-height: 2.5;
   margin:.1em 0 .2em;
 }
 .reveal .title-slide .midtitle {
@@ -250,17 +250,4 @@ html { color-scheme: light; }
     --clock-bg: rgba(255,255,255,.85); --clock-fg:#111315;
   }
   .reveal .slides{ background: var(--bg); }
-}
-
-
-/* === SUPER-SIZED TITLE SLIDE === */
-/* Works whether you use `class: title-slide` or just the first slide */
-.reveal .title-slide h1,
-.reveal .slides > section:first-of-type h1:first-of-type {
-  /* ~4–5× bigger, responsive to viewport */
-  font-size: clamp(72px, 10vw, 140px);
-  line-height: 1.05;
-  letter-spacing: .005em;
-  margin: .1em 0 .2em;
-  color: var(--brand-primary);
 }
