@@ -11,8 +11,12 @@ A Dissection of Collateral’s Bounded Rationality
     - Avg credit dollar per checking account balance
 
 ---
-## who we want making decisions with our money
-    - Homer vs Bohr (images)
+## Who would you rather decide on your money?
+
+<div class="cols" style="min-height:70vh; align-items:center; justify-items:center; gap:64px;">
+  <img data-src="./images/einsten.jpg" style="max-height:60vh; width:auto;" alt="Einstein">
+  <img data-src="./images/homer.webp" style="max-height:60vh; width:auto;" alt="Homer">
+</div>
 
 ---
 ## Research Question
