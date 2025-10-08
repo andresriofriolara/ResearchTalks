@@ -21,7 +21,7 @@ A Dissection of Collateral’s Bounded Rationality
 ---
 ## Research Question
 
-<div style="min-height:70vh; display:grid; place-items:center; text-align:center;">
+<div style="min-height:200vh; display:grid; place-items:center; text-align:center;">
   <h2>Perfectly Centered</h2>
   <p>How and to which magnitude can the effect of present bias be decreased in loan granting?</p>
 </div>
@@ -44,6 +44,13 @@ Figures from theoretical framework
 ## Intertemporal Choice Component (Laibson, 1997)
 
 $$U_t = u(c_t) + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} u(c_\tau)$$
+
+Where,
+
+- $u(c_t)$ : instant utility from consumption $c_t$
+- $\beta$ : present-bias parameter $\beta \in(0,1]$
+- $\delta$ : discount factor $\delta\in(0,1)$
+- $T$ : the time horizon
 
 --
 ## decision rule
