@@ -115,7 +115,21 @@ Where,
 
 $$U_t = \sum_{k=1}^{K} \left[ \frac{(c_{t}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{t}^{k}, r_{t}^{k}) \right] + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} \sum_{k=1}^{K} \left[ \frac{(c_{\tau} ^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{\tau}^{k}, r_{\tau}^{k}) \right]$$
 
+--
 
+## A Final Adjustment
+
+- $A_t$ : available menu
+- $F(A_t)$ : feasible attention sets
+- $S_t\subseteq(A_t)$ : consideration set endogenously chosen
+- feasible utility path:
+$$\tilde{U}_t = \max_{c_t \in S_t} \left[ u(c_t \mid r_t) + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} \mathbb{E}_{S_\tau} \left[ u(c_\tau \mid r_\tau) \right] \right]$$
+
+- $\Theta_t$ : a point given at time t
+- $u(c_t \mid r_t) \geq \theta_t$ : satisfaction point
+- Constrained to $c_t \in S_t \subseteq A_t$
+
+$$U_t = \sum_{k=1}^{K} \left[ \frac{(c_{t}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{t}^{k}, r_{t}^{k}) \right] + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} \sum_{k=1}^{K} \left[ \frac{(c_{\tau}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{\tau}^{k}, r_{\tau}^{k}) \right]$$
 
 --
 ## decision rule
