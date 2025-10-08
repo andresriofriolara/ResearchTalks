@@ -97,7 +97,7 @@ $
 \mu_k(c_k,r_k) =
 \begin{cases}
   \eta_k\, x_k^{\alpha_k}, & \text{if } x_k \ge 0 \quad \text{(gain)}
-  
+
   -\eta_k\,\lambda_k\, (-x_k)^{\gamma_k}, & \text{if } x_k < 0 \quad \text{(loss)}
 \end{cases}
 \qquad x_k=c_k-r_k.
@@ -108,6 +108,14 @@ Where,
 - $\lambda_k \ge 1$ : loss-aversion parameter
 - $\alpha_k \in (0,1]$ : gains
 - $\gamma_k \in (0,1]$ : losses
+
+--
+
+## Hybrid Model (quasi-hyperbolic discounting with explicit risk preferences)
+
+$$U_t = \sum_{k=1}^{K} \left[ \frac{(c_{t}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{t}^{k}, r_{t}^{k}) \right] + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} \sum_{k=1}^{K} \left[ \frac{(c_{\tau} ^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{\tau}^{k}, r_{\tau}^{k}) \right]$$
+
+
 
 --
 ## decision rule
