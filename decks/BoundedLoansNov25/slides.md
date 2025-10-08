@@ -22,7 +22,6 @@ A Dissection of Collateral’s Bounded Rationality
 ## Research Question
 
 <div style="min-height:10vh; display:grid; place-items:center; text-align:center;">
-  <h2>Perfectly Centered</h2>
   <p>How and to which magnitude can the effect of present bias be decreased in loan granting?</p>
 </div>
 
@@ -168,6 +167,7 @@ And the frontier:
 $$y=\left(1-\left(\frac{x}{\psi}\right)^{1-\lambda}\right)^{1-\lambda}$$
 
 -- 
+
 ## The Frontier perception shift and inter-temporal effect
 
 - Distorded decision set:
