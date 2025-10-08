@@ -74,7 +74,8 @@ Where,
 $$
 \mu_k(x) = 
 	\begin{cases}
-		\eta_k x, & \text{if } x \geq 0 \quad \text{(gain)} \\
+		\eta_k x, & \text{if } x \geq 0 \quad \text{(gain)}
+
 		\eta_k \lambda_k x, & \text{if } x < 0 \quad \text{(loss)}
 	\end{cases}
 $$
@@ -92,14 +93,15 @@ $m^k(c^k)$ is replaced with $u(c^k)$
 
 Giving:
 
-$$
+$
 \mu_k(c_k,r_k) =
 \begin{cases}
-\eta_k\, x_k^{\alpha_k}, & \text{if } x_k \ge 0 \quad \text{(gain)}\\[6pt]
--\eta_k\,\lambda_k\, (-x_k)^{\gamma_k}, & \text{if } x_k < 0 \quad \text{(loss)}
+  \eta_k\, x_k^{\alpha_k}, & \text{if } x_k \ge 0 \quad \text{(gain)}
+  
+  -\eta_k\,\lambda_k\, (-x_k)^{\gamma_k}, & \text{if } x_k < 0 \quad \text{(loss)}
 \end{cases}
 \qquad x_k=c_k-r_k.
-$$
+$
 
 Where,
 - $\eta_k>0$ : sensitivity factor
