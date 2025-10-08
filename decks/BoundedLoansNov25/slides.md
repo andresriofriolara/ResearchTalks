@@ -21,7 +21,11 @@ A Dissection of Collateral’s Bounded Rationality
 ---
 ## Research Question
 
-How and to which magnitude can the effect of present bias  be decreased in loan granting?
+<div style="min-height:70vh; display:grid; place-items:center; text-align:center;">
+  <h2>Perfectly Centered</h2>
+  <p>How and to which magnitude can the effect of present bias be decreased in loan granting?</p>
+</div>
+
 
 ---
 ## Banking process (Rational)
