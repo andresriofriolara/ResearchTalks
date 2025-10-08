@@ -86,7 +86,7 @@ Where,
 
 --
 
-## Adjustment deviation-based structure with CRRA form
+## Adjusting the deviation-based structure with a CRRA form
 
 $m^k(c^k)$ is replaced with $u(c^k)$
 
@@ -100,6 +100,12 @@ $$
 \end{cases}
 \qquad x_k=c_k-r_k.
 $$
+
+Where,
+- $\eta_k>0$ : sensitivity factor
+- $\lambda_k \ge 1$ : loss-aversion parameter
+- $\alpha_k \in (0,1]$ : gains
+- $\gamma_k \in (0,1]$ : losses
 
 --
 ## decision rule
