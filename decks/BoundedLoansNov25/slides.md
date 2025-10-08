@@ -97,7 +97,6 @@ $
 \mu_k(c_k,r_k) =
 \begin{cases}
   \eta_k\, x_k^{\alpha_k}, & \text{if } x_k \ge 0 \quad \text{(gain)}
-
   -\eta_k\,\lambda_k\, (-x_k)^{\gamma_k}, & \text{if } x_k < 0 \quad \text{(loss)}
 \end{cases}
 \qquad x_k=c_k-r_k.
@@ -132,11 +131,49 @@ $$\tilde{U}_t = \max_{c_t \in S_t} \left[ u(c_t \mid r_t) + \beta \sum_{\tau = t
 $$U_t = \sum_{k=1}^{K} \left[ \frac{(c_{t}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{t}^{k}, r_{t}^{k}) \right] + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} \sum_{k=1}^{K} \left[ \frac{(c_{\tau}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{\tau}^{k}, r_{\tau}^{k}) \right]$$
 
 --
-## decision rule
+## The decision Rule
 
+Utility function for each potential scenario:
+- When Right:
+  - $U_1$, when $\mathop{\mathbb{E}}(P_a)$ when customer expected probability $P_i$ is read as it landed above the threshold and that it was accepted.
+  - $U_4$ , when $\mathop{\mathbb{E}}(P_b)$ of the expected repayment probability $P_i$, given by $(1-P_a)$ is read as it landed below the threshold and that it was rejected.
+
+- When Wrong:
+  - $U_3$ Type I Error
+  - $U_2$ Type II Error
+
+Each Scenario Probability of Accepting and rejecting given by:
+
+$$\mathop{\mathbb{E}}\left[U|\text{Accept}\right]=P_aU_1+P_bU_2$$
+$$\mathop{\mathbb{E}}\left[U|\text{Reject}\right]=P_aU_3+P_bU_4$$
+
+In a multi-scenario task the decision maker will rank the utilities from the highest to the lowest.
+
+---
+## A Blur in the Perceived Feasibility Frontier
+
+Add the images
 
 --
-## frontier
+## The effect of an Ancillary condition "d" (Clippel, Nd)
+
+- $\Psi$ : bias (present bias)
+- $\lambda$ : risk preference
+- Decision set:
+
+$$L=C(\{ x,y \}, \Psi, \lambda) \textnormal{ where, } (x,y)\in \mathbb{R}^2_+ $$
+
+And the frontier:
+
+$$y=\left(1-\left(\frac{x}{\psi}\right)^{1-\lambda}\right)^{1-\lambda}$$
+
+-- 
+## The Frontier perception shift and inter-temporal effect
+
+- Distorded decision set:
+$$\psi_t=\psi(\psi_{t-1},A_t)$$
+- Inter-temporal effect of time dependency:
+$$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 
 
 ---
