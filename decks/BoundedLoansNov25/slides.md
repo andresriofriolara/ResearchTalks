@@ -21,7 +21,7 @@ A Dissection of Collateral’s Bounded Rationality
 ---
 ## Research Question
 
-<div style="min-height:200vh; display:grid; place-items:center; text-align:center;">
+<div style="min-height:10vh; display:grid; place-items:center; text-align:center;">
   <h2>Perfectly Centered</h2>
   <p>How and to which magnitude can the effect of present bias be decreased in loan granting?</p>
 </div>
@@ -51,6 +51,55 @@ Where,
 - $\beta$ : present-bias parameter $\beta \in(0,1]$
 - $\delta$ : discount factor $\delta\in(0,1)$
 - $T$ : the time horizon
+
+--
+
+## Reference-Dependent Preferences (Koszegi and Rabin, 2006)
+
+$$U(c \mid r) = m(c) + \sum_{k=1}^{K} \mu_k \left[ m_k(c_k) - m_k(r_k) \right]$$
+
+Where,
+
+- $c=(c^1,...,C^K)$ : vector over k dimensions
+- $c^k$ : realized outcome in k dimension
+- $m(c)$ : total consumption utility $\sum_{k=1}^{K} m_k(c_k)$
+- $r^k$ : agent's rational outcome expectations on $c^k$
+- $m^k(\cdot)$ : consumption utility function for k dimension
+- $\mu_k(\cdot)$ : the gain-loss utility function*
+
+--
+
+## Gain-Loss Utility Function Capturing Reference Dependence (Koszegi and Rabin, 2006)
+
+$$
+\mu_k(x) = 
+	\begin{cases}
+		\eta_k x, & \text{if } x \geq 0 \quad \text{(gain)} \\
+		\eta_k \lambda_k x, & \text{if } x < 0 \quad \text{(loss)}
+	\end{cases}
+$$
+
+Where,
+
+- $\eta_k$ : scale of sensitivity to gain/losses
+- $\lambda_k$ : loss aversion parameter
+
+--
+
+## Adjustment deviation-based structure with CRRA form
+
+$m^k(c^k)$ is replaced with $u(c^k)$
+
+Giving:
+
+$$
+\mu_k(c_k,r_k) =
+\begin{cases}
+\eta_k\, x_k^{\alpha_k}, & \text{if } x_k \ge 0 \quad \text{(gain)}\\[6pt]
+-\eta_k\,\lambda_k\, (-x_k)^{\gamma_k}, & \text{if } x_k < 0 \quad \text{(loss)}
+\end{cases}
+\qquad x_k=c_k-r_k.
+$$
 
 --
 ## decision rule
