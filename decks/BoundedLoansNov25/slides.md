@@ -21,6 +21,8 @@ A Dissection of Collateral’s Bounded Rationality
 ---
 ## Research Question
 
+How and to which magnitude can the effect of present bias  be decreased in loan granting?
+
 ---
 ## Banking process (Rational)
 
@@ -41,6 +43,17 @@ Figures from theoretical framework
 ---
 
 ## The Experimental Design
+
+- Lab Experiment Proposed
+- Field Experiment Proposed
+
+--
+
+## Lab Experiment
+
+--
+
+## Field Experiment
 
 ---
 
