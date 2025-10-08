@@ -38,14 +38,22 @@ Figures from theoretical framework
 Figures from theoretical framework
 
 ---
-## The Model Design
+## The Model
 
-- Analyticial of the thre components of the utility function
-- decision rule
-- frontier
+--
+## Intertemporal Choice Component (Laibson, 1997)
+
+$$U_t = u(c_t) + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} u(c_\tau)$$
+
+--
+## decision rule
+
+
+--
+## frontier
+
 
 ---
-
 ## The Experimental Design
 
 - Lab Experiment Proposed
