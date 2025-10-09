@@ -5,13 +5,13 @@
 
 ---
 
-## Why we care
+## Some data...
 - **How much in bank accounts**
     - The median bank account balance 5,400.00 (Yahoo Finance)
     - The Loan to Deposit Ratio is 0.71 (71 cents loaned per dolar deposited - Federal Reserve)
 
 ---
-## Who would you rather decide on your money?
+## Who would you rather decide where to lend your money?
 
 <div class="cols" style="min-height:70vh; align-items:center; justify-items:center; gap:64px;">
   <img data-src="./images/einsten.jpg" style="max-height:60vh; width:auto;" alt="Einstein">
@@ -21,7 +21,7 @@
 ---
 ## Research Question
 
-<div style="min-height:10vh; display:grid; place-items:center; text-align:center;">
+<div style="min-height:10vh; display:center; place-items:center; text-align:center;">
   <p>How and to which magnitude can the effect of present bias be decreased in loan granting?</p>
 </div>
 
