@@ -7,8 +7,8 @@
 
 ## Why we care
 - **How much in bank accounts**
-    - Avg Canadian checking account balance
-    - Avg credit dollar per checking account balance
+    - The median bank account balance 5,400.00 (Yahoo Finance)
+    - The Loan to Deposit Ratio is 0.71 (71 cents loaned per dolar deposited - Federal Reserve)
 
 ---
 ## Who would you rather decide on your money?
@@ -29,12 +29,17 @@
 ---
 ## Banking process (Rational)
 
-Figures from theoretical framework
+<div class="cols" style="min-height:70vh; align-items:center; justify-items:center; ">
+  <img data-src="./images/Figure1.png" style="max-height:60vh; width:auto;" alt="Process1">
+</div>
 
 ---
 ## Banking process (Heuristics)
 
-Figures from theoretical framework
+<div class="cols" style="min-height:70vh; align-items:center; justify-items:center; gap:64px;">
+  <img data-src="./images/Figure4.png" style="max-height:60vh; width:auto;" alt="Process2">
+  <img data-src="./images/Figure6.png" style="max-height:60vh; width:auto;" alt="Process3">
+</div>
 
 ---
 ## The Model
@@ -151,7 +156,10 @@ In a multi-scenario task the decision maker will rank the utilities from the hig
 ---
 ## A Blur in the Perceived Feasibility Frontier
 
-Add the images
+<div class="cols" style="min-height:70vh; align-items:center; justify-items:center; gap:64px;">
+  <img data-src="./images/frontier1.png" style="max-height:60vh; width:auto;" alt="Frontier1">
+  <img data-src="./images/frontier2.png" style="max-height:60vh; width:auto;" alt="Frontier2">
+</div>
 
 --
 ## The effect of an Ancillary condition "d" (Clippel, Nd)
