@@ -138,7 +138,7 @@
 /* Big, black main title — responsive and tight leading */
 .reveal .title-slide h1{
   color: #111827 !important;          /* force near-black on the first slide */
-  font-weight: 700;
+  font-weight: 150;
   font-size: clamp(56px, 8.8vw, 124px); /* ≈ your Week 1 example */
   line-height: 1.06;
   letter-spacing: -0.01em;
