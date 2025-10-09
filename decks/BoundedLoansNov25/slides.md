@@ -1,5 +1,5 @@
-<section class="title-slide">
-A Dissection of Collateral’s Bounded Rationality
+<!-- .slide: class="title-slide" -->
+# A Dissection of Collateral’s Bounded Rationality
 <div class="subtitle">Ivey Doctoral Research Seminaries Series | <em>November 14th, 2025</em></div>
 </section>
 

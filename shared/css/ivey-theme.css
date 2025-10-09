@@ -1,5 +1,5 @@
 /* Ivey Minimal Theme + Top-Right Logo + Bottom-Right Controls + Minute Clock
-   File: ivey-theme.css
+   File: ivey-theme.css  (patched)
 */
 
 /* ===== Brand & System Tokens ===== */
@@ -40,7 +40,7 @@
   --clock-font: 14px/1 var(--font-sans);
 
   /* Footer text (edit if you want a different line) */
-  --footer-text: "UTPL • Ingeniería Financiera y Administración de Riesgos Financieros • A. Riofrío-Lara";
+  --footer-text: "Ivey Business School • A. Riofrío-Lara";
 }
 
 /* Optional back-compat with older token names */
@@ -90,11 +90,13 @@
 
 /* ===== Base ===== */
 .reveal .slides{ background:var(--bg); }
-.reveal h1{ font-weight:2100; letter-spacing:.01em; }
+
+/* PATCH: sane weight for headings (was 2100 which browsers clamp) */
+.reveal h1{ font-weight: 800; letter-spacing:.01em; }
 .reveal h2{ font-weight:700; }
 .reveal h3{ font-weight:600; }
 
-/* Headings in brand primary */
+/* Headings in brand primary (overridden on title-slide h1 below) */
 .reveal h1, .reveal h2, .reveal h3 { color: var(--brand-primary); }
 
 /* Links use brand primary */
@@ -125,19 +127,34 @@
 
 /* ===== Helpers ===== */
 
-/* Title slide */
+/* ===== Title slide (only affects slides with class="title-slide") ===== */
 .reveal .title-slide{
   display: grid;
   place-content: center;
   min-height: 100%;
-  text-align:center;
+  text-align: center;
 }
-/* Main deck title ≈4× bigger */
+
+/* Big, black main title — responsive and tight leading */
 .reveal .title-slide h1{
-  font-size: 12em;           /* was ~2.6em */
-  line-height: 2.5;
-  margin:.1em 0 .2em;
+  color: #111827 !important;          /* force near-black on the first slide */
+  font-weight: 700;
+  font-size: clamp(56px, 8.8vw, 124px); /* ≈ your Week 1 example */
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  margin: 0 0 .35em;
 }
+
+/* Keep subtitle small like the original tiny one */
+.reveal .title-slide .subtitle{
+  display: block;
+  font-size: clamp(14px, 1.6vw, 22px);
+  color: var(--muted);
+  font-weight: 400;
+  margin: 0 0 2.2rem;
+}
+
+/* Optional tiny midtitle & footer helpers (safe to keep) */
 .reveal .title-slide .midtitle {
   font-size: 2.4em;
   font-weight: 800;
@@ -145,9 +162,12 @@
   margin: 0 0 .25em 0;
   color: var(--brand-primary);
 }
-.reveal .title-slide .subtitle{
-  font-size:1.1em;
-  color:var(--muted);
+.reveal .title-slide .title-foot{
+  position: absolute;
+  bottom: 2rem;
+  left: 0; right: 0;
+  margin: 0 auto;
+  font-size: 12px;
 }
 
 /* Secondary/muted text (captions, notes, etc.) */
