@@ -6,7 +6,7 @@
 ---
 
 ## Some data...
-- **How much in bank accounts**
+- **About bank accounts...**
     - The median bank account balance 5,400.00 (Yahoo Finance)
     - The Loan to Deposit Ratio is 0.71 (71 cents loaned per dolar deposited - Federal Reserve)
 
@@ -29,8 +29,10 @@
 ---
 ## Banking process (Rational)
 
-<div class="cols" style="min-height:70vh; align-items:center; justify-items:center; ">
-  <img data-src="./images/Figure1.png" style="max-height:60vh; width:auto;" alt="Process1">
+<div style="height:80vh; display:flex; align-items:center; justify-content:center;">
+  <img data-src="./images/Figure1.png"
+       alt="Process1"
+       style="max-height:75vh; width:auto; display:block;">
 </div>
 
 ---
@@ -73,21 +75,20 @@ Where,
 
 --
 
-## Gain-Loss Utility Function Capturing Reference Dependence (Koszegi and Rabin, 2006)
+## Gain–Loss Utility Function Capturing Reference Dependence (Kőszegi & Rabin, 2006)
 
 $$
-\mu_k(x) = 
-	\begin{cases}
-		\eta_k x, & \text{if } x \geq 0 \quad \text{(gain)}
-
-		\eta_k \lambda_k x, & \text{if } x < 0 \quad \text{(loss)}
-	\end{cases}
+\mu_k(x)=
+\begin{cases}
+\eta_k\,x,            & \text{if } x \ge 0 \quad \text{(gain)}\\[4pt]
+\eta_k\,\lambda_k\,x, & \text{if } x < 0 \quad \text{(loss)}
+\end{cases}
 $$
 
 Where,
 
-- $\eta_k$ : scale of sensitivity to gain/losses
-- $\lambda_k$ : loss aversion parameter
+- $\eta_k$: scale of sensitivity to gains/losses  
+- $\lambda_k$: loss aversion parameter
 
 --
 
@@ -97,20 +98,21 @@ $m^k(c^k)$ is replaced with $u(c^k)$
 
 Giving:
 
-$
-\mu_k(c_k,r_k) =
+$$
+\mu_k(c_k,r_k)=
 \begin{cases}
-  \eta_k\, x_k^{\alpha_k}, & \text{if } x_k \ge 0 \quad \text{(gain)}
-  -\eta_k\,\lambda_k\, (-x_k)^{\gamma_k}, & \text{if } x_k < 0 \quad \text{(loss)}
+\eta_k\,x_k^{\alpha_k},                & \text{if } x_k \ge 0 \quad \text{(gain)}\\[4pt]
+-\eta_k\,\lambda_k\,(-x_k)^{\gamma_k}, & \text{if } x_k < 0 \quad \text{(loss)}
 \end{cases}
-\qquad x_k=c_k-r_k.
-$
+\qquad \text{with } x_k=c_k-r_k.
+$$
 
 Where,
-- $\eta_k>0$ : sensitivity factor
-- $\lambda_k \ge 1$ : loss-aversion parameter
-- $\alpha_k \in (0,1]$ : gains
-- $\gamma_k \in (0,1]$ : losses
+- $\eta_k>0$: sensitivity factor  
+- $\lambda_k \ge 1$: loss-aversion parameter  
+- $\alpha_k \in (0,1]$: gains  
+- $\gamma_k \in (0,1]$: losses
+
 
 --
 
@@ -122,17 +124,25 @@ $$U_t = \sum_{k=1}^{K} \left[ \frac{(c_{t}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_
 
 ## A Final Adjustment
 
-- $A_t$ : available menu
-- $F(A_t)$ : feasible attention sets
-- $S_t\subseteq(A_t)$ : consideration set endogenously chosen
+- $A_t$: available menu
+- $F(A_t)$: feasible attention sets
+- $S_t \subseteq A_t$: consideration set endogenously chosen
 - feasible utility path:
-$$\tilde{U}_t = \max_{c_t \in S_t} \left[ u(c_t \mid r_t) + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} \mathbb{E}_{S_\tau} \left[ u(c_\tau \mid r_\tau) \right] \right]$$
 
-- $\Theta_t$ : a point given at time t
-- $u(c_t \mid r_t) \geq \theta_t$ : satisfaction point
+  $$
+  \tilde{U}_t=\max_{c_t\in S_t}\left[ u(c_t \mid r_t)
+  + \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
+  \mathbb{E}_{S_\tau}\!\left[ u(c_\tau \mid r_\tau) \right] \right]
+  $$
+
+- $\Theta_t$: a point given at time $t$
+- $u(c_t \mid r_t)\ge \theta_t$: satisfaction point
 - Constrained to $c_t \in S_t \subseteq A_t$
 
-$$U_t = \sum_{k=1}^{K} \left[ \frac{(c_{t}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{t}^{k}, r_{t}^{k}) \right] + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} \sum_{k=1}^{K} \left[ \frac{(c_{\tau}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{\tau}^{k}, r_{\tau}^{k}) \right]$$
+$$
+U_t=\sum_{k=1}^{K}\left[\frac{(c_t^{k})^{1-\rho}}{1-\rho}+\mu_k(c_t^{k},r_t^{k})\right]
++\beta\sum_{\tau=t+1}^{T}\delta^{\tau-t}\sum_{k=1}^{K}\left[\frac{(c_\tau^{k})^{1-\rho}}{1-\rho}+\mu_k(c_\tau^{k},r_\tau^{k})\right]
+$$
 
 --
 ## The decision Rule
