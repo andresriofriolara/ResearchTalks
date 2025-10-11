@@ -71,7 +71,7 @@
 
 <p style="text-align:center">
   <img src="./images/aiintel.png" alt="AI Intel"
-       style="max-width:90%; height:auto; border-radius:12px;">
+       style="max-width:40%; height:auto; border-radius:12px;">
 </p>
 
 <small style="display:block;text-align:center;color:#888">Figura: Patwardhan, Tejal, Rachel Dias, Elizabeth Proehl, Grace Kim, Michele Wang, Olivia Watkins, Simón Posada Fishman et al. "GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks." arXiv preprint arXiv:2510.04374 (2025)</small>
