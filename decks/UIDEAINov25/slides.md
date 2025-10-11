@@ -70,7 +70,7 @@
 - ## AI no es tan inteligente como pensamos
 
 <p style="text-align:center">
-  <img src="UIDEAINov25/images/aiintel.png" alt="AI Intel"
+  <img src="./images/aiintel.png" alt="AI Intel"
        style="max-width:90%; height:auto; border-radius:12px;">
 </p>
 
