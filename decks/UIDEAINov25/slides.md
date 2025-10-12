@@ -9,6 +9,42 @@
 
 ---
 
+## Expectativas IA
+
+<div class="r-stretch" style="display:grid; place-items:center;">
+  <div style="position:relative; width:100%; max-width:900px; aspect-ratio:16/9;">
+    <iframe
+      data-src="https://www.youtube.com/embed/Ddk9ci6geSs?si=PnTfDzei2cWQ3TmJ&start=60"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      style="position:absolute; inset:0; width:100%; height:100%;"
+    ></iframe>
+  </div>
+</div>
+
+--
+
+## Realidad IA (un poco...)
+
+<div class="r-stretch" style="display:grid; place-items:center;">
+  <div style="position:relative; width:100%; max-width:900px; aspect-ratio:16/9;">
+    <iframe
+      data-src="https://www.youtube.com/embed/PZlL5gZeGDI?si=P4x-MeYqjql3C8cj&start=60"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      style="position:absolute; inset:0; width:100%; height:100%;"
+    ></iframe>
+  </div>
+</div>
+
+---
+
 ## ¿Has usado GenAI en tu enseñanza-investigación?
 
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'>
