@@ -5,6 +5,25 @@
 
 ---
 
+## Research Question
+
+<div style="min-height:10vh; display:center; place-items:center; text-align:center;">
+  <p>How and to which magnitude can the effect of present bias be decreased in loan granting?</p>
+</div>
+
+
+
+---
+
+## The Decision Maker
+
+talk about the loan officers
+
+whats their role
+how their decisions they make affect individuals and society
+
+---
+
 ## Some data...
 - **About bank accounts...**
     - The median bank account balance 5,400.00 (Yahoo Finance)
@@ -19,14 +38,6 @@
 </div>
 
 ---
-## Research Question
-
-<div style="min-height:10vh; display:center; place-items:center; text-align:center;">
-  <p>How and to which magnitude can the effect of present bias be decreased in loan granting?</p>
-</div>
-
-
----
 ## Banking process (Rational)
 
 <div style="height:80vh; display:flex; align-items:center; justify-content:center;">
@@ -36,7 +47,7 @@
 </div>
 
 ---
-## Banking process (Heuristics)
+## Banking process (Heuristics) (1/2)
 
 <div class="cols" style="min-height:70vh; align-items:center; justify-items:center; gap:64px;">
   <img data-src="./images/Figure4.png" style="max-height:60vh; width:auto;" alt="Process2">
@@ -44,7 +55,37 @@
 </div>
 
 ---
+## Banking process (Heuristics) (2/2)
+
+
+
+---
 ## The Model
+
+$$
+U_t=\sum_{k=1}^{K}\left[\frac{(c_t^{k})^{1-\rho}}{1-\rho}+\mu_k(c_t^{k},r_t^{k})\right]
++\beta\sum_{\tau=t+1}^{T}\delta^{\tau-t}\sum_{k=1}^{K}\left[\frac{(c_\tau^{k})^{1-\rho}}{1-\rho}+\mu_k(c_\tau^{k},r_\tau^{k})\right]
+$$
+
+--
+## The decision Rule
+
+Utility function for each potential scenario:
+- When Right:
+  - $U_1$, when $\mathop{\mathbb{E}}(P_a)$ when customer expected probability $P_i$ is read as it landed above the threshold and that it was accepted.
+  - $U_4$ , when $\mathop{\mathbb{E}}(P_b)$ of the expected repayment probability $P_i$, given by $(1-P_a)$ is read as it landed below the threshold and that it was rejected.
+
+- When Wrong:
+  - $U_3$ Type I Error
+  - $U_2$ Type II Error
+
+Each Scenario Probability of Accepting and rejecting given by:
+
+$$\mathop{\mathbb{E}}\left[U|\text{Accept}\right]=P_aU_1+P_bU_2$$
+$$\mathop{\mathbb{E}}\left[U|\text{Reject}\right]=P_aU_3+P_bU_4$$
+
+In a multi-scenario task the decision maker will rank the utilities from the highest to the lowest.
+
 
 --
 ## Intertemporal Choice Component (Laibson, 1997)
@@ -144,24 +185,6 @@ U_t=\sum_{k=1}^{K}\left[\frac{(c_t^{k})^{1-\rho}}{1-\rho}+\mu_k(c_t^{k},r_t^{k})
 +\beta\sum_{\tau=t+1}^{T}\delta^{\tau-t}\sum_{k=1}^{K}\left[\frac{(c_\tau^{k})^{1-\rho}}{1-\rho}+\mu_k(c_\tau^{k},r_\tau^{k})\right]
 $$
 
---
-## The decision Rule
-
-Utility function for each potential scenario:
-- When Right:
-  - $U_1$, when $\mathop{\mathbb{E}}(P_a)$ when customer expected probability $P_i$ is read as it landed above the threshold and that it was accepted.
-  - $U_4$ , when $\mathop{\mathbb{E}}(P_b)$ of the expected repayment probability $P_i$, given by $(1-P_a)$ is read as it landed below the threshold and that it was rejected.
-
-- When Wrong:
-  - $U_3$ Type I Error
-  - $U_2$ Type II Error
-
-Each Scenario Probability of Accepting and rejecting given by:
-
-$$\mathop{\mathbb{E}}\left[U|\text{Accept}\right]=P_aU_1+P_bU_2$$
-$$\mathop{\mathbb{E}}\left[U|\text{Reject}\right]=P_aU_3+P_bU_4$$
-
-In a multi-scenario task the decision maker will rank the utilities from the highest to the lowest.
 
 ---
 ## A Blur in the Perceived Feasibility Frontier
@@ -210,13 +233,13 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 
 ---
 
-## Empirical Strategy
-
-- **MLE**
+## Preliminary Results
 
 ---
 
-## Preliminary Results
+## Empirical Strategy
+
+- **MLE**
 
 ---
 
