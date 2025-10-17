@@ -289,3 +289,40 @@ html { color-scheme: light; }
   font-size: calc(var(--r-heading3-size, 1.5em) * 2);
   line-height: 1.1;
 }
+
+
+/* === Slide-heading image layout fixes === */
+.reveal section.slide-heading h2{
+  margin: 0 0 .35em 0;            /* tighter gap under the title */
+}
+
+.reveal section.slide-heading .cols{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;             /* center items on Y */
+  place-content: center;           /* center the grid block in the slide */
+  gap: 2rem;
+  height: 60vh;                    /* leave room for title/footer; prevents overflow */
+  padding-bottom: 1rem;            /* guard against footer overlap */
+}
+
+.reveal section.slide-heading .cols img{
+  max-height: 36vh;                /* guaranteed to fit in 60vh area */
+  max-width: 40vw;                 /* prevents extra-wide scaling */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Stack on narrow screens */
+@media (max-width: 900px){
+  .reveal section.slide-heading .cols{
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 40vh;
+  }
+  .reveal section.slide-heading .cols img{
+    max-height: 28vh;
+    max-width: 70vw;
+  }
+}

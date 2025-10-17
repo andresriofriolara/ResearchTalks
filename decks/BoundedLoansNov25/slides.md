@@ -22,8 +22,8 @@
 <!-- .slide: class="slide-heading" -->
 ## ~70% of your Banking Statement is being lend
 
-    - The median bank account balance 5,400.00 (Yahoo Finance)
-    - The Loan to Deposit Ratio is 0.71 (71 cents loaned per dolar deposited - Federal Reserve)
+- The median bank account balance 5,400.00 (Yahoo Finance)
+- The Loan to Deposit Ratio is 0.71 (71 cents loaned per dolar deposited - Federal Reserve)
 
 ---
 <!-- .slide: class="slide-heading" -->
