@@ -12,7 +12,7 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## The Decision Maker
+## Trust starts at the first line, misaligned incentives risk shareholders and society.
 
 - **Their role** is to be the first "trustworthiness" filter for the bank.
 - They are part of the **first line of defense** of the institution.
@@ -24,8 +24,8 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## Some data...
-- **About bank accounts...**
+## Banks lend ~$0.71 per $1 of deposits while median accounts hold ~$5.4k
+
     - The median bank account balance 5,400.00 (Yahoo Finance)
     - The Loan to Deposit Ratio is 0.71 (71 cents loaned per dolar deposited - Federal Reserve)
 
@@ -40,7 +40,7 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## Banking process (Rational)
+## The "Rational" Banking process
 
 <div class="r-vstack" style="height:80vh;justify-content:center;align-items:center;">
   <img data-src="./images/Figure1.png" alt="Process1" style="max-height:75vh;width:auto;display:block;">
@@ -61,7 +61,7 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## The Model
+## The Utility Function
 
 
 $$
@@ -147,7 +147,7 @@ $$
 
 --
 <!-- .slide: class="slide-heading" -->
-## The decision Rule
+## The decision Rule our Decision Maker Follows
 
 Utility function for each potential scenario:
 - When Right:
@@ -242,7 +242,7 @@ $$U_t = \sum_{k=1}^{K} \left[ \frac{(c_{t}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_
 
 --
 
-## A Final Adjustment
+## To be Consistent with De Clippel Ancillary Conditions
 
 - $A_t$: available menu
 - $F(A_t)$: feasible attention sets
@@ -300,14 +300,14 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 
 ---
 <!-- .slide: class="slide-heading" -->
-## The Experimental Design
+## Experimental Design
 
-- Lab Experiment Proposed
-- Field Experiment Proposed
+- Lab Experiment
+- Field Experiment
 
 --
-
-## Lab Experiment
+<!-- .slide: class="slide-heading" -->
+## Our Lab Experiment
 
 <table style="border-collapse:collapse; margin:auto;">
   <thead>
@@ -336,7 +336,8 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 </table>
 
 --
-## The measures
+<!-- .slide: class="slide-heading" -->
+## The Subject's Measures
 
 - Risk Aversion (Holt and Laury, 2002)
 - Short-term Impatience (Andreoni, 2012)
@@ -344,78 +345,81 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 - DOSPERT - Risk Taking (Blais and Weber, 2006)
 
 --
-
-## Situation
+<!-- .slide: class="slide-heading" -->
+## A Decision Making Situation
 
 - Loan Officer Training in 5 minutes
 - Decision making - rank from most to least chances of repayment (5 decisions)
 
-<!-- .slide: class="bank-screen" -->
-<div style="display:grid; grid-template-columns: 1.1fr .9fr; gap:16px; align-items:start; max-width:1100px; margin:0 auto;">
+<section>
+  <div style="display:grid; grid-template-columns: 1.1fr .9fr; gap:16px; align-items:start; max-width:1100px; margin:0 auto;">
 
-  <!-- Panel: Application -->
-  <div style="border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.05);">
-    <div style="background:#0b3d5c; color:#fff; padding:10px 14px; font-weight:700;">CREDIT APPLICATION A</div>
-    <div style="padding:14px; background:#f8fafc;">
-      <table style="width:100%; border-collapse:separate; border-spacing:0 8px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
-        <tr><td style="color:#5b6573;">Amount Requested</td><td style="text-align:right; font-weight:700;">$10,000.00</td></tr>
-        <tr><td style="color:#5b6573;">Term</td><td style="text-align:right;">36 periods</td></tr>
-        <tr><td style="color:#5b6573;">Payment Frequency</td><td style="text-align:right;">Monthly <span style="padding:2px 6px; border:1px solid #c9ced6; border-radius:4px; background:#eef3f8;">X</span></td></tr>
-        <tr><td style="color:#5b6573;">Installment (payment)</td><td style="text-align:right; font-weight:700;">$346.65</td></tr>
-        <tr><td style="color:#5b6573;">Purpose of Credit</td><td style="text-align:right;">Consumer</td></tr>
-        <tr><td style="color:#5b6573;">Type of Collateral</td><td style="text-align:right;">Mortgage-backed</td></tr>
-        <tr><td style="color:#5b6573;">Source of Income</td><td style="text-align:right;">Private employee (5 years)</td></tr>
-        <tr><td style="color:#5b6573;">Score</td><td style="text-align:right;">AAA (950; positive bureau history – 10 years)</td></tr>
-        <tr><td style="color:#5b6573;">Total Consolidated Risk</td><td style="text-align:right; font-weight:700;">$10,000.00</td></tr>
-      </table>
+    <!-- Panel: Application -->
+    <div style="border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.05);">
+      <div style="background:#0b3d5c; color:#fff; padding:10px 14px; font-weight:700;">CREDIT APPLICATION A</div>
+      <div style="padding:14px; background:#f8fafc;">
+        <table style="width:100%; border-collapse:separate; border-spacing:0 8px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
+          <tr><td style="color:#5b6573;">Amount Requested</td><td style="text-align:right; font-weight:700;">$10,000.00</td></tr>
+          <tr><td style="color:#5b6573;">Term</td><td style="text-align:right;">36 periods</td></tr>
+          <tr><td style="color:#5b6573;">Payment Frequency</td><td style="text-align:right;">Monthly <span style="padding:2px 6px; border:1px solid #c9ced6; border-radius:4px; background:#eef3f8;">X</span></td></tr>
+          <tr><td style="color:#5b6573;">Installment (payment)</td><td style="text-align:right; font-weight:700;">$346.65</td></tr>
+          <tr><td style="color:#5b6573;">Purpose of Credit</td><td style="text-align:right;">Consumer</td></tr>
+          <tr><td style="color:#5b6573;">Type of Collateral</td><td style="text-align:right;">Mortgage-backed</td></tr>
+          <tr><td style="color:#5b6573;">Source of Income</td><td style="text-align:right;">Private employee (5 years)</td></tr>
+          <tr><td style="color:#5b6573;">Score</td><td style="text-align:right;">AAA (950; positive bureau history – 10 years)</td></tr>
+          <tr><td style="color:#5b6573;">Total Consolidated Risk</td><td style="text-align:right; font-weight:700;">$10,000.00</td></tr>
+        </table>
+      </div>
     </div>
-  </div>
 
-  <!-- Panel: Payment Capacity Analysis -->
-  <div style="border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.05);">
-    <div style="background:#0b3d5c; color:#fff; padding:10px 14px; font-weight:700;">Payment Capacity Analysis</div>
-    <div style="padding:14px;">
-      <table style="width:100%; border-collapse:separate; border-spacing:0 6px; margin-bottom:12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
-        <thead>
-          <tr>
-            <th style="text-align:left; color:#5b6573;">Assets</th>
-            <th style="text-align:right; color:#5b6573;">Value</th>
-            <th></th>
-            <th style="text-align:left; color:#5b6573;">Liabilities</th>
-            <th style="text-align:right; color:#5b6573;">Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Real Estate</td><td style="text-align:right;">$20,000.00</td><td></td><td>Secured Bank Debt</td><td style="text-align:right;">$19,120.89</td></tr>
-          <tr><td>Other Assets</td><td style="text-align:right;">$10,000.00</td><td></td><td>Short-Term Liabilities</td><td style="text-align:right;">$953.75</td></tr>
-        </tbody>
-      </table>
+    <!-- Panel: Payment Capacity Analysis -->
+    <div style="border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.05);">
+      <div style="background:#0b3d5c; color:#fff; padding:10px 14px; font-weight:700;">Payment Capacity Analysis</div>
+      <div style="padding:14px;">
 
-      <table style="width:100%; border-collapse:separate; border-spacing:0 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
-        <thead>
-          <tr>
-            <th style="text-align:left; color:#5b6573;">Income / Expense</th>
-            <th style="text-align:right; color:#5b6573;">Amount</th>
-            <th></th>
-            <th style="text-align:left; color:#5b6573;">Income / Expense</th>
-            <th style="text-align:right; color:#5b6573;">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Income</td><td style="text-align:right;">$1,247.55</td><td></td><td>Financial Expenses</td><td style="text-align:right;">$459.80</td></tr>
-          <tr><td>Family Expenses</td><td style="text-align:right;">$98.00</td><td></td><td>Net Savings</td><td style="text-align:right; font-weight:700;">$689.75</td></tr>
-          <tr><td style="color:#5b6573;">Total Expenses</td><td style="text-align:right;">$557.80</td><td></td><td></td><td></td></tr>
-        </tbody>
-      </table>
+        <table style="width:100%; border-collapse:separate; border-spacing:0 6px; margin-bottom:12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
+          <thead>
+            <tr>
+              <th style="text-align:left; color:#5b6573;">Assets</th>
+              <th style="text-align:right; color:#5b6573;">Value</th>
+              <th></th>
+              <th style="text-align:left; color:#5b6573;">Liabilities</th>
+              <th style="text-align:right; color:#5b6573;">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Real Estate</td><td style="text-align:right;">$20,000.00</td><td></td><td>Secured Bank Debt</td><td style="text-align:right;">$19,120.89</td></tr>
+            <tr><td>Other Assets</td><td style="text-align:right;">$10,000.00</td><td></td><td>Short-Term Liabilities</td><td style="text-align:right;">$953.75</td></tr>
+          </tbody>
+        </table>
+
+        <table style="width:100%; border-collapse:separate; border-spacing:0 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
+          <thead>
+            <tr>
+              <th style="text-align:left; color:#5b6573;">Income / Expense</th>
+              <th style="text-align:right; color:#5b6573;">Amount</th>
+              <th></th>
+              <th style="text-align:left; color:#5b6573;">Income / Expense</th>
+              <th style="text-align:right; color:#5b6573;">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Income</td><td style="text-align:right;">$1,247.55</td><td></td><td>Financial Expenses</td><td style="text-align:right;">$459.80</td></tr>
+            <tr><td>Family Expenses</td><td style="text-align:right;">$98.00</td><td></td><td>Net Savings</td><td style="text-align:right; font-weight:700;">$689.75</td></tr>
+            <tr><td style="color:#5b6573;">Total Expenses</td><td style="text-align:right;">$557.80</td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+
+      </div>
     </div>
-  </div>
 
-</div>
+  </div>
+</section>
 
 
 --
 <!-- .slide: class="slide-heading" -->
-## Field Experiment
+## The Field Experiment
 
 1. Loan Officers undergo a "regular" workshop.
 2. Fill surveys (behavioral traits).
@@ -451,7 +455,7 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 --
 
 <!-- .slide: class="slide-heading" -->
-## A Shift in Accuracy
+## Better Decision Makers (In Average)
 
 <!-- .slide: class="img-center" -->
 
@@ -464,7 +468,7 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 --
 
 <!-- .slide: class="slide-heading" -->
-## A Momentary Shift in Risk Preferences
+## Less willing to take risks (for a bit)
 
 <!-- .slide: class="img-center" -->
 
@@ -479,11 +483,11 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 ## Empirical Strategy Using MLE
 
 **From the Experiments**
-- Risk (Holt–Laury \(R^{HL}\)
-- Eckel–Grossman \(R^{EG}\)
-- DOSPERT \(R^{DOS}\))  
-- Impatience \(S^{imp}\
-- Delay indicator \(D\)
+- Risk (Holt–Laury $R^{HL}$
+- Eckel–Grossman $R^{EG}$
+- DOSPERT $R^{DOS}$
+- Impatience $S^{imp}$
+- Delay indicator $D$
 
 --
 
