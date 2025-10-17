@@ -17,10 +17,13 @@
 
 ## The Decision Maker
 
-talk about the loan officers
+- **Their role** is to be the first "trustworthiness" filter for the bank.
+- They are part of the **first line of defense** of the institution.
+- Materialy contribute with the **risk taking** of the bank: information (hard and soft)-loans.
 
-whats their role
-how their decisions they make affect individuals and society
+- When incentives are misaligned they can make the bank incurr in **excesive lending**.
+- Banks can go bankrupt because of **credit risk** materialization.
+- **30%** of loans might get **never recovered** after a bankruptcy.
 
 ---
 
@@ -40,32 +43,59 @@ how their decisions they make affect individuals and society
 ---
 ## Banking process (Rational)
 
-<div style="height:80vh; display:flex; align-items:center; justify-content:center;">
-  <img data-src="./images/Figure1.png"
-       alt="Process1"
-       style="max-height:75vh; width:auto; display:block;">
+<div class="r-vstack" style="height:80vh;justify-content:center;align-items:center;">
+  <img data-src="./images/Figure1.png" alt="Process1" style="max-height:75vh;width:auto;display:block;">
 </div>
 
 ---
+
 ## Banking process (Heuristics) (1/2)
 
-<div class="cols" style="min-height:70vh; align-items:center; justify-items:center; gap:64px;">
-  <img data-src="./images/Figure4.png" style="max-height:60vh; width:auto;" alt="Process2">
-  <img data-src="./images/Figure6.png" style="max-height:60vh; width:auto;" alt="Process3">
-</div>
+![Process2](./images/Figure4.png) <!-- .element: class="r-stretch" style="max-height:60vh;width:auto;" -->
 
----
+
+--
+
 ## Banking process (Heuristics) (2/2)
 
-
+![Process3](./images/Figure6.png) <!-- .element: class="r-stretch" style="max-height:60vh;width:auto;" -->
 
 ---
 ## The Model
 
+
 $$
-U_t=\sum_{k=1}^{K}\left[\frac{(c_t^{k})^{1-\rho}}{1-\rho}+\mu_k(c_t^{k},r_t^{k})\right]
-+\beta\sum_{\tau=t+1}^{T}\delta^{\tau-t}\sum_{k=1}^{K}\left[\frac{(c_\tau^{k})^{1-\rho}}{1-\rho}+\mu_k(c_\tau^{k},r_\tau^{k})\right]
+U_t \;=\; 
+\sum_{k=1}^{K}\!\left[
+  \underbrace{\frac{(c_t^{k})^{1-\rho}}{1-\rho}}_{\text{CRRA level utility}}
+  \;+\;
+  \underbrace{\mu_k(c_t^{k}, r_t^{k})}_{\text{reference-dependent gain--loss}}
+\right]
+\;+\;
+\underbrace{\beta \sum_{\tau=t+1}^{T} \delta^{\,\tau-t} \sum_{k=1}^{K}\!\left[
+  \frac{(c_{\tau}^{k})^{1-\rho}}{1-\rho} + \mu_k(c_{\tau}^{k}, r_{\tau}^{k})
+\right]}_{\text{present-biased discounted future utility}}
 $$
+
+| Symbol | Meaning |
+|---|---|
+| \(c_t^{k}\) | Consumption in dimension \(k\) at time \(t\) |
+| \(r_t^{k}\) | Reference point in dimension \(k\) at time \(t\) |
+| \(K\) | Number of consumption dimensions |
+| \(T\) | Time horizon |
+| \(\rho\) | CRRA risk curvature in levels \((\rho\neq 1)\) |
+| \(\beta\in(0,1]\) | Present-bias factor |
+| \(\delta\in(0,1)\) | Per-period discount factor |
+| \(\mu_k(\cdot)\) | Gain–loss utility around \(r_t^k\) |
+| \(\eta_k>0\) | Sensitivity scale for gains/losses (in \(\mu_k\)) |
+| \(\lambda_k\ge 1\) | Loss-aversion weight (in \(\mu_k\)) |
+| \(\alpha_k,\gamma_k\in(0,1]\) | Gain/loss branch curvatures (in \(\mu_k\)) |
+
+**Typical branch form**
+\[
+\mu_k(c,r)=\eta_k\,\big[(c-r)_+^{\alpha_k} - \lambda_k\, (-(c-r)_-)^{\gamma_k}\big].
+\]
+
 
 --
 ## The decision Rule
