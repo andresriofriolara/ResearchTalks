@@ -3,12 +3,8 @@
 </section>
 
 ---
-<!-- .slide: class="big-text" -->
-<div class="r-fit-text" style="text-align:center;">
-  How and to which magnitude can the effect of present bias be decreased in loan granting? TBU
-</div>
-
-
+<!-- .slide: class="slide-heading" -->
+## How and to which magnitude can the effect of present bias be decreased in loan granting? TBU
 
 ---
 <!-- .slide: class="slide-heading" -->
@@ -24,7 +20,7 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## Banks lend ~$0.71 per $1 of deposits while median accounts hold ~$5.4k
+## ~70% of your Banking Statement is being lend
 
     - The median bank account balance 5,400.00 (Yahoo Finance)
     - The Loan to Deposit Ratio is 0.71 (71 cents loaned per dolar deposited - Federal Reserve)
