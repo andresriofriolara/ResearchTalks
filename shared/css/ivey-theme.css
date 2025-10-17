@@ -264,3 +264,28 @@ html { color-scheme: light; }
   }
   .reveal .slides{ background: var(--bg); }
 }
+
+/* Only the title slide */
+.reveal .title-slide h1{
+  font-size: 3.2em;   /* tweak size */
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: .01em;
+  margin: 0 0 .2em 0;
+}
+/* optional: slightly smaller subtitle */
+.reveal .title-slide .subtitle{ font-size: 1.15em; }
+
+/* Only affect slides tagged with class="slide-heading" */
+.reveal section.slide-heading h1{
+  font-size: calc(var(--r-heading1-size, 2.5em) * 2);
+  line-height: 1.05;
+}
+.reveal section.slide-heading h2{
+  font-size: calc(var(--r-heading2-size, 1.9em) * 2);
+  line-height: 1.05;
+}
+.reveal section.slide-heading h3{
+  font-size: calc(var(--r-heading3-size, 1.5em) * 2);
+  line-height: 1.1;
+}
