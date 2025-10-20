@@ -326,3 +326,31 @@ html { color-scheme: light; }
     max-width: 70vw;
   }
 }
+
+/* Panels layout */
+.reveal .panels{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:16px;
+  align-items:start;
+  max-width:1100px;
+  margin:0 auto;
+}
+.reveal .panel{
+  border:1px solid #c9ced6;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 2px 12px rgba(0,0,0,.05);
+  background:#fff;
+}
+.reveal .panel .panel-hd{
+  background:#0b3d5c; color:#fff; padding:10px 14px; font-weight:700;
+}
+.reveal .panel .panel-bd{ padding:14px; }
+.reveal .panel table{
+  width:100%; border-collapse:separate; border-spacing:0 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+.reveal .panel th{ text-align:left; color:#5b6573; font-weight:600; }
+.reveal .panel td{ color:#111; }
+.reveal .panel td:last-child{ text-align:right; }

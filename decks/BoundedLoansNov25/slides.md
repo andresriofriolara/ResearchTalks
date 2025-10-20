@@ -315,71 +315,61 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 - Decision making - rank from most to least chances of repayment (5 decisions)
 
 <section>
-  <div style="display:grid; grid-template-columns: 1.1fr .9fr; gap:16px; align-items:start; max-width:1100px; margin:0 auto;">
+<div class="panels">
 
-    <!-- Panel: Application -->
-    <div style="border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.05);">
-      <div style="background:#0b3d5c; color:#fff; padding:10px 14px; font-weight:700;">CREDIT APPLICATION A</div>
-      <div style="padding:14px; background:#f8fafc;">
-        <table style="width:100%; border-collapse:separate; border-spacing:0 8px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
-          <tr><td style="color:#5b6573;">Amount Requested</td><td style="text-align:right; font-weight:700;">$10,000.00</td></tr>
-          <tr><td style="color:#5b6573;">Term</td><td style="text-align:right;">36 periods</td></tr>
-          <tr><td style="color:#5b6573;">Payment Frequency</td><td style="text-align:right;">Monthly <span style="padding:2px 6px; border:1px solid #c9ced6; border-radius:4px; background:#eef3f8;">X</span></td></tr>
-          <tr><td style="color:#5b6573;">Installment (payment)</td><td style="text-align:right; font-weight:700;">$346.65</td></tr>
-          <tr><td style="color:#5b6573;">Purpose of Credit</td><td style="text-align:right;">Consumer</td></tr>
-          <tr><td style="color:#5b6573;">Type of Collateral</td><td style="text-align:right;">Mortgage-backed</td></tr>
-          <tr><td style="color:#5b6573;">Source of Income</td><td style="text-align:right;">Private employee (5 years)</td></tr>
-          <tr><td style="color:#5b6573;">Score</td><td style="text-align:right;">AAA (950; positive bureau history – 10 years)</td></tr>
-          <tr><td style="color:#5b6573;">Total Consolidated Risk</td><td style="text-align:right; font-weight:700;">$10,000.00</td></tr>
-        </table>
-      </div>
+  <div class="panel">
+    <div class="panel-hd">CREDIT APPLICATION A</div>
+    <div class="panel-bd">
+      <table>
+        <tr><td>Amount Requested</td><td><strong>$10,000.00</strong></td></tr>
+        <tr><td>Term</td><td>36 periods</td></tr>
+        <tr><td>Payment Frequency</td><td>Monthly <span style="padding:2px 6px; border:1px solid #c9ced6; border-radius:4px; background:#eef3f8;">X</span></td></tr>
+        <tr><td>Installment (payment)</td><td><strong>$346.65</strong></td></tr>
+        <tr><td>Purpose of Credit</td><td>Consumer</td></tr>
+        <tr><td>Type of Collateral</td><td>Mortgage-backed</td></tr>
+        <tr><td>Source of Income</td><td>Private employee (5 years)</td></tr>
+        <tr><td>Score</td><td>AAA (950; positive bureau history – 10 years)</td></tr>
+        <tr><td>Total Consolidated Risk</td><td><strong>$10,000.00</strong></td></tr>
+      </table>
     </div>
-
-    <!-- Panel: Payment Capacity Analysis -->
-    <div style="border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.05);">
-      <div style="background:#0b3d5c; color:#fff; padding:10px 14px; font-weight:700;">Payment Capacity Analysis</div>
-      <div style="padding:14px;">
-
-        <table style="width:100%; border-collapse:separate; border-spacing:0 6px; margin-bottom:12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
-          <thead>
-            <tr>
-              <th style="text-align:left; color:#5b6573;">Assets</th>
-              <th style="text-align:right; color:#5b6573;">Value</th>
-              <th></th>
-              <th style="text-align:left; color:#5b6573;">Liabilities</th>
-              <th style="text-align:right; color:#5b6573;">Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Real Estate</td><td style="text-align:right;">$20,000.00</td><td></td><td>Secured Bank Debt</td><td style="text-align:right;">$19,120.89</td></tr>
-            <tr><td>Other Assets</td><td style="text-align:right;">$10,000.00</td><td></td><td>Short-Term Liabilities</td><td style="text-align:right;">$953.75</td></tr>
-          </tbody>
-        </table>
-
-        <table style="width:100%; border-collapse:separate; border-spacing:0 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">
-          <thead>
-            <tr>
-              <th style="text-align:left; color:#5b6573;">Income / Expense</th>
-              <th style="text-align:right; color:#5b6573;">Amount</th>
-              <th></th>
-              <th style="text-align:left; color:#5b6573;">Income / Expense</th>
-              <th style="text-align:right; color:#5b6573;">Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Income</td><td style="text-align:right;">$1,247.55</td><td></td><td>Financial Expenses</td><td style="text-align:right;">$459.80</td></tr>
-            <tr><td>Family Expenses</td><td style="text-align:right;">$98.00</td><td></td><td>Net Savings</td><td style="text-align:right; font-weight:700;">$689.75</td></tr>
-            <tr><td style="color:#5b6573;">Total Expenses</td><td style="text-align:right;">$557.80</td><td></td><td></td><td></td></tr>
-          </tbody>
-        </table>
-
-      </div>
-    </div>
-
   </div>
+
+  <div class="panel">
+    <div class="panel-hd">Payment Capacity Analysis</div>
+    <div class="panel-bd">
+      <table style="border-spacing:0 6px;">
+        <thead>
+          <tr>
+            <th>Assets</th><th style="text-align:right;">Value</th>
+            <th></th>
+            <th>Liabilities</th><th style="text-align:right;">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Real Estate</td><td style="text-align:right;">$20,000.00</td><td></td><td>Secured Bank Debt</td><td style="text-align:right;">$19,120.89</td></tr>
+          <tr><td>Other Assets</td><td style="text-align:right;">$10,000.00</td><td></td><td>Short-Term Liabilities</td><td style="text-align:right;">$953.75</td></tr>
+        </tbody>
+      </table>
+
+      <table style="border-spacing:0 6px; margin-top:10px;">
+        <thead>
+          <tr>
+            <th>Income / Expense</th><th style="text-align:right;">Amount</th>
+            <th></th>
+            <th>Income / Expense</th><th style="text-align:right;">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Income</td><td style="text-align:right;">$1,247.55</td><td></td><td>Financial Expenses</td><td style="text-align:right;">$459.80</td></tr>
+          <tr><td>Family Expenses</td><td style="text-align:right;">$98.00</td><td></td><td>Net Savings</td><td style="text-align:right;"><strong>$689.75</strong></td></tr>
+          <tr><td style="color:#5b6573;">Total Expenses</td><td style="text-align:right;">$557.80</td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
 </section>
-
-
 --
 <!-- .slide: class="slide-heading" -->
 ## The Field Experiment
