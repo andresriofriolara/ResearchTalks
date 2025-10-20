@@ -1,3 +1,27 @@
+<style>
+  .hrow-3{
+    height:100%;
+    display:flex;
+    align-items:center;          /* vertical centering */
+    justify-content:space-between;
+    gap:2rem;
+    padding:0 2rem;
+  }
+  .hrow-3 .cell{
+    flex:1 1 0;                  /* equal-width columns */
+    display:flex;
+    justify-content:center;      /* center each image inside its cell */
+  }
+  .hrow-3 img{
+    max-height:60vh;             /* uniform heights fit on slide */
+    max-width:30vw;              /* prevents overflow in narrow screens */
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    display:block;
+  }
+</style>
+
 <!-- .slide: class="title-slide" -->
 # A Dissection of Collateral’s Bounded Rationality
 </section>
