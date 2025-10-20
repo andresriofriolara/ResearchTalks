@@ -44,6 +44,31 @@
   <script defer src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
   <script defer src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
 
+<!-- reveal core -->
+<link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+<script defer src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+<script defer src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+<script defer src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+
+<!-- math (KaTeX) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+<script defer src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ],
+    math: {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  display: false }
+      ],
+      throwOnError: false
+    }
+  });
+</script>
+
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       Reveal.initialize({

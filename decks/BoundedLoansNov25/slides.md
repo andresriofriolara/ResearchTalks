@@ -64,30 +64,28 @@ $$
 U_t
 &=
 \underbrace{%
-  \overbrace{\,w(p_t)\Big[(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}
-  - \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}\Big]\,}^{\text{repay branch}}
-  +
-  \overbrace{\,\bigl[1-w(p_t)\bigr]\Big[(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}
-  - \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}\Big]\,}^{\text{default branch}}
+\underbrace{\,w(p_t)\!\left[(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}
+- \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}\right]\,}_{\text{repay branch}}
+\;+\;
+\underbrace{\,\bigl(1-w(p_t)\bigr)\!\left[(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}
+- \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}\right]\,}_{\text{default branch}}
 }_{\text{within-period Prospect Theory value } V_t(c_t\mid r_t)}
-\\[4pt]
-&\quad+
+\\[6pt]
+&\quad+\;
 \underbrace{%
-  \underbrace{\beta}_{\text{present bias}}
-  \sum_{\tau=t+1}^{T}
-  \underbrace{\delta^{\,\tau-t}}_{\text{exponential discount}}
-  \, \mathbb{E}\Big[
-    \overbrace{\,w(p_\tau)\Big[(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}
-    - \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}\Big]\,}^{\text{repay at }\tau}
-\\[-2pt]
-&\qquad\qquad\qquad\qquad\qquad\qquad\quad
-    +
-    \overbrace{\,\bigl[1-w(p_\tau)\bigr]\Big[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}
-    - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}\Big]\,}^{\text{default at }\tau}
-  \Big]
+\beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
+\mathbb{E}\!\left[
+\underbrace{\,w(p_\tau)\!\left[(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}
+- \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}\right]\,}_{\text{repay at }\tau}
+\;+\;
+\underbrace{\,\bigl(1-w(p_\tau)\bigr)\!\left[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}
+- \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}\right]\,}_{\text{default at }\tau}
+\right]
 }_{\text{discounted expectation of future within-period values}}
 \end{aligned}
 $$
+
+--
 
 <div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
   <table style="border-collapse:collapse; margin:auto;">
