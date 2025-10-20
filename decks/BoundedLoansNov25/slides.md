@@ -597,7 +597,7 @@ $$
 - **Correctness linkage:** bivariate (ordered probit + probit) with $\mathrm{Corr}(\varepsilon,\nu)=\rho$
 - **Ranked decisions:** Plackett–Luce (exploded logit) or composite *pairwise probit*
 - **Stopping / satisficing:** sequential block → threshold model for first-hit times (identifies $\theta_t$)
-- **Reporting:** marginal effects by delay/impatience; threshold plots; subject random effects; predictive accuracy
+- **Reporting:** marginal effects by delay/impatience; threshold plots; subject random effects; predictive accuracy.
 
 ---
 <!-- .slide: class="slide-heading" -->
