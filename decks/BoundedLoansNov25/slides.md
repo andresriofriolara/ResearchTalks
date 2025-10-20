@@ -338,6 +338,7 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 - Loan Officer Training in 5 minutes
 - Decision making - rank from most to least chances of repayment (5 decisions)
 
+--
 <section>
 <div class="panels">
 
@@ -409,24 +410,85 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 <!-- .slide: class="slide-heading" -->
 ## Preliminary Results
 
-| Category              | Details                                                                 |
-|----------------------|--------------------------------------------------------------------------|
-| Participants (n)     | 42 loan officers                                                         |
-| Age range            | 25–45 years                                                              |
-| Gender               | 17 male, 25 female                                                       |
-| Experience (role)    | 2 months – 10 years                                                      |
-| Context              | During a scheduled training                                              |
-| Instruments          | DOSPERT test; Holt–Laury risk test                                       |
-| Decision sets        | Based on current bank standards, pre & post stimuli                      |
-| Stimulus             | HR announced a change to bonus calculation (vs. status quo)              |
+<!-- .slide: class="slide-heading" -->
+<h2>Design & Sample Summary</h2>
+
+<div style="max-width:900px; margin:0 auto; border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06);">
+  <div style="background:#0b3d5c; color:#fff; padding:10px 16px; font-weight:700; letter-spacing:.2px;">
+    Study Setup
+  </div>
+  <div style="background:#f7f9fb;">
+    <table style="width:100%; border-collapse:separate; border-spacing:0; font-size:1.02em;">
+      <tbody>
+        <tr>
+          <th style="width:32%; text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Participants (n)</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;"><strong>42 loan officers</strong></td>
+        </tr>
+        <tr style="background:#ffffff;">
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Age range</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">25–45 years</td>
+        </tr>
+        <tr>
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Gender</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">17 male, 25 female</td>
+        </tr>
+        <tr style="background:#ffffff;">
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Experience (role)</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">2 months – 10 years</td>
+        </tr>
+        <tr>
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Context</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">During a scheduled training</td>
+        </tr>
+        <tr style="background:#ffffff;">
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Instruments</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">DOSPERT test; Holt–Laury risk test</td>
+        </tr>
+        <tr>
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Decision sets</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">Based on current bank standards, pre &amp; post stimuli</td>
+        </tr>
+        <tr style="background:#ffffff;">
+          <th style="text-align:left; padding:10px 14px; color:#5b6573;">Stimulus</th>
+          <td style="padding:10px 14px;">HR announced a change to bonus calculation (vs. status quo)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
 --
 
-| Outcome                                  | Result / Interpretation                                                                 |
-|------------------------------------------|------------------------------------------------------------------------------------------|
-| Loan decision accuracy                    | Increased from 46% to 53% when present bias was deactivated                             |
-| Collective risk preferences               | Shifted in the very short term, then converged back toward baseline                     |
-| Statistical power                         | Study underpowered; ~290 participants estimated for statistical significance            |
+<div style="max-width:900px; margin:0 auto; border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06);">
+  <div style="background:#0b3d5c; color:#fff; padding:10px 16px; font-weight:700; letter-spacing:.2px;">
+    Results & Interpretation
+  </div>
+  <div style="background:#f7f9fb;">
+    <table style="width:100%; border-collapse:separate; border-spacing:0; font-size:1.02em;">
+      <tbody>
+        <tr>
+          <th style="width:36%; text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Loan decision accuracy</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">
+            <strong>↑ 46% → 53%</strong> when present bias was deactivated
+          </td>
+        </tr>
+        <tr style="background:#ffffff;">
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Collective risk preferences</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">
+            Shifted in the very short term, then converged back toward baseline
+          </td>
+        </tr>
+        <tr>
+          <th style="text-align:left; padding:10px 14px; color:#5b6573;">Statistical power</th>
+          <td style="padding:10px 14px;">
+            Study underpowered; ~<strong>290</strong> participants estimated for statistical significance
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 
 --
