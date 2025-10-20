@@ -59,25 +59,22 @@
 <!-- .slide: class="slide-heading" -->
 ## The Utility Function
 
-
 $$
 \begin{aligned}
 U_t
-&=
-\sum_{k=1}^{K}\!\left[
-  \underbrace{\frac{(c_t^{k})^{1-\rho}}{1-\rho}}_{\text{CRRA level utility}}
-  \;+\;
-  \underbrace{\mu_k(c_t^{k}, r_t^{k})}_{\text{reference-dependent gain--loss}}
-\right] \\
+&=\underbrace{\,w(p_t)\,v\!\big(c_t^{\text{repay}}\mid r_t\big)
++\bigl[1-w(p_t)\bigr]\,
+v\!\big(c_t^{\text{default}}\mid r_t\big)\,}_{\text{within-period prospect value}}
+\\[2pt]
 &\quad+\;
-\underbrace{\beta \sum_{\tau=t+1}^{T} \delta^{\tau - t} \sum_{k=1}^{K}\!\left[
-  \underbrace{\frac{(c_{\tau}^{k})^{1-\rho}}{1-\rho}}_{\text{CRRA level utility}}
-  \;+\;
-  \underbrace{\mu_k(c_{\tau}^{k}, r_{\tau}^{k})}_{\text{reference-dependent gain--loss}}
-\right]}_{\text{present-biased discounted future utility}} \, .
+\underbrace{\beta \sum_{\tau=t+1}^{T} \delta^{\,\tau-t}\,
+\mathbb{E}\!\Big[
+w(p_\tau)\,v\!\big(c_\tau^{\text{repay}}\mid r_\tau\big)
++\bigl[1-w(p_\tau)\bigr]\,
+v\!\big(c_\tau^{\text{default}}\mid r_\tau\big)
+\Big]}_{\text{present-biased discounted future prospect value}} \, .
 \end{aligned}
 $$
-
 
 <table style="border-collapse:collapse; margin:auto;">
   <thead>
@@ -87,179 +84,126 @@ $$
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$c_t^{k}$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Consumption in dimension $k$ at time $t$</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$r_t^{k}$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Reference point in dimension $k$ at time $t$</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$K$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Number of consumption dimensions</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$T$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Time horizon</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$\rho$</td>
-      <td style="border:1px solid #ccc; padding:6px;">CRRA curvature ($\rho\neq 1$)</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$\beta\in(0,1]$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Present-bias factor</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$\delta\in(0,1)$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Per-period discount factor</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$\mu_k(\cdot)$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Gain–loss utility around $r_t^k$</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$\eta_k&gt;0$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Sensitivity scale in $\mu_k$</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$\lambda_k\ge 1$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Loss-aversion weight in $\mu_k$</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;">$\alpha_k,\gamma_k\in(0,1]$</td>
-      <td style="border:1px solid #ccc; padding:6px;">Gain/loss branch curvatures in $\mu_k$</td>
-    </tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$c_t$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Outcome at time $t$ (we specialize to $K{=}1$)</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$r_t$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Reference point at time $t$</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$p_t$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Objective probability of “repay” (Bernoulli prospect)</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$w(\cdot)$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function (KT’79)</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$\alpha_v,\beta_v$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Value curvature in gains / losses (around $r_t$)</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$\lambda$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Loss aversion ($\ge 1$)</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$V_t$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Decision-weighted within-period value</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$\beta\in(0,1]$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Present-bias factor (Laibson, 1997)</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$\delta\in(0,1)$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Per-period discount factor</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$T$</td>
+        <td style="border:1px solid #ccc; padding:6px;">Horizon</td></tr>
   </tbody>
 </table>
 
-
-**Typical branch form**
-$$
-\mu_k(c,r)=\eta_k\,\big[(c-r)_+^{\alpha_k} - \lambda_k\, (-(c-r)_-)^{\gamma_k}\big].
-$$
-
-
 --
+
 <!-- .slide: class="slide-heading" -->
-## The decision Rule our Decision Maker Follows
+## The Decision Rule Our Decision Maker Follows
 
-Utility function for each potential scenario:
-- When Right:
-  - $U_1$, when $\mathop{\mathbb{E}}(P_a)$ when customer expected probability $P_i$ is read as it landed above the threshold and that it was accepted.
-  - $U_4$ , when $\mathop{\mathbb{E}}(P_b)$ of the expected repayment probability $P_i$, given by $(1-P_a)$ is read as it landed below the threshold and that it was rejected.
+Utility for each scenario is computed via the KT’79 value $v(\cdot\mid r)$ for the corresponding outcomes.
 
-- When Wrong:
-  - $U_3$ Type I Error
-  - $U_2$ Type II Error
+**Decision-weighted expected utilities:**
+$$
+\mathbb{E}\!\left[U\mid \text{Accept}\right] \;=\; w(p)\,U_1 \;+\; \bigl[1-w(p)\bigr]\,U_2,
+\qquad
+\mathbb{E}\!\left[U\mid \text{Reject}\right] \;=\; w(p)\,U_3 \;+\; \bigl[1-w(p)\bigr]\,U_4.
+$$
 
-Each Scenario Probability of Accepting and rejecting given by:
+- When **Right**:
+  - $U_1$: accept a good loan (repay).
+  - $U_4$: reject a bad loan (default).
+- When **Wrong**:
+  - $U_3$: Type I (reject a good loan).
+  - $U_2$: Type II (accept a bad loan).
 
-$$\mathop{\mathbb{E}}\left[U|\text{Accept}\right]=P_aU_1+P_bU_2$$
-$$\mathop{\mathbb{E}}\left[U|\text{Reject}\right]=P_aU_3+P_bU_4$$
-
-In a multi-scenario task the decision maker will rank the utilities from the highest to the lowest.
-
+In a multi-scenario task, rank by the expected value above (largest to smallest).
 
 --
+
+<!-- .slide: class="slide-heading" -->
 ## Intertemporal Choice Component (Laibson, 1997)
 
-$$U_t = u(c_t) + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} u(c_\tau)$$
+$$
+U_t \;=\; V_t \;+\; \beta \sum_{\tau = t+1}^{T} \delta^{\,\tau - t}\, \mathbb{E}\!\left[V_\tau\right]
+$$
 
 Where,
 
-- $u(c_t)$ : instant utility from consumption $c_t$
-- $\beta$ : present-bias parameter $\beta \in(0,1]$
-- $\delta$ : discount factor $\delta\in(0,1)$
+- $V_t$ : KT’79 decision-weighted within-period value (relative to $r_t$)  
+- $\beta$ : present-bias parameter $\beta \in(0,1]$  
+- $\delta$ : discount factor $\delta\in(0,1)$  
 - $T$ : the time horizon
 
 --
 
-## Reference-Dependent Preferences (Koszegi and Rabin, 2006)
+<!-- .slide: class="slide-heading" -->
+## Reference Formation (Kőszegi & Rabin, 2006)
 
-$$U(c \mid r) = m(c) + \sum_{k=1}^{K} \mu_k \left[ m_k(c_k) - m_k(r_k) \right]$$
-
-Where,
-
-- $c=(c^1,...,C^K)$ : vector over k dimensions
-- $c^k$ : realized outcome in k dimension
-- $m(c)$ : total consumption utility $\sum_{k=1}^{K} m_k(c_k)$
-- $r^k$ : agent's rational outcome expectations on $c^k$
-- $m^k(\cdot)$ : consumption utility function for k dimension
-- $\mu_k(\cdot)$ : the gain-loss utility function*
+We adopt expectations-based **reference formation** for $r_t$ (e.g., $r_t=\mathbb{E}_{t-1}[c_t]$ or partial adaptation).
+Within-period value follows Kahneman–Tversky (1979) Prospect Theory (see “The Utility Function”).
 
 --
 
-## Gain–Loss Utility Function Capturing Reference Dependence (Kőszegi & Rabin, 2006)
+<!-- .slide: class="slide-heading" -->
+## Prospect Theory Value Around the Reference (Kahneman–Tversky, 1979)
 
 $$
-\mu_k(x)=
+v(c_t\mid r_t)=
 \begin{cases}
-\eta_k\,x,            & \text{if } x \ge 0 \quad \text{(gain)}\\[4pt]
-\eta_k\,\lambda_k\,x, & \text{if } x < 0 \quad \text{(loss)}
+(c_t-r_t)^{\alpha_v}, & c_t\ge r_t,\\[4pt]
+-\lambda\,(r_t-c_t)^{\beta_v}, & c_t< r_t,
 \end{cases}
+\qquad \alpha_v,\beta_v\in(0,1],\ \lambda\ge 1.
 $$
 
-Where,
-
-- $\eta_k$: scale of sensitivity to gains/losses  
-- $\lambda_k$: loss aversion parameter
+Decision weighting for a Bernoulli prospect (repay vs default):
+$$
+V_t \;=\; w(p_t)\,v\!\big(c_t^{\text{repay}}\mid r_t\big)
+      \;+\; \bigl[1-w(p_t)\bigr]\,v\!\big(c_t^{\text{default}}\mid r_t\big).
+$$
 
 --
 
-## Adjusting the deviation-based structure with a CRRA form
-
-$m^k(c^k)$ is replaced with $u(c^k)$
-
-Giving:
+<!-- .slide: class="slide-heading" -->
+## Hybrid Model (Present Bias + Prospect Theory + Attention)
 
 $$
-\mu_k(c_k,r_k)=
-\begin{cases}
-\eta_k\,x_k^{\alpha_k},                & \text{if } x_k \ge 0 \quad \text{(gain)}\\[4pt]
--\eta_k\,\lambda_k\,(-x_k)^{\gamma_k}, & \text{if } x_k < 0 \quad \text{(loss)}
-\end{cases}
-\qquad \text{with } x_k=c_k-r_k.
+U_t \;=\; V_t \;+\; \beta \sum_{\tau=t+1}^{T} \delta^{\,\tau-t}\,\mathbb{E}\!\left[V_\tau\right],
+\quad
+V_t \;=\; w(p_t)\,v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]\,v(c_t^{\text{default}}\mid r_t).
 $$
-
-Where,
-- $\eta_k>0$: sensitivity factor  
-- $\lambda_k \ge 1$: loss-aversion parameter  
-- $\alpha_k \in (0,1]$: gains  
-- $\gamma_k \in (0,1]$: losses
-
 
 --
 
-## Hybrid Model (quasi-hyperbolic discounting with explicit risk preferences)
-
-$$U_t = \sum_{k=1}^{K} \left[ \frac{(c_{t}^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{t}^{k}, r_{t}^{k}) \right] + \beta \sum_{\tau = t+1}^{T} \delta^{\tau - t} \sum_{k=1}^{K} \left[ \frac{(c_{\tau} ^{k})^{1 - \rho}}{1 - \rho} + \mu_k(c_{\tau}^{k}, r_{\tau}^{k}) \right]$$
-
---
-
+<!-- .slide: class="slide-heading" -->
 ## To be Consistent with De Clippel Ancillary Conditions
 
-- $A_t$: available menu
-- $F(A_t)$: feasible attention sets
-- $S_t \subseteq A_t$: consideration set endogenously chosen
-- feasible utility path:
+- $A_t$: available menu  
+- $F(A_t)$: feasible attention sets  
+- $S_t \subseteq A_t$: endogenous consideration set  
 
-  $$
-  \tilde{U}_t=\max_{c_t\in S_t}\left[ u(c_t \mid r_t)
-  + \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
-  \mathbb{E}_{S_\tau}\!\left[ u(c_\tau \mid r_\tau) \right] \right]
-  $$
-
-- $\Theta_t$: a point given at time $t$
-- $u(c_t \mid r_t)\ge \theta_t$: satisfaction point
-- Constrained to $c_t \in S_t \subseteq A_t$
-
+**Feasible utility path:**
 $$
-U_t=\sum_{k=1}^{K}\left[\frac{(c_t^{k})^{1-\rho}}{1-\rho}+\mu_k(c_t^{k},r_t^{k})\right]
-+\beta\sum_{\tau=t+1}^{T}\delta^{\tau-t}\sum_{k=1}^{K}\left[\frac{(c_\tau^{k})^{1-\rho}}{1-\rho}+\mu_k(c_\tau^{k},r_\tau^{k})\right]
+\tilde{U}_t
+=\max_{c_t\in S_t}\Big[
+  V_t(c_t\mid r_t)
+  + \beta \sum_{\tau=t+1}^{T}\delta^{\tau-t}\,
+    \mathbb{E}_{S_\tau}\!\big[ V_\tau(c_\tau\mid r_\tau) \big]
+\Big],
+\quad S_t\in F(A_t),\ \ V_t(c_t\mid r_t)\ge \theta_t.
 $$
-
 
 ---
 <!-- .slide: class="slide-heading" -->
@@ -479,7 +423,7 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 ## Empirical Strategy Using MLE
 
 **From the Experiments**
-- Risk (Holt–Laury $R^{HL}$
+- Risk (Holt–Laury) $R^{HL}$
 - Eckel–Grossman $R^{EG}$
 - DOSPERT $R^{DOS}$
 - Impatience $S^{imp}$
@@ -492,62 +436,69 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 **Latent index** for trial $i$ (subject $g$):
 
 $$
-y_i^\ast = m_i'\beta + \varepsilon_i, \qquad \varepsilon_i \sim \mathcal{N}(0,1)
+y_i^\ast = m_i'\theta + \varepsilon_i, \qquad \varepsilon_i \sim \mathcal{N}(0,1)
 $$
 
 Observed category $y_i \in \{1,\dots,J\}$ via cutpoints  
 $\mu_0=-\infty < \mu_1 < \dots < \mu_{J-1} < \mu_J=+\infty$:
 
 $$
-P(y_i=j) = \Phi(\mu_j - m_i'\beta) - \Phi(\mu_{j-1} - m_i'\beta)
+P(y_i=j) = \Phi(\mu_j - m_i'\theta) - \Phi(\mu_{j-1} - m_i'\theta)
 $$
 
-**Design of $m_i$ (links model → data):**
-
+**Design of $m_i$:**
 - **Present bias:** $D_i$, $S^{imp}_g$, $D_i \times S^{imp}_g$
-- **Risk:** $R^{HL}_g$, $R^{EG}_g$, $R^{DOS}_g$
-- **Task features:** stakes, variance, information load, time pressure; engineered from $u(c)$ and $\mu_k(\cdot)$
-- **Heteroskedasticity:**  
-  $\mathrm{Var}(\varepsilon_i)=\sigma_i^2=\exp(w_i'\kappa)$  
-  $\Rightarrow\; P(y_i=j)=\Phi\!\Big(\frac{\mu_j-m_i'\beta}{\sigma_i}\Big)-\Phi\!\Big(\frac{\mu_{j-1}-m_i'\beta}{\sigma_i}\Big)$
+- **Prospect Theory features:**
+  - Gain/loss indicator relative to $r_t$: $\mathbb{1}\{c_t \gtrless r_t\}$
+  - Magnitude terms: $|c_t-r_t|$ (and interactions for curvature proxies)
+  - Loss-side asymmetry proxy (for $\lambda$): $\mathbb{1}\{c_t<r_t\}\times |c_t-r_t|$
+  - Probability level $p_t$ and small/large-$p$ bins (for $w(\cdot)$ sensitivity)
+- **Attention / consideration set:** menu size, time pressure, salience flags, process-tracing counts (hover/time on collateral vs cash-flow)
+- **Controls:** stakes, variance, information load
+
+**Heteroskedasticity:**  
+$\mathrm{Var}(\varepsilon_i)=\sigma_i^2=\exp(w_i'\kappa)$  
+$\Rightarrow\; P(y_i=j)=\Phi\!\Big(\frac{\mu_j-m_i'\theta}{\sigma_i}\Big)-\Phi\!\Big(\frac{\mu_{j-1}-m_i'\theta}{\sigma_i}\Big)$
 
 **Panel heterogeneity:**  
 Random intercept $b_g\sim\mathcal{N}(0,\sigma_b^2)$  
 $$
-y_{ig}^\ast = m_{ig}'\beta + b_g + \varepsilon_{ig}.
+y_{ig}^\ast = m_{ig}'\theta + b_g + \varepsilon_{ig}.
 $$
 
+<!-- Note: using $\theta$ for the regression coefficients avoids collision with the present-bias parameter $\beta$ in the theory. -->
 
 --
 
 ## Estimation, Tests, and Extensions (MLE / QMLE)
 
-**Log-likelihood** (maximize over $\beta$, $\mu$, and optionally $\kappa$, $\gamma_j$, $\sigma_b^2$):
+**Log-likelihood** (maximize over $\theta$, $\mu$, and optionally $\kappa$, $\sigma_b^2$):
 
 $$
 \ell = \sum_{i=1}^n \sum_{j=1}^J 
 \mathbf{1}\{y_i=j\} \,
 \log \Big[
-\Phi(\mu_j - m_i'\beta) - \Phi(\mu_{j-1} - m_i'\beta)
+\Phi(\mu_j - m_i'\theta) - \Phi(\mu_{j-1} - m_i'\theta)
 \Big]
 $$
 
 - **Inference:** Fisher or observed information; robust (sandwich) SEs for QMLE.
-- **Identification:** ordered scale (fix $\mathrm{Var}(\varepsilon)=1$.
+- **Identification:** ordered scale (fix $\mathrm{Var}(\varepsilon)=1$).
 
 --
 
-**Key hypotheses (link to behavioral theory):**
+**Key hypotheses:**
 
 - *Present bias:* $H_0:\; D=0,\; S^{imp}=0,\; D\times S^{imp}=0$
-- *Risk channels:* joint Wald test on $(R^{HL}, R^{EG}, R^{DOS})$
+- *Prospect Theory channels:* joint tests on gain/loss asymmetry and $p_t$-sensitivity terms (proxies for $\lambda$ and $w(\cdot)$)
+- *Attention/consideration:* menu size / salience / time pressure predictors jointly zero
 - *Panel heterogeneity:* $H_0:\; \sigma_b^2 = 0$
 
 **Extensions:**
-
 - **Correctness linkage:** bivariate (ordered probit + probit) with $\mathrm{Corr}(\varepsilon,\nu)=\rho$
 - **Ranked decisions:** Plackett–Luce (exploded logit) or composite *pairwise probit*
-- **Reporting:** marginal effects by delay/impatience, threshold plots, subject-level random effects, predictive accuracy.
+- **Stopping / satisficing:** sequential block → threshold model for first-hit times (identifies $\theta_t$)
+- **Reporting:** marginal effects by delay/impatience; threshold plots; subject random effects; predictive accuracy
 
 ---
 <!-- .slide: class="slide-heading" -->
