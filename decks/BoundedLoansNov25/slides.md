@@ -312,7 +312,6 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 - Loan Officer Training in 5 minutes
 - Decision making - rank from most to least chances of repayment (5 decisions)
 
---
 <section>
 <div class="panels">
 
