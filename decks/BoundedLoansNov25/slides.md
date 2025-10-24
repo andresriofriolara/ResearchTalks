@@ -100,7 +100,7 @@
 ## The "Rational" Banking process
 
 <div class="media-xy">
-  <img data-src="./images/Figure1.png" class="img-md" alt="Rational banking process diagram">
+  <img data-src="./images/Figure1.png" class="img-sm" alt="Rational banking process diagram">
 </div>
 
 ---
@@ -108,7 +108,7 @@
 ## Heuristics in the Banking Process (1/2)
 
 <div class="media-xy">
-  <img data-src="./images/Figure4.png" class="img-md" alt="Heuristics in the banking process">
+  <img data-src="./images/Figure4.png" class="img-sm" alt="Heuristics in the banking process">
 </div>
 
 --
@@ -116,7 +116,7 @@
 ## Heuristics in the Banking Process (2/2)
 
 <div class="media-xy">
-  <img data-src="./images/Figure6.png" class="img-md" alt="Heuristics in the banking process, part 2">
+  <img data-src="./images/Figure6.png" class="img-sm" alt="Heuristics in the banking process, part 2">
 </div>
 
 
