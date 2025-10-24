@@ -241,8 +241,15 @@ Within-period value follows Kahneman Tversky (1979) Prospect Theory (see “The 
 <!-- .slide: class="slide-heading" -->
 ## Prospect Theory Value Around the Reference (Kahneman–Tversky, 1979)
 
-$$v(c_t\mid r_t)= \begin{cases}(c_t-r_t)^{\alpha_v}, & c_t\ge r_t, \\ [4pt]
-  -\lambda\,(r_t-c_t)^{\beta_v}, & c_t< r_t,\end{cases}\qquad \alpha_v,\beta_v\in(0,1],\ \lambda\ge 1$$
+$$
+v(c_t\mid r_t)=
+\begin{cases}
+  (c_t-r_t)^{\alpha_v}, & c_t\ge r_t,\\[4pt]
+  -\lambda\,(r_t-c_t)^{\beta_v}, & c_t< r_t
+\end{cases}
+\qquad \alpha_v,\beta_v\in(0,1],\ \lambda\ge 1
+$$
+
 
 Decision weighting for a Bernoulli prospect (repay vs default):
 $$
