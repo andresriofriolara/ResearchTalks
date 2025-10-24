@@ -122,6 +122,7 @@
 ---
 <!-- .slide: class="slide-heading" -->
 ## The Utility Function
+
 $$
 \begin{aligned}
 U_t
