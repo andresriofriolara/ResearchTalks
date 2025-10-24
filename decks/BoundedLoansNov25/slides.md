@@ -122,7 +122,6 @@
 ---
 <!-- .slide: class="slide-heading" -->
 ## The Utility Function
-
 $$
 \begin{aligned}
 U_t
@@ -148,7 +147,6 @@ U_t
 }_{\text{discounted expectation of future within-period values}}
 \end{aligned}
 $$
-
 --
 
 <div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">

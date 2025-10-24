@@ -5,12 +5,11 @@
   <title>Bounded Loans • Ivey Doctoral Research Seminaries Series</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Reveal core CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/white.css">
+  <!-- Reveal core -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
 
   <!-- Code highlight theme -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
 
   <!-- Your custom theme -->
   <link rel="stylesheet" href="../../shared/css/ivey-theme.css">
@@ -20,11 +19,11 @@
     :root{
       --footer-text: "Ivey Doctoral Research Seminaries Series • Bounded Loans • A. Riofrío-Lara";
     }
-    /* keep images responsive, your theme further constrains them */
+    /* keep (non-destructive) */
     section img { max-width: 100%; height: auto; }
   </style>
 
-  <!-- KaTeX -->
+  <!-- KaTeX (CSS + JS) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
 </head>
@@ -42,24 +41,25 @@
     </div>
   </div>
 
-  <!-- Reveal core + plugins (load once) -->
-  <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
+  <!-- Reveal core + plugins (load ONCE) -->
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
 
   <script>
     Reveal.initialize({
       hash: true,
       slideNumber: true,
       controls: true,
+      controlsTutorial: true,
       progress: true,
       plugins: [
         RevealMarkdown,
         RevealHighlight,
         RevealNotes,
-        RevealMath.KaTeX   // ✅ KaTeX (not MathJax)
+        RevealMath.KaTeX     // ✅ KaTeX only
       ],
       math: {
         delimiters: [
@@ -72,7 +72,7 @@
     });
   </script>
 
-  <!-- Clock -->
+  <!-- Clock (top-left) -->
   <script src="../../shared/js/clock.js"></script>
 </body>
 </html>
