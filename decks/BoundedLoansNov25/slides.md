@@ -200,9 +200,9 @@ Utility for each scenario is computed via Khaneman Tversky value $v(\cdot\mid r)
 
 **Decision-weighted expected utilities:**
 
-$$\mathbb{E}\!\left[U\mid \text{Accept}\right] = w(p)U_1 + \bigl[1-w(p)\bigr]U_2$$
+$$\mathbb{E}\left[U\mid \text{Accept}\right] = w(p)U_1 + \bigl[1-w(p)\bigr]U_2$$
 
-$$\mathbb{E}\!\left[U\mid \text{Reject}\right] = w(p)U_3 + \bigl[1-w(p)\bigr]U_4$$
+$$\mathbb{E}\left[U\mid \text{Reject}\right] = w(p)U_3 + \bigl[1-w(p)\bigr]U_4$$
 
 - When **Right**:
   - $U_1$: accept a good loan (repay).
@@ -292,7 +292,6 @@ $$
   V_t(c_t\mid r_t)\ge \theta_t
 \end{aligned}
 $$
-
 
 ---
 <!-- .slide: class="slide-heading closer" -->
