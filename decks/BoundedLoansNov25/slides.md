@@ -8,15 +8,44 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## Trust starts at the first line, misaligned incentives risk shareholders and society.
+## Trust starts at the first line
 
-- **Their role** is to be the first "trustworthiness" filter for the bank.
-- They are part of the **first line of defense** of the institution.
-- Materialy contribute with the **risk taking** of the bank: information (hard and soft)-loans.
+<section>
+  <!-- Funnel → Forked Outcomes (no title) -->
+  <div class="smart-funnel" aria-label="First-line process funnel with forked outcomes">
+    <div class="funnel">
+      <div class="band band-1">
+        <span>First <em>trustworthiness</em> filter</span>
+      </div>
+      <div class="band band-2">
+        <span>First line of defense</span>
+      </div>
+      <div class="band band-3">
+        <span>Risk-taking input: hard &amp; soft information → loan decisions</span>
+      </div>
+      <div class="neck" aria-hidden="true"></div>
+    </div>
+    <div class="fork">
+      <div class="lane lane-good">
+        <div class="lane-track">
+          <div class="pill">Aligned incentives → prudent lending</div>
+          <div class="end-cap end-good" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="lane lane-bad">
+        <div class="lane-track">
+          <div class="pill">Misaligned incentives → excessive lending</div>
+          <div class="pill">Credit risk materializes → bankruptcy</div>
+          <div class="badge-loss" role="note" aria-label="30 percent of loans unrecovered post-bankruptcy">
+            <strong>≈30%</strong><span> unrecovered<br>post-bankruptcy</span>
+          </div>
+          <div class="end-cap end-bad" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-- When incentives are misaligned they can make the bank incurr in **excesive lending**.
-- Banks can go bankrupt because of **credit risk** materialization.
-- **30%** of loans might get **never recovered** after a bankruptcy.
 
 ---
 <!-- .slide: class="slide-heading" -->
