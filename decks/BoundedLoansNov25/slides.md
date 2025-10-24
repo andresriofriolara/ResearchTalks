@@ -142,7 +142,7 @@ U_t
     + \bigl(1-w(p_\tau)\bigr)\big[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}\big]
     - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
   \right]
-}_{\substack{\text{discounted expectation}}}
+}_{\mathclap{\text{discounted expectation}}}
 \end{aligned}
 </div>
 
