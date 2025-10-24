@@ -5,7 +5,7 @@
   <title>Bounded Loans • Ivey Doctoral Research Seminaries Series</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Reveal core -->
+  <!-- Reveal core (v5) -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
 
   <!-- Code highlight theme -->
@@ -19,11 +19,10 @@
     :root{
       --footer-text: "Ivey Doctoral Research Seminaries Series • Bounded Loans • A. Riofrío-Lara";
     }
-    /* keep (non-destructive) */
     section img { max-width: 100%; height: auto; }
   </style>
 
-  <!-- KaTeX (CSS + JS) -->
+  <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
 </head>
@@ -41,7 +40,7 @@
     </div>
   </div>
 
-  <!-- Reveal core + plugins (load ONCE) -->
+  <!-- Reveal core + plugins (v5, load ONCE) -->
   <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
@@ -59,7 +58,7 @@
         RevealMarkdown,
         RevealHighlight,
         RevealNotes,
-        RevealMath.KaTeX     // ✅ KaTeX only
+        RevealMath.KaTeX   // ✅ KaTeX variant (requires v5)
       ],
       math: {
         delimiters: [

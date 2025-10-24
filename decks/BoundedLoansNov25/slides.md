@@ -170,7 +170,7 @@ $$
       <tr><td style="border:1px solid #ccc; padding:6px;">$p_t$</td>
           <td style="border:1px solid #ccc; padding:6px;">Objective probability of “repay” at time $t$ (Bernoulli prospect)</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$w(\cdot)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function (KT’79), with $w\!:\![0,1]\to[0,1]$</td></tr>
+          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function, with $w\!:\![0,1]\to[0,1]$</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$(x)_{+}$</td>
           <td style="border:1px solid #ccc; padding:6px;">Positive part: $(x)_{+}=\max\{x,0\}$ (used in PT value around $r_t$)</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$\alpha_v,\;\beta_v$</td>
@@ -196,7 +196,7 @@ $$
 <!-- .slide: class="slide-heading" -->
 ## The Decision Rule Our Decision Maker Follows
 
-Utility for each scenario is computed via the KT’79 value $v(\cdot\mid r)$ for the corresponding outcomes.
+Utility for each scenario is computed via Khaneman Tversky value $v(\cdot\mid r)$ for the corresponding outcomes.
 
 **Decision-weighted expected utilities:**
 $$
@@ -225,7 +225,7 @@ $$
 
 Where,
 
-- $V_t$ : KT’79 decision-weighted within-period value (relative to $r_t$)  
+- $V_t$ : KKhaneman Tversky decision-weighted within-period value (relative to $r_t$)  
 - $\beta$ : present-bias parameter $\beta \in(0,1]$  
 - $\delta$ : discount factor $\delta\in(0,1)$  
 - $T$ : the time horizon
@@ -236,7 +236,7 @@ Where,
 ## Reference Formation (Kőszegi & Rabin, 2006)
 
 We adopt expectations-based **reference formation** for $r_t$ (e.g., $r_t=\mathbb{E}_{t-1}[c_t]$ or partial adaptation).
-Within-period value follows Kahneman–Tversky (1979) Prospect Theory (see “The Utility Function”).
+Within-period value follows Kahneman Tversky (1979) Prospect Theory (see “The Utility Function”).
 
 --
 
