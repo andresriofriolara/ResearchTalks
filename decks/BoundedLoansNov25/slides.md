@@ -7,7 +7,7 @@
 ## How and to which magnitude can the effect of present bias be decreased in loan granting? TBU
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading closer" -->
 ## Trust starts at the first line
 
 <section>
@@ -48,7 +48,7 @@
 
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading closer" -->
 ## ~70% of your Banking Statement is being lend
 
 <div>
@@ -121,7 +121,7 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## The Utility Function 
+## The Utility Function
 
 <script type="math/tex; mode=display">
 \begin{aligned}

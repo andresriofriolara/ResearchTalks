@@ -16,20 +16,18 @@
 
   <!-- Deck-specific footer override -->
   <style>
-    :root{
-      --footer-text: "Ivey Doctoral Research Seminaries Series • Bounded Loans • A. Riofrío-Lara";
-    }
-    section img { max-width: 100%; height: auto; }
+    :root{ --footer-text:"Ivey Doctoral Research Seminaries Series • Bounded Loans • A. Riofrío-Lara"; }
+    section img{ max-width:100%; height:auto; }
   </style>
 
-  <!-- KaTeX -->
+  <!-- KaTeX + auto-render -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <!-- Markdown-powered deck -->
       <section
         data-markdown="slides.md"
         data-separator="^---$"
@@ -40,12 +38,11 @@
     </div>
   </div>
 
-  <!-- Reveal core + plugins (v5, load ONCE) -->
+  <!-- Reveal core + NON-math plugins (v5) -->
   <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
 
   <script>
     Reveal.initialize({
@@ -54,21 +51,26 @@
       controls: true,
       controlsTutorial: true,
       progress: true,
-      plugins: [
-        RevealMarkdown,
-        RevealHighlight,
-        RevealNotes,
-        RevealMath.KaTeX   // ✅ KaTeX variant (requires v5)
-      ],
-      math: {
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "\\(", right: "\\)", display: false },
-          { left: "\\[", right: "\\]", display: true }
-        ],
-        katex: { strict: "warn" }
-      }
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ] // ← no math plugin
     });
+
+    // Render KaTeX on the current slide when the deck is ready and on slide changes
+    const renderOpts = {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+      throwOnError: false
+    };
+
+    function renderSlide(e){
+      // render only the current slide's DOM to avoid double-rendering
+      renderMathInElement(e.currentSlide || e.slide || document.querySelector('.slides'), renderOpts);
+    }
+
+    Reveal.on('ready', renderSlide);
+    Reveal.on('slidechanged', renderSlide);
   </script>
 
   <!-- Clock (top-left) -->
