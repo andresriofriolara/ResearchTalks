@@ -279,15 +279,18 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 **Feasible utility path:**
 
 $$
+\begin{aligned}
 \tilde U_t
-= \max_{c_t\in S_t}\Bigl\{
+&= \max_{c_t\in S_t}\Bigl\{
   V_t(c_t\mid r_t)
-  + \beta \sum_{\tau=t+1}^{T}\delta^{\tau-t}\,
-    \mathbb{E}_{S_\tau}\!\bigl[\,V_\tau(c_\tau\mid r_\tau)\,\bigr]
+  {}+ \beta \sum_{\tau=t+1}^{T}\delta^{\tau-t}\,
+     \mathbb{E}_{S_\tau}\!\bigl[\,V_\tau(c_\tau\mid r_\tau)\,\bigr]
 \Bigr\}
-\quad \text{s.t.}\quad
-S_t\in F(A_t),\qquad
-V_t(c_t\mid r_t)\ge \theta_t
+\\\\[4pt]
+&\text{s.t.}\quad
+  S_t\in F(A_t),\qquad
+  V_t(c_t\mid r_t)\ge \theta_t
+\end{aligned}
 $$
 
 ---
