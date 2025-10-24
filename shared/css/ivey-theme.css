@@ -598,3 +598,11 @@ html { color-scheme: light; }
   max-height:40vh;     /* hard cap to avoid footer/logo */
   max-width:70vw;
 }
+
+/* Heuristics: closer to the title (combine with .diagram) */
+.reveal section.slide-heading.diagram.closer h1{ margin-bottom:.15em; }
+.reveal section.slide-heading.diagram.closer .media-xy{ min-height:48vh; }  /* pull content up */
+.reveal section.slide-heading.diagram.closer img{
+  max-height:38vh;     /* keep safely inside margins */
+  max-width:68vw;
+}

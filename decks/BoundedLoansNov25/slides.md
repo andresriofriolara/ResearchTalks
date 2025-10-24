@@ -96,7 +96,7 @@
 </div>
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading closer" -->
 ## The "Rational" Banking process
 
 <div class="media-xy">
@@ -104,7 +104,7 @@
 </div>
 
 ---
-<!-- .slide: class="slide-heading diagram" -->
+<!-- .slide: class="slide-heading diagram closer" -->
 ## Heuristics in the Banking Process (1/2)
 
 <div class="media-xy">
@@ -112,7 +112,7 @@
 </div>
 
 --
-<!-- .slide: class="slide-heading diagram" -->
+<!-- .slide: class="slide-heading diagram closer" -->
 ## Heuristics in the Banking Process (2/2)
 
 <div class="media-xy">
