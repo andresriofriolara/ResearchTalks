@@ -121,7 +121,7 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## The Utility Function
+## The Utility Function 
 
 <script type="math/tex; mode=display">
 \begin{aligned}
