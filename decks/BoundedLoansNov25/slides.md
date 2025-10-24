@@ -142,7 +142,7 @@ U_t
     + \bigl(1-w(p_\tau)\bigr)\big[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}\big]
     - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
   \right]
-}{\text{discounted expectation of future within-period values}}
+}_{\substack{\text{discounted expectation}\\ \text{of future within-period values}}}
 \end{aligned}
 </div>
 
