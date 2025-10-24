@@ -88,3 +88,18 @@
   <script src="../../shared/js/clock.js"></script>
 </body>
 </html>
+
+<script>
+  // Renders the "Feasible utility path" equation (mirrors renderUtilEqn)
+  function renderFeasEqn(slide) {
+    const s   = slide || Reveal.getCurrentSlide();
+    const src = s && s.querySelector('#feas-eqn-src');
+    const out = s && s.querySelector('#feas-eqn-render');
+    if (src && out && out.childNodes.length === 0) {
+      katex.render(src.textContent, out, { displayMode: true, throwOnError: false });
+    }
+  }
+
+  Reveal.on('ready',        e => renderFeasEqn(e.currentSlide));
+  Reveal.on('slidechanged', e => renderFeasEqn(e.currentSlide));
+</script>
