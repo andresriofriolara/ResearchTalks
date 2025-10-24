@@ -51,8 +51,40 @@
 <!-- .slide: class="slide-heading" -->
 ## ~70% of your Banking Statement is being lend
 
-- The median bank account balance 5,400.00 (Yahoo Finance)
-- The Loan to Deposit Ratio is 0.71 (71 cents loaned per dolar deposited - Federal Reserve)
+<div>
+  <div class="mini-sankey" role="group" aria-label="Deposits flow to loans and other uses">
+    <div class="sankey-col left">
+      <div class="node node-source"><div class="label">Deposits</div></div>
+      <div class="tile">
+        <div class="kpi">$5,400</div>
+        <div class="sub">median bank account balance</div>
+        <div class="src">Yahoo Finance</div>
+      </div>
+    </div>
+    <div class="sankey-diagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <g>
+          <path class="ribbon loans" d="M160 70 C280 70 540 40 660 40 L660 100 C540 100 280 120 160 120 Z"/>
+          <path class="ribbon other" d="M160 140 C280 140 540 160 660 160 L660 200 C540 200 280 190 160 190 Z"/>
+          <rect class="stub" x="140" y="70" width="20" height="120"/>
+          <rect class="dock loans" x="660" y="40" width="20" height="60"/>
+          <rect class="dock other" x="660" y="160" width="20" height="40"/>
+        </g>
+      </svg>
+    </div>
+    <div class="sankey-col right">
+      <div class="node node-dest loans">
+        <div><div class="label">Loans</div><div class="pct">71%</div></div>
+      </div>
+      <div class="node node-dest other">
+        <div><div class="label">Other uses</div><div class="pct">29%</div></div>
+      </div>
+      <div class="src right-src">Federal Reserve</div>
+    </div>
+    <div class="sources">Sources: Yahoo Finance · Federal Reserve</div>
+  </div>
+</div>
+
 
 ---
 <!-- .slide: class="slide-heading" -->
