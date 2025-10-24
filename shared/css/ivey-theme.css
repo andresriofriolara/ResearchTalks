@@ -579,3 +579,22 @@ html { color-scheme: light; }
 .reveal img.img-md{ max-height: 50vh; }     /* was 60vh */
 .reveal img.img-sm,
 .reveal img.mindmap{ max-height: 42vh; max-width: 60vw; }
+
+
+/* === 1) "Closer to title" variant for two-up hero images === */
+.reveal section.slide-heading.closer h1{ margin-bottom:.15em; }
+.reveal section.slide-heading.closer .cols{
+  height:32vh;         /* was 42vh */
+  gap:1rem;
+}
+.reveal section.slide-heading.closer .cols img{
+  max-height:22vh;     /* was 26vh */
+  max-width:32vw;      /* a touch narrower */
+}
+
+/* === 2) Stricter clamp for big diagrams (heuristics) === */
+.reveal section.slide-heading.diagram .media-xy{ min-height:56vh; }  /* less vertical push */
+.reveal section.slide-heading.diagram img{
+  max-height:40vh;     /* hard cap to avoid footer/logo */
+  max-width:70vw;
+}

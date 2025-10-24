@@ -87,7 +87,7 @@
 
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading closer" -->
 ## Who would you rather decide where to lend your money?
 
 <div class="cols">
@@ -104,7 +104,7 @@
 </div>
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading diagram" -->
 ## Heuristics in the Banking Process (1/2)
 
 <div class="media-xy">
@@ -112,7 +112,7 @@
 </div>
 
 --
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading diagram" -->
 ## Heuristics in the Banking Process (2/2)
 
 <div class="media-xy">
