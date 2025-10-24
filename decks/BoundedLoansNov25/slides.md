@@ -278,7 +278,7 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 
 **Feasible utility path:**
 
-$$
+<script type="math/tex; mode=display">
 \begin{aligned}
 \tilde U_t
 &= \max_{c_t\in S_t}\left\{
@@ -291,7 +291,7 @@ $$
   S_t\in F(A_t),\qquad
   V_t(c_t\mid r_t)\ge \theta_t
 \end{aligned}
-$$
+</script>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
