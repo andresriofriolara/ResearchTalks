@@ -123,7 +123,7 @@
 <!-- .slide: class="slide-heading" -->
 ## The Utility Function
 
-<script type="math/tex; mode=display">
+<div id="util-eqn-src" style="display:none">
 \begin{aligned}
 U_t
 &=
@@ -144,7 +144,9 @@ U_t
   \right]
 }{\text{discounted expectation of future within-period values}}
 \end{aligned}
-</script>
+</div>
+
+<div id="util-eqn-render" class="katex-display"></div>
 
 --
 
