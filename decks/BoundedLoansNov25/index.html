@@ -7,14 +7,11 @@
 
   <!-- Reveal core (v5) -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
-
-  <!-- Code highlight theme -->
+  <!-- Code highlight -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css">
-
-  <!-- Your custom theme -->
+  <!-- Your theme -->
   <link rel="stylesheet" href="../../shared/css/ivey-theme.css">
 
-  <!-- Deck-specific footer override -->
   <style>
     :root{ --footer-text:"Ivey Doctoral Research Seminaries Series • Bounded Loans • A. Riofrío-Lara"; }
     section img{ max-width:100%; height:auto; }
@@ -38,7 +35,7 @@
     </div>
   </div>
 
-  <!-- Reveal core + NON-math plugins (v5) -->
+  <!-- Reveal core + NON-math plugins -->
   <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
@@ -54,7 +51,6 @@
       plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ] // ← no math plugin
     });
 
-    // Render KaTeX on the current slide when the deck is ready and on slide changes
     const renderOpts = {
       delimiters: [
         { left: "$$", right: "$$", display: true },
@@ -65,15 +61,12 @@
     };
 
     function renderSlide(e){
-      // render only the current slide's DOM to avoid double-rendering
       renderMathInElement(e.currentSlide || e.slide || document.querySelector('.slides'), renderOpts);
     }
-
     Reveal.on('ready', renderSlide);
     Reveal.on('slidechanged', renderSlide);
   </script>
 
-  <!-- Clock (top-left) -->
   <script src="../../shared/js/clock.js"></script>
 </body>
 </html>

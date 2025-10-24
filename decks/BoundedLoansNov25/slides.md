@@ -274,12 +274,12 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 $$\tilde{U}_t=\max_{c_t\in S_t}\Big[V_t(c_t\mid r_t)+ \beta \sum_{\tau=t+1}^{T}\delta^{\tau-t}\, \mathbb{E}_{S_\tau}\!\big[ V_\tau(c_\tau\mid r_\tau) \big] \Big], \quad S_t\in F(A_t),\ \ V_t(c_t\mid r_t)\ge \theta_t$$
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading closer" -->
 ## A Blur in the Perceived Feasibility Frontier
 
-<div class="cols" style="min-height:70vh; align-items:center; justify-items:center; gap:64px;">
-  <img data-src="./images/frontier1.png" style="max-height:60vh; width:auto;" alt="Frontier1">
-  <img data-src="./images/frontier2.png" style="max-height:60vh; width:auto;" alt="Frontier2">
+<div class="cols">
+  <img data-src="./images/frontier1.png" class="img-sm" alt="Frontier1">
+  <img data-src="./images/frontier2.png"   class="img-sm" alt="Frontier2">
 </div>
 
 --
@@ -509,29 +509,19 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 
 
 --
+<!-- .slide: class="slide-heading diagram closer" -->
+# Better Decision Makers (In Average)
 
-<!-- .slide: class="slide-heading" -->
-## Better Decision Makers (In Average)
-
-<!-- .slide: class="img-center" -->
-
-<div style="display:grid; place-items:center; min-height:80vh;">
-  <img src="./images/Accuracy_2.png"
-       alt="Accuracy figure"
-       style="max-width:90%; max-height:85vh;" />
+<div class="media-xy">
+  <img data-src="./images/Accuracy_2.png" class="img-sm" alt="Accuracy figure">
 </div>
 
 --
-
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading diagram closer" -->
 ## Less willing to take risks (for a bit)
 
-<!-- .slide: class="img-center" -->
-
-<div style="display:grid; place-items:center; min-height:80vh;">
-  <img src="./images/Risk_Preference_Trajectories.png"
-       alt="Accuracy figure"
-       style="max-width:90%; max-height:85vh;" />
+<div class="media-xy">
+  <img data-src="./images/Risk_Preference_Trajectories.png" class="img-sm" alt="trajectories">
 </div>
 
 ---
