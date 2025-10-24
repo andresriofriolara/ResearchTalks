@@ -489,3 +489,62 @@ html { color-scheme: light; }
   .sankey-col.right{ order: 3; }
   .sources{ order: 4; }
 }
+
+
+/* === Image fit & center defaults (non slide-heading slides) === */
+.reveal section:not(.slide-heading) img{
+  display:block;
+  margin:0 auto;                 /* center X */
+  max-width:90vw;                /* keep inside viewport width */
+  max-height:72vh;               /* leave room for footer/logo */
+  width:auto; height:auto;
+  object-fit:contain;
+}
+
+/* === XY center wrapper for any media === */
+.reveal .media-xy{
+  display:grid;
+  place-items:center;            /* center X & Y */
+  min-height:70vh;               /* vertical centering space */
+  padding:0.25rem 0;             /* tiny breathing space */
+}
+
+/* === Convenient size presets === */
+.reveal img.img-lg{  max-width:85vw; max-height:75vh; }
+.reveal img.img-md{  max-width:70vw; max-height:60vh; }
+.reveal img.img-sm{  max-width:60vw; max-height:48vh; }
+
+/* === Mental-map specific (smaller, consistent) === */
+.reveal img.mindmap{ max-width:60vw; max-height:52vh; }
+.reveal .mindmap-slide .media-xy{ min-height:68vh; } /* a tad tighter */
+
+/* === Two-up with a heading (reuse your .slide-heading) ===
+   Usage:
+   <section class="slide-heading">
+     <h1>Title...</h1>
+     <div class="cols">
+       <img src="..." class="img-md">
+       <img src="..." class="img-md">
+     </div>
+   </section>
+*/
+.reveal section.slide-heading .cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  justify-items:center;
+  align-items:center;
+  place-content:center;
+  gap:2rem;
+  height:60vh;
+  padding-bottom:1rem;
+}
+.reveal section.slide-heading .cols img{
+  max-height:36vh;
+  max-width:40vw;
+  width:auto;
+  object-fit:contain;
+}
+@media (max-width:900px){
+  .reveal section.slide-heading .cols{ grid-template-columns:1fr; height:auto; min-height:40vh; }
+  .reveal section.slide-heading .cols img{ max-height:28vh; max-width:70vw; }
+}

@@ -90,31 +90,35 @@
 <!-- .slide: class="slide-heading" -->
 ## Who would you rather decide where to lend your money?
 
-<div class="cols" style="min-height:70vh; align-items:center; justify-items:center; gap:64px;">
-  <img data-src="./images/einsten.jpg" style="max-height:60vh; width:auto;" alt="Einstein">
-  <img data-src="./images/homer.webp" style="max-height:60vh; width:auto;" alt="Homer">
+<div class="cols">
+  <img data-src="./images/einstein.jpg" class="img-md" alt="Einstein">
+  <img data-src="./images/homer.webp"   class="img-md" alt="Homer Simpson">
 </div>
 
 ---
 <!-- .slide: class="slide-heading" -->
 ## The "Rational" Banking process
 
-<div class="r-vstack" style="height:80vh;justify-content:center;align-items:center;">
-  <img data-src="./images/Figure1.png" alt="Process1" style="max-height:75vh;width:auto;display:block;">
+<div class="media-xy">
+  <img data-src="./images/Figure1.png" class="img-md" alt="Rational banking process diagram">
 </div>
 
 ---
 <!-- .slide: class="slide-heading" -->
-## Heuristics in the Banking Process  (1/2)
+## Heuristics in the Banking Process (1/2)
 
-![Process2](./images/Figure4.png) <!-- .element: class="r-stretch" style="max-height:60vh;width:auto;" -->
-
+<div class="media-xy">
+  <img data-src="./images/Figure4.png" class="img-md" alt="Heuristics in the banking process">
+</div>
 
 --
 <!-- .slide: class="slide-heading" -->
 ## Heuristics in the Banking Process (2/2)
 
-![Process3](./images/Figure6.png) <!-- .element: class="r-stretch" style="max-height:60vh;width:auto;" -->
+<div class="media-xy">
+  <img data-src="./images/Figure6.png" class="img-md" alt="Heuristics in the banking process, part 2">
+</div>
+
 
 ---
 <!-- .slide: class="slide-heading" -->
