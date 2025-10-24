@@ -219,7 +219,7 @@ In a multi-scenario task, rank by the expected value above (largest to smallest)
 ## Intertemporal Choice Component (Laibson, 1997)
 
 $$
-U_t \;=\; V_t \;+\; \beta \sum_{\tau = t+1}^{T} \delta^{\,\tau - t}\, \mathbb{E}\!\left[V_\tau\right]
+U_t = V_t + \beta \sum_{\tau = t+1}^{T} \delta^{\,\tau - t}, \mathbb{E}\left[V_\tau\right]
 $$
 
 Where,
@@ -245,17 +245,16 @@ Within-period value follows Kahneman Tversky (1979) Prospect Theory (see “The 
 $$
 v(c_t\mid r_t)=
 \begin{cases}
-  (c_t-r_t)^{\alpha_v}, & c_t\ge r_t,\\[4pt]
+  (c_t-r_t)^{\alpha_v}, & c_t\ge r_t, \\\\[4pt]
   -\lambda\,(r_t-c_t)^{\beta_v}, & c_t< r_t
 \end{cases}
 \qquad \alpha_v,\beta_v\in(0,1],\ \lambda\ge 1
 $$
 
-
 Decision weighting for a Bernoulli prospect (repay vs default):
 $$
-V_t \;=\; w(p_t)\,v\!\big(c_t^{\text{repay}}\mid r_t\big)
-      \;+\; \bigl[1-w(p_t)\bigr]\,v\!\big(c_t^{\text{default}}\mid r_t\big).
+V_t = w(p_t)\,v\big(c_t^{\text{repay}}\mid r_t\big)
+      + \bigl[1-w(p_t)\bigr]\,v\big(c_t^{\text{default}}\mid r_t\big).
 $$
 
 --
@@ -264,7 +263,7 @@ $$
 ## Hybrid Model (Present Bias + Prospect Theory + Attention)
 
 
-$$U_t= V_t + \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\!\left[V_\tau\right]$$
+$$U_t= V_t + \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\left[V_\tau\right]$$
 
 $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{default}}\mid r_t)$$
 
