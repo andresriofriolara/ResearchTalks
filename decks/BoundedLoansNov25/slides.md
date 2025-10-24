@@ -149,7 +149,6 @@ U_t
 \end{aligned}
 $$
 
-
 --
 
 <div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">

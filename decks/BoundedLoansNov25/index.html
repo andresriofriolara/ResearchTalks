@@ -94,3 +94,26 @@
   <script src="../../shared/js/clock.js"></script>
 </body>
 </html>
+
+<!-- KaTeX (CSS + JS) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+
+<!-- Reveal math plugin -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    // ...your other options...
+    plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ],
+    math: {
+      // Ensure $$…$$ works, and \(\)…\)\ for inline
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+      katex: { fleqn: false, strict: "warn" }
+    }
+  });
+</script>
