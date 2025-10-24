@@ -91,8 +91,8 @@
 ## Who would you rather decide where to lend your money?
 
 <div class="cols">
-  <img data-src="./images/einstein.jpg" class="img-md" alt="Einstein">
-  <img data-src="./images/homer.webp"   class="img-md" alt="Homer Simpson">
+  <img data-src="./images/einstein.jpg" class="img-sm" alt="Einstein">
+  <img data-src="./images/homer.webp"   class="img-sm" alt="Homer Simpson">
 </div>
 
 ---
@@ -118,7 +118,6 @@
 <div class="media-xy">
   <img data-src="./images/Figure6.png" class="img-sm" alt="Heuristics in the banking process, part 2">
 </div>
-
 
 ---
 <!-- .slide: class="slide-heading" -->

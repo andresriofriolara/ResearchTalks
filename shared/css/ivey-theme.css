@@ -548,3 +548,34 @@ html { color-scheme: light; }
   .reveal section.slide-heading .cols{ grid-template-columns:1fr; height:auto; min-height:40vh; }
   .reveal section.slide-heading .cols img{ max-height:28vh; max-width:70vw; }
 }
+
+
+/* Tighter image caps, globally (non slide-heading) */
+.reveal section:not(.slide-heading) img{
+  max-width: 85vw;
+  max-height: 60vh;      /* was 72vh */
+}
+
+/* Slide-heading grid: make the image band shorter to stay inside margins */
+.reveal section.slide-heading .cols{ height: 50vh; } /* was 60vh */
+.reveal section.slide-heading .cols img{
+  max-height: 30vh;      /* was 36vh */
+  max-width: 38vw;       /* slightly narrower */
+}
+
+/* Compact variant: bring content closer to the title */
+.reveal section.slide-heading.tight h1{ margin-bottom: .25em; }
+.reveal section.slide-heading.tight .cols{
+  height: 42vh;          /* images sit closer to the title */
+  gap: 1.25rem;
+}
+.reveal section.slide-heading.tight .cols img{
+  max-height: 26vh;
+  max-width: 34vw;
+}
+
+/* Single-image “diagram/mindmap” slides — smaller & centered */
+.reveal .media-xy{ min-height: 62vh; }      /* was 70vh */
+.reveal img.img-md{ max-height: 50vh; }     /* was 60vh */
+.reveal img.img-sm,
+.reveal img.mindmap{ max-height: 42vh; max-width: 60vw; }
