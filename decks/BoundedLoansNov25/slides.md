@@ -204,11 +204,10 @@ $$
 Utility for each scenario is computed via Khaneman Tversky value $v(\cdot\mid r)$ for the corresponding outcomes.
 
 **Decision-weighted expected utilities:**
-$$
-\mathbb{E}\!\left[U\mid \text{Accept}\right] \;=\; w(p)\,U_1 \;+\; \bigl[1-w(p)\bigr]\,U_2,
-\qquad
-\mathbb{E}\!\left[U\mid \text{Reject}\right] \;=\; w(p)\,U_3 \;+\; \bigl[1-w(p)\bigr]\,U_4.
-$$
+
+$$\mathbb{E}\!\left[U\mid \text{Accept}\right] = w(p)U_1 + \bigl[1-w(p)\bigr]U_2$$
+
+$$\mathbb{E}\!\left[U\mid \text{Reject}\right] = w(p)U_3 + \bigl[1-w(p)\bigr]U_4$$
 
 - When **Right**:
   - $U_1$: accept a good loan (repay).
@@ -262,11 +261,10 @@ $$
 <!-- .slide: class="slide-heading" -->
 ## Hybrid Model (Present Bias + Prospect Theory + Attention)
 
-$$
-U_t \;=\; V_t \;+\; \beta \sum_{\tau=t+1}^{T} \delta^{\,\tau-t}\,\mathbb{E}\!\left[V_\tau\right],
-\quad
-V_t \;=\; w(p_t)\,v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]\,v(c_t^{\text{default}}\mid r_t).
-$$
+
+$$U_t= V_t + \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\!\left[V_\tau\right]$$
+
+$$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{default}}\mid r_t)$$
 
 --
 
