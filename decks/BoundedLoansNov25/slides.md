@@ -123,7 +123,7 @@
 <!-- .slide: class="slide-heading" -->
 ## The Utility Function
 
-$$
+<script type="math/tex; mode=display">
 \begin{aligned}
 U_t
 &=
@@ -144,8 +144,7 @@ U_t
   \right]
 }{\text{discounted expectation of future within-period values}}
 \end{aligned}
-$$
-
+</script>
 
 --
 
