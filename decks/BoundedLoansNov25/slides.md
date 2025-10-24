@@ -91,7 +91,7 @@
 ## Who would you rather decide where to lend your money?
 
 <div class="cols">
-  <img data-src="./images/einstein.jpg" class="img-sm" alt="Einstein">
+  <img data-src="./images/einsten.jpg" class="img-sm" alt="Einstein">
   <img data-src="./images/homer.webp"   class="img-sm" alt="Homer Simpson">
 </div>
 
