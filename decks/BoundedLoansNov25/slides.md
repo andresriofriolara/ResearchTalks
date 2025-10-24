@@ -253,8 +253,8 @@ $$
 
 Decision weighting for a Bernoulli prospect (repay vs default):
 $$
-V_t = w(p_t)\,v\big(c_t^{\text{repay}}\mid r_t\big)
-      + \bigl[1-w(p_t)\bigr]\,v\big(c_t^{\text{default}}\mid r_t\big).
+V_t = w(p_t)v\big(c_t^{\text{repay}}\mid r_t\big)
+      + \bigl[1-w(p_t)\bigr]v\big(c_t^{\text{default}}\mid r_t\big).
 $$
 
 --
