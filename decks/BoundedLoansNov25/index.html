@@ -35,20 +35,6 @@
     </div>
   </div>
 
-  <script>
-  function renderUtilEqn(slide) {
-    const s = slide || Reveal.getCurrentSlide();
-    const src = s && s.querySelector('#util-eqn-src');
-    const out = s && s.querySelector('#util-eqn-render');
-    if (src && out && out.childNodes.length === 0) {
-      katex.render(src.textContent, out, { displayMode: true, throwOnError: false });
-    }
-  }
-  Reveal.on('ready', e => renderUtilEqn(e.currentSlide));
-  Reveal.on('slidechanged', e => renderUtilEqn(e.currentSlide));
-</script>
-
-
   <!-- Reveal core + NON-math plugins -->
   <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
@@ -56,6 +42,7 @@
   <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
 
   <script>
+    // Initialize Reveal first
     Reveal.initialize({
       hash: true,
       slideNumber: true,
@@ -65,6 +52,7 @@
       plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ] // ← no math plugin
     });
 
+    // KaTeX auto-render for inline/$$…$$ math
     const renderOpts = {
       delimiters: [
         { left: "$$", right: "$$", display: true },
@@ -75,10 +63,25 @@
       throwOnError: false
     };
 
-    function renderSlide(e){
-      renderMathInElement(e.currentSlide || e.slide || document.querySelector('.slides'), renderOpts);
+    // Special renderer for the hidden/visible Utility Function equation
+    function renderUtilEqn(slide) {
+      const s   = slide || Reveal.getCurrentSlide();
+      const src = s && s.querySelector('#util-eqn-src');
+      const out = s && s.querySelector('#util-eqn-render');
+      if (!src || !out || out.dataset.rendered) return;
+      katex.render(src.textContent.trim(), out, { displayMode: true, throwOnError: false });
+      out.dataset.rendered = '1';
     }
-    Reveal.on('ready', renderSlide);
+
+    // Run KaTeX auto-render + special util equation on current slide
+    function renderSlide(e){
+      const current = e.currentSlide || e.slide || document.querySelector('.slides');
+      renderMathInElement(current, renderOpts);
+      renderUtilEqn(current);
+    }
+
+    // Hook both on ready & slidechanged
+    Reveal.on('ready',        renderSlide);
     Reveal.on('slidechanged', renderSlide);
   </script>
 
