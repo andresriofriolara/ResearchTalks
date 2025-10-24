@@ -128,26 +128,20 @@ $$
 U_t
 &=
 \underbrace{
-  \underbrace{\,w(p_t)\!\big[(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}\big]\,}_{\text{repay branch}}
-  \;-\;
-  \underbrace{\,\lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}\,}_{}
-  \;+\;
-  \underbrace{\,\bigl(1-w(p_t)\bigr)\!\big[(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}\big]\,}_{\text{default branch}}
-  \;-\;
-  \underbrace{\,\lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}\,}_{}
+  \underbrace{\,w(p_t)\big[(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}\big]\,}_{\text{repay branch}}
+  \;-\; \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}
+  \;+\; \underbrace{\,\bigl(1-w(p_t)\bigr)\big[(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}\big]\,}_{\text{default branch}}
+  \;-\; \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}
 }_{\substack{\text{within-period Prospect Theory value}\\ V_t(c_t\mid r_t)}}
 \\[6pt]
 &\quad+\;
 \underbrace{
   \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
   \mathbb{E}\!\left[
-    \underbrace{\,w(p_\tau)\!\big[(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}\big]\,}_{\text{repay at }\tau}
-    \;-\;
-    \underbrace{\,\lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}\,}_{}
-    \;+\;
-    \underbrace{\,\bigl(1-w(p_\tau)\bigr)\!\big[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}\big]\,}_{\text{default at }\tau}
-    \;-\;
-    \underbrace{\,\lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}\,}_{}
+    \underbrace{\,w(p_\tau)\big[(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}\big]\,}_{\text{repay at }\tau}
+    \;-\; \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}
+    \;+\; \underbrace{\,\bigl(1-w(p_\tau)\bigr)\big[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}\big]\,}_{\text{default at }\tau}
+    \;-\; \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
   \right]
 }_{\text{discounted expectation of future within-period values}}
 \end{aligned}
@@ -247,7 +241,7 @@ Within-period value follows Kahneman Tversky (1979) Prospect Theory (see “The 
 <!-- .slide: class="slide-heading" -->
 ## Prospect Theory Value Around the Reference (Kahneman–Tversky, 1979)
 
-$$v(c_t\mid r_t)= \begin{cases}(c_t-r_t)^{\alpha_v}, & c_t\ge r_t,\\[4pt]
+$$v(c_t\mid r_t)= \begin{cases}(c_t-r_t)^{\alpha_v}, & c_t\ge r_t, \\ [4pt]
   -\lambda\,(r_t-c_t)^{\beta_v}, & c_t< r_t,\end{cases}\qquad \alpha_v,\beta_v\in(0,1],\ \lambda\ge 1$$
 
 Decision weighting for a Bernoulli prospect (repay vs default):
@@ -277,7 +271,17 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 
 **Feasible utility path:**
 
-$$\tilde{U}_t=\max_{c_t\in S_t}\Big[V_t(c_t\mid r_t)+ \beta \sum_{\tau=t+1}^{T}\delta^{\tau-t}\, \mathbb{E}_{S_\tau}\!\big[ V_\tau(c_\tau\mid r_\tau) \big] \Big], \quad S_t\in F(A_t),\ \ V_t(c_t\mid r_t)\ge \theta_t$$
+$$
+\tilde U_t
+= \max_{c_t\in S_t}\Bigl\{
+  V_t(c_t\mid r_t)
+  + \beta \sum_{\tau=t+1}^{T}\delta^{\tau-t}\,
+    \mathbb{E}_{S_\tau}\!\bigl[\,V_\tau(c_\tau\mid r_\tau)\,\bigr]
+\Bigr\}
+\quad \text{s.t.}\quad
+S_t\in F(A_t),\qquad
+V_t(c_t\mid r_t)\ge \theta_t
+$$
 
 ---
 <!-- .slide: class="slide-heading closer" -->
