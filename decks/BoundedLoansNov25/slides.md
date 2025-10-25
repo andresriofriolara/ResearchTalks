@@ -8,6 +8,129 @@
 
 ---
 <!-- .slide: class="slide-heading closer" -->
+## What does this research does?
+
+<section id="gif-cycle-slide">
+  <style>
+    /* Responsive stack container */
+    .gif-stack {
+      position: relative;
+      width: 70vw;            /* feel free to tweak */
+      max-width: 90vh;
+      aspect-ratio: 4 / 3;    /* base ratio; Tenor will letterbox if needed */
+      margin: 0 auto;
+      cursor: pointer;
+    }
+    /* Each Tenor embed sits on a layer that we z-index */
+    .gif-stack .layer {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Make the embed fill the layer neatly */
+    .gif-stack .layer > * {
+      width: 100%;
+      height: 100%;
+    }
+    /* Prevent clicks from opening Tenor links; we capture clicks ourselves */
+    .gif-stack .layer a { pointer-events: none; }
+    .gif-stack iframe { pointer-events: none; } /* Tenor uses iframes; let them play but not eat clicks */
+
+    /* Transparent overlay that reliably catches clicks */
+    .gif-stack .click-catcher {
+      position: absolute;
+      inset: 0;
+      z-index: 9999;
+      background: transparent;
+    }
+  </style>
+
+  <div class="gif-stack" id="gifCycle1">
+    <div class="layer">
+      <div class="tenor-gif-embed"
+           data-postid="18166157344745467544"
+           data-share-method="host"
+           data-aspect-ratio="1.33333"
+           data-width="100%">
+        <a href="https://tenor.com/view/homer-simpson-crayon-de-cires-cerveau-brain-gif-18166157344745467544">Homer Simpson GIF</a>
+        from <a href="https://tenor.com/search/homer-gifs">Homer GIFs</a>
+      </div>
+    </div>
+    <div class="layer">
+      <div class="tenor-gif-embed"
+           data-postid="1682632743426818742"
+           data-share-method="host"
+           data-aspect-ratio="1.33333"
+           data-width="100%">
+        <a href="https://tenor.com/view/homer-simpson-crayon-brain-brain-rot-there%27s-your-problem-gif-1682632743426818742">Homer Simpson Crayon GIF</a>
+        from <a href="https://tenor.com/search/homer+simpson-gifs">Homer Simpson GIFs</a>
+      </div>
+    </div>
+    <div class="layer">
+      <div class="tenor-gif-embed"
+           data-postid="3809909"
+           data-share-method="host"
+           data-aspect-ratio="1.91617"
+           data-width="100%">
+        <a href="https://tenor.com/view/the-simpsons-homer-simpson-rubik-rubiks-cube-gif-3809909">Rubik&#39;S Cubes - The Simpsons GIF</a>
+        from <a href="https://tenor.com/search/the+simpsons-gifs">The Simpsons GIFs</a>
+      </div>
+    </div>
+    <div class="click-catcher" aria-label="Cycle GIFs"></div>
+  </div>
+
+  <!-- Load Tenor once -->
+  <script src="https://tenor.com/embed.js" defer></script>
+
+  <script>
+    (function () {
+      function initCycle(stack) {
+        if (!stack || stack.dataset.bound) return; // avoid rebinding
+        stack.dataset.bound = "1";
+
+        const layers = Array.from(stack.querySelectorAll('.layer'));
+        const n = layers.length;
+        let top = n - 1; // start with the third embed on top; set 0/1 to start with others
+
+        function paint() {
+          // Assign z-index so `top` is highest, others descend—no DOM moves, so GIFs keep playing
+          for (let i = 0; i < n; i++) {
+            const level = (i === top) ? n : (n - ((top - i + n) % n) - 1);
+            layers[i].style.zIndex = String(level);
+          }
+        }
+        paint();
+
+        // Cycle on click (do not advance slide)
+        const catcher = stack.querySelector('.click-catcher');
+        catcher.addEventListener('click', (ev) => {
+          ev.stopPropagation();
+          top = (top + 1) % n;
+          paint();
+        });
+      }
+
+      // Bind when deck is ready / when this slide becomes active
+      if (window.Reveal) {
+        Reveal.on('ready',    () => initCycle(document.getElementById('gifCycle1')));
+        Reveal.on('slidechanged', (e) => {
+          if (e.currentSlide && e.currentSlide.querySelector('#gifCycle1')) {
+            initCycle(document.getElementById('gifCycle1'));
+          }
+        });
+      } else {
+        // Fallback if not inside Reveal (e.g., static preview)
+        window.addEventListener('DOMContentLoaded', () => initCycle(document.getElementById('gifCycle1')));
+      }
+    })();
+  </script>
+</section>
+
+
+---
+<!-- .slide: class="slide-heading closer" -->
 ## Trust starts at the first line
 
 <section>
@@ -49,7 +172,7 @@
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## ~70% of your Banking Statement is being lend
+## ~70% of your Banking Statement is being lent
 
 <div>
   <div class="mini-sankey" role="group" aria-label="Deposits flow to loans and other uses">
@@ -83,16 +206,6 @@
     </div>
     <div class="sources">Sources: Yahoo Finance · Federal Reserve</div>
   </div>
-</div>
-
-
----
-<!-- .slide: class="slide-heading closer" -->
-## Who would you rather decide where to lend your money?
-
-<div class="cols">
-  <img data-src="./images/einsten.jpg" class="img-sm" alt="Einstein">
-  <img data-src="./images/homer.webp"   class="img-sm" alt="Homer Simpson">
 </div>
 
 ---
