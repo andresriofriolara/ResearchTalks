@@ -10,26 +10,34 @@
 <!-- .slide: class="slide-heading closer" -->
 ## What does this research does?
 
-<section id="gif-cycle-slide">
+<section>
   <style>
+    .center-xy { display:flex; align-items:center; justify-content:center; height:100%; }
     .gif-stack{
-      position:relative;
-      width:70vw;           /* tweak size if you want */
-      max-width:90vh;
-      aspect-ratio:4/3;    
-      margin:0 auto;
-      cursor:pointer;
+      position: relative;
+      width: 70vw;          /* try 60–80vw to taste */
+      height: 50vh;         /* explicit height avoids layout drift */
+      max-width: 110vh;     /* safety on ultra-wide screens */
+      margin: 0 auto;
+      cursor: pointer;
+      overflow: hidden;     /* hide anything outside the box */
+      border-radius: 8px;   /* optional */
     }
     .gif-stack img{
       position:absolute; inset:0;
       width:100%; height:100%;
-      object-fit:contain;
+      object-fit: contain;   /* keep full image; switch to 'cover' if you prefer fill/crop */
+      background:#fff;       /* IMPORTANT: hides lower GIFs in letterbox bands */
+      display:block;
     }
   </style>
-  <div class="gif-stack" id="gifCycle1">
-    <img src="./images/homer-simpson.gif"             alt="Homer Simpson (1)">
-    <img src="./images/homer-simpson-crayon.gif"      alt="Homer Simpson Crayon (2)">
-    <img src="./images/the-simpsons-homer-simpson.gif" alt="The Simpsons Homer (3)">
+  <div class="center-xy">
+    <div class="gif-stack" id="gifCycle1">
+      <!-- bottom → top -->
+      <img src="./images/homer-simpson.gif"              alt="Homer 1">
+      <img src="./images/homer-simpson-crayon.gif"       alt="Homer 2">
+      <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
+    </div>
   </div>
   <script>
     (function(){
@@ -38,15 +46,14 @@
         stack.dataset.bound = "1";
         const imgs = Array.from(stack.querySelectorAll('img'));
         const n = imgs.length;
-        let top = 0; // start with GIF #1 on top (use 1 or 2 to start with others)
+        let top = 0; // start with #1; use 1 or 2 to start with others
         function paint(){
           for(let i=0;i<n;i++){
-            const level = (i===top) ? n : (n - ((top - i + n) % n) - 1);
-            imgs[i].style.zIndex = String(level);
+            const z = (i===top) ? n : (n - ((top - i + n) % n) - 1);
+            imgs[i].style.zIndex = String(z);
           }
         }
         paint();
-        // Click cycles the top image; stopPropagation prevents advancing the slide
         stack.addEventListener('click', (e)=>{
           e.stopPropagation();
           top = (top + 1) % n;
@@ -55,7 +62,7 @@
       }
       if(window.Reveal){
         Reveal.on('ready', ()=> init(document.getElementById('gifCycle1')));
-        Reveal.on('slidechanged', (e)=>{
+        Reveal.on('slidechanged', e=>{
           if(e.currentSlide && e.currentSlide.querySelector('#gifCycle1')){
             init(document.getElementById('gifCycle1'));
           }
