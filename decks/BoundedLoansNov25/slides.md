@@ -12,117 +12,56 @@
 
 <section id="gif-cycle-slide">
   <style>
-    /* Responsive stack container */
-    .gif-stack {
-      position: relative;
-      width: 70vw;            /* feel free to tweak */
-      max-width: 90vh;
-      aspect-ratio: 4 / 3;    /* base ratio; Tenor will letterbox if needed */
-      margin: 0 auto;
-      cursor: pointer;
+    .gif-stack{
+      position:relative;
+      width:70vw;           /* tweak size if you want */
+      max-width:90vh;
+      aspect-ratio:4/3;    
+      margin:0 auto;
+      cursor:pointer;
     }
-    /* Each Tenor embed sits on a layer that we z-index */
-    .gif-stack .layer {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    /* Make the embed fill the layer neatly */
-    .gif-stack .layer > * {
-      width: 100%;
-      height: 100%;
-    }
-    /* Prevent clicks from opening Tenor links; we capture clicks ourselves */
-    .gif-stack .layer a { pointer-events: none; }
-    .gif-stack iframe { pointer-events: none; } /* Tenor uses iframes; let them play but not eat clicks */
-
-    /* Transparent overlay that reliably catches clicks */
-    .gif-stack .click-catcher {
-      position: absolute;
-      inset: 0;
-      z-index: 9999;
-      background: transparent;
+    .gif-stack img{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:contain;
     }
   </style>
-
   <div class="gif-stack" id="gifCycle1">
-    <div class="layer">
-      <div class="tenor-gif-embed"
-           data-postid="18166157344745467544"
-           data-share-method="host"
-           data-aspect-ratio="1.33333"
-           data-width="100%">
-        <a href="https://tenor.com/view/homer-simpson-crayon-de-cires-cerveau-brain-gif-18166157344745467544">Homer Simpson GIF</a>
-        from <a href="https://tenor.com/search/homer-gifs">Homer GIFs</a>
-      </div>
-    </div>
-    <div class="layer">
-      <div class="tenor-gif-embed"
-           data-postid="1682632743426818742"
-           data-share-method="host"
-           data-aspect-ratio="1.33333"
-           data-width="100%">
-        <a href="https://tenor.com/view/homer-simpson-crayon-brain-brain-rot-there%27s-your-problem-gif-1682632743426818742">Homer Simpson Crayon GIF</a>
-        from <a href="https://tenor.com/search/homer+simpson-gifs">Homer Simpson GIFs</a>
-      </div>
-    </div>
-    <div class="layer">
-      <div class="tenor-gif-embed"
-           data-postid="3809909"
-           data-share-method="host"
-           data-aspect-ratio="1.91617"
-           data-width="100%">
-        <a href="https://tenor.com/view/the-simpsons-homer-simpson-rubik-rubiks-cube-gif-3809909">Rubik&#39;S Cubes - The Simpsons GIF</a>
-        from <a href="https://tenor.com/search/the+simpsons-gifs">The Simpsons GIFs</a>
-      </div>
-    </div>
-    <div class="click-catcher" aria-label="Cycle GIFs"></div>
+    <img src="./images/homer-simpson.gif"             alt="Homer Simpson (1)">
+    <img src="./images/homer-simpson-crayon.gif"      alt="Homer Simpson Crayon (2)">
+    <img src="./images/the-simpsons-homer-simpson.gif" alt="The Simpsons Homer (3)">
   </div>
-
-  <!-- Load Tenor once -->
-  <script src="https://tenor.com/embed.js" defer></script>
-
   <script>
-    (function () {
-      function initCycle(stack) {
-        if (!stack || stack.dataset.bound) return; // avoid rebinding
+    (function(){
+      function init(stack){
+        if(!stack || stack.dataset.bound) return;
         stack.dataset.bound = "1";
-
-        const layers = Array.from(stack.querySelectorAll('.layer'));
-        const n = layers.length;
-        let top = n - 1; // start with the third embed on top; set 0/1 to start with others
-
-        function paint() {
-          // Assign z-index so `top` is highest, others descend—no DOM moves, so GIFs keep playing
-          for (let i = 0; i < n; i++) {
-            const level = (i === top) ? n : (n - ((top - i + n) % n) - 1);
-            layers[i].style.zIndex = String(level);
+        const imgs = Array.from(stack.querySelectorAll('img'));
+        const n = imgs.length;
+        let top = 0; // start with GIF #1 on top (use 1 or 2 to start with others)
+        function paint(){
+          for(let i=0;i<n;i++){
+            const level = (i===top) ? n : (n - ((top - i + n) % n) - 1);
+            imgs[i].style.zIndex = String(level);
           }
         }
         paint();
-
-        // Cycle on click (do not advance slide)
-        const catcher = stack.querySelector('.click-catcher');
-        catcher.addEventListener('click', (ev) => {
-          ev.stopPropagation();
+        // Click cycles the top image; stopPropagation prevents advancing the slide
+        stack.addEventListener('click', (e)=>{
+          e.stopPropagation();
           top = (top + 1) % n;
           paint();
         });
       }
-
-      // Bind when deck is ready / when this slide becomes active
-      if (window.Reveal) {
-        Reveal.on('ready',    () => initCycle(document.getElementById('gifCycle1')));
-        Reveal.on('slidechanged', (e) => {
-          if (e.currentSlide && e.currentSlide.querySelector('#gifCycle1')) {
-            initCycle(document.getElementById('gifCycle1'));
+      if(window.Reveal){
+        Reveal.on('ready', ()=> init(document.getElementById('gifCycle1')));
+        Reveal.on('slidechanged', (e)=>{
+          if(e.currentSlide && e.currentSlide.querySelector('#gifCycle1')){
+            init(document.getElementById('gifCycle1'));
           }
         });
       } else {
-        // Fallback if not inside Reveal (e.g., static preview)
-        window.addEventListener('DOMContentLoaded', () => initCycle(document.getElementById('gifCycle1')));
+        window.addEventListener('DOMContentLoaded', ()=> init(document.getElementById('gifCycle1')));
       }
     })();
   </script>
