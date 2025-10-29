@@ -10,61 +10,7 @@
 <!-- .slide: class="slide-heading closer" -->
 ## What does this research do?
 
-<section>
-  <style>
-    .three-col {
-      box-sizing: border-box;
-      width: 90%;                 /* % of the slide, not of the viewport */
-      max-width: 1100px;          /* optional hard cap */
-      margin: 0 auto;             /* center horizontally */
-      padding-inline: 1.5rem;     /* inner gutters so edges never touch */
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: clamp(1rem, 3vw, 2rem);/* responsive gap without overflow */
-      align-items: center;
-      justify-items: center;
-      overflow: hidden;           /* guardrail */
-    }
-    .gif-box {
-      box-sizing: border-box;
-      inline-size: 100%;          /* fill its grid cell */
-      aspect-ratio: 4 / 3;        /* keep consistent height across columns */
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,.12);
-      background: #fff;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 100%;            /* never exceed the cell */
-    }
-    .gif-box img{
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;        /* switch to 'cover' if you want edge-to-edge crop */
-      background: #fff;
-      max-width: 100%;
-    }
-    @media (max-width: 900px){
-      .three-col{ grid-template-columns: repeat(2, minmax(0, 1fr)); width: 92%; }
-    }
-    @media (max-width: 640px){
-      .three-col{ grid-template-columns: 1fr; width: 94%; }
-    }
-  </style>
-  <div class="three-col">
-    <div class="gif-box">
-      <img src="./images/homer-simpson.gif" alt="Homer 1">
-    </div>
-    <div class="gif-box">
-      <img src="./images/homer-simpson-crayon.gif" alt="Homer 2">
-    </div>
-    <div class="gif-box">
-      <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
-    </div>
-  </div>
-</section>
+
 
 ---
 <!-- .slide: class="slide-heading closer" -->
@@ -105,6 +51,17 @@
     </div>
   </div>
 </section>
+<style>
+.reveal .slides section.present .three-col{
+  width: min(88%, 1100px);
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+.three-col, .gif-box{ overflow: clip; max-inline-size: 100%; }
+@media (min-width: 1400px){
+  .reveal .slides section.present .three-col{ width: 80%; }
+}
+</style>
 
 
 ---
