@@ -12,70 +12,59 @@
 
 <section>
   <style>
-    /* 3 equal columns, centered on the slide */
+    /* Keep the grid inside the slide bounds */
     .three-col {
+      box-sizing: border-box;
+      width: min(96vw, 1100px);   /* prevent touching side margins */
+      margin: 0 auto;
+      height: 100%;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr)); /* no overflow from intrinsic widths */
       gap: 2rem;
       align-items: center;
       justify-items: center;
-      width: 100%;
-      height: 100%;
-      padding: 1rem 0;
-    }
-    .center-xy {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
+      overflow: hidden; /* belt-and-suspenders */
     }
     .gif-box {
-      width: min(28vw, 34vh);  /* similar perceived size across screens */
-      height: 34vh;            /* equal height for all three columns */
-      max-width: 100%;
+      width: 100%;                 /* fill the grid cell, not the viewport */
+      aspect-ratio: 4 / 3;         /* equal proportions for all three */
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.12);
+      background: #fff;
       overflow: hidden;
-      border-radius: 8px;      /* optional */
-      box-shadow: 0 2px 12px rgba(0,0,0,.12); /* optional */
-      background: #fff;        /* avoids transparency artifacts */
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .gif-box img{
+    .gif-box img {
       width: 100%;
       height: 100%;
-      object-fit: contain;     /* use 'cover' if you prefer fill/crop */
+      object-fit: contain;         /* use 'cover' to fill/crop instead */
       display: block;
       background: #fff;
     }
+    @media (max-width: 1100px){
+      .three-col{ width: 94vw; gap: 1.5rem; }
+    }
     @media (max-width: 900px){
-      .three-col{ grid-template-columns: repeat(2, 1fr); }
+      .three-col{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 640px){
       .three-col{ grid-template-columns: 1fr; }
-      .gif-box{ width: 70vw; height: 30vh; }
     }
   </style>
-
-  <div class="center-xy">
-    <div class="three-col">
-      <!-- Column 1 -->
-      <div class="gif-box">
-        <img src="./images/homer-simpson.gif" alt="Homer 1">
-      </div>
-      <!-- Column 2 -->
-      <div class="gif-box">
-        <img src="./images/homer-simpson-crayon.gif" alt="Homer 2">
-      </div>
-      <!-- Column 3 -->
-      <div class="gif-box">
-        <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
-      </div>
+  <div class="three-col">
+    <div class="gif-box">
+      <img src="./images/homer-simpson.gif" alt="Homer 1">
+    </div>
+    <div class="gif-box">
+      <img src="./images/homer-simpson-crayon.gif" alt="Homer 2">
+    </div>
+    <div class="gif-box">
+      <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
     </div>
   </div>
 </section>
-
 
 
 ---
