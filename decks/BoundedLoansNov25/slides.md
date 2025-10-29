@@ -8,7 +8,7 @@
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## What does this research does?
+## What does this research do?
 
 <section>
   <style>
