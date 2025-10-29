@@ -12,67 +12,70 @@
 
 <section>
   <style>
-    .center-xy { display:flex; align-items:center; justify-content:center; height:100%; }
-    .gif-stack{
-      position: relative;
-      width: 70vw;          /* try 60–80vw to taste */
-      height: 50vh;         /* explicit height avoids layout drift */
-      max-width: 110vh;     /* safety on ultra-wide screens */
-      margin: 0 auto;
-      cursor: pointer;
-      overflow: hidden;     /* hide anything outside the box */
-      border-radius: 8px;   /* optional */
+    /* 3 equal columns, centered on the slide */
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: center;
+      justify-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 1rem 0;
     }
-    .gif-stack img{
-      position:absolute; inset:0;
-      width:100%; height:100%;
-      object-fit: contain;   /* keep full image; switch to 'cover' if you prefer fill/crop */
-      background:#fff;       /* IMPORTANT: hides lower GIFs in letterbox bands */
-      display:block;
+    .center-xy {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+    .gif-box {
+      width: min(28vw, 34vh);  /* similar perceived size across screens */
+      height: 34vh;            /* equal height for all three columns */
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 8px;      /* optional */
+      box-shadow: 0 2px 12px rgba(0,0,0,.12); /* optional */
+      background: #fff;        /* avoids transparency artifacts */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gif-box img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;     /* use 'cover' if you prefer fill/crop */
+      display: block;
+      background: #fff;
+    }
+    @media (max-width: 900px){
+      .three-col{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px){
+      .three-col{ grid-template-columns: 1fr; }
+      .gif-box{ width: 70vw; height: 30vh; }
     }
   </style>
+
   <div class="center-xy">
-    <div class="gif-stack" id="gifCycle1">
-      <!-- bottom → top -->
-      <img src="./images/homer-simpson.gif"              alt="Homer 1">
-      <img src="./images/homer-simpson-crayon.gif"       alt="Homer 2">
-      <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
+    <div class="three-col">
+      <!-- Column 1 -->
+      <div class="gif-box">
+        <img src="./images/homer-simpson.gif" alt="Homer 1">
+      </div>
+      <!-- Column 2 -->
+      <div class="gif-box">
+        <img src="./images/homer-simpson-crayon.gif" alt="Homer 2">
+      </div>
+      <!-- Column 3 -->
+      <div class="gif-box">
+        <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
+      </div>
     </div>
   </div>
-  <script>
-    (function(){
-      function init(stack){
-        if(!stack || stack.dataset.bound) return;
-        stack.dataset.bound = "1";
-        const imgs = Array.from(stack.querySelectorAll('img'));
-        const n = imgs.length;
-        let top = 0; // start with #1; use 1 or 2 to start with others
-        function paint(){
-          for(let i=0;i<n;i++){
-            const z = (i===top) ? n : (n - ((top - i + n) % n) - 1);
-            imgs[i].style.zIndex = String(z);
-          }
-        }
-        paint();
-        stack.addEventListener('click', (e)=>{
-          e.stopPropagation();
-          top = (top + 1) % n;
-          paint();
-        });
-      }
-      if(window.Reveal){
-        Reveal.on('ready', ()=> init(document.getElementById('gifCycle1')));
-        Reveal.on('slidechanged', e=>{
-          if(e.currentSlide && e.currentSlide.querySelector('#gifCycle1')){
-            init(document.getElementById('gifCycle1'));
-          }
-        });
-      } else {
-        window.addEventListener('DOMContentLoaded', ()=> init(document.getElementById('gifCycle1')));
-      }
-    })();
-  </script>
 </section>
+
 
 
 ---
