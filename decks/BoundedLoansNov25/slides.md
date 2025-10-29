@@ -10,7 +10,70 @@
 <!-- .slide: class="slide-heading closer" -->
 ## What does this research do?
 
-
+<section id="gif3cols">
+  <style>
+    #gif3cols .wrap{
+      --side-gutter: clamp(20px, 3.5vw, 40px);
+      --col-gap:     clamp(16px, 3vw, 28px);
+      box-sizing: border-box;
+      inline-size: 100%;
+      max-inline-size: 1200px;          /* optional hard cap */
+      margin-inline: auto;
+      padding-inline: var(--side-gutter);
+      /* Final safety against any 1px rounding */
+      overflow: clip;
+    }
+    #gif3cols .grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: var(--col-gap);
+      row-gap: var(--col-gap);
+      align-items: center;
+      justify-items: center;
+      /* Don’t allow the grid to grow past its container */
+      max-inline-size: 100%;
+      overflow: clip;
+      box-sizing: border-box;
+    }
+    #gif3cols .card{
+      inline-size: 100%;    /* fill its grid cell only */
+      aspect-ratio: 4 / 3;  /* equal visual height across columns */
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,.12);
+      overflow: hidden;     /* in case GIF frames exceed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #gif3cols .card img{
+      display: block;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: contain;  /* use 'cover' to fill/crop instead */
+      background: #fff;
+    }
+    @media (max-width: 900px){
+      #gif3cols .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 600px){
+      #gif3cols .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+  <div class="wrap">
+    <div class="grid">
+      <div class="card">
+        <img src="./images/homer-simpson.gif" alt="Homer 1">
+      </div>
+      <div class="card">
+        <img src="./images/homer-simpson-crayon.gif" alt="Homer 2">
+      </div>
+      <div class="card">
+        <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
+      </div>
+    </div>
+  </div>
+</section>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
@@ -51,17 +114,6 @@
     </div>
   </div>
 </section>
-<style>
-.reveal .slides section.present .three-col{
-  width: min(88%, 1100px);
-  margin-inline: auto;
-  padding-inline: 2rem;
-}
-.three-col, .gif-box{ overflow: clip; max-inline-size: 100%; }
-@media (min-width: 1400px){
-  .reveal .slides section.present .three-col{ width: 80%; }
-}
-</style>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
