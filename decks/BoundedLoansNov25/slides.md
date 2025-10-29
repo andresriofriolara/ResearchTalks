@@ -1,3 +1,15 @@
+<style>
+.reveal .slides section.present .three-col{
+  width: min(88%, 1100px);
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+.three-col, .gif-box{ overflow: clip; max-inline-size: 100%; }
+@media (min-width: 1400px){
+  .reveal .slides section.present .three-col{ width: 80%; }
+}
+</style>
+
 <!-- .slide: class="title-slide" -->
 # A Dissection of Collateral’s Bounded Rationality
 </section>
@@ -51,17 +63,6 @@
     </div>
   </div>
 </section>
-<style>
-.reveal .slides section.present .three-col{
-  width: min(88%, 1100px);
-  margin-inline: auto;
-  padding-inline: 2rem;
-}
-.three-col, .gif-box{ overflow: clip; max-inline-size: 100%; }
-@media (min-width: 1400px){
-  .reveal .slides section.present .three-col{ width: 80%; }
-}
-</style>
 
 
 ---
