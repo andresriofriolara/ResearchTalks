@@ -12,7 +12,6 @@
 
 <section>
   <style>
-    /* GRID stays inside the slide (no viewport units → no clipping) */
     .three-col {
       box-sizing: border-box;
       width: 90%;                 /* % of the slide, not of the viewport */
