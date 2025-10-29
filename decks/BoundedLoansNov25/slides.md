@@ -12,45 +12,46 @@
 
 <section>
   <style>
-    /* Keep the grid inside the slide bounds */
+    /* GRID stays inside the slide (no viewport units → no clipping) */
     .three-col {
       box-sizing: border-box;
-      width: min(96vw, 1100px);   /* prevent touching side margins */
-      margin: 0 auto;
-      height: 100%;
+      width: 90%;                 /* % of the slide, not of the viewport */
+      max-width: 1100px;          /* optional hard cap */
+      margin: 0 auto;             /* center horizontally */
+      padding-inline: 1.5rem;     /* inner gutters so edges never touch */
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr)); /* no overflow from intrinsic widths */
-      gap: 2rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1rem, 3vw, 2rem);/* responsive gap without overflow */
       align-items: center;
       justify-items: center;
-      overflow: hidden; /* belt-and-suspenders */
+      overflow: hidden;           /* guardrail */
     }
     .gif-box {
-      width: 100%;                 /* fill the grid cell, not the viewport */
-      aspect-ratio: 4 / 3;         /* equal proportions for all three */
-      border-radius: 12px;
+      box-sizing: border-box;
+      inline-size: 100%;          /* fill its grid cell */
+      aspect-ratio: 4 / 3;        /* keep consistent height across columns */
+      border-radius: 14px;
       box-shadow: 0 2px 12px rgba(0,0,0,.12);
       background: #fff;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      max-width: 100%;            /* never exceed the cell */
     }
-    .gif-box img {
+    .gif-box img{
+      display: block;
       width: 100%;
       height: 100%;
-      object-fit: contain;         /* use 'cover' to fill/crop instead */
-      display: block;
+      object-fit: contain;        /* switch to 'cover' if you want edge-to-edge crop */
       background: #fff;
-    }
-    @media (max-width: 1100px){
-      .three-col{ width: 94vw; gap: 1.5rem; }
+      max-width: 100%;
     }
     @media (max-width: 900px){
-      .three-col{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .three-col{ grid-template-columns: repeat(2, minmax(0, 1fr)); width: 92%; }
     }
     @media (max-width: 640px){
-      .three-col{ grid-template-columns: 1fr; }
+      .three-col{ grid-template-columns: 1fr; width: 94%; }
     }
   </style>
   <div class="three-col">
@@ -65,7 +66,6 @@
     </div>
   </div>
 </section>
-
 
 ---
 <!-- .slide: class="slide-heading closer" -->
