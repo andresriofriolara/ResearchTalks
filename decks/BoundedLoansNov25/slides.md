@@ -83,10 +83,10 @@
   <!-- Funnel → Forked Outcomes (no title) -->
   <div class="smart-funnel" aria-label="First-line process funnel with forked outcomes">
     <div class="funnel">
-      <div class="band band-1">
+      <div class="band band-1 fragment">
         <span>Can that deviation be reconciled?</span>
       </div>
-      <div class="band band-2">
+      <div class="band band-2 fragment">
         <span>Biased decision makers influence the portfolio mix.</span>
       </div>
       <div class="band band-3 fragment">
