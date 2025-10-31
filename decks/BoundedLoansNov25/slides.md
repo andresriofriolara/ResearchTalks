@@ -576,9 +576,6 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 <!-- .slide: data-background-color="transparent" -->
 ## The Field Experiment
 
-<!-- .slide: data-background-color="transparent" -->
-## The Field Experiment
-
 <div class="vsteps-wrap">
   <ul class="vsteps">
     <li><span class="num">1</span>Loan Officers undergo a "regular" workshop.</li>
