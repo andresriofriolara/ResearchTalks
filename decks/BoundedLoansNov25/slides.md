@@ -577,92 +577,95 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 ## The Field Experiment
 
 <style>
-  /* Vertical Timeline — fits long labels, Ivey-friendly */
-  .vt-wrap {
-    display: grid;
-    grid-template-columns: 36px 16px 1fr;
-    grid-auto-rows: auto;
-    gap: 10px 16px;
-    max-width: 1000px;
-    margin: 18px auto 0;
-    align-items: start;
-    font-size: clamp(18px, 2.2vw, 26px);
-    line-height: 1.25;
+  /* Two-Line Grid (3×2), Ivey-friendly */
+  .g62-wrap{
+    max-width: 1200px; margin: 10px auto 0; padding: 4px 0;
   }
-  .vt-num {
-    grid-column: 1;
-    justify-self: center;
-    align-self: center;
-    width: 30px; height: 30px; border-radius: 50%;
+  .g62{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(12px, 2.2vw, 22px);
+    align-items: stretch;
+  }
+  .g62-card{
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.66);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    padding: clamp(12px, 1.8vw, 16px) clamp(12px, 2vw, 18px) clamp(12px, 2vw, 18px) clamp(48px, 4vw, 58px);
+    font-size: clamp(18px, 2.1vw, 26px);
+    line-height: 1.25;
+    min-height: 90px;
+  }
+  .g62-num{
+    position: absolute; left: clamp(10px, 1.4vw, 14px); top: clamp(10px, 1.2vw, 12px);
+    width: 34px; height: 34px; border-radius: 50%;
     display: grid; place-items: center;
-    font-weight: 700;
-    background: var(--ivey-green, #0d5e3a);
-    color: #fff;
+    font-weight: 800;
+    background: var(--ivey-green, #0d5e3a); color: #fff;
     box-shadow: 0 2px 10px rgba(13,94,58,0.25);
   }
-  .vt-line {
-    grid-column: 2; position: relative; width: 2px; height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.08));
-    justify-self: center;
+  /* subtle progression arrows between columns */
+  .g62-card[data-arrow="right"]::after{
+    content: "→";
+    position: absolute; right: -18px; top: 50%; transform: translateY(-50%);
+    font-weight: 700; opacity: 0.25;
   }
-  .vt-item:last-of-type .vt-line { background: transparent; }
-  .vt-text {
-    grid-column: 3;
-    background: rgba(255,255,255,0.66);
-    border: 1px solid rgba(0,0,0,0.08);
-    border-radius: 12px;
-    padding: 12px 14px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  /* row connector arrow at end of first row pointing to start of second row */
+  .g62-rowbreak{
+    grid-column: 1 / -1;
+    height: 0; position: relative;
   }
-  .vt-item.fragment { opacity: 1; }
-  .vt-item.fragment.current-fragment .vt-text {
+  .g62-rowbreak::after{
+    content: "↓";
+    position: absolute; left: calc(100% / 6 * 5); /* under column 3 */
+    transform: translateX(-50%);
+    top: -4px; font-weight: 700; opacity: 0.25;
+  }
+  /* Fragments: keep layout stable; emphasize current */
+  .g62-card.fragment{ opacity: 1; }
+  .g62-card.fragment.current-fragment{
     outline: 2px solid var(--ivey-green, #0d5e3a);
     box-shadow: 0 6px 18px rgba(13,94,58,0.20);
     transform: translateY(-1px);
-    transition: all 220ms ease;
+    transition: all 200ms ease;
   }
-  @media (max-width: 700px) {
-    .vt-wrap { grid-template-columns: 28px 12px 1fr; gap: 8px 12px; }
-    .vt-num { width: 26px; height: 26px; font-size: 0.9em; }
-    .vt-text { padding: 10px 12px; }
+  @media (max-width: 900px){
+    .g62{ grid-template-columns: 1fr; }
+    .g62-rowbreak{ display:none; }
+    .g62-card[data-arrow="right"]::after{ display:none; }
   }
 </style>
-<div class="vt-wrap">
-  <!-- 1 -->
-  <div class="vt-item fragment" data-fragment-index="1">
-    <div class="vt-num">1</div>
-    <div class="vt-line"></div>
-    <div class="vt-text">Loan Officers undergo a "regular" workshop.</div>
-  </div>
-  <!-- 2 -->
-  <div class="vt-item fragment" data-fragment-index="2">
-    <div class="vt-num">2</div>
-    <div class="vt-line"></div>
-    <div class="vt-text">Fill surveys (behavioral traits).</div>
-  </div>
-  <!-- 3 -->
-  <div class="vt-item fragment" data-fragment-index="3">
-    <div class="vt-num">3</div>
-    <div class="vt-line"></div>
-    <div class="vt-text">They have to make decision sets</div>
-  </div>
-  <!-- 4 -->
-  <div class="vt-item fragment" data-fragment-index="4">
-    <div class="vt-num">4</div>
-    <div class="vt-line"></div>
-    <div class="vt-text">Start an unrelated training.</div>
-  </div>
-  <!-- 5 -->
-  <div class="vt-item fragment" data-fragment-index="5">
-    <div class="vt-num">5</div>
-    <div class="vt-line"></div>
-    <div class="vt-text">HR provides Stimuli</div>
-  </div>
-  <!-- 6 -->
-  <div class="vt-item fragment" data-fragment-index="6">
-    <div class="vt-num">6</div>
-    <div class="vt-line"></div>
-    <div class="vt-text">They have to make decisions sets</div>
+<div class="g62-wrap">
+  <div class="g62">
+    <!-- Row 1 -->
+    <div class="g62-card fragment" data-fragment-index="1" data-arrow="right">
+      <div class="g62-num">1</div>
+      Loan Officers undergo a "regular" workshop.
+    </div>
+    <div class="g62-card fragment" data-fragment-index="2" data-arrow="right">
+      <div class="g62-num">2</div>
+      Fill surveys (behavioral traits).
+    </div>
+    <div class="g62-card fragment" data-fragment-index="3">
+      <div class="g62-num">3</div>
+      They have to make decision sets
+    </div>
+    <div class="g62-rowbreak"></div>
+    <!-- Row 2 -->
+    <div class="g62-card fragment" data-fragment-index="4" data-arrow="right">
+      <div class="g62-num">4</div>
+      Start an unrelated training.
+    </div>
+    <div class="g62-card fragment" data-fragment-index="5" data-arrow="right">
+      <div class="g62-num">5</div>
+      HR provides Stimuli
+    </div>
+    <div class="g62-card fragment" data-fragment-index="6">
+      <div class="g62-num">6</div>
+      They have to make decisions sets
+    </div>
   </div>
 </div>
 
