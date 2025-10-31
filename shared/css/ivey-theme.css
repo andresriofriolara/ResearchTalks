@@ -606,3 +606,13 @@ html { color-scheme: light; }
   max-height:38vh;     /* keep safely inside margins */
   max-width:68vw;
 }
+
+/* two-line grid for step cards */
+.g62-wrap{max-width:1200px;margin:10px auto 0;padding:4px 0;}
+.g62{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2.2vw,22px);align-items:stretch}
+.g62-card{position:relative;border:1px solid rgba(0,0,0,.08);border-radius:14px;background:rgba(255,255,255,.66);
+  box-shadow:0 1px 6px rgba(0,0,0,.06);padding:clamp(12px,1.8vw,16px) clamp(12px,2vw,18px);
+  font-size:clamp(18px,2.1vw,26px);line-height:1.25;min-height:90px}
+.g62-num{position:absolute;left:clamp(10px,1.4vw,14px);top:clamp(10px,1.2vw,12px);width:34px;height:34px;border-radius:50%;
+  display:grid;place-items:center;font-weight:800;background:var(--ivey-green,#0d5e3a);color:#fff;box-shadow:0 2px 10px rgba(13,94,58,.25)}
+@media (max-width:900px){.g62{grid-template-columns:1fr}}
