@@ -4,7 +4,7 @@
 
 ---
 <!-- .slide: class="slide-heading" -->
-## How and to which magnitude can the effect of present bias be decreased in loan granting? TBU
+## To what degree can the deviation created by present bias be decreased throught incentive adjustment within a prospect theory framing?
 
 ---
 <!-- .slide: class="slide-heading closer" -->
@@ -77,20 +77,20 @@
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## Trust starts at the first line
+## Optimal Decisions Start at the First Line
 
 <section>
   <!-- Funnel → Forked Outcomes (no title) -->
   <div class="smart-funnel" aria-label="First-line process funnel with forked outcomes">
     <div class="funnel">
       <div class="band band-1">
-        <span>First <em>trustworthiness</em> filter</span>
+        <span>Can that deviation be reconciled?</span>
       </div>
       <div class="band band-2">
-        <span>First line of defense</span>
+        <span>Biased decision makers influence the portfolio mix.</span>
       </div>
       <div class="band band-3">
-        <span>Risk-taking input: hard &amp; soft information → loan decisions</span>
+        <span>Objective information input: hard &amp; soft information → loan decisions</span>
       </div>
       <div class="neck" aria-hidden="true"></div>
     </div>
@@ -390,8 +390,72 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design
 
-- Lab Experiment
-- Field Experiment
+<section data-background-color="transparent">
+  <style>
+    /* Segmented Toggle — Ivey-friendly */
+    .seg-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80%;
+    }
+    .seg-pill {
+      display: inline-flex;
+      border: 1px solid var(--seg-border, rgba(0,0,0,0.15));
+      border-radius: 999px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      backdrop-filter: saturate(1.1);
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+    .seg {
+      padding: 14px 28px;
+      min-width: 220px;
+      text-align: center;
+      user-select: none;
+      transition: transform 220ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+      background: var(--seg-bg, rgba(255,255,255,0.65));
+      color: var(--seg-fg, #222);
+    }
+    .seg + .seg {
+      border-left: 1px solid var(--seg-divider, rgba(0,0,0,0.08));
+    }
+    /* Keep fragments visible; only the active one gets emphasis */
+    .seg.fragment { opacity: 1; }
+    .seg.fragment.current-fragment {
+      background: var(--ivey-green, #0d5e3a);
+      color: #fff;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
+      transform: scale(1.02);
+    }
+    /* Hover/press polish (optional) */
+    .seg:hover { transform: translateY(-1px); }
+    .seg:active { transform: translateY(0); }
+    /* Title style (optional, matches Ivey minimalism) */
+    .seg-title {
+      text-align: center;
+      margin-bottom: 18px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      opacity: 0.9;
+    }
+    @media (max-width: 880px) {
+      .seg { min-width: 140px; padding: 12px 18px; }
+    }
+  </style>
+
+  <div class="seg-wrap">
+    <div>
+      <div class="seg-title">Experiments:</div>
+      <div class="seg-pill">
+        <!-- Step 1 highlights LAB, Step 2 highlights FIELD -->
+        <div class="seg fragment" data-fragment-index="1">Lab Experiment</div>
+        <div class="seg fragment" data-fragment-index="2">Field Experiment</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 --
 <!-- .slide: class="slide-heading" -->
@@ -427,10 +491,26 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 <!-- .slide: class="slide-heading" -->
 ## The Subject's Measures
 
-- Risk Aversion (Holt and Laury, 2002)
-- Short-term Impatience (Andreoni, 2012)
-- Risk Seeking (Eckel and Grossman, 2002)
-- DOSPERT - Risk Taking (Blais and Weber, 2006)
+<div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
+  <table style="border-collapse:collapse; margin:auto;">
+    <thead>
+      <tr>
+        <th style="border:1px solid #ccc; padding:6px;">Measure</th>
+        <th style="border:1px solid #ccc; padding:6px;">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="border:1px solid #ccc; padding:6px;">Risk Aversion</td>
+          <td style="border:1px solid #ccc; padding:6px;">Holt and Laury, 2002</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">Short-term Impatience</td>
+          <td style="border:1px solid #ccc; padding:6px;">Andreoni, 2012</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">Risk Seekingness</td>
+          <td style="border:1px solid #ccc; padding:6px;">Eckel and Grossman, 2002</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">DOSPERT - Risk Taking</td>
+          <td style="border:1px solid #ccc; padding:6px;">Blais and Weber, 2006</td></tr>
+    </tbody>
+  </table>
+</div>
 
 --
 <!-- .slide: class="slide-heading" -->
@@ -497,12 +577,110 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 <!-- .slide: class="slide-heading" -->
 ## The Field Experiment
 
-1. Loan Officers undergo a "regular" workshop.
-2. Fill surveys (behavioral traits).
-3. They have to make decision sets
-4. Start an unrelated training.
-5. HR provides Stimuli
-6. They have to make decisions sets
+<section data-background-color="transparent">
+  <style>
+    /* Vertical Timeline — fits long labels, Ivey-friendly */
+    .vt-wrap {
+      display: grid;
+      grid-template-columns: 36px 16px 1fr;
+      grid-auto-rows: auto;
+      gap: 10px 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+      align-items: start;
+      font-size: clamp(18px, 2.2vw, 26px);
+      line-height: 1.25;
+    }
+    .vt-num {
+      grid-column: 1;
+      justify-self: center;
+      align-self: center;
+      width: 30px; height: 30px; border-radius: 50%;
+      display: grid; place-items: center;
+      font-weight: 700;
+      background: var(--ivey-green, #0d5e3a);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(13,94,58,0.25);
+    }
+    .vt-line {
+      grid-column: 2; position: relative; width: 2px; height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.08));
+      justify-self: center;
+    }
+    .vt-item:last-of-type .vt-line { background: transparent; } /* no tail after last */
+    .vt-text {
+      grid-column: 3;
+      background: rgba(255,255,255,0.66);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    /* Fragments: keep layout stable, add emphasis on reveal */
+    .vt-item.fragment { opacity: 1; }
+    .vt-item.fragment.current-fragment .vt-text {
+      outline: 2px solid var(--ivey-green, #0d5e3a);
+      box-shadow: 0 6px 18px rgba(13,94,58,0.20);
+      transform: translateY(-1px);
+      transition: all 220ms ease;
+    }
+    .vt-title {
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      margin: 0 0 18px;
+      font-size: clamp(22px, 2.6vw, 32px);
+      opacity: 0.95;
+    }
+    @media (max-width: 700px) {
+      .vt-wrap { grid-template-columns: 28px 12px 1fr; gap: 8px 12px; }
+      .vt-num { width: 26px; height: 26px; font-size: 0.9em; }
+      .vt-text { padding: 10px 12px; }
+    }
+  </style>
+
+  <div class="vt-title">Experimental Steps</div>
+
+  <div class="vt-wrap">
+    <!-- 1 -->
+    <div class="vt-item fragment" data-fragment-index="1">
+      <div class="vt-num">1</div>
+      <div class="vt-line"></div>
+      <div class="vt-text">Loan Officers undergo a "regular" workshop.</div>
+    </div>
+    <!-- 2 -->
+    <div class="vt-item fragment" data-fragment-index="2">
+      <div class="vt-num">2</div>
+      <div class="vt-line"></div>
+      <div class="vt-text">Fill surveys (behavioral traits).</div>
+    </div>
+    <!-- 3 -->
+    <div class="vt-item fragment" data-fragment-index="3">
+      <div class="vt-num">3</div>
+      <div class="vt-line"></div>
+      <div class="vt-text">They have to make decision sets</div>
+    </div>
+    <!-- 4 -->
+    <div class="vt-item fragment" data-fragment-index="4">
+      <div class="vt-num">4</div>
+      <div class="vt-line"></div>
+      <div class="vt-text">Start an unrelated training.</div>
+    </div>
+    <!-- 5 -->
+    <div class="vt-item fragment" data-fragment-index="5">
+      <div class="vt-num">5</div>
+      <div class="vt-line"></div>
+      <div class="vt-text">HR provides Stimuli</div>
+    </div>
+    <!-- 6 -->
+    <div class="vt-item fragment" data-fragment-index="6">
+      <div class="vt-num">6</div>
+      <div class="vt-line"></div>
+      <div class="vt-text">They have to make decisions sets</div>
+    </div>
+  </div>
+</section>
+
 
 ---
 <!-- .slide: class="slide-heading" -->
