@@ -576,33 +576,18 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 <!-- .slide: data-background-color="transparent" -->
 ## The Field Experiment
 
-<div class="g62-wrap">
-  <div class="g62">
-    <div class="g62-card">
-      <div class="g62-num">1</div>
-      Loan Officers undergo a "regular" workshop.
-    </div>
-    <div class="g62-card">
-      <div class="g62-num">2</div>
-      Fill surveys (behavioral traits).
-    </div>
-    <div class="g62-card">
-      <div class="g62-num">3</div>
-      They have to make decision sets
-    </div>
-    <div class="g62-card">
-      <div class="g62-num">4</div>
-      Start an unrelated training.
-    </div>
-    <div class="g62-card">
-      <div class="g62-num">5</div>
-      HR provides Stimuli
-    </div>
-    <div class="g62-card">
-      <div class="g62-num">6</div>
-      They have to make decisions sets
-    </div>
-  </div>
+<!-- .slide: data-background-color="transparent" -->
+## The Field Experiment
+
+<div class="vsteps-wrap">
+  <ul class="vsteps">
+    <li><span class="num">1</span>Loan Officers undergo a "regular" workshop.</li>
+    <li><span class="num">2</span>Fill surveys (behavioral traits).</li>
+    <li><span class="num">3</span>They have to make decision sets</li>
+    <li><span class="num">4</span>Start an unrelated training.</li>
+    <li><span class="num">5</span>HR provides Stimuli</li>
+    <li><span class="num">6</span>They have to make decisions sets</li>
+  </ul>
 </div>
 
 ---

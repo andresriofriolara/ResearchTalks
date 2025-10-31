@@ -616,3 +616,42 @@ html { color-scheme: light; }
 .g62-num{position:absolute;left:clamp(10px,1.4vw,14px);top:clamp(10px,1.2vw,12px);width:34px;height:34px;border-radius:50%;
   display:grid;place-items:center;font-weight:800;background:var(--ivey-green,#0d5e3a);color:#fff;box-shadow:0 2px 10px rgba(13,94,58,.25)}
 @media (max-width:900px){.g62{grid-template-columns:1fr}}
+
+/* Vertical step list with boxed items and arrows */
+.vsteps-wrap{max-width:900px;margin:14px auto 0}
+.vsteps{list-style:none;margin:0;padding:0}
+.vsteps li{
+  position:relative;
+  margin:14px 0;
+  padding:14px 16px 14px 64px;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:14px;
+  background:rgba(255,255,255,.66);
+  box-shadow:0 1px 6px rgba(0,0,0,.06);
+  font-size:clamp(18px,2.0vw,26px);
+  line-height:1.28;
+}
+.vsteps .num{
+  position:absolute; left:16px; top:50%; transform:translateY(-50%);
+  width:36px; height:36px; border-radius:50%;
+  display:grid; place-items:center; font-weight:800;
+  background:var(--ivey-green,#0d5e3a); color:#fff;
+  box-shadow:0 2px 10px rgba(13,94,58,.25);
+}
+/* connector line + arrow between items */
+.vsteps li:not(:last-child)::after{
+  content:""; position:absolute; left:34px; bottom:-24px; width:2px; height:22px;
+  background:linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.1));
+}
+.vsteps li:not(:last-child)::before{
+  content:""; position:absolute; left:29px; bottom:-28px;
+  border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid rgba(0,0,0,.25);
+}
+/* responsive */
+@media (max-width:700px){
+  .vsteps li{padding-left:58px}
+  .vsteps .num{left:12px;width:32px;height:32px}
+  .vsteps li:not(:last-child)::after{left:30px}
+  .vsteps li:not(:last-child)::before{left:25px}
+}
+
