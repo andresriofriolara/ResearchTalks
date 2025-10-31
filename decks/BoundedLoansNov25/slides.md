@@ -89,7 +89,7 @@
       <div class="band band-2">
         <span>Biased decision makers influence the portfolio mix.</span>
       </div>
-      <div class="band band-3">
+      <div class="band band-3 fragment">
         <span>Objective information input: hard &amp; soft information → loan decisions</span>
       </div>
       <div class="neck" aria-hidden="true"></div>
