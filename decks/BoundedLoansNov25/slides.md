@@ -62,10 +62,10 @@
   <div class="rq-wrap">
     <div class="rq-grid">
       <!-- Q3 -->
-      <div class="rq-card fragment" data-fragment-index="0">
+      <div class="rq-card fragment" data-fragment-index="2">
         <div class="rq-badge">3</div>
         <h3 class="rq-title">Can the deviation from rationality be reconciled?</h3>
-        <p class="rq-sub">If biases exist, what mechanisms or designs restore alignment with optimal lending?</p>
+        <p class="rq-sub">If biases exist, could incentive readjustments restore alignment with optimal lending?</p>
       </div>
       <!-- Q2 -->
       <div class="rq-card fragment" data-fragment-index="1">
@@ -74,7 +74,7 @@
         <p class="rq-sub">Focus on <em>loss aversion</em> and <em>present bias</em> in loan-decision-making.</p>
       </div>
       <!-- Q1 -->
-      <div class="rq-card fragment" data-fragment-index="2">
+      <div class="rq-card fragment" data-fragment-index="0">
         <div class="rq-badge">1</div>
         <h3 class="rq-title">To what degree are loan officers rational decision makers?</h3>
         <p class="rq-sub">Benchmark observed choices against normative, information-consistent decisions.</p>
