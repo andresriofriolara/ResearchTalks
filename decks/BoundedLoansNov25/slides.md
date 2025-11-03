@@ -1,10 +1,14 @@
 <!-- .slide: class="title-slide" -->
-# A Dissection of Collateral’s Bounded Rationality
+# Bounded Loans: Present Bias and Loss Aversion Effects over Loan Granting
 </section>
 
 ---
 <!-- .slide: class="slide-heading" -->
-## To what degree can the deviation created by present bias be decreased throught incentive adjustment within a prospect theory framing?
+## Research Questions
+
+- To what degree are loan officers rational decision makers?
+- Are we observing a systematic bias (loss aaversion and present bias) in loan-decision-making?
+- Can the deviation from rationality be reconciled?
 
 ---
 <!-- .slide: class="slide-heading closer" -->
@@ -83,13 +87,13 @@
   <!-- Funnel → Forked Outcomes (no title) -->
   <div class="smart-funnel" aria-label="First-line process funnel with forked outcomes">
     <div class="funnel">
-      <div class="band band-1 fragment fragment fragment">
+      <div class="band band-1 fragment" data-fragment-index="2">
         <span>Can that deviation be reconciled?</span>
       </div>
-      <div class="band band-2 fragment fragment">
+      <div class="band band-2 fragment" data-fragment-index="1">
         <span>Biased decision makers influence the portfolio mix.</span>
       </div>
-      <div class="band band-3 fragment">
+      <div class="band band-3 fragment" data-fragment-index="0">
         <span>Objective information input: hard &amp; soft information → loan decisions</span>
       </div>
       <div class="neck" aria-hidden="true"></div>
@@ -180,30 +184,18 @@
 <!-- .slide: class="slide-heading" -->
 ## The Utility Function
 
-<div id="util-eqn-src" style="display:none">
-\begin{aligned}
+<div id="util-eqn-src-compact" style="display:none">
+\[
 U_t
-&=
-\underbrace{
-  \underbrace{w(p_t)\big[(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}\big]}_{\text{repay branch}}
-  - \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}
-  + \underbrace{\bigl(1-w(p_t)\bigr)\big[(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}\big]}_{\text{default branch}}
-  - \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}
-}_{\substack{\text{within-period Prospect Theory value}\\ V_t(c_t\mid r_t)}}
-\\[6pt]
-&\quad+\;
-\underbrace{
-  \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\!\left[
-    w(p_\tau)\big[(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}\big]
-    - \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}
-    + \bigl(1-w(p_\tau)\bigr)\big[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}\big]
-    - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
-  \right]
-}_{\mathclap{\text{discounted expectation}}}
-\end{aligned}
+\;=\;
+\underbrace{\mathbb{E}_t^{\,w}\!\big[v(c_t\mid r_t)\big]}_{\text{within-period (decision-weighted)}}
+\;+\;
+\underbrace{\beta \sum_{\tau=t+1}^{T}\delta^{\,\tau-t}\,
+\mathbb{E}\!\Big[\mathbb{E}_\tau^{\,w}\!\big[v(c_\tau\mid r_\tau)\big]\Big]}_{\text{discounted continuation value}}
+\]
 </div>
 
-<div id="util-eqn-render" class="katex-display"></div>
+<div id="util-eqn-render-compact" class="katex-display"></div>
 
 --
 
@@ -217,36 +209,33 @@ U_t
     </thead>
     <tbody>
       <tr><td style="border:1px solid #ccc; padding:6px;">$U_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Intertemporal utility at time $t$ (PT within-period, quasi-hyperbolic across time)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$V_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Decision-weighted within-period value (Prospect Theory)</td></tr>
+          <td style="border:1px solid #ccc; padding:6px;">Intertemporal utility at time $t$ (PT within-period via $v$, quasi-hyperbolic across time)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$v(c\mid r)$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Within-period Prospect Theory value around reference $r$: $(c-r)_{+}^{\alpha_v}-\lambda\,(r-c)_{+}^{\beta_v}$</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}_t^{\,w}[\cdot]$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Decision-weighted expectation at $t$ (rank-dependent); puts weight $w(p_t)$ on repay and $1-w(p_t)$ on default</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}[\cdot]$</td>
+          <td style="border:1px solid #ccc; padding:6px;">(Regular) expectation over future uncertainty conditional on information at $t$</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$c_t^{\mathrm{repay}},\; c_t^{\mathrm{default}}$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Outcome (payoff) in repay vs. default state at time $t$</td></tr>
+          <td style="border:1px solid #ccc; padding:6px;">Outcomes (payoffs) in repay vs. default state at time $t$</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$r_t$</td>
           <td style="border:1px solid #ccc; padding:6px;">Reference point at time $t$</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$p_t$</td>
           <td style="border:1px solid #ccc; padding:6px;">Objective probability of “repay” at time $t$ (Bernoulli prospect)</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$w(\cdot)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function, with $w\!:\![0,1]\to[0,1]$</td></tr>
+          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function, $w\!:\![0,1]\to[0,1]$</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$(x)_{+}$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Positive part: $(x)_{+}=\max\{x,0\}$ (used in PT value around $r_t$)</td></tr>
+          <td style="border:1px solid #ccc; padding:6px;">Positive part: $(x)_{+}=\max\{x,0\}$</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$\alpha_v,\;\beta_v$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Curvature in gains ($\alpha_v$) / losses ($\beta_v$), $\in(0,1]$</td></tr>
+          <td style="border:1px solid #ccc; padding:6px;">Value curvature in gains ($\alpha_v$) and losses ($\beta_v$), typically $\in(0,1]$</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$\lambda$</td>
           <td style="border:1px solid #ccc; padding:6px;">Loss aversion ($\lambda\ge 1$)</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$\beta\in(0,1]$</td>
           <td style="border:1px solid #ccc; padding:6px;">Present-bias factor (quasi-hyperbolic)</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$\delta\in(0,1)$</td>
           <td style="border:1px solid #ccc; padding:6px;">Per-period exponential discount factor</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}[\cdot]$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Expectation operator (over future uncertainty, conditional on information at $t$)</td></tr>
       <tr><td style="border:1px solid #ccc; padding:6px;">$T$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Time horizon (finite in the displayed sum)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$t,\;\tau$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Current time index ($t$) and future index ($\tau\ge t{+}1$)</td></tr>
-    </tbody>
-  </table>
-</div>
+          <td style="border:1px solid #ccc; padding:6px;">Time horizon (finite in the displayed sum)</
 
 --
 
@@ -261,12 +250,71 @@ $$\mathbb{E}\left[U\mid \text{Accept}\right] = w(p)U_1 + \bigl[1-w(p)\bigr]U_2$$
 
 $$\mathbb{E}\left[U\mid \text{Reject}\right] = w(p)U_3 + \bigl[1-w(p)\bigr]U_4$$
 
-- When **Right**:
-  - $U_1$: accept a good loan (repay).
-  - $U_4$: reject a bad loan (default).
-- When **Wrong**:
-  - $U_3$: Type I (reject a good loan).
-  - $U_2$: Type II (accept a bad loan).
+<section>
+  <style>
+    .rw-matrix {
+      max-width: 900px; margin: 0 auto; font-size: clamp(18px, 2vw, 24px);
+    }
+    .rw-matrix table {
+      border-collapse: separate; border-spacing: 0; width: 100%;
+      box-shadow: 0 6px 20px rgba(0,0,0,.08); border-radius: 12px; overflow: hidden;
+    }
+    .rw-matrix th, .rw-matrix td {
+      padding: 14px 16px; text-align: center; vertical-align: middle;
+      border: 1px solid #e5e7eb; background: #fff;
+    }
+    .rw-matrix thead th {
+      background: #f8fafc; font-weight: 700;
+    }
+    .rw-matrix .stub { background: #f8fafc; font-weight: 700; width: 22%; }
+    .rw-matrix .right { background: #ecfdf5; }
+    .rw-matrix .wrong { background: #fef2f2; }
+    .rw-matrix .tag {
+      display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.85em;
+      background: #e5e7eb; font-weight: 700;
+    }
+    .rw-matrix .right .tag { background: #34d39922; }
+    .rw-matrix .wrong .tag { background: #f8717122; }
+    .rw-matrix small { display:block; opacity:.85; margin-top:4px; line-height:1.1; }
+  </style>
+
+  <div class="rw-matrix">
+    <table>
+      <thead>
+        <tr>
+          <th class="stub"></th>
+          <th><strong>Right</strong></th>
+          <th><strong>Wrong</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="stub">Accept</th>
+          <td class="right">
+            <span class="tag">\(U_1\)</span>
+            <small>Accept a good loan (repay)</small>
+          </td>
+          <td class="wrong">
+            <span class="tag">\(U_2\)</span>
+            <small>Type II — accept a bad loan (default)</small>
+          </td>
+        </tr>
+        <tr>
+          <th class="stub">Reject</th>
+          <td class="right">
+            <span class="tag">\(U_4\)</span>
+            <small>Reject a bad loan (default)</small>
+          </td>
+          <td class="wrong">
+            <span class="tag">\(U_3\)</span>
+            <small>Type I — reject a good loan (repay)</small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 
 In a multi-scenario task, rank by the expected value above (largest to smallest).
 
@@ -351,6 +399,78 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 </div>
 
 <div id="feas-eqn-render" class="katex-display"></div>
+
+--
+<!-- .slide: class="slide-heading" -->
+## The Complete Utility Function
+
+<div id="util-eqn-src" style="display:none">
+\begin{aligned}
+U_t
+&=
+\underbrace{
+  \underbrace{w(p_t)\big[(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}\big]}_{\text{repay branch}}
+  - \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}
+  + \underbrace{\bigl(1-w(p_t)\bigr)\big[(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}\big]}_{\text{default branch}}
+  - \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}
+}_{\substack{\text{within-period Prospect Theory value}\\ V_t(c_t\mid r_t)}}
+\\[6pt]
+&\quad+\;
+\underbrace{
+  \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\!\left[
+    w(p_\tau)\big[(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}\big]
+    - \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}
+    + \bigl(1-w(p_\tau)\bigr)\big[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}\big]
+    - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
+  \right]
+}_{\mathclap{\text{discounted expectation}}}
+\end{aligned}
+</div>
+
+<div id="util-eqn-render" class="katex-display"></div>
+
+--
+
+<div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
+  <table style="border-collapse:collapse; margin:auto;">
+    <thead>
+      <tr>
+        <th style="border:1px solid #ccc; padding:6px;">Symbol</th>
+        <th style="border:1px solid #ccc; padding:6px;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$U_t$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Intertemporal utility at time $t$ (PT within-period, quasi-hyperbolic across time)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$V_t$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Decision-weighted within-period value (Prospect Theory)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$c_t^{\mathrm{repay}},\; c_t^{\mathrm{default}}$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Outcome (payoff) in repay vs. default state at time $t$</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$r_t$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Reference point at time $t$</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$p_t$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Objective probability of “repay” at time $t$ (Bernoulli prospect)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$w(\cdot)$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function, with $w\!:\![0,1]\to[0,1]$</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$(x)_{+}$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Positive part: $(x)_{+}=\max\{x,0\}$ (used in PT value around $r_t$)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$\alpha_v,\;\beta_v$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Curvature in gains ($\alpha_v$) / losses ($\beta_v$), $\in(0,1]$</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$\lambda$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Loss aversion ($\lambda\ge 1$)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$\beta\in(0,1]$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Present-bias factor (quasi-hyperbolic)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$\delta\in(0,1)$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Per-period exponential discount factor</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}[\cdot]$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Expectation operator (over future uncertainty, conditional on information at $t$)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$T$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Time horizon (finite in the displayed sum)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">$t,\;\tau$</td>
+          <td style="border:1px solid #ccc; padding:6px;">Current time index ($t$) and future index ($\tau\ge t{+}1$)</td></tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
@@ -475,13 +595,13 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
   <tbody>
     <tr>
       <td style="border:1px solid #ccc; padding:6px;"><strong>Yes</strong></td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">Treatment 3</td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">Treatment 2</td>
+      <td style="border:1px solid #ccc; padding:6px; text-align:center;">Time Delay | Incentive Adjustment</td>
+      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | Incentive Adjustment</td>
     </tr>
     <tr>
       <td style="border:1px solid #ccc; padding:6px;"><strong>No</strong></td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">Treatment 1</td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">Control</td>
+      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | Incentive Adjustment</td>
+      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | No Incentive Adjustment</td>
     </tr>
   </tbody>
 </table>
