@@ -259,17 +259,17 @@
 ## The Utility Function
 
 <div id="util-compact-src" style="display:none">
-\[
-U_t
-\;=\;
+\begin{aligned}
+U_t \;=\;
 \underbrace{\mathbb{E}_t^{\,w}\!\big[v(c_t\mid r_t)\big]}_{\text{within-period (decision-weighted)}}
 \;+\;
 \underbrace{\beta \sum_{\tau=t+1}^{T}\delta^{\,\tau-t}\,
 \mathbb{E}\!\Big[\mathbb{E}_\tau^{\,w}\!\big[v(c_\tau\mid r_\tau)\big]\Big]}_{\text{discounted continuation value}}
-\]
+\end{aligned}
 </div>
 
 <div id="util-compact-render" class="katex-display"></div>
+
 
 --
 
