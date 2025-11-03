@@ -255,7 +255,8 @@
 </div>
 
 ---
-<!-- The Utility Function -->
+<!-- .slide: class="slide-heading closer" -->
+## The Utility Function
 
 <div id="util-eqn-src" style="display:none">
 \begin{aligned}
@@ -267,7 +268,6 @@ U_t \;=\;
 \end{aligned}
 </div>
 <div id="util-eqn-render" class="katex-display"></div>
-
 
 --
 
