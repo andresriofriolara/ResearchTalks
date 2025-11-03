@@ -255,10 +255,8 @@
 </div>
 
 ---
-<!-- .slide: class="slide-heading" -->
-## The Utility Function
-
-<div id="util-compact-src" style="display:none">
+<!-- The Utility Function -->
+<div id="util-compact-eqn-src" style="display:none">
 \begin{aligned}
 U_t \;=\;
 \underbrace{\mathbb{E}_t^{\,w}\!\big[v(c_t\mid r_t)\big]}_{\text{within-period (decision-weighted)}}
@@ -268,8 +266,7 @@ U_t \;=\;
 \end{aligned}
 </div>
 
-<div id="util-compact-render" class="katex-display"></div>
-
+<div id="util-compact-eqn-render" class="katex-display"></div>
 
 --
 
