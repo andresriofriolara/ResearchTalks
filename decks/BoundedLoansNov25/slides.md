@@ -256,7 +256,8 @@
 
 ---
 <!-- The Utility Function -->
-<div id="util-compact-eqn-src" style="display:none">
+
+<div id="util-eqn-src" style="display:none">
 \begin{aligned}
 U_t \;=\;
 \underbrace{\mathbb{E}_t^{\,w}\!\big[v(c_t\mid r_t)\big]}_{\text{within-period (decision-weighted)}}
@@ -265,8 +266,8 @@ U_t \;=\;
 \mathbb{E}\!\Big[\mathbb{E}_\tau^{\,w}\!\big[v(c_\tau\mid r_\tau)\big]\Big]}_{\text{discounted continuation value}}
 \end{aligned}
 </div>
+<div id="util-eqn-render" class="katex-display"></div>
 
-<div id="util-compact-eqn-render" class="katex-display"></div>
 
 --
 
