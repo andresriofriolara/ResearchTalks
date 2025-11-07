@@ -546,7 +546,6 @@ U_t
   </table>
 </div>
 
-
 ---
 <!-- .slide: class="slide-heading closer" -->
 ## A Blur in the Perceived Feasibility Frontier
