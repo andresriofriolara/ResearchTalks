@@ -504,6 +504,7 @@ U_t
 --
 
 <div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
+
   <table style="border-collapse:collapse; margin:auto;">
     <thead>
       <tr>
@@ -512,37 +513,39 @@ U_t
       </tr>
     </thead>
     <tbody>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$U_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Intertemporal utility at time $t$ (PT within-period, quasi-hyperbolic across time)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$V_t$</td>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(U_t\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Intertemporal utility at time \(t\) (PT within-period, quasi-hyperbolic across time)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(V_t\)</td>
           <td style="border:1px solid #ccc; padding:6px;">Decision-weighted within-period value (Prospect Theory)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$c_t^{\mathrm{repay}},\; c_t^{\mathrm{default}}$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Outcome (payoff) in repay vs. default state at time $t$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$r_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Reference point at time $t$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$p_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Objective probability of “repay” at time $t$ (Bernoulli prospect)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$w(\cdot)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function, with $w\!:\![0,1]\to[0,1]$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$(x)_{+}$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Positive part: $(x)_{+}=\max\{x,0\}$ (used in PT value around $r_t$)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\alpha_v,\;\beta_v$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Curvature in gains ($\alpha_v$) / losses ($\beta_v$), $\in(0,1]$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\lambda$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Loss aversion ($\lambda\ge 1$)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\beta\in(0,1]$</td>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(c_t^{\text{repay}},\; c_t^{\text{default}}\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Outcome (payoff) in repay vs. default state at time \(t\)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(r_t\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Reference point at time \(t\)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(p_t\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Objective probability of “repay” at time \(t\) (Bernoulli prospect)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(w(\cdot)\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function, with \(w\!:\![0,1]\to[0,1]\)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\((x)_{+}\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Positive part: \((x)_{+}=\max\{x,0\}\) (used in PT value around \(r_t\))</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(\alpha_v,\;\beta_v\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Curvature in gains \((\alpha_v)\) / losses \((\beta_v)\), \(\in(0,1]\)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(\lambda\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Loss aversion \((\lambda\ge 1)\)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(\beta\in(0,1]\)</td>
           <td style="border:1px solid #ccc; padding:6px;">Present-bias factor (quasi-hyperbolic)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\delta\in(0,1)$</td>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(\delta\in(0,1)\)</td>
           <td style="border:1px solid #ccc; padding:6px;">Per-period exponential discount factor</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}[\cdot]$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Expectation operator (over future uncertainty, conditional on information at $t$)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$T$</td>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(\mathbb{E}[\cdot]\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Expectation operator (over future uncertainty, conditional on information at \(t\))</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(T\)</td>
           <td style="border:1px solid #ccc; padding:6px;">Time horizon (finite in the displayed sum)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$t,\;\tau$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Current time index ($t$) and future index ($\tau\ge t{+}1$)</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:6px;">\(t,\;\tau\)</td>
+          <td style="border:1px solid #ccc; padding:6px;">Current time index \((t)\) and future index \((\tau\ge t{+}1)\)</td></tr>
     </tbody>
   </table>
+
 </div>
+
 
 ---
 <!-- .slide: class="slide-heading closer" -->
