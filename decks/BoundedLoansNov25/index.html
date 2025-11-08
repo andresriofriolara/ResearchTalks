@@ -111,15 +111,23 @@
       throwOnError: false
     };
 
-    // Special renderer for the hidden/visible Utility Function equation
-    function renderUtilEqn(slide) {
-      const s   = slide || Reveal.getCurrentSlide();
-      const src = s && s.querySelector('#util-eqn-src');
-      const out = s && s.querySelector('#util-eqn-render');
-      if (!src || !out || out.dataset.rendered) return;
-      katex.render(src.textContent.trim(), out, { displayMode: true, throwOnError: false });
-      out.dataset.rendered = '1';
-    }
+function renderUtilEqn(slide) {
+  const s   = slide || Reveal.getCurrentSlide();
+  const src = s && s.querySelector('#util-eqn-src');
+  const out = s && s.querySelector('#util-eqn-render');
+  if (!src || !out || out.dataset.rendered) return;
+
+  // Strip \mathclap{...} wrappers if present (KaTeX-safe)
+  let tex = src.textContent.trim().replace(/\\mathclap\s*\{([^}]*)\}/g, '$1');
+
+  try {
+    katex.render(tex, out, { displayMode: true, throwOnError: false });
+    out.dataset.rendered = '1';
+  } catch (e) {
+    console.error('KaTeX render error:', e);
+  }
+}
+
 
     // Run KaTeX auto-render + special util equation on current slide
     function renderSlide(e){
