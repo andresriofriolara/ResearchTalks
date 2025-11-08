@@ -655,3 +655,9 @@ html { color-scheme: light; }
   .vsteps li:not(:last-child)::before{left:25px}
 }
 
+
+/* 3× bigger for this single equation only */
+  #util-eqn-render.katex-display{
+    font-size: 3em !important;
+    line-height: 1.05; /* keeps tall stacks tidy */
+  }
