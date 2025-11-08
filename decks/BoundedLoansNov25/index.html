@@ -17,6 +17,16 @@
     section img{ max-width:100%; height:auto; }
   </style>
 
+<style>
+  /* 3× bigger for this single equation only */
+  #util-eqn-render.katex-display{
+    font-size: 1.5em !important;
+    line-height: 1.05; /* keeps tall stacks tidy */
+  }
+</style>
+
+
+
 <!-- Segmented toggle styles (global, reusable, theme-safe) -->
 <style id="seg-toggle-styles">
   .reveal .seg-toggle{
@@ -143,5 +153,6 @@
   Reveal.on('ready',        e => renderFeasEqn(e.currentSlide));
   Reveal.on('slidechanged', e => renderFeasEqn(e.currentSlide));
 </script>
+
 
 
