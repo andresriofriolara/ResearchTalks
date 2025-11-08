@@ -99,36 +99,36 @@
     });
   </script>
 
-  <!-- KaTeX rendering (auto + custom pairs) -->
+  <!-- KaTeX rendering (auto + class-based pairs) -->
   <script>
   (function(){
-    function renderUtilEqn(slide){
-      const s   = slide || Reveal.getCurrentSlide();
-      const src = s && s.querySelector('#util-eqn-src');
-      const out = s && s.querySelector('#util-eqn-render');
-      if(!src || !out || out.dataset.rendered) return;
+    function renderPairs(slide){
+      const root = slide || Reveal.getCurrentSlide();
+      if(!root) return;
+      const pairs = root.querySelectorAll('.util-pair');
+      pairs.forEach(pair=>{
+        const src = pair.querySelector('.util-src');
+        const out = pair.querySelector('.util-render');
+        if(!src || !out || out.dataset.rendered) return;
 
-      let tex = src.textContent
-        .replace(/\\mathclap\s*\{([^}]*)\}/g, '$1')
-        .replace(/\\substack\s*\{([^}]*)\}/g, '\\begin{array}{c}$1\\end{array}')
-        .replace(/\u00A0/g, ' ')
-        .replace(/\\big\s*\[/g,  '\\bigl[')
-        .replace(/\\big\s*\]/g,  '\\bigr]')
-        .replace(/\\Big\s*\[/g,  '\\Bigl[')
-        .replace(/\\Big\s*\]/g,  '\\Bigr]')
-        .replace(/\\bigg\s*\[/g, '\\biggl[')
-        .replace(/\\bigg\s*\]/g, '\\biggr]')
-        .replace(/\\Bigg\s*\[/g, '\\Biggl[')
-        .replace(/\\Bigg\s*\]/g, '\\Biggr]')
-        .replace(/\\!+/g, '\\!');
+        let tex = src.textContent
+          .replace(/\\mathclap\s*\{([^}]*)\}/g,'$1')
+          .replace(/\\substack\s*\{([^}]*)\}/g,'\\begin{array}{c}$1\\end{array}')
+          .replace(/\u00A0/g,' ')
+          .replace(/\\big\s*\[/g,'\\bigl[').replace(/\\big\s*\]/g,'\\bigr]')
+          .replace(/\\Big\s*\[/g,'\\Bigl[').replace(/\\Big\s*\]/g,'\\Bigr]')
+          .replace(/\\bigg\s*\[/g,'\\biggl[').replace(/\\bigg\s*\]/g,'\\biggr]')
+          .replace(/\\Bigg\s*\[/g,'\\Biggl[').replace(/\\Bigg\s*\]/g,'\\Biggr]')
+          .replace(/\\!+/g,'\\!');
 
-      try{
-        katex.render(tex.trim(), out, { displayMode:true, throwOnError:false, strict:"ignore" });
-        out.dataset.rendered = '1';
-      }catch(e){
-        console.error('KaTeX render error:', e.message);
-        out.textContent = tex;
-      }
+        try{
+          katex.render(tex.trim(), out, { displayMode:true, throwOnError:false, strict:"ignore" });
+          out.dataset.rendered='1';
+        }catch(e){
+          console.error('KaTeX render error:', e.message);
+          out.textContent = tex;
+        }
+      });
     }
 
     function renderFeasEqn(slide){
@@ -142,19 +142,19 @@
 
     function renderSlide(e){
       const current = e.currentSlide || e.slide || document.querySelector('.slides');
-      if (window.renderMathInElement){
-        window.renderMathInElement(current, {
-          delimiters: [
-            { left:"$$", right:"$$", display:true },
-            { left:"\\(", right:"\\)", display:false },
-            { left:"\\[", right:"\\]", display:true },
-            { left:"$",  right:"$",  display:false }
+      if(window.renderMathInElement){
+        window.renderMathInElement(current,{
+          delimiters:[
+            {left:"$$", right:"$$", display:true},
+            {left:"\\(", right:"\\)", display:false},
+            {left:"\\[", right:"\\]", display:true},
+            {left:"$",  right:"$",  display:false}
           ],
           throwOnError:false,
           ignoredClasses:['util-src','feas-src']
         });
       }
-      renderUtilEqn(current);
+      renderPairs(current);
       renderFeasEqn(current);
     }
 
