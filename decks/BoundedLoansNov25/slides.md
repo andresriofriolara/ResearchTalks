@@ -267,7 +267,7 @@ U_t \;=\;
 \mathbb{E}\!\Big[\mathbb{E}_\tau^{\,w}\!\big[v(c_\tau\mid r_\tau)\big]\Big]}_{\text{discounted continuation value}}
 \end{aligned}
 </div>
-<div id="util-eqn-render" class="katex-display"></div>
+<div id="util-eqn-render" class="katex-display util-eqn--big"></div>
 
 --
 
