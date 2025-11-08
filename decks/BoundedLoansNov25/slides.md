@@ -476,9 +476,6 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 <!-- .slide: class="slide-heading" -->
 ## The Complete Utility Function
 
----
-## The Complete Utility Function
-
 <div id="util-eqn-src" class="util-src" style="display:none">
 \begin{aligned}
 U_t
