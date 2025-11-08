@@ -17,53 +17,51 @@
     section img{ max-width:100%; height:auto; }
   </style>
 
-<style>
-  /* Bigger only when you add the class */
-  .util-eqn--big.katex-display{
-    font-size: 1.5em;
-    line-height: 1.05;
-  }
-</style>
+  <!-- Per-slide “bigger math” toggle (only when class is added on the render DIV) -->
+  <style>
+    .util-eqn--big.katex-display{
+      font-size: 1.5em;
+      line-height: 1.05;
+    }
+  </style>
 
-<!-- Segmented toggle styles (global, reusable, theme-safe) -->
-<style id="seg-toggle-styles">
-  .reveal .seg-toggle{
-    display:flex; justify-content:center; align-items:center;
-    margin: 1.2em 0 1em; /* space above and below */
-  }
-  .reveal .seg-toggle .seg-pill{
-    display:inline-flex; border:1px solid var(--seg-border, rgba(0,0,0,0.15));
-    border-radius:999px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.06);
-    backdrop-filter:saturate(1.1); font-weight:600; letter-spacing:.2px;
-  }
-  .reveal .seg-toggle .seg{
-    padding:14px 28px; min-width:220px; text-align:center; user-select:none;
-    transition:transform .22s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
-    background:var(--seg-bg, rgba(255,255,255,0.65)); color:var(--seg-fg,#222);
-  }
-  .reveal .seg-toggle .seg + .seg{ border-left:1px solid var(--seg-divider, rgba(0,0,0,0.08)); }
-  .reveal .seg-toggle .seg:hover{ transform: translateY(-1px); }
-  .reveal .seg-toggle .seg:active{ transform: translateY(0); }
-  .reveal .seg-toggle .seg.is-active{
-    background: var(--ivey-green, #0d5e3a); color:#fff;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
-    transform: scale(1.02);
-  }
-  @media (max-width:880px){
-    .reveal .seg-toggle .seg{ min-width:140px; padding:12px 18px; }
-  }
-</style>
+  <!-- Segmented toggle styles (global, reusable, theme-safe) -->
+  <style id="seg-toggle-styles">
+    .reveal .seg-toggle{
+      display:flex; justify-content:center; align-items:center;
+      margin: 1.2em 0 1em;
+    }
+    .reveal .seg-toggle .seg-pill{
+      display:inline-flex; border:1px solid var(--seg-border, rgba(0,0,0,0.15));
+      border-radius:999px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.06);
+      backdrop-filter:saturate(1.1); font-weight:600; letter-spacing:.2px;
+    }
+    .reveal .seg-toggle .seg{
+      padding:14px 28px; min-width:220px; text-align:center; user-select:none;
+      transition:transform .22s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+      background:var(--seg-bg, rgba(255,255,255,0.65)); color:var(--seg-fg,#222);
+    }
+    .reveal .seg-toggle .seg + .seg{ border-left:1px solid var(--seg-divider, rgba(0,0,0,0.08)); }
+    .reveal .seg-toggle .seg:hover{ transform: translateY(-1px); }
+    .reveal .seg-toggle .seg:active{ transform: translateY(0); }
+    .reveal .seg-toggle .seg.is-active{
+      background: var(--ivey-green, #0d5e3a); color:#fff;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
+      transform: scale(1.02);
+    }
+    @media (max-width:880px){
+      .reveal .seg-toggle .seg{ min-width:140px; padding:12px 18px; }
+    }
+  </style>
 
-
-<script>
-  window.MathJax = {
-    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-    // +5pt ≈ +6–7px → ~1.18× scale is a good match
-    chtml: { scale: 1.4 },
-    svg:   { scale: 1.4 }
-  };
-</script>
-
+  <!-- (MathJax config present but unused; deck uses KaTeX) -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      chtml: { scale: 1.4 },
+      svg:   { scale: 1.4 }
+    };
+  </script>
 
   <!-- KaTeX + auto-render -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
@@ -89,100 +87,73 @@
   <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
 
+  <!-- Reveal init -->
   <script>
-    // Initialize Reveal first
     Reveal.initialize({
       hash: true,
       slideNumber: true,
       controls: true,
       controlsTutorial: true,
       progress: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ] // ← no math plugin
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ] /* no math plugin */
     });
-
-    // KaTeX auto-render for inline/$$…$$ math
-    const renderOpts = {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true },
-        { left: "$",  right: "$",  display: false }
-      ],
-      throwOnError: false
-    };
-
-
-
-    // Run KaTeX auto-render + special util equation on current slide
-    function renderSlide(e){
-      const current = e.currentSlide || e.slide || document.querySelector('.slides');
-      renderMathInElement(current, renderOpts);
-      renderUtilEqn(current);
-    }
-
-    // Hook both on ready & slidechanged
-    Reveal.on('ready',        renderSlide);
-    Reveal.on('slidechanged', renderSlide);
   </script>
 
+  <!-- KaTeX rendering (auto + custom pairs) -->
+  <script>
+  (function(){
+    function renderUtilEqn(slide){
+      const s = slide || Reveal.getCurrentSlide();
+      const src = s && s.querySelector('#util-eqn-src');
+      const out = s && s.querySelector('#util-eqn-render');
+      if(!src || !out || out.dataset.rendered) return;
+      let tex = src.textContent
+        .replace(/\\mathclap\s*\{([^}]*)\}/g,'$1')
+        .replace(/\\substack\s*\{([^}]*)\}/g,'\\begin{array}{c}$1\\end{array}')
+        .replace(/\u00A0/g,' ')
+        .replace(/\\!+/g,'\\!');
+      try{
+        katex.render(tex.trim(), out, { displayMode:true, throwOnError:false, strict:"ignore" });
+        out.dataset.rendered = '1';
+      }catch(e){
+        console.error('KaTeX render error:', e);
+        out.textContent = tex;
+      }
+    }
+
+    function renderFeasEqn(slide){
+      const s = slide || Reveal.getCurrentSlide();
+      const src = s && s.querySelector('#feas-eqn-src');
+      const out = s && s.querySelector('#feas-eqn-render');
+      if(src && out && out.childNodes.length === 0){
+        katex.render(src.textContent, out, { displayMode:true, throwOnError:false });
+      }
+    }
+
+    function renderSlide(e){
+      const current = e.currentSlide || e.slide || document.querySelector('.slides');
+      if (window.renderMathInElement){
+        window.renderMathInElement(current, {
+          delimiters: [
+            { left:"$$", right:"$$", display:true },
+            { left:"\\(", right:"\\)", display:false },
+            { left:"\\[", right:"\\]", display:true },
+            { left:"$",  right:"$",  display:false }
+          ],
+          throwOnError:false,
+          ignoredClasses: ['util-src','feas-src']
+        });
+      }
+      renderUtilEqn(current);
+      renderFeasEqn(current);
+    }
+
+    Reveal.on('ready', renderSlide);
+    Reveal.on('slidechanged', renderSlide);
+  })();
+  </script>
+
+  <!-- Clock (keep last) -->
   <script src="../../shared/js/clock.js"></script>
 </body>
 </html>
-
-<script>
-  // Renders the "Feasible utility path" equation (mirrors renderUtilEqn)
-  function renderFeasEqn(slide) {
-    const s   = slide || Reveal.getCurrentSlide();
-    const src = s && s.querySelector('#feas-eqn-src');
-    const out = s && s.querySelector('#feas-eqn-render');
-    if (src && out && out.childNodes.length === 0) {
-      katex.render(src.textContent, out, { displayMode: true, throwOnError: false });
-    }
-  }
-
-  Reveal.on('ready',        e => renderFeasEqn(e.currentSlide));
-  Reveal.on('slidechanged', e => renderFeasEqn(e.currentSlide));
-</script>
-
-
-<script>
-(function(){
-  function renderUtilEqn(slide){
-    const s = slide || Reveal.getCurrentSlide();
-    const src = s && s.querySelector('#util-eqn-src');
-    const out = s && s.querySelector('#util-eqn-render');
-    if(!src || !out || out.dataset.rendered) return;
-    let tex = src.textContent
-      .replace(/\\mathclap\s*\{([^}]*)\}/g,'$1')
-      .replace(/\\substack\s*\{([^}]*)\}/g,'\\begin{array}{c}$1\\end{array}')
-      .replace(/\u00A0/g,' ')
-      .replace(/\\!+/g,'\\!');
-    try{
-      katex.render(tex.trim(), out, { displayMode:true, throwOnError:false, strict:"ignore" });
-      out.dataset.rendered = '1';
-    }catch(e){
-      console.error('KaTeX render error:', e);
-      out.textContent = tex;
-    }
-  }
-
-  function renderSlide(e){
-    const current = e.currentSlide || e.slide || document.querySelector('.slides');
-    if (window.renderMathInElement){
-      window.renderMathInElement(current, {
-        delimiters: [
-          { left:"$$", right:"$$", display:true },
-          { left:"\\(", right:"\\)", display:false },
-          { left:"\\[", right:"\\]", display:true },
-          { left:"$",  right:"$",  display:false }
-        ],
-        throwOnError:false
-      });
-    }
-    renderUtilEqn(current);
-  }
-
-  Reveal.on('ready', renderSlide);
-  Reveal.on('slidechanged', renderSlide);
-})();
-</script>
