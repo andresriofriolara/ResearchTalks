@@ -103,20 +103,30 @@
   <script>
   (function(){
     function renderUtilEqn(slide){
-      const s = slide || Reveal.getCurrentSlide();
+      const s   = slide || Reveal.getCurrentSlide();
       const src = s && s.querySelector('#util-eqn-src');
       const out = s && s.querySelector('#util-eqn-render');
       if(!src || !out || out.dataset.rendered) return;
+
       let tex = src.textContent
-        .replace(/\\mathclap\s*\{([^}]*)\}/g,'$1')
-        .replace(/\\substack\s*\{([^}]*)\}/g,'\\begin{array}{c}$1\\end{array}')
-        .replace(/\u00A0/g,' ')
-        .replace(/\\!+/g,'\\!');
+        .replace(/\\mathclap\s*\{([^}]*)\}/g, '$1')
+        .replace(/\\substack\s*\{([^}]*)\}/g, '\\begin{array}{c}$1\\end{array}')
+        .replace(/\u00A0/g, ' ')
+        .replace(/\\big\s*\[/g,  '\\bigl[')
+        .replace(/\\big\s*\]/g,  '\\bigr]')
+        .replace(/\\Big\s*\[/g,  '\\Bigl[')
+        .replace(/\\Big\s*\]/g,  '\\Bigr]')
+        .replace(/\\bigg\s*\[/g, '\\biggl[')
+        .replace(/\\bigg\s*\]/g, '\\biggr]')
+        .replace(/\\Bigg\s*\[/g, '\\Biggl[')
+        .replace(/\\Bigg\s*\]/g, '\\Biggr]')
+        .replace(/\\!+/g, '\\!');
+
       try{
         katex.render(tex.trim(), out, { displayMode:true, throwOnError:false, strict:"ignore" });
         out.dataset.rendered = '1';
       }catch(e){
-        console.error('KaTeX render error:', e);
+        console.error('KaTeX render error:', e.message);
         out.textContent = tex;
       }
     }
@@ -141,7 +151,7 @@
             { left:"$",  right:"$",  display:false }
           ],
           throwOnError:false,
-          ignoredClasses: ['util-src','feas-src']
+          ignoredClasses:['util-src','feas-src']
         });
       }
       renderUtilEqn(current);

@@ -498,7 +498,6 @@ U_t
 }_{\mathclap{\text{discounted expectation}}}
 \end{aligned}
 </div>
-
 <div id="util-eqn-render" class="katex-display"></div>
 
 ---
