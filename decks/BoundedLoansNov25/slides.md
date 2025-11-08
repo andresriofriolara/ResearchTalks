@@ -449,7 +449,7 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 <!-- .slide: class="slide-heading" -->
 ## To be Consistent with De Clippel Ancillary Conditions
 
-- $A_t$: available menu  
+- $A_t$: available menu
 - $F(A_t)$: feasible attention sets  
 - $S_t \subseteq A_t$: endogenous consideration set  
 

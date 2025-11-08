@@ -17,7 +17,7 @@
     section img{ max-width:100%; height:auto; }
   </style>
 
-  <!-- Per-slide “bigger math” toggle (only when class is added on the render DIV) -->
+  <!-- Optional per-slide size booster (only if you add class on the render DIV) -->
   <style>
     .util-eqn--big.katex-display{
       font-size: 1.5em;
@@ -25,45 +25,19 @@
     }
   </style>
 
-  <!-- Segmented toggle styles (global, reusable, theme-safe) -->
+  <!-- Segmented toggle styles -->
   <style id="seg-toggle-styles">
-    .reveal .seg-toggle{
-      display:flex; justify-content:center; align-items:center;
-      margin: 1.2em 0 1em;
-    }
-    .reveal .seg-toggle .seg-pill{
-      display:inline-flex; border:1px solid var(--seg-border, rgba(0,0,0,0.15));
-      border-radius:999px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.06);
-      backdrop-filter:saturate(1.1); font-weight:600; letter-spacing:.2px;
-    }
-    .reveal .seg-toggle .seg{
-      padding:14px 28px; min-width:220px; text-align:center; user-select:none;
-      transition:transform .22s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
-      background:var(--seg-bg, rgba(255,255,255,0.65)); color:var(--seg-fg,#222);
-    }
-    .reveal .seg-toggle .seg + .seg{ border-left:1px solid var(--seg-divider, rgba(0,0,0,0.08)); }
+    .reveal .seg-toggle{ display:flex; justify-content:center; align-items:center; margin:1.2em 0 1em; }
+    .reveal .seg-toggle .seg-pill{ display:inline-flex; border:1px solid var(--seg-border,rgba(0,0,0,.15)); border-radius:999px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,.06); backdrop-filter:saturate(1.1); font-weight:600; letter-spacing:.2px; }
+    .reveal .seg-toggle .seg{ padding:14px 28px; min-width:220px; text-align:center; user-select:none; transition:transform .22s ease, background .18s ease, color .18s ease, box-shadow .18s ease; background:var(--seg-bg,rgba(255,255,255,.65)); color:var(--seg-fg,#222); }
+    .reveal .seg-toggle .seg + .seg{ border-left:1px solid var(--seg-divider,rgba(0,0,0,.08)); }
     .reveal .seg-toggle .seg:hover{ transform: translateY(-1px); }
     .reveal .seg-toggle .seg:active{ transform: translateY(0); }
-    .reveal .seg-toggle .seg.is-active{
-      background: var(--ivey-green, #0d5e3a); color:#fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
-      transform: scale(1.02);
-    }
-    @media (max-width:880px){
-      .reveal .seg-toggle .seg{ min-width:140px; padding:12px 18px; }
-    }
+    .reveal .seg-toggle .seg.is-active{ background:var(--ivey-green,#0d5e3a); color:#fff; box-shadow:inset 0 0 0 1px rgba(255,255,255,.25), 0 4px 14px rgba(13,94,58,.35); transform:scale(1.02); }
+    @media (max-width:880px){ .reveal .seg-toggle .seg{ min-width:140px; padding:12px 18px; } }
   </style>
 
-  <!-- (MathJax config present but unused; deck uses KaTeX) -->
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-      chtml: { scale: 1.4 },
-      svg:   { scale: 1.4 }
-    };
-  </script>
-
-  <!-- KaTeX + auto-render -->
+  <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
@@ -81,7 +55,7 @@
     </div>
   </div>
 
-  <!-- Reveal core + NON-math plugins -->
+  <!-- Reveal core + plugins -->
   <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
@@ -99,36 +73,32 @@
     });
   </script>
 
-  <!-- KaTeX rendering (auto + class-based pairs) -->
+  <!-- KaTeX: auto-render + single ID-based utility renderer (stable) -->
   <script>
   (function(){
-    function renderPairs(slide){
-      const root = slide || Reveal.getCurrentSlide();
-      if(!root) return;
-      const pairs = root.querySelectorAll('.util-pair');
-      pairs.forEach(pair=>{
-        const src = pair.querySelector('.util-src');
-        const out = pair.querySelector('.util-render');
-        if(!src || !out || out.dataset.rendered) return;
+    function renderUtilEqn(slide){
+      const s   = slide || Reveal.getCurrentSlide();
+      const src = s && s.querySelector('#util-eqn-src');
+      const out = s && s.querySelector('#util-eqn-render');
+      if(!src || !out || out.dataset.rendered) return;
 
-        let tex = src.textContent
-          .replace(/\\mathclap\s*\{([^}]*)\}/g,'$1')
-          .replace(/\\substack\s*\{([^}]*)\}/g,'\\begin{array}{c}$1\\end{array}')
-          .replace(/\u00A0/g,' ')
-          .replace(/\\big\s*\[/g,'\\bigl[').replace(/\\big\s*\]/g,'\\bigr]')
-          .replace(/\\Big\s*\[/g,'\\Bigl[').replace(/\\Big\s*\]/g,'\\Bigr]')
-          .replace(/\\bigg\s*\[/g,'\\biggl[').replace(/\\bigg\s*\]/g,'\\biggr]')
-          .replace(/\\Bigg\s*\[/g,'\\Biggl[').replace(/\\Bigg\s*\]/g,'\\Biggr]')
-          .replace(/\\!+/g,'\\!');
+      let tex = src.textContent
+        .replace(/\\mathclap\s*\{([^}]*)\}/g, '$1')
+        .replace(/\\substack\s*\{([^}]*)\}/g, '\\begin{array}{c}$1\\end{array}')
+        .replace(/\u00A0/g, ' ')
+        .replace(/\\big\s*\[/g,  '\\bigl[').replace(/\\big\s*\]/g,  '\\bigr]')
+        .replace(/\\Big\s*\[/g,  '\\Bigl[').replace(/\\Big\s*\]/g,  '\\Bigr]')
+        .replace(/\\bigg\s*\[/g, '\\biggl[').replace(/\\bigg\s*\]/g, '\\biggr]')
+        .replace(/\\Bigg\s*\[/g, '\\Biggl[').replace(/\\Bigg\s*\]/g, '\\Biggr]')
+        .replace(/\\!+/g, '\\!');
 
-        try{
-          katex.render(tex.trim(), out, { displayMode:true, throwOnError:false, strict:"ignore" });
-          out.dataset.rendered='1';
-        }catch(e){
-          console.error('KaTeX render error:', e.message);
-          out.textContent = tex;
-        }
-      });
+      try{
+        katex.render(tex.trim(), out, { displayMode:true, throwOnError:false, strict:"ignore" });
+        out.dataset.rendered = '1';
+      }catch(e){
+        console.error('KaTeX render error:', e.message);
+        out.textContent = tex;
+      }
     }
 
     function renderFeasEqn(slide){
@@ -142,28 +112,28 @@
 
     function renderSlide(e){
       const current = e.currentSlide || e.slide || document.querySelector('.slides');
-      if(window.renderMathInElement){
-        window.renderMathInElement(current,{
-          delimiters:[
-            {left:"$$", right:"$$", display:true},
-            {left:"\\(", right:"\\)", display:false},
-            {left:"\\[", right:"\\]", display:true},
-            {left:"$",  right:"$",  display:false}
+      if (window.renderMathInElement){
+        window.renderMathInElement(current, {
+          delimiters: [
+            { left:"$$", right:"$$", display:true },
+            { left:"\\(", right:"\\)", display:false },
+            { left:"\\[", right:"\\]", display:true },
+            { left:"$",  right:"$",  display:false }
           ],
           throwOnError:false,
-          ignoredClasses:['util-src','feas-src']
+          ignoredClasses: ['util-src','feas-src'] /* prevent hidden sources from being parsed */
         });
       }
-      renderPairs(current);
+      renderUtilEqn(current);
       renderFeasEqn(current);
     }
 
-    Reveal.on('ready', renderSlide);
+    Reveal.on('ready',        renderSlide);
     Reveal.on('slidechanged', renderSlide);
   })();
   </script>
 
-  <!-- Clock (keep last) -->
+  <!-- Clock -->
   <script src="../../shared/js/clock.js"></script>
 </body>
 </html>
