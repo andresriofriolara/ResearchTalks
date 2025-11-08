@@ -608,46 +608,12 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 --
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design
-<section data-background-color="transparent">
-  <style>
-    /* Segmented Toggle — static version (stuck on "Lab Experiment") */
-    .seg-wrap {
-      display: flex; justify-content: center; align-items: center; height: 80%;
-    }
-    .seg-pill {
-      display: inline-flex; border: 1px solid var(--seg-border, rgba(0,0,0,0.15));
-      border-radius: 999px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-      backdrop-filter: saturate(1.1); font-weight: 600; letter-spacing: 0.2px;
-    }
-    .seg {
-      padding: 14px 28px; min-width: 220px; text-align: center; user-select: none;
-      transition: transform 220ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-      background: var(--seg-bg, rgba(255,255,255,0.65)); color: var(--seg-fg, #222);
-    }
-    .seg + .seg { border-left: 1px solid var(--seg-divider, rgba(0,0,0,0.08)); }
-    .seg:hover { transform: translateY(-1px); }
-    .seg:active { transform: translateY(0); }
-    .seg-title { text-align: center; margin-bottom: 18px; font-weight: 700; letter-spacing: 0.3px; opacity: 0.9; }
-    @media (max-width: 880px) { .seg { min-width: 140px; padding: 12px 18px; } }
-    .seg.is-active{
-      background: var(--ivey-green, #0d5e3a); color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
-      transform: scale(1.02);
-    }
-  </style>
-
-  <div class="seg-wrap">
-    <div>
-      <div class="seg-title">Experiments:</div>
-      <div class="seg-pill">
-        <!-- Static: stuck on Lab -->
-        <div class="seg is-active">Lab Experiment</div>
-        <div class="seg">Field Experiment</div>
-      </div>
-    </div>
+<div class="seg-toggle" aria-label="Experiments">
+  <div class="seg-pill">
+    <div class="seg is-active">Lab Experiment</div>
+    <div class="seg">Field Experiment</div>
   </div>
-</section>
-
+</div>
 
 <table style="border-collapse:collapse; margin:auto;">
   <thead>
@@ -678,45 +644,12 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 --
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design
-<section data-background-color="transparent">
-  <style>
-    /* Segmented Toggle — static version (stuck on "Lab Experiment") */
-    .seg-wrap {
-      display: flex; justify-content: center; align-items: center; height: 80%;
-    }
-    .seg-pill {
-      display: inline-flex; border: 1px solid var(--seg-border, rgba(0,0,0,0.15));
-      border-radius: 999px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-      backdrop-filter: saturate(1.1); font-weight: 600; letter-spacing: 0.2px;
-    }
-    .seg {
-      padding: 14px 28px; min-width: 220px; text-align: center; user-select: none;
-      transition: transform 220ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-      background: var(--seg-bg, rgba(255,255,255,0.65)); color: var(--seg-fg, #222);
-    }
-    .seg + .seg { border-left: 1px solid var(--seg-divider, rgba(0,0,0,0.08)); }
-    .seg:hover { transform: translateY(-1px); }
-    .seg:active { transform: translateY(0); }
-    .seg-title { text-align: center; margin-bottom: 18px; font-weight: 700; letter-spacing: 0.3px; opacity: 0.9; }
-    @media (max-width: 880px) { .seg { min-width: 140px; padding: 12px 18px; } }
-    .seg.is-active{
-      background: var(--ivey-green, #0d5e3a); color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
-      transform: scale(1.02);
-    }
-  </style>
-
-  <div class="seg-wrap">
-    <div>
-      <div class="seg-title">Experiments:</div>
-      <div class="seg-pill">
-        <!-- Static: stuck on Lab -->
-        <div class="seg is-active">Lab Experiment</div>
-        <div class="seg">Field Experiment</div>
-      </div>
-    </div>
+<div class="seg-toggle" aria-label="Experiments">
+  <div class="seg-pill">
+    <div class="seg is-active">Lab Experiment</div>
+    <div class="seg">Field Experiment</div>
   </div>
-</section>
+</div>
 
 <div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
   <table style="border-collapse:collapse; margin:auto;">
@@ -742,45 +675,12 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 --
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design - A Decision Making Situation
-<section data-background-color="transparent">
-  <style>
-    /* Segmented Toggle — static version (stuck on "Lab Experiment") */
-    .seg-wrap {
-      display: flex; justify-content: center; align-items: center; height: 80%;
-    }
-    .seg-pill {
-      display: inline-flex; border: 1px solid var(--seg-border, rgba(0,0,0,0.15));
-      border-radius: 999px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-      backdrop-filter: saturate(1.1); font-weight: 600; letter-spacing: 0.2px;
-    }
-    .seg {
-      padding: 14px 28px; min-width: 220px; text-align: center; user-select: none;
-      transition: transform 220ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-      background: var(--seg-bg, rgba(255,255,255,0.65)); color: var(--seg-fg, #222);
-    }
-    .seg + .seg { border-left: 1px solid var(--seg-divider, rgba(0,0,0,0.08)); }
-    .seg:hover { transform: translateY(-1px); }
-    .seg:active { transform: translateY(0); }
-    .seg-title { text-align: center; margin-bottom: 18px; font-weight: 700; letter-spacing: 0.3px; opacity: 0.9; }
-    @media (max-width: 880px) { .seg { min-width: 140px; padding: 12px 18px; } }
-    .seg.is-active{
-      background: var(--ivey-green, #0d5e3a); color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
-      transform: scale(1.02);
-    }
-  </style>
-
-  <div class="seg-wrap">
-    <div>
-      <div class="seg-title">Experiments:</div>
-      <div class="seg-pill">
-        <!-- Static: stuck on Lab -->
-        <div class="seg is-active">Lab Experiment</div>
-        <div class="seg">Field Experiment</div>
-      </div>
-    </div>
+<div class="seg-toggle" aria-label="Experiments">
+  <div class="seg-pill">
+    <div class="seg is-active">Lab Experiment</div>
+    <div class="seg">Field Experiment</div>
   </div>
-</section>
+</div>
 
 - Loan Officer Training in 5 minutes
 - Decision making - rank from most to least chances of repayment (5 decisions)
@@ -842,46 +742,12 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 --
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design
-<section data-background-color="transparent">
-  <style>
-    /* Segmented Toggle — static version (stuck on "Field Experiment") */
-    .seg-wrap {
-      display: flex; justify-content: center; align-items: center; height: 80%;
-    }
-    .seg-pill {
-      display: inline-flex; border: 1px solid var(--seg-border, rgba(0,0,0,0.15));
-      border-radius: 999px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-      backdrop-filter: saturate(1.1); font-weight: 600; letter-spacing: 0.2px;
-    }
-    .seg {
-      padding: 14px 28px; min-width: 220px; text-align: center; user-select: none;
-      transition: transform 220ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-      background: var(--seg-bg, rgba(255,255,255,0.65)); color: var(--seg-fg, #222);
-    }
-    .seg + .seg { border-left: 1px solid var(--seg-divider, rgba(0,0,0,0.08)); }
-    .seg:hover { transform: translateY(-1px); }
-    .seg:active { transform: translateY(0); }
-    .seg-title { text-align: center; margin-bottom: 18px; font-weight: 700; letter-spacing: 0.3px; opacity: 0.9; }
-    @media (max-width: 880px) { .seg { min-width: 140px; padding: 12px 18px; } }
-    .seg.is-active{
-      background: var(--ivey-green, #0d5e3a); color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
-      transform: scale(1.02);
-    }
-  </style>
-
-  <div class="seg-wrap">
-    <div>
-      <div class="seg-title">Experiments:</div>
-      <div class="seg-pill">
-        <!-- Static: stuck on Field -->
-        <div class="seg">Lab Experiment</div>
-        <div class="seg is-active">Field Experiment</div>
-      </div>
-    </div>
+<div class="seg-toggle" aria-label="Experiments">
+  <div class="seg-pill">
+    <div class="seg">Lab Experiment</div>
+    <div class="seg is-active">Field Experiment</div>
   </div>
-</section>
-
+</div>
 
 <div class="vsteps-wrap">
   <ul class="vsteps">
