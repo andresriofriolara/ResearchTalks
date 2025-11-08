@@ -476,7 +476,7 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 <!-- .slide: class="slide-heading" -->
 ## The Complete Utility Function
 
-<div id="util-eqnfl-src" style="display:none">
+<div id="util-eqn-src" style="display:none">
 \begin{aligned}
 U_t
 &=
@@ -499,7 +499,7 @@ U_t
 \end{aligned}
 </div>
 
-<div id="util-eqnfl-render" class="katex-display"></div>
+<div id="util-eqn-render" class="katex-display"></div>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
