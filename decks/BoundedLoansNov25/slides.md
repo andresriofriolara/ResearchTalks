@@ -498,7 +498,6 @@ U_t
 }_{\mathclap{\text{discounted expectation}}}
 \end{aligned}
 </div>
-
 <div id="util-eqn-render" class="katex-display"></div>
 
 ---
@@ -740,6 +739,17 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 </section>
 
 --
+<!-- .slide: class="slide-heading" -->
+## Experimental Design
+<div class="seg-toggle" aria-label="Experiments">
+  <div class="seg-pill">
+    <div class="seg">Lab Experiment</div>
+    <div class="seg is-active">Field Experiment</div>
+  </div>
+</div>
+
+--
+
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design
 <div class="seg-toggle" aria-label="Experiments">
