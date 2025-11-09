@@ -133,6 +133,37 @@
   })();
   </script>
 
+<script>
+(function(){
+  function renderCompleteEqn(slide){
+    const s   = slide || Reveal.getCurrentSlide();
+    const src = s && s.querySelector('#complete-util-src');
+    const out = s && s.querySelector('#complete-util-render');
+    if (!src || !out || out.dataset.rendered) return;
+
+    // KaTeX-friendly normalization (no-op for already safe input)
+    let tex = src.textContent
+      .replace(/\\mathclap\s*\{([^}]*)\}/g,'$1')
+      .replace(/\\substack\s*\{([^}]*)\}/g,'\\begin{array}{c}$1\\end{array}')
+      .replace(/\u00A0/g,' ')
+      .replace(/\\big\s*\[/g,'\\bigl[').replace(/\\big\s*\]/g,'\\bigr]')
+      .replace(/\\Big\s*\[/g,'\\Bigl[').replace(/\\Big\s*\]/g,'\\Bigr]');
+
+    try{
+      katex.render(tex.trim(), out, { displayMode:true, throwOnError:false, strict:"ignore" });
+      out.dataset.rendered = '1';
+    }catch(e){
+      console.error('Complete util render error:', e && e.message);
+      out.textContent = tex;
+    }
+  }
+
+  Reveal.on('ready',        e => renderCompleteEqn(e.currentSlide));
+  Reveal.on('slidechanged', e => renderCompleteEqn(e.currentSlide));
+})();
+</script>
+
+
   <!-- Clock -->
   <script src="../../shared/js/clock.js"></script>
 </body>
