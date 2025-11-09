@@ -481,24 +481,25 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 U_t
 &=
 \underbrace{
-  \underbrace{w(p_t)\big[(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}\big]}_{\text{repay branch}}
-  - \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}
-  + \underbrace{\bigl(1-w(p_t)\bigr)\big[(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}\big]}_{\text{default branch}}
-  - \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}
+  \underbrace{w(p_t)\,\big(c_t^{\mathrm{repay}}-r_t\big)_{+}^{\alpha_v}}_{\text{repay branch}}
+  \;\!-\;\! \lambda\,\big(r_t-c_t^{\mathrm{repay}}\big)_{+}^{\beta_v}
+  \;\!+\;\! \underbrace{\bigl(1-w(p_t)\bigr)\,\big(c_t^{\mathrm{default}}-r_t\big)_{+}^{\alpha_v}}_{\text{default branch}}
+  \;\!-\;\! \lambda\,\big(r_t-c_t^{\mathrm{default}}\big)_{+}^{\beta_v}
 }_{
   \begin{array}{c}
-    \text{within-period Prospect Theory value}\\
-    V_t(c_t\mid r_t)
+    \text{within-period Prospect Theory value} \\
+    V_t(c_t \mid r_t)
   \end{array}
 }
 \\[6pt]
 &\quad+\;
 \underbrace{
-  \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\!\left[
-    w(p_\tau)\big[(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}\big]
-    - \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}
-    + \bigl(1-w(p_\tau)\bigr)\big[(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}\big]
-    - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
+  \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
+  \mathbb{E}\!\left[
+    w(p_\tau)\,\big(c_\tau^{\mathrm{repay}}-r_\tau\big)_{+}^{\alpha_v}
+    \;\!-\;\! \lambda\,\big(r_\tau-c_\tau^{\mathrm{repay}}\big)_{+}^{\beta_v}
+    \;\!+\;\! \bigl(1-w(p_\tau)\bigr)\,\big(c_\tau^{\mathrm{default}}-r_\tau\big)_{+}^{\alpha_v}
+    \;\!-\;\! \lambda\,\big(r_\tau-c_\tau^{\mathrm{default}}\big)_{+}^{\beta_v}
   \right]
 }_{\text{discounted continuation value}}
 \end{aligned}
