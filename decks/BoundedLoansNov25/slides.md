@@ -473,7 +473,6 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 <div id="feas-eqn-render" class="katex-display"></div>
 
 --
-
 <!-- .slide: class="slide-heading" -->
 ## The Complete Utility Function
 
