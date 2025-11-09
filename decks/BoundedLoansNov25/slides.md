@@ -476,28 +476,24 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 <!-- .slide: class="slide-heading" -->
 ## The Complete Utility Function
 
-<div id="util-eqn-src" class="util-src" style="display:none">
-\begin{aligned}
-U_t
+$$
+\begin{aligned} U_t
 &=
-\underbrace{w(p_t)\,\big(c_t^{\mathrm{repay}}-r_t\big)_{+}^{\alpha_v}}_{\text{repay branch}}
-\;+\; \Big(-\,\lambda\,\big(r_t-c_t^{\mathrm{repay}}\big)_{+}^{\beta_v}\Big)
-\;+\; \underbrace{\bigl(1-w(p_t)\bigr)\,\big(c_t^{\mathrm{default}}-r_t\big)_{+}^{\alpha_v}}_{\text{default branch}}
-\;+\; \Big(-\,\lambda\,\big(r_t-c_t^{\mathrm{default}}\big)_{+}^{\beta_v}\Big)
-\\[6pt]
+\underbrace{\,w(p_t)\bigl(c_t^{\mathrm{repay}}-r_t\bigr)_{+}^{\alpha_v}
+-\lambda\bigl(r_t-c_t^{\mathrm{repay}}\bigr)_{+}^{\beta_v}
++\bigl(1-w(p_t)\bigr)\bigl(c_t^{\mathrm{default}}-r_t\bigr)_{+}^{\alpha_v}
+-\lambda\bigl(r_t-c_t^{\mathrm{default}}\bigr)_{+}^{\beta_v}\,}_{\text{within-period Prospect Theory value } V_t(c_t\mid r_t)}
+\\[4pt]
 &\quad+\;
-\underbrace{\beta \sum_{\tau=t+1}^{T} \delta^{\,\tau-t}\,
+\underbrace{\,\beta\sum_{\tau=t+1}^{T}\delta^{\tau-t}\,
 \mathbb{E}\!\left[
-  w(p_\tau)\,\big(c_\tau^{\mathrm{repay}}-r_\tau\big)_{+}^{\alpha_v}
-  \;+\; \Big(-\,\lambda\,\big(r_\tau-c_\tau^{\mathrm{repay}}\big)_{+}^{\beta_v}\Big)
-  \;+\; \bigl(1-w(p_\tau)\bigr)\,\big(c_\tau^{\mathrm{default}}-r_\tau\big)_{+}^{\alpha_v}
-  \;+\; \Big(-\,\lambda\,\big(r_\tau-c_\tau^{\mathrm{default}}\big)_{+}^{\beta_v}\Big)
-\right]}_{\text{discounted continuation value}}
+w(p_\tau)\bigl(c_\tau^{\mathrm{repay}}-r_\tau\bigr)_{+}^{\alpha_v}
+-\lambda\bigl(r_\tau-c_\tau^{\mathrm{repay}}\bigr)_{+}^{\beta_v}
++\bigl(1-w(p_\tau)\bigr)\bigl(c_\tau^{\mathrm{default}}-r_\tau\bigr)_{+}^{\alpha_v}
+-\lambda\bigl(r_\tau-c_\tau^{\mathrm{default}}\bigr)_{+}^{\beta_v}
+\right]\,}_{\text{discounted continuation value}}
 \end{aligned}
-</div>
-
-<div id="util-eqn-render" class="katex-display"></div>
-
+$$
 
 ---
 <!-- .slide: class="slide-heading closer" -->
