@@ -481,7 +481,6 @@ U_t &= w(p_t)\,(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v} - \lambda\,(r_t-c_t^{\m
 &\quad + \beta \sum_{\tau=t+1}^{T} \delta^{\,\tau-t}\,\mathbb{E}\!\left[\, w(p_\tau)\,(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v} - \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v} + (1{-}w(p_\tau))\,(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v} - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v} \,\right]
 \end{aligned}$$
 
-
 ---
 <!-- .slide: class="slide-heading closer" -->
 ## A Blur in the Perceived Feasibility Frontier
