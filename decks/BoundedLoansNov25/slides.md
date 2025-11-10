@@ -476,15 +476,15 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 <!-- .slide: class="slide-heading" -->
 ## The Complete Utility Function
 
-<div id="complete-util-src" class="util-src" style="display:none">
+<div id="feas-eqn-src" style="display:none">
 \begin{aligned}
 U_t
 &=
 \underbrace{
   \underbrace{w(p_t)\,\big(c_t^{\mathrm{repay}}-r_t\big)_{+}^{\alpha_v}}_{\text{repay branch}}
-  \;\!-\;\! \lambda\,\big(r_t-c_t^{\mathrm{repay}}\big)_{+}^{\beta_v}
-  \;\!+\;\! \underbrace{\bigl(1-w(p_t)\bigr)\,\big(c_t^{\mathrm{default}}-r_t\big)_{+}^{\alpha_v}}_{\text{default branch}}
-  \;\!-\;\! \lambda\,\big(r_t-c_t^{\mathrm{default}}\big)_{+}^{\beta_v}
+  \;-\; \lambda\,\big(r_t-c_t^{\mathrm{repay}}\big)_{+}^{\beta_v}
+  \;+\; \underbrace{\bigl(1-w(p_t)\bigr)\,\big(c_t^{\mathrm{default}}-r_t\big)_{+}^{\alpha_v}}_{\text{default branch}}
+  \;-\; \lambda\,\big(r_t-c_t^{\mathrm{default}}\big)_{+}^{\beta_v}
 }_{
   \begin{array}{c}
     \text{within-period Prospect Theory value} \\
@@ -497,15 +497,15 @@ U_t
   \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
   \mathbb{E}\!\left[
     w(p_\tau)\,\big(c_\tau^{\mathrm{repay}}-r_\tau\big)_{+}^{\alpha_v}
-    \;\!-\;\! \lambda\,\big(r_\tau-c_\tau^{\mathrm{repay}}\big)_{+}^{\beta_v}
-    \;\!+\;\! \bigl(1-w(p_\tau)\bigr)\,\big(c_\tau^{\mathrm{default}}-r_\tau\big)_{+}^{\alpha_v}
-    \;\!-\;\! \lambda\,\big(r_\tau-c_\tau^{\mathrm{default}}\big)_{+}^{\beta_v}
+    \;-\; \lambda\,\big(r_\tau-c_\tau^{\mathrm{repay}}\big)_{+}^{\beta_v}
+    \;+\; \bigl(1-w(p_\tau)\bigr)\,\big(c_\tau^{\mathrm{default}}-r_\tau\big)_{+}^{\alpha_v}
+    \;-\; \lambda\,\big(r_\tau-c_\tau^{\mathrm{default}}\big)_{+}^{\beta_v}
   \right]
 }_{\text{discounted continuation value}}
 \end{aligned}
 </div>
 
-<div id="complete-util-render" class="katex-display"></div>
+<div id="feas-eqn-render" class="katex-display"></div>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
