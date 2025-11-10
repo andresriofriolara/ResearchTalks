@@ -493,7 +493,6 @@ U_t
 \end{aligned}
 $$
 
-
 ---
 <!-- .slide: class="slide-heading closer" -->
 ## A Blur in the Perceived Feasibility Frontier
