@@ -477,22 +477,21 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 ## The Complete Utility Function
 
 $$
-\begin{aligned}
-U_t
-&= w(p_t)\,(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}
+U_t = w(p_t)\,(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}
 {}- \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}
 {}+ \bigl(1-w(p_t)\bigr)\,(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}
 {}- \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}
-\\[4pt]
-&\quad {}+ \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\!\Bigl[
-  w(p_\tau)\,(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}
-  {}- \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}
-  {}+ \bigl(1-w(p_\tau)\bigr)\,(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}
-  {}- \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
-\Bigr]
-\end{aligned}
 $$
 
+$$
+\qquad {}+ \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
+\mathbb{E}\!\Bigl[
+w(p_\tau)\,(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}
+{}- \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}
+{}+ \bigl(1-w(p_\tau)\bigr)\,(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}
+{}- \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
+\Bigr]
+$$
 ---
 <!-- .slide: class="slide-heading closer" -->
 ## A Blur in the Perceived Feasibility Frontier
