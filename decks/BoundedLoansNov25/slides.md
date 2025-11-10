@@ -476,7 +476,7 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 <!-- .slide: class="slide-heading" -->
 ## The Complete Utility Function
 
-\[
+$$
 \begin{aligned}
 U_t
 &= w(p_t)\,(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}
@@ -491,7 +491,7 @@ U_t
       {}- \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
    \right]
 \end{aligned}
-\]
+$$
 
 ---
 <!-- .slide: class="slide-heading closer" -->
