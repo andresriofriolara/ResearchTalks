@@ -477,11 +477,24 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 ## The Complete Utility Function
 
 $$
-U_t^{\text{within}} = w(p_t)\,(c_t^{R}-r_t)_{+}^{\alpha} - \lambda\,(r_t-c_t^{R})_{+}^{\beta} + \bigl(1-w(p_t)\bigr)\,(c_t^{D}-r_t)_{+}^{\alpha}- \lambda\,(r_t-c_t^{D})_{+}^{\beta}
+U_t^{\mathrm{within}}
+=
+w(p_t)\,(c_t^{R}-r_t)^{\alpha}
+- \lambda\,(r_t-c_t^{R})^{\beta}
++ \bigl(1-w(p_t)\bigr)\,(c_t^{D}-r_t)^{\alpha}
+- \lambda\,(r_t-c_t^{D})^{\beta}
 $$
 
 $$
-U_t^{\text{future}} = \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t} E \left[ w(p_\tau)\,(c_\tau^{R}-r_\tau)_{+}^{\alpha} - \lambda\,(r_\tau-c_\tau^{R})_{+}^{\beta} + \bigl(1-w(p_\tau)\bigr)\,(c_\tau^{D}-r_\tau)_{+}^{\alpha} - \lambda\,(r_\tau-c_\tau^{D})_{+}^{\beta} \right]
+U_t^{\mathrm{future}}
+=
+\beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
+\mathbb{E}\!\left[
+  w(p_\tau)\,(c_\tau^{R}-r_\tau)^{\alpha}
+  - \lambda\,(r_\tau-c_\tau^{R})^{\beta}
+  + \bigl(1-w(p_\tau)\bigr)\,(c_\tau^{D}-r_\tau)^{\alpha}
+  - \lambda\,(r_\tau-c_\tau^{D})^{\beta}
+\right]
 $$
 
 ---
