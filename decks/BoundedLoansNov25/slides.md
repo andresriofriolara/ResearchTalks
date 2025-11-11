@@ -476,22 +476,16 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 <!-- .slide: class="slide-heading" -->
 ## The Complete Utility Function
 
-\[
-U_t = w(p_t)\,(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v}
- - \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v}
- + \bigl(1-w(p_t)\bigr)\,(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v}
- - \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}
-\]
+$$
+U_t^{\text{within}} =
+w(p_t)\,(c_t^{\mathrm{repay}}-r_t)_{+}^{\alpha_v} - \lambda\,(r_t-c_t^{\mathrm{repay}})_{+}^{\beta_v} + \bigl(1-w(p_t)\bigr)\,(c_t^{\mathrm{default}}-r_t)_{+}^{\alpha_v} - \lambda\,(r_t-c_t^{\mathrm{default}})_{+}^{\beta_v}
+$$
 
-\[
-{} + \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
-\mathbb{E}\!\Bigl[
-  w(p_\tau)\,(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v}
-  - \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v}
-  + \bigl(1-w(p_\tau)\bigr)\,(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v}
-  - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v}
-\Bigr]
-\]
+$$
+U_t^{\text{future}} =
+\beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,
+\mathbb{E}\!\Big[w(p_\tau)\,(c_\tau^{\mathrm{repay}}-r_\tau)_{+}^{\alpha_v} - \lambda\,(r_\tau-c_\tau^{\mathrm{repay}})_{+}^{\beta_v} + \bigl(1-w(p_\tau)\bigr)\,(c_\tau^{\mathrm{default}}-r_\tau)_{+}^{\alpha_v} - \lambda\,(r_\tau-c_\tau^{\mathrm{default}})_{+}^{\beta_v} \Big]
+$$
 
 ---
 <!-- .slide: class="slide-heading closer" -->
