@@ -1,5 +1,5 @@
 <!-- .slide: class="title-slide" -->
-# Present Bias and Loss Aversion Effects over Loan Granting
+# The Effects of Present Bias and Loss Aversion over Loan Granting
 </section>
 
 ---
