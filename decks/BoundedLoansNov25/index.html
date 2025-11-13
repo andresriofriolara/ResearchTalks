@@ -102,13 +102,31 @@
     }
 
     function renderFeasEqn(slide){
-      const s = slide || Reveal.getCurrentSlide();
+      const s   = slide || Reveal.getCurrentSlide();
       const src = s && s.querySelector('#feas-eqn-src');
       const out = s && s.querySelector('#feas-eqn-render');
-      if(src && out && out.childNodes.length === 0){
-        katex.render(src.textContent, out, { displayMode:true, throwOnError:false });
+      if (!src || !out || out.dataset.rendered) return;
+
+      // Light normalization (mirrors renderUtilEqn style)
+      let tex = src.textContent
+        .replace(/\\mathclap\s*\{([^}]*)\}/g, '$1')
+        .replace(/\\substack\s*\{([^}]*)\}/g, '\\begin{array}{c}$1\\end{array}')
+        .replace(/\u00A0/g, ' ');
+
+      try{
+        katex.render(tex.trim(), out, {
+          displayMode: true,
+          throwOnError: false,
+          strict: "ignore"
+        });
+        out.dataset.rendered = '1';
+      }catch(e){
+        console.error('Feasible path KaTeX error:', e && e.message);
+        // Fallback: show raw TeX instead of a blank slide
+        out.textContent = tex;
       }
     }
+
 
     function renderSlide(e){
       const current = e.currentSlide || e.slide || document.querySelector('.slides');

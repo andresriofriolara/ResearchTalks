@@ -455,7 +455,7 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 
 **Feasible utility path:**
 
-<div id="feas-eqn-src" style="display:none">
+<div id="feas-eqn-src" class="feas-src" style="display:none">
 \begin{aligned}
 \tilde U_t
 &= \max_{c_t\in S_t}\left\{
@@ -471,6 +471,15 @@ $$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{def
 </div>
 
 <div id="feas-eqn-render" class="katex-display"></div>
+
+--
+
+<!-- .slide: class="slide-heading" -->
+## The Complete Utility Function
+
+<div class="media-xy">
+  <img data-src="./images/function.png" class="img-sm" alt="fullfunction">
+</div>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
