@@ -51,6 +51,8 @@
 
 ### Can the counteractive lobbying framework of Austen–Smith &amp; Wright be replicated through the RPAA setting using the Canadian federal lobbying registry?
 
+--
+
 <div class="vsteps-wrap">
   <ul class="vsteps">
     <li>
