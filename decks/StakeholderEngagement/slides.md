@@ -55,11 +55,15 @@
    - **Registrations**: define clients, registration identifiers, subject codes, and text descriptions.  
    - **Communications**: define individual reported contacts between clients and Designated Public Office Holders (DPOHs), with dates and links to registrations.
 
+--
+
 2. **Issue definition: RPAA**  
    - Construct registration-level and communication-level text corpora by aggregating relevant text fields for each registration or communication.  
    - Define a **strict RPAA** indicator based on direct references to the Retail Payment Activities Act and its regulations.  
    - Define a **broad RPAA** indicator based on RPAA-related expressions (retail payments, payment service providers, payments modernisation, open banking, etc.), including all strict matches.  
    - Flag registrations and communications as RPAA-related according to these indicators.
+
+--
 
 3. **Actor universe and side classification**  
    - Define the RPAA actor universe as all clients that appear in at least one RPAA-related registration or communication.  
@@ -69,6 +73,8 @@
      - **Other / ambiguous** (governments, broad business associations, unclear cases).  
    - Apply keyword-based rules to organisation names and registration text, with scope for manual review.
 
+--
+
 4. **Mapping communications to political units**  
    - For RPAA-related communications, join to the DPOH table so each row becomes a **client–communication–DPOH event**.  
    - Classify DPOHs as:  
@@ -76,6 +82,8 @@
      - **Officials**: non-elected public servants (e.g., deputy ministers, directors, analysts).  
    - Define a political **unit** as a person–institution pair (e.g., “Name | House of Commons”, “Name | Finance Canada (FIN)”).  
    - This creates a set of political units analogous to AS&W’s senators.
+
+--
 
 5. **Lobbying measures and planned models**  
    - For each political unit \(i\), construct:  
