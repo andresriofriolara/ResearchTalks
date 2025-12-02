@@ -186,20 +186,39 @@
 
 --
 
-5. **Lobbying measures and planned models**  
-   - For each political unit $i$, construct:  
-     - $L^P_i$: number of RPAA events where the client is on the industry (pro-policy) side.  
-     - $L^A_i$: number of RPAA events where the client is on the public-interest (anti-policy) side.  
-     - $L^T_i = L^P_i + L^A_i$: total RPAA-related events for unit $i$.  
-   - Derive additional variables:  
-     - Net difference $\Delta L_i = L^P_i - L^A_i$.  
-     - Shares $s^P_i = \frac{L^P_i}{L^P_i + L^A_i}$, $s^A_i = \frac{L^A_i}{L^P_i + L^A_i}$ when both sides are present.  
-     - Log-transformed and indicator versions (e.g., $\log(1+L^P_i)$, indicator for any lobbying from each side).  
-   - Attach simple structural controls based on DPOH metadata (MP/Senator vs staff, House of Commons vs Senate vs executive/regulators, membership in core financial institutions such as Finance Canada or the Bank of Canada).  
-   - **Planned estimation approach:**  
-     - When both sides are sufficiently active, estimate AS\&W-style simultaneous equations in $(L^P_i, L^A_i)$, using side-specific variables as instruments as in the original paper.  
-     - When the data do not support a two-sided system, use one-sided OLS specifications for $L^P_i$, treating the AS\&W equations as a conceptual benchmark.
-
+<div class="smart-funnel">
+  <div class="funnel">
+    <div class="band band-1">
+      <strong>5. Lobbying measures and planned models</strong><br>
+      For each political unit $i$, construct:
+      <ul>
+        <li>$L^P_i$: number of RPAA events where the client is on the industry (pro-policy) side.</li>
+        <li>$L^A_i$: number of RPAA events where the client is on the public-interest (anti-policy) side.</li>
+        <li>$L^T_i = L^P_i + L^A_i$: total RPAA-related events for unit $i$.</li>
+      </ul>
+    </div>
+    <div class="band band-2">
+      <strong>Derive additional variables</strong><br>
+      <ul>
+        <li>Net difference $\Delta L_i = L^P_i - L^A_i$.</li>
+        <li>Shares $s^P_i = \frac{L^P_i}{L^P_i + L^A_i}$, $s^A_i = \frac{L^A_i}{L^P_i + L^A_i}$ when both sides are present.</li>
+        <li>Log-transformed and indicator versions (e.g., $\log(1+L^P_i)$, indicator for any lobbying from each side).</li>
+      </ul>
+    </div>
+    <div class="band band-3">
+      <strong>Structural controls</strong><br>
+      Attach simple structural controls based on DPOH metadata (MP/Senator vs staff, House of Commons vs Senate vs executive/regulators, membership in core financial institutions such as Finance Canada or the Bank of Canada).
+    </div>
+    <div class="band band-3">
+      <strong>Planned estimation approach</strong><br>
+      <ul>
+        <li>When both sides are sufficiently active, estimate AS&amp;W-style simultaneous equations in $(L^P_i, L^A_i)$, using side-specific variables as instruments as in the original paper.</li>
+        <li>When the data do not support a two-sided system, use one-sided OLS specifications for $L^P_i$, treating the AS&amp;W equations as a conceptual benchmark.</li>
+      </ul>
+    </div>
+    <div class="neck"></div>
+  </div>
+</div>
 
 ---
 <!-- .slide: class="slide-heading" -->
