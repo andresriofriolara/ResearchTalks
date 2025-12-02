@@ -149,13 +149,22 @@
     <div class="g62-card">
       <div class="g62-num">2</div>
       <strong>Targeting by predisposition and structure</strong><br>
-      The framework allows testing whether coalitions concentrate lobbying on units that are ex ante favourable, unfavourable, or neutral, based on indicators of predisposition. Unit-level lobbying measures can be related to structural variables such as institutional position, committee roles, and vulnerability measures.
+      The framework allows testing whether coalitions concentrate lobbying on units that are ex ante favourable, unfavourable, or neutral, based on indicators of predisposition.
     </div>
     <div class="g62-card">
       <div class="g62-num">3</div>
       <strong>Concentration of lobbying pressure</strong><br>
       The distribution of $L^T_i$ across political units can be used to assess whether RPAA-related lobbying is concentrated on a limited set of units or more evenly spread. Institutional aggregates can summarise how lobbying is distributed across Parliament, core financial regulators, and other institutions.
     </div>
+  </div>
+</div>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Expected Results
+
+<div class="g62-wrap">
+  <div class="g62">
     <div class="g62-card">
       <div class="g62-num">4</div>
       <strong>Methodological output</strong><br>
