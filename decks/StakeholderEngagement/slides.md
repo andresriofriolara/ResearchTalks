@@ -49,35 +49,30 @@
 <!-- .slide: class="slide-heading" -->
 ## Research Question
 
-**Can the counteractive lobbying framework of Austen–Smith & Wright be replicated through the RPAA setting using the Canadian federal lobbying registry?**
+# Can the counteractive lobbying framework of Austen–Smith & Wright be replicated through the RPAA setting using the Canadian federal lobbying registry?
 
 <div class="vsteps-wrap">
   <ul class="vsteps">
-
     <li>
       <div class="num">1</div>
       <strong>Targeting across institutions</strong><br>
       How can we measure which institutions (Parliament, Finance Canada, Bank of Canada, FCAC, other departments) are most involved in RPAA-related lobbying?
     </li>
-
     <li>
       <div class="num">2</div>
       <strong>Targeting across political units</strong><br>
       How can we describe the distribution of lobbying intensity across individual political units (MPs, Senators, ministers, senior officials and staff)?
     </li>
-
     <li>
       <div class="num">3</div>
       <strong>Two sides and their balance</strong><br>
       How can we operationalise “pro-policy” and “anti-policy” sides (industry vs public-interest) in the registry, and under what conditions is it possible to study their interaction at the unit level?
     </li>
-
     <li>
       <div class="num">4</div>
       <strong>Link to outcomes (for later stages)</strong><br>
       How could these lobbying measures later be connected to votes, amendments, speeches, or regulatory decisions, once those outcomes are coded?
     </li>
-
   </ul>
 </div>
 
