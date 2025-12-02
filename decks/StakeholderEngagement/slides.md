@@ -87,10 +87,23 @@
 <!-- .slide: class="slide-heading" -->
 ## Empirical Strategy
 
-1. **Data backbone: registrations and communications**  
-   - Use Office of the Commissioner of Lobbying (OCL) CSV files.  
-   - **Registrations**: define clients, registration identifiers, subject codes, and text descriptions.  
-   - **Communications**: define individual reported contacts between clients and Designated Public Office Holders (DPOHs), with dates and links to registrations.
+<div class="smart-funnel">
+  <div class="funnel">
+    <div class="band band-1">
+      <strong>1. Data backbone: registrations and communications</strong><br>
+      Use Office of the Commissioner of Lobbying (OCL) CSV files.
+    </div>
+    <div class="band band-2">
+      <strong>Registrations</strong><br>
+      Define clients, registration identifiers, subject codes, and text descriptions.
+    </div>
+    <div class="band band-3">
+      <strong>Communications</strong><br>
+      Define individual reported contacts between clients and Designated Public Office Holders (DPOHs), with dates and links to registrations.
+    </div>
+    <div class="neck"></div>
+  </div>
+</div>
 
 --
 
