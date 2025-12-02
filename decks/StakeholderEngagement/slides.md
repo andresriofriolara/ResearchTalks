@@ -159,13 +159,30 @@
 
 --
 
-4. **Mapping communications to political units**  
-   - For RPAA-related communications, join to the DPOH table so each row becomes a **client–communication–DPOH event**.  
-   - Classify DPOHs as:  
-     - **Political units**: MPs, Senators, ministers, parliamentary secretaries, and clearly political staff,  
-     - **Officials**: non-elected public servants (e.g., deputy ministers, directors, analysts).  
-   - Define a political **unit** as a person–institution pair (e.g., “Name | House of Commons”, “Name | Finance Canada (FIN)”).  
-   - This creates a set of political units analogous to AS&W’s senators.
+<div class="smart-funnel">
+  <div class="funnel">
+    <div class="band band-1">
+      <strong>4. Mapping communications to political units</strong><br>
+      For RPAA-related communications, join to the DPOH table so each row becomes a <strong>client–communication–DPOH event</strong>.
+    </div>
+    <div class="band band-2">
+      <strong>DPOH classification</strong>
+      <ul>
+        <li><strong>Political units</strong>: MPs, Senators, ministers, parliamentary secretaries, and clearly political staff,</li>
+        <li><strong>Officials</strong>: non-elected public servants (e.g., deputy ministers, directors, analysts).</li>
+      </ul>
+    </div>
+    <div class="band band-3">
+      <strong>Political unit definition</strong><br>
+      Define a political <strong>unit</strong> as a person–institution pair (e.g., “Name | House of Commons”, “Name | Finance Canada (FIN)”).
+    </div>
+    <div class="band band-3">
+      <strong>Analogy to AS&amp;W</strong><br>
+      This creates a set of political units analogous to AS&amp;W’s senators.
+    </div>
+    <div class="neck"></div>
+  </div>
+</div>
 
 --
 
