@@ -6,21 +6,45 @@
 <!-- .slide: class="slide-heading" -->
 ## Motivation
 
-- **Counteractive lobbying as an object of study**  
-  - When one coalition lobbies, this can change the incentives of the opposing coalition to lobby the same decision-makers.  
-  - This affects which interests are represented around a given policy conflict.
+<div class="panels">
 
-- **From Austen–Smith & Wright (AS&W) to RPAA**  
-  - AS&W study counteractive lobbying for a single confirmation conflict in the U.S. Senate.  
-  - This project asks whether their logic can be applied to Canadian financial regulation, using RPAA as the focal issue.
+  <div class="panel">
+    <div class="panel-hd">Counteractive lobbying and AS&W</div>
+    <div class="panel-bd">
+      <ul>
+        <li><strong>Counteractive lobbying as an object of study</strong></li>
+        <ul>
+          <li>When one coalition lobbies, this can change the incentives of the opposing coalition to lobby the same decision-makers.</li>
+          <li>This affects which interests are represented around a given policy conflict.</li>
+        </ul>
+        <li><strong>From Austen–Smith &amp; Wright (AS&amp;W) to RPAA</strong></li>
+        <ul>
+          <li>AS&amp;W study counteractive lobbying for a single confirmation conflict in the U.S. Senate.</li>
+          <li>This project asks whether their logic can be applied to Canadian financial regulation, using RPAA as the focal issue.</li>
+        </ul>
+      </ul>
+    </div>
+  </div>
 
-- **Why RPAA and the Canadian lobbying registry**  
-  - RPAA and its regulations define a single, well-specified policy domain in retail payments.  
-  - The federal lobbying registry provides administrative records on registrations and communications, including clients, public office holders, dates, and issue descriptions.  
-  - These data can be used to construct measures of lobbying directed at specific political units.
+  <div class="panel">
+    <div class="panel-hd">RPAA setting and this project</div>
+    <div class="panel-bd">
+      <ul>
+        <li><strong>Why RPAA and the Canadian lobbying registry</strong></li>
+        <ul>
+          <li>RPAA and its regulations define a single, well-specified policy domain in retail payments.</li>
+          <li>The federal lobbying registry provides administrative records on registrations and communications, including clients, public office holders, dates, and issue descriptions.</li>
+        </ul>
+        <li><strong>Aim of the project</strong></li>
+        <ul>
+          <li>Use the RPAA case and the registry to implement AS&amp;W-style lobbying measures.</li>
+          <li>Examine how their framework can structure an analysis of lobbying around Canadian financial regulation.</li>
+        </ul>
+      </ul>
+    </div>
+  </div>
 
-- **Aim of the project**  
-  - Use the RPAA case and the registry to implement AS&W-style lobbying measures and examine how their framework can structure an analysis of lobbying around Canadian financial regulation.
+</div>
 
 ---
 <!-- .slide: class="slide-heading" -->
