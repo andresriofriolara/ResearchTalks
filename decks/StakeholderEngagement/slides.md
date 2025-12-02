@@ -139,24 +139,35 @@
 <!-- .slide: class="slide-heading" -->
 ## Expected Results
 
-- **Cross-side patterns**  
-  - In a setting where both sides are active, the counteractive-lobbying logic implies that political units with higher lobbying from one side may also be attractive targets for the other side.  
-  - This would be examined through the relationship between \(L^P_i\) and \(L^A_i\) at the unit level.
-
-- **Targeting by predisposition and structure**  
-  - The framework allows testing whether coalitions concentrate lobbying on units that are ex ante favourable, unfavourable, or neutral, based on indicators of predisposition.  
-  - Unit-level lobbying measures can be related to structural variables such as institutional position, committee roles, and vulnerability measures.
-
-- **Concentration of lobbying pressure**  
-  - The distribution of \(L^T_i\) across political units can be used to assess whether RPAA-related lobbying is concentrated on a limited set of units or more evenly spread.  
-  - Institutional aggregates can summarise how lobbying is distributed across Parliament, core financial regulators, and other institutions.
-
-- **Methodological output**  
-  - A reproducible path from registry data to AS&W-style measures \((L^P_i, L^A_i, L^T_i)\) defined at the political-unit level.  
-  - Conditions under which two-sided estimation of a counteractive system is feasible, and conditions under which only one-sided descriptive analysis is possible.
-
-- **Future extensions**  
-  - Once outcome variables (votes, amendments, speeches, regulatory decisions) are merged to the same political units, the same measures can be used to study whether lobbying exposure is associated with observable policy behaviour.
+<div class="g62-wrap">
+  <div class="g62">
+    <div class="g62-card">
+      <div class="g62-num">1</div>
+      <strong>Cross-side patterns</strong><br>
+      In a setting where both sides are active, the counteractive-lobbying logic implies that political units with higher lobbying from one side may also be attractive targets for the other side. This would be examined through the relationship between $L^P_i$ and $L^A_i$ at the unit level.
+    </div>
+    <div class="g62-card">
+      <div class="g62-num">2</div>
+      <strong>Targeting by predisposition and structure</strong><br>
+      The framework allows testing whether coalitions concentrate lobbying on units that are ex ante favourable, unfavourable, or neutral, based on indicators of predisposition. Unit-level lobbying measures can be related to structural variables such as institutional position, committee roles, and vulnerability measures.
+    </div>
+    <div class="g62-card">
+      <div class="g62-num">3</div>
+      <strong>Concentration of lobbying pressure</strong><br>
+      The distribution of $L^T_i$ across political units can be used to assess whether RPAA-related lobbying is concentrated on a limited set of units or more evenly spread. Institutional aggregates can summarise how lobbying is distributed across Parliament, core financial regulators, and other institutions.
+    </div>
+    <div class="g62-card">
+      <div class="g62-num">4</div>
+      <strong>Methodological output</strong><br>
+      A reproducible path from registry data to AS&amp;W-style measures $(L^P_i, L^A_i, L^T_i)$ defined at the political-unit level. Conditions under which two-sided estimation of a counteractive system is feasible, and conditions under which only one-sided descriptive analysis is possible.
+    </div>
+    <div class="g62-card">
+      <div class="g62-num">5</div>
+      <strong>Future extensions</strong><br>
+      Once outcome variables (votes, amendments, speeches, regulatory decisions) are merged to the same political units, the same measures can be used to study whether lobbying exposure is associated with observable policy behaviour.
+    </div>
+  </div>
+</div>
 
 ---
 <!-- .slide: class="slide-heading" -->
