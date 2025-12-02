@@ -107,11 +107,27 @@
 
 --
 
-2. **Issue definition: RPAA**  
-   - Construct registration-level and communication-level text corpora by aggregating relevant text fields for each registration or communication.  
-   - Define a **strict RPAA** indicator based on direct references to the Retail Payment Activities Act and its regulations.  
-   - Define a **broad RPAA** indicator based on RPAA-related expressions (retail payments, payment service providers, payments modernisation, open banking, etc.), including all strict matches.  
-   - Flag registrations and communications as RPAA-related according to these indicators.
+<div class="smart-funnel">
+  <div class="funnel">
+    <div class="band band-1">
+      <strong>2. Issue definition: RPAA</strong><br>
+      Construct registration-level and communication-level text corpora by aggregating relevant text fields for each registration or communication.
+    </div>
+    <div class="band band-2">
+      <strong>Strict RPAA indicator</strong><br>
+      Define a strict RPAA indicator based on direct references to the Retail Payment Activities Act and its regulations.
+    </div>
+    <div class="band band-3">
+      <strong>Broad RPAA indicator</strong><br>
+      Define a broad RPAA indicator based on RPAA-related expressions (retail payments, payment service providers, payments modernisation, open banking, etc.), including all strict matches.
+    </div>
+    <div class="band band-3">
+      <strong>RPAA flags</strong><br>
+      Flag registrations and communications as RPAA-related according to these indicators.
+    </div>
+    <div class="neck"></div>
+  </div>
+</div>
 
 --
 
