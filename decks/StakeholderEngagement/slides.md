@@ -9,7 +9,7 @@
 <div class="panels">
 
   <div class="panel">
-    <div class="panel-hd">Counteractive lobbying and AS&W</div>
+    <div class="panel-hd">Counteractive lobbying</div>
     <div class="panel-bd">
       <ul>
         <li><strong>Counteractive lobbying as an object of study</strong></li>
@@ -19,25 +19,24 @@
         </ul>
         <li><strong>From Austen–Smith &amp; Wright (AS&amp;W) to RPAA</strong></li>
         <ul>
-          <li>AS&amp;W study counteractive lobbying for a single confirmation conflict in the U.S. Senate.</li>
-          <li>This project asks whether their logic can be applied to Canadian financial regulation, using RPAA as the focal issue.</li>
+          <li>AS&amp;W 94' study counteractive lobbying for a single confirmation conflict in the U.S. Senate.</li>
         </ul>
       </ul>
     </div>
   </div>
 
   <div class="panel">
-    <div class="panel-hd">RPAA setting and this project</div>
+    <div class="panel-hd">RPAA settings</div>
     <div class="panel-bd">
       <ul>
-        <li><strong>Why RPAA and the Canadian lobbying registry</strong></li>
+        <li><strong>RPAA and the Canadian lobbying registry</strong></li>
         <ul>
           <li>RPAA and its regulations define a single, well-specified policy domain in retail payments.</li>
           <li>The federal lobbying registry provides administrative records on registrations and communications, including clients, public office holders, dates, and issue descriptions.</li>
         </ul>
-        <li><strong>Aim of the project</strong></li>
+        <li><strong>Why should it work...</strong></li>
         <ul>
-          <li>Use the RPAA case and the registry to implement AS&amp;W-style lobbying measures.</li>
+          <li>Use the RPAA case and the registry to implement AS&amp;W 94'-style lobbying measures.</li>
           <li>Examine how their framework can structure an analysis of lobbying around Canadian financial regulation.</li>
         </ul>
       </ul>
