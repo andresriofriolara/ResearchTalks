@@ -1,10 +1,29 @@
 <!-- .slide: class="title-slide" -->
-# The Effects of Present Bias and Loss Aversion over Loan Granting.
+# Counteractive Lobbying: Conceptual Replication in the Canadian Financial Regulation.
 </section>
 
 ---
 <!-- .slide: class="slide-heading" -->
-## Research Questions
+## Motivation
+
+
+---
+<!-- .slide: class="slide-heading" -->
+## Research Question
+
+
+---
+<!-- .slide: class="slide-heading" -->
+## Theoretical Framework
+
+
+---
+<!-- .slide: class="slide-heading" -->
+## Empirical Strategy
+
+---
+<!-- .slide: class="slide-heading" -->
+## Expected Results
 
 ---
 <!-- .slide: class="slide-heading" -->
