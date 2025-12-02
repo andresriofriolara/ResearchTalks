@@ -131,13 +131,31 @@
 
 --
 
-3. **Actor universe and side classification**  
-   - Define the RPAA actor universe as all clients that appear in at least one RPAA-related registration or communication.  
-   - Classify clients into:  
-     - **Industry / pro-policy side** (banks, payment service providers, fintech firms, industry associations),  
-     - **Public-interest side** (consumer advocacy organisations, unions, NGOs with stated public-interest objectives),  
-     - **Other / ambiguous** (governments, broad business associations, unclear cases).  
-   - Apply keyword-based rules to organisation names and registration text, with scope for manual review.
+<div class="smart-funnel">
+  <div class="funnel">
+    <div class="band band-1">
+      <strong>3. Actor universe and side classification</strong><br>
+      Define the RPAA actor universe as all clients that appear in at least one RPAA-related registration or communication.
+    </div>
+    <div class="band band-2">
+      <strong>Side classification</strong><br>
+      Classify clients into three sides for the RPAA issue.
+    </div>
+    <div class="band band-3">
+      <strong>Client categories</strong>
+      <ul>
+        <li><strong>Industry / pro-policy side</strong>: banks, payment service providers, fintech firms, industry associations.</li>
+        <li><strong>Public-interest side</strong>: consumer advocacy organisations, unions, NGOs with stated public-interest objectives.</li>
+        <li><strong>Other / ambiguous</strong>: governments, broad business associations, unclear cases.</li>
+      </ul>
+    </div>
+    <div class="band band-3">
+      <strong>Implementation</strong><br>
+      Apply keyword-based rules to organisation names and registration text, with scope for manual review.
+    </div>
+    <div class="neck"></div>
+  </div>
+</div>
 
 --
 
