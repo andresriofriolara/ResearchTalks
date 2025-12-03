@@ -135,7 +135,6 @@
       <strong>Modern empirical lobbying: access, influence, and channels</strong><br>
       Access and connections: revolving-door and network studies show that lobbyists with government connections earn access rents; both connections and expertise are rewarded. Lobbying concentrates where access is most valuable.<br>
       Real effects of lobbying: lobbying by interest groups can shift public funding priorities (e.g., disease-group lobbying and NIH allocations), and corporate philanthropy can act as tax-exempt lobbying, partly outside formal registries.<br>
-      Political wins and markets: political influence feeds into product-market competition; lobbying is one margin of broader strategic rivalry.
     </li>
   </ul>
 </div>
