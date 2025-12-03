@@ -82,6 +82,61 @@
 <!-- .slide: class="slide-heading" -->
 ## Theoretical Framework
 
+<div class="seg-toggle">
+  <div class="seg-pill">
+    <div class="seg is-active">AS&amp;W (1994)</div>
+    <div class="seg">Debate &amp; Rejoinder (1996)</div>
+  </div>
+</div>
+
+<div class="cols">
+  <div>
+    <h3>Counteractive lobbying – Austen–Smith &amp; Wright (1994)</h3>
+    <ul>
+      <li>Two opposing coalitions, one legislator with a prior and costly auditing.</li>
+      <li>Lobbying is strategic information under competition.</li>
+      <li>Evidence: Bork nomination; senator-level counts of pro/anti lobbying are broadly consistent with these patterns.</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Debate and rejoinder (Baumgartner &amp; Leech 1996; AS&amp;W 1996)</h3>
+    <ul>
+      <li><strong>Baumgartner &amp; Leech (1996):</strong>
+        <ul>
+          <li>Argue that the evidence is ambiguous and that other mechanisms (indirect lobbying, coalition maintenance, dynamics) could generate similar patterns.</li>
+          <li>Question the measurement strategy and cross-sectional design.</li>
+        </ul>
+      </li>
+      <li><strong>Austen–Smith &amp; Wright (1996):</strong>
+        <ul>
+          <li>Emphasise that the interaction between opponent lobbying and predisposition is the core test.</li>
+          <li>Show that alternative assumptions about priors still produce similar counteractive patterns.</li>
+          <li>Stress that analysis must be at the coalition–legislator level.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+---
+**Who gets lobbied? Allies and institutional structure**  
+- Kollman (1997): groups often lobby allies on key committees; institutional structure shapes targeting.  
+- Awad (2020): groups lobby allies as intermediaries who set agendas and build coalitions.  
+- Implication: lobbying of friendly legislators can reflect counteractive defence or ally-centred persuasion, depending on context and opponent activity.
+
+
+**Modern empirical lobbying: access, influence, and channels**  
+- Access and connections:  
+  - Revolving-door and network studies show that lobbyists with government connections earn access rents; both connections and expertise are rewarded.  
+  - Lobbying concentrates where access is most valuable.  
+- Real effects of lobbying:  
+  - Lobbying by interest groups can shift public funding priorities (e.g., disease-group lobbying and NIH allocations).  
+  - Corporate philanthropy can act as tax-exempt lobbying, partly outside formal registries.  
+- Political wins and markets:  
+  - Political influence feeds into product-market competition; lobbying is one margin of broader strategic rivalry.
+
+
 
 ---
 <!-- .slide: class="slide-heading" -->
