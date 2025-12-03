@@ -121,8 +121,6 @@
 
 --
 
----
-
 <div class="vsteps-wrap">
   <ul class="vsteps">
     <li>
