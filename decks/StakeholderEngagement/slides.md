@@ -58,17 +58,17 @@
     <li>
       <div class="num">1</div>
       <strong>Targeting across institutions</strong><br>
-      How can we measure which institutions (Parliament, Finance Canada, Bank of Canada, FCAC, other departments) are most involved in RPAA-related lobbying?
+      What institutions (Parliament, Finance Canada, Bank of Canada, FCAC, other departments) are most involved in RPAA-related lobbying?
     </li>
     <li>
       <div class="num">2</div>
       <strong>Targeting across political units</strong><br>
-      How can we describe the distribution of lobbying intensity across individual political units (MPs, Senators, ministers, senior officials and staff)?
+      What is the distribution of lobbying intensity across individual political units (MPs, Senators, ministers, senior officials and staff)?
     </li>
     <li>
       <div class="num">3</div>
       <strong>Two sides and their balance</strong><br>
-      How can we operationalise “pro-policy” and “anti-policy” sides (industry vs public-interest) in the registry, and under what conditions is it possible to study their interaction at the unit level?
+      To what degree can we operationalise “pro-policy” and “anti-policy” sides (industry vs public-interest) in the registry, and under what conditions is it possible to study their interaction at the unit level?
     </li>
     <li>
       <div class="num">4</div>
