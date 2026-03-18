@@ -441,7 +441,7 @@
   </div>
 </div>
 
----
+--
 <!-- .slide: class="slide-heading closer" -->
 ## The Hassle Vector
 
@@ -563,6 +563,128 @@
 </div>
 
 ---
+<!-- .slide: class="slide-heading closer" -->
+## Methods
+
+<style>
+  .m-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px 18px 0 18px;
+  }
+  .m-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .m-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    text-align: left;
+    min-height: 180px;
+  }
+  .m-card.accent{
+    background: linear-gradient(180deg, #f4fbf7, #eef8f2);
+    border-color: #cfe3d8;
+  }
+  .m-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .m-title{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .m-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .m-list{
+    margin: 8px 0 0 18px;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .m-list li{
+    margin: 4px 0;
+    text-align: left;
+  }
+  .m-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  @media (max-width: 900px){
+    .m-grid{
+      grid-template-columns: 1fr;
+    }
+    .m-card{
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="m-wrap">
+  <div class="m-grid">
+    <div class="m-card">
+      <div class="m-label">Data</div>
+      <div class="m-title">Sample and time coverage</div>
+      <p class="m-text">
+        The empirical analysis combines the TK panel of Japanese foreign subsidiaries with Hassle Factor country-year data for 2008–2018.
+      </p>
+    </div>
+    <div class="m-card">
+      <div class="m-label">Outcomes</div>
+      <div class="m-title">Subsidiary exit and profitability</div>
+      <ul class="m-list">
+        <li>Discrete subsidiary survival / exit outcome</li>
+        <li>Profitability proxied by log(1 + Revenue<sup>USD</sup><sub>i,t</sub>)</li>
+      </ul>
+    </div>
+    <div class="m-card">
+      <div class="m-label">Models</div>
+      <div class="m-title">Hazard and profitability specifications</div>
+      <ul class="m-list">
+        <li>Discrete-time hazard model for exit</li>
+        <li>Profitability regression for operating performance</li>
+        <li>Key regressors: H<sub>host</sub>, Δ<sup>+</sup>, Δ<sup>−</sup>, controls, fixed effects, and duration terms</li>
+      </ul>
+    </div>
+    <div class="m-card accent">
+      <div class="m-label">Inference</div>
+      <div class="m-title">Dependence is modeled in hassle-space-time</div>
+      <p class="m-text">
+        Inference relies on Conley-style robust standard errors, where dependence is defined over the metric space
+        (Δ, t) rather than only over physical geography.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
 
 <!-- .slide: class="slide-heading" -->
 ## Q&A
