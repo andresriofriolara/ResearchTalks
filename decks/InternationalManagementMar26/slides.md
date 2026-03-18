@@ -336,6 +336,113 @@
 </section>
 
 ---
+<!-- .slide: class="slide-heading closer" -->
+## The Hassle Factor
+
+<style>
+  .hf-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px 18px 0 18px;
+  }
+  .hf-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .hf-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    text-align: left;
+    min-height: 170px;
+  }
+  .hf-card.accent{
+    background: linear-gradient(180deg, #f4fbf7, #eef8f2);
+    border-color: #cfe3d8;
+  }
+  .hf-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .hf-title{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .hf-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .hf-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  @media (max-width: 900px){
+    .hf-grid{
+      grid-template-columns: 1fr;
+    }
+    .hf-card{
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="hf-wrap">
+  <div class="hf-grid">
+    <div class="hf-card">
+      <div class="hf-label">Definition</div>
+      <div class="hf-title">What it is</div>
+      <p class="hf-text">
+        A country-attractiveness and business-friction measure developed to capture how burdensome it is to conduct business across countries.
+      </p>
+    </div>
+    <div class="hf-card">
+      <div class="hf-label">Dimensions</div>
+      <div class="hf-title">What it captures</div>
+      <p class="hf-text">
+        Eleven practical sources of business inconvenience, including safety, visas, transportation, hotels, hygiene, telecom, health risks, language, business facilitation, and climate.
+      </p>
+    </div>
+    <div class="hf-card">
+      <div class="hf-label">Construction</div>
+      <div class="hf-title">How it is built</div>
+      <p class="hf-text">
+        A comparable country-year scalar score constructed from weighted indicators within a confirmatory-factor framework.
+      </p>
+    </div>
+    <div class="hf-card accent">
+      <div class="hf-label">Role in this paper</div>
+      <div class="hf-title">Why it matters here</div>
+      <p class="hf-text">
+        The Hassle Factor provides the empirical raw material: each country-year score becomes the coordinate from which hassle space is later defined.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
 
 <!-- .slide: class="slide-heading" -->
 ## Q&A
