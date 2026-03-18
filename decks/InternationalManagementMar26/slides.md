@@ -224,8 +224,8 @@
     overflow: visible;
   }
   .reveal section.slide-heading .just-card img{
-    width: 66% !important;
-    max-width: 66% !important;
+    width: 75% !important;
+    max-width: 75% !important;
     height: auto !important;
     max-height: none !important;
     object-fit: contain;
@@ -684,7 +684,319 @@
 </div>
 
 ---
+<!-- .slide: class="slide-heading closer" -->
+## Results: Exit Hazard
 
+<style>
+  .res-wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 4px 14px 0 14px;
+  }
+  .res-lead{
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    line-height: 1.28;
+    color: #2f3844;
+    text-align: left;
+  }
+  .res-note{
+    margin-top: 8px;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: left;
+  }
+  .res-card{
+    border: 1px solid #e6eaef;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    box-shadow: 0 6px 20px rgba(0,0,0,.05);
+    overflow: hidden;
+  }
+  .res-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    line-height: 1.25;
+  }
+  .res-table thead th{
+    background: #0d5e3a;
+    color: #ffffff;
+    padding: 10px 8px;
+    font-weight: 800;
+    text-align: center;
+    border-bottom: 1px solid #d8e1db;
+  }
+  .res-table td{
+    padding: 8px 8px;
+    border-bottom: 1px solid #edf1f4;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .res-table td:first-child,
+  .res-table th:first-child{
+    text-align: left;
+  }
+  .res-table tbody tr:nth-child(even){
+    background: #fafcfd;
+  }
+  .res-table .key-row{
+    background: #f2f8f4 !important;
+    font-weight: 700;
+  }
+  .res-takeaway{
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #eef8f2;
+    border: 1px solid #d7e8dd;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #123524;
+    text-align: left;
+  }
+  .res-tight td{ padding-top: 7px; padding-bottom: 7px; }
+</style>
+
+<div class="res-wrap">
+  <p class="res-lead">
+    Baseline discrete-time hazard model for subsidiary exit with Conley standard errors in hassle-space-time (cutoff <strong>b = 2.0</strong>).
+  </p>
+
+  <div class="res-card">
+    <table class="res-table res-tight">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Coef.</th>
+          <th>S.E.</th>
+          <th>z</th>
+          <th>p-value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>H<sub>host</sub></td>
+          <td>-1.3720</td>
+          <td>0.0592</td>
+          <td>-23.1671</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr class="key-row">
+          <td>Δ<sup>+</sup></td>
+          <td>1.2542</td>
+          <td>0.1865</td>
+          <td>6.7248</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr class="key-row">
+          <td>Δ<sup>−</sup></td>
+          <td>-1.1564</td>
+          <td>0.1567</td>
+          <td>-7.3798</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>Japanese ownership share (%)</td>
+          <td>-0.0054</td>
+          <td>0.0006</td>
+          <td>-9.3042</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>log(1 + Capital)</td>
+          <td>-0.0458</td>
+          <td>0.0038</td>
+          <td>-12.1275</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>-0.0738</td>
+          <td>0.0157</td>
+          <td>-4.6911</td>
+          <td>&lt;0.001</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="res-takeaway">
+    <strong>Interpretation:</strong> upward movement in hassle space increases exit hazard, while downward movement reduces it.
+  </div>
+
+  <div class="res-note">
+    Selected coefficients from the baseline hazard specification reported in the paper; full model also includes year effects and duration terms.
+  </div>
+</div>
+
+--
+<!-- .slide: class="slide-heading closer" -->
+## Results: Profitability
+
+<div class="res-wrap">
+  <p class="res-lead">
+    Baseline profitability model with Conley standard errors in hassle-space-time (cutoff <strong>b = 2.0</strong>). Profitability is proxied by <strong>log(1 + Revenue<sup>USD</sup><sub>i,t</sub>)</strong>.
+  </p>
+
+  <div class="res-card">
+    <table class="res-table res-tight">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Coef.</th>
+          <th>S.E.</th>
+          <th>z</th>
+          <th>p-value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>H<sub>host</sub></td>
+          <td>4.1227</td>
+          <td>0.0669</td>
+          <td>61.6683</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr class="key-row">
+          <td>Δ<sup>+</sup></td>
+          <td>-4.2938</td>
+          <td>0.0862</td>
+          <td>-49.8347</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr class="key-row">
+          <td>Δ<sup>−</sup></td>
+          <td>5.3087</td>
+          <td>0.1121</td>
+          <td>47.3522</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>Japanese ownership share (%)</td>
+          <td>-0.0037</td>
+          <td>0.0004</td>
+          <td>-10.3867</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>log(1 + Capital)</td>
+          <td>0.1635</td>
+          <td>0.0269</td>
+          <td>6.0810</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>0.2679</td>
+          <td>0.0308</td>
+          <td>8.6861</td>
+          <td>&lt;0.001</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="res-takeaway">
+    <strong>Interpretation:</strong> upward movement in hassle space lowers profitability, while downward movement increases it.
+  </div>
+
+  <div class="res-note">
+    Selected coefficients from the baseline profitability specification reported in the paper; full model also includes year fixed effects.
+  </div>
+</div>
+
+--
+<!-- .slide: class="slide-heading closer" -->
+## Results: Robustness
+
+<div class="res-wrap">
+  <p class="res-lead">
+    The asymmetric directional pattern survives alternative specifications controlling for investment intensity and sector composition.
+  </p>
+
+  <div class="res-card">
+    <table class="res-table res-tight">
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Specification</th>
+          <th>H<sub>host</sub></th>
+          <th>Δ<sup>+</sup></th>
+          <th>Δ<sup>−</sup></th>
+          <th>Joint legs χ²</th>
+          <th>Symmetry χ²</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hazard</td>
+          <td>Investment proxy</td>
+          <td>-1.537</td>
+          <td>1.437</td>
+          <td>-1.337</td>
+          <td>786.41</td>
+          <td>734.45</td>
+        </tr>
+        <tr>
+          <td>Hazard</td>
+          <td>Narrow industry FE</td>
+          <td>-1.278</td>
+          <td>1.168</td>
+          <td>-1.163</td>
+          <td>334.01</td>
+          <td>75.05</td>
+        </tr>
+        <tr>
+          <td>Hazard</td>
+          <td>Broad industry FE</td>
+          <td>-1.177</td>
+          <td>1.040</td>
+          <td>-1.066</td>
+          <td>220.17</td>
+          <td>128.81</td>
+        </tr>
+        <tr>
+          <td>Profitability</td>
+          <td>Investment proxy</td>
+          <td>4.276</td>
+          <td>-4.401</td>
+          <td>5.488</td>
+          <td>25349.87</td>
+          <td>24622.50</td>
+        </tr>
+        <tr>
+          <td>Profitability</td>
+          <td>Narrow industry FE</td>
+          <td>3.787</td>
+          <td>-4.009</td>
+          <td>5.077</td>
+          <td>2240.06</td>
+          <td>2219.04</td>
+        </tr>
+        <tr>
+          <td>Profitability</td>
+          <td>Broad industry FE</td>
+          <td>4.297</td>
+          <td>-4.435</td>
+          <td>5.743</td>
+          <td>4428.73</td>
+          <td>3159.69</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="res-takeaway">
+    <strong>Interpretation:</strong> the signs of Δ<sup>+</sup> and Δ<sup>−</sup> remain stable across all robustness checks, and both the joint and symmetry tests continue to be strongly rejected.
+  </div>
+
+  <div class="res-note">
+    Robustness values are taken directly from the paper’s hazard and profitability robustness tables.
+  </div>
+</div>
+
+---
 
 <!-- .slide: class="slide-heading" -->
 ## Q&A
