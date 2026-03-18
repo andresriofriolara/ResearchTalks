@@ -105,106 +105,106 @@
 </section>
 
 --
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading closer" -->
 ## Hypotheses
 
-<section>
-  <style>
-    .hyp-wrap{
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: clamp(8px, 2vw, 18px);
-    }
-    .hyp-grid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(16px, 2.4vw, 24px);
-      align-items: stretch;
-    }
-    .hyp-card{
-      position: relative;
-      background: linear-gradient(180deg, #ffffff, #fbfdff);
-      border: 1px solid #e6eaef;
-      border-radius: 18px;
-      padding: 24px 24px 22px 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.07);
-      text-align: left;
-    }
-    .hyp-tag{
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #0d5e3a;
-      color: #fff;
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: .3px;
-    }
-    .hyp-title{
-      margin: 0 0 10px 0;
-      font-size: clamp(22px, 2.3vw, 30px);
-      line-height: 1.2;
-      font-weight: 800;
-    }
-    .hyp-text{
-      margin: 0;
-      font-size: clamp(17px, 1.55vw, 21px);
-      line-height: 1.45;
-      color: #2f3844;
-    }
-    .hyp-em{
-      color: #0d5e3a;
-      font-weight: 800;
-    }
-    .hyp-card::after{
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 6px;
-      background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
-      border-radius: 0 0 18px 18px;
-      opacity: .9;
-    }
-    @media (max-width: 900px){
-      .hyp-grid{ grid-template-columns: 1fr; }
-    }
-    :root.dark .hyp-card{
-      background: #0f141a;
-      border-color: #2a3441;
-    }
-    :root.dark .hyp-text{
-      color: #d3dbe5;
-    }
-  </style>
-
-  <div class="hyp-wrap">
-    <div class="hyp-grid">
-      <div class="hyp-card fragment" data-fragment-index="0">
-        <div class="hyp-tag">Hypothesis 1</div>
-        <h3 class="hyp-title">Subsidiary Survival</h3>
-        <p class="hyp-text">
-          Greater hassle-space displacement between the origin country and the host country,
-          captured by <span class="hyp-em">\( \Delta^+_{i,t} \)</span> and/or
-          <span class="hyp-em">\( \Delta^-_{i,t} \)</span>,
-          is associated with a lower probability of subsidiary survival,
-          allowing for asymmetric effects between upward and downward moves in hassle space.
-        </p>
-      </div>
-      <div class="hyp-card fragment" data-fragment-index="1">
-        <div class="hyp-tag">Hypothesis 2</div>
-        <h3 class="hyp-title">Subsidiary Profitability</h3>
-        <p class="hyp-text">
-          Greater hassle-space displacement between the origin country and the host country,
-          captured by <span class="hyp-em">\( \Delta^+_{i,t} \)</span> and/or
-          <span class="hyp-em">\( \Delta^-_{i,t} \)</span>,
-          is associated with lower subsidiary profitability,
-          again allowing for asymmetric effects between upward and downward moves in hassle space.
-        </p>
-      </div>
+<div class="hyp-wrap">
+  <div class="hyp-grid">
+    <div class="hyp-card fragment" data-fragment-index="0">
+      <div class="hyp-tag">Hypothesis 1</div>
+      <h3 class="hyp-title">Subsidiary Survival</h3>
+      <p class="hyp-text">
+        Greater hassle-space displacement between the origin country and the host country,
+        captured by <span class="hyp-em">\( \Delta^+_{i,t} \)</span> and/or
+        <span class="hyp-em">\( \Delta^-_{i,t} \)</span>,
+        is associated with a lower probability of subsidiary survival, allowing for asymmetric effects between upward and downward moves in hassle space.
+      </p>
+    </div>
+    <div class="hyp-card fragment" data-fragment-index="1">
+      <div class="hyp-tag">Hypothesis 2</div>
+      <h3 class="hyp-title">Subsidiary Profitability</h3>
+      <p class="hyp-text">
+        Greater hassle-space displacement between the origin country and the host country,
+        captured by <span class="hyp-em">\( \Delta^+_{i,t} \)</span> and/or
+        <span class="hyp-em">\( \Delta^-_{i,t} \)</span>,
+        is associated with lower subsidiary profitability, again allowing for asymmetric effects between upward and downward moves in hassle space.
+      </p>
     </div>
   </div>
-</section>
+</div>
+
+<style>
+  .hyp-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8px 18px;
+  }
+  .hyp-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+  }
+  .hyp-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 24px 24px 22px 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.07);
+    text-align: left;
+  }
+  .hyp-tag{
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .hyp-title{
+    margin: 0 0 10px 0;
+    font-size: clamp(20px, 2vw, 28px);
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .hyp-text{
+    margin: 0;
+    font-size: clamp(15px, 1.25vw, 19px);
+    line-height: 1.42;
+    color: #2f3844;
+  }
+  .hyp-em{
+    color: #0d5e3a;
+    font-weight: 800;
+  }
+  .hyp-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 6px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  @media (max-width: 900px){
+    .hyp-grid{ grid-template-columns: 1fr; }
+  }
+  :root.dark .hyp-card{
+    background: #0f141a;
+    border-color: #2a3441;
+  }
+  :root.dark .hyp-title{
+    color: #e5edf5;
+  }
+  :root.dark .hyp-text{
+    color: #d3dbe5;
+  }
+</style>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
