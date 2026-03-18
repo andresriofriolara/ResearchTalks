@@ -51,8 +51,8 @@
     }
     .rq-title {
       margin: 0;
-      font-size: clamp(18px, 1.95vw, 28px);
-      line-height: 1.22;
+      font-size: clamp(13px, 1.35vw, 20px);
+      line-height: 1.18;
       font-weight: 800;
       letter-spacing: 0;
       color: #0b4f35;
@@ -82,7 +82,7 @@
     @media (max-width: 900px) {
       .rq-wrap { padding: 0 10px; }
       .rq-card { padding: 18px 18px 16px 24px; }
-      .rq-title { font-size: clamp(18px, 2.4vw, 24px); }
+      .rq-title { font-size: clamp(13px, 1.8vw, 18px); }
     }
   </style>
 
