@@ -1071,6 +1071,127 @@
 </div>
 
 ---
+<!-- .slide: class="slide-heading closer" -->
+## Conclusions and Contribution
+
+<style>
+  .cc-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px 18px 0 18px;
+  }
+  .cc-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .cc-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    text-align: left;
+    min-height: 180px;
+  }
+  .cc-card.accent{
+    background: linear-gradient(180deg, #f4fbf7, #eef8f2);
+    border-color: #cfe3d8;
+  }
+  .cc-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .cc-title{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .cc-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .cc-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  .cc-close{
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #f7faf8;
+    border: 1px solid #e3ebe6;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #5f6b66;
+    text-align: center;
+  }
+  @media (max-width: 900px){
+    .cc-grid{
+      grid-template-columns: 1fr;
+    }
+    .cc-card{
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="cc-wrap">
+  <div class="cc-grid">
+    <div class="cc-card accent">
+      <div class="cc-label">Main finding</div>
+      <div class="cc-title">Direction, not distance alone, organizes outcomes</div>
+      <p class="cc-text">
+        Subsidiary outcomes are structured by the direction of movement in hassle space: upward moves are associated with higher exit hazard and lower profitability, while downward moves are associated with lower exit hazard and higher profitability.
+      </p>
+    </div>
+    <div class="cc-card">
+      <div class="cc-label">Conceptual contribution</div>
+      <div class="cc-title">From scalar measure to relational construct</div>
+      <p class="cc-text">
+        The paper transforms the Hassle Factor from a static host-country scalar into a directional relational object defined by the contrast between origin and host environments.
+      </p>
+    </div>
+    <div class="cc-card">
+      <div class="cc-label">Methodological contribution</div>
+      <div class="cc-title">Inference in an abstract economic space</div>
+      <p class="cc-text">
+        Dependence-robust inference is defined in hassle-space-time, showing that the relevant covariance structure need not be based only on physical geography but can instead be built from an economically meaningful metric space.
+      </p>
+    </div>
+    <div class="cc-card">
+      <div class="cc-label">Broader implication</div>
+      <div class="cc-title">Firms evaluate host environments relatively</div>
+      <p class="cc-text">
+        Multinational subsidiaries appear to respond not only to absolute host-country burden, but to how burdensome the host environment is relative to the parent firm's origin baseline.
+      </p>
+    </div>
+  </div>
+
+  <div class="cc-close">
+    What matters is not only where firms operate, but whether they move upward or downward relative to their origin in hassle space.
+  </div>
+</div>
+
+---
 
 <!-- .slide: class="slide-heading" -->
 ## Q&A
