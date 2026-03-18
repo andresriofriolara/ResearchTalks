@@ -996,6 +996,80 @@
   </div>
 </div>
 
+--
+<!-- .slide: class="slide-heading closer" -->
+## Results: Graphical Evidence
+
+<style>
+  .reveal section.slide-heading .gimg-wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 18px;
+  }
+  .reveal section.slide-heading .gimg-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+    justify-items: center;
+  }
+  .reveal section.slide-heading .gimg-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+  }
+  .reveal section.slide-heading .gimg-card img{
+    width: 88% !important;
+    max-width: 88% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  .reveal section.slide-heading .gimg-cap{
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #6b7280;
+    text-align: center;
+  }
+  @media (max-width: 1000px){
+    .reveal section.slide-heading .gimg-grid{
+      grid-template-columns: 1fr;
+    }
+    .reveal section.slide-heading .gimg-card img{
+      width: 42% !important;
+      max-width: 42% !important;
+    }
+  }
+</style>
+
+<div class="gimg-wrap">
+  <div class="gimg-grid">
+    <div class="gimg-card">
+      <div>
+        <img src="images/hf_trajectories.png" alt="Hassle-space trajectories">
+        <div class="gimg-cap">Hassle-space trajectories</div>
+      </div>
+    </div>
+    <div class="gimg-card">
+      <div>
+        <img src="images/delta_distribution.png" alt="Distribution of delta">
+        <div class="gimg-cap">Distribution of Δ over time</div>
+      </div>
+    </div>
+    <div class="gimg-card">
+      <div>
+        <img src="images/conley_decay.png" alt="Dependence decay in hassle-space-time">
+        <div class="gimg-cap">Dependence decay in hassle-space-time</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ---
 
 <!-- .slide: class="slide-heading" -->
