@@ -1041,8 +1041,8 @@
       grid-template-columns: 1fr;
     }
     .reveal section.slide-heading .gimg-card img{
-      width: 42% !important;
-      max-width: 42% !important;
+      width: 50% !important;
+      max-width: 50% !important;
     }
   }
 </style>
