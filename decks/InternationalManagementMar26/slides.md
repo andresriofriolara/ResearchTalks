@@ -190,6 +190,58 @@
 </section>
 
 ---
+<!-- .slide: class="slide-heading closer" -->
+## Justification
+
+<section>
+  <style>
+    .just-wrap{
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: clamp(8px, 1.8vw, 16px);
+    }
+    .just-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(16px, 2vw, 24px);
+      align-items: center;
+      justify-items: center;
+    }
+    .just-card{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .just-card img{
+      width: 100%;
+      max-width: 520px;
+      max-height: 62vh;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px){
+      .just-grid{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <div class="just-wrap">
+    <div class="just-grid">
+      <div class="just-card">
+        <img src="images/similar.png" alt="Related literature or conceptual similarity figure">
+      </div>
+      <div class="just-card">
+        <img src="images/cited.png" alt="Citation or literature motivation figure">
+      </div>
+    </div>
+  </div>
+</section>
+
+---
 
 <!-- .slide: class="slide-heading" -->
 ## Q&A
