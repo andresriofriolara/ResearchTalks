@@ -51,8 +51,8 @@
     }
     .rq-title {
       margin: 0;
-      font-size: clamp(13px, 1.35vw, 20px);
-      line-height: 1.18;
+      font-size: clamp(10px, 1.05vw, 15px);
+      line-height: 1.16;
       font-weight: 800;
       letter-spacing: 0;
       color: #0b4f35;
@@ -82,7 +82,7 @@
     @media (max-width: 900px) {
       .rq-wrap { padding: 0 10px; }
       .rq-card { padding: 18px 18px 16px 24px; }
-      .rq-title { font-size: clamp(13px, 1.8vw, 18px); }
+      .rq-title { font-size: clamp(10px, 1.35vw, 14px); }
     }
   </style>
 
@@ -235,7 +235,7 @@
       width: auto;
       height: auto;
       max-width: 100%;
-      max-height: 34vh;
+      max-height: 12vh;
       object-fit: contain;
       display: block;
       margin: 0 auto;
@@ -245,7 +245,7 @@
         grid-template-columns: 1fr;
       }
       .just-card img{
-        max-height: 28vh;
+        max-height: 10vh;
       }
     }
   </style>
