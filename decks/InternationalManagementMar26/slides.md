@@ -224,8 +224,8 @@
     overflow: visible;
   }
   .reveal section.slide-heading .just-card img{
-    width: 33% !important;
-    max-width: 33% !important;
+    width: 66% !important;
+    max-width: 66% !important;
     height: auto !important;
     max-height: none !important;
     object-fit: contain;
@@ -442,7 +442,127 @@
 </div>
 
 ---
+<!-- .slide: class="slide-heading closer" -->
+## The Hassle Vector
 
+<style>
+  .hv-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px 18px 0 18px;
+  }
+  .hv-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .hv-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    text-align: left;
+    min-height: 180px;
+  }
+  .hv-card.accent{
+    background: linear-gradient(180deg, #f4fbf7, #eef8f2);
+    border-color: #cfe3d8;
+  }
+  .hv-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .hv-title{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .hv-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .hv-eqn{
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 1.25;
+    color: #123524;
+    font-weight: 700;
+  }
+  .hv-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  @media (max-width: 900px){
+    .hv-grid{
+      grid-template-columns: 1fr;
+    }
+    .hv-card{
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="hv-wrap">
+  <div class="hv-grid">
+    <div class="hv-card">
+      <div class="hv-label">Coordinate</div>
+      <div class="hv-title">Each country-year is a point in hassle space</div>
+      <p class="hv-text">
+        The Hassle Factor is no longer treated only as a scalar attribute, but as a coordinate in an abstract metric space.
+      </p>
+    </div>
+    <div class="hv-card">
+      <div class="hv-label">Comparison</div>
+      <div class="hv-title">The relevant contrast is origin versus host</div>
+      <p class="hv-text">
+        For subsidiary <em>i</em>, the relevant empirical comparison is not the host country in isolation, but the difference between host and origin environments.
+      </p>
+    </div>
+    <div class="hv-card">
+      <div class="hv-label">Displacement</div>
+      <div class="hv-title">The Hassle Vector is the signed difference</div>
+      <p class="hv-text">
+        It measures movement from the origin country to the host country in hassle space.
+      </p>
+      <div class="hv-eqn">
+        Δ<sub>i,t</sub> = H<sub>h<sub>i</sub>,t</sub> − H<sub>o<sub>i</sub>,t</sub>
+      </div>
+    </div>
+    <div class="hv-card accent">
+      <div class="hv-label">Asymmetry</div>
+      <div class="hv-title">The sign of movement matters</div>
+      <p class="hv-text">
+        The displacement is decomposed into two legs so the model distinguishes upward from downward movement in hassle space.
+      </p>
+      <div class="hv-eqn">
+        Δ<sup>+</sup><sub>i,t</sub> = max(Δ<sub>i,t</sub>, 0)
+        <br>
+        Δ<sup>−</sup><sub>i,t</sub> = max(−Δ<sub>i,t</sub>, 0)
+      </div>
+    </div>
+  </div>
+</div>
+
+---
 
 <!-- .slide: class="slide-heading" -->
 ## Q&A
