@@ -110,7 +110,7 @@
 
 <div class="hyp-wrap">
   <div class="hyp-grid">
-    <div class="hyp-card fragment" data-fragment-index="0">
+    <div class="hyp-card">
       <div class="hyp-tag">Hypothesis 1</div>
       <h3 class="hyp-title">Subsidiary Survival</h3>
       <p class="hyp-text">
@@ -120,7 +120,7 @@
         is associated with a lower probability of subsidiary survival, allowing for asymmetric effects between upward and downward moves in hassle space.
       </p>
     </div>
-    <div class="hyp-card fragment" data-fragment-index="1">
+    <div class="hyp-card">
       <div class="hyp-tag">Hypothesis 2</div>
       <h3 class="hyp-title">Subsidiary Profitability</h3>
       <p class="hyp-text">
