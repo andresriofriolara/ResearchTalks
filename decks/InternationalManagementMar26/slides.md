@@ -115,8 +115,8 @@
       <h3 class="hyp-title">Subsidiary Survival</h3>
       <p class="hyp-text">
         Greater hassle-space displacement between the origin country and the host country,
-        captured by <span class="hyp-em">\( \Delta^+_{i,t} \)</span> and/or
-        <span class="hyp-em">\( \Delta^-_{i,t} \)</span>,
+        captured by <span class="hyp-em">$ \Delta^+_{i,t} $</span> and/or
+        <span class="hyp-em">$ \Delta^-_{i,t} $</span>,
         is associated with a lower probability of subsidiary survival, allowing for asymmetric effects between upward and downward moves in hassle space.
       </p>
     </div>
@@ -125,8 +125,8 @@
       <h3 class="hyp-title">Subsidiary Profitability</h3>
       <p class="hyp-text">
         Greater hassle-space displacement between the origin country and the host country,
-        captured by <span class="hyp-em">\( \Delta^+_{i,t} \)</span> and/or
-        <span class="hyp-em">\( \Delta^-_{i,t} \)</span>,
+        captured by <span class="hyp-em">$ \Delta^+_{i,t} $</span> and/or
+        <span class="hyp-em">$ \Delta^-_{i,t} $</span>,
         is associated with lower subsidiary profitability, again allowing for asymmetric effects between upward and downward moves in hassle space.
       </p>
     </div>
