@@ -103,6 +103,7 @@
     </div>
   </div>
 </section>
+
 --
 <!-- .slide: class="slide-heading" -->
 ## Hypotheses
