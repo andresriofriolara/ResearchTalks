@@ -203,57 +203,56 @@
 <!-- .slide: class="slide-heading closer" -->
 ## Justification
 
-<section>
-  <style>
-    .just-wrap{
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 18px;
+<style>
+  .reveal section.slide-heading .just-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 18px;
+  }
+  .reveal section.slide-heading .just-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+    justify-items: center;
+  }
+  .reveal section.slide-heading .just-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+  }
+  .reveal section.slide-heading .just-card img{
+    width: 33% !important;
+    max-width: 33% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px){
+    .reveal section.slide-heading .just-grid{
+      grid-template-columns: 1fr;
     }
-    .just-grid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      align-items: start;
-      justify-items: center;
+    .reveal section.slide-heading .just-card img{
+      width: 42% !important;
+      max-width: 42% !important;
     }
-    .just-card{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      overflow: visible;
-    }
-    .just-card img{
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 12vh;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-    }
-    @media (max-width: 900px){
-      .just-grid{
-        grid-template-columns: 1fr;
-      }
-      .just-card img{
-        max-height: 10vh;
-      }
-    }
-  </style>
+  }
+</style>
 
-  <div class="just-wrap">
-    <div class="just-grid">
-      <div class="just-card">
-        <img src="images/similar.png" alt="Related literature or conceptual similarity figure">
-      </div>
-      <div class="just-card">
-        <img src="images/cited.png" alt="Citation or literature motivation figure">
-      </div>
+<div class="just-wrap">
+  <div class="just-grid">
+    <div class="just-card">
+      <img src="images/similar.png" alt="Related literature or conceptual similarity figure">
+    </div>
+    <div class="just-card">
+      <img src="images/cited.png" alt="Citation or literature motivation figure">
     </div>
   </div>
-</section>
+</div>
 
 --
 <!-- .slide: class="slide-heading closer" -->
