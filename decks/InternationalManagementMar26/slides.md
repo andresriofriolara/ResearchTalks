@@ -72,13 +72,6 @@
     .rq-card[data-fragment-index="0"] { z-index: 3; }
     .rq-card[data-fragment-index="1"] { z-index: 2; }
     .rq-card[data-fragment-index="2"] { z-index: 1; }
-    :root.dark .rq-card {
-      background: #0f141a;
-      border-color: #2a3441;
-    }
-    :root.dark .rq-title {
-      color: #e5edf5;
-    }
     @media (max-width: 900px) {
       .rq-wrap { padding: 0 10px; }
       .rq-card { padding: 18px 18px 16px 24px; }
@@ -90,15 +83,15 @@
     <div class="rq-grid">
       <div class="rq-card fragment" data-fragment-index="2">
         <div class="rq-badge">3</div>
-        <h3 class="rq-title">Does moving toward a relatively lower-hassle environment improve subsidiary outcomes?</h3>
+        <div class="rq-title">Does moving toward a relatively lower-hassle environment improve subsidiary outcomes?</div>
       </div>
       <div class="rq-card fragment" data-fragment-index="1">
         <div class="rq-badge">2</div>
-        <h3 class="rq-title">Does moving into a relatively higher-hassle environment worsen subsidiary outcomes?</h3>
+        <div class="rq-title">Does moving into a relatively higher-hassle environment worsen subsidiary outcomes?</div>
       </div>
       <div class="rq-card fragment" data-fragment-index="0">
         <div class="rq-badge">1</div>
-        <h3 class="rq-title">Does directional movement in hassle space help explain multinational subsidiary survival and profitability?</h3>
+        <div class="rq-title">Does directional movement in hassle space help explain multinational subsidiary survival and profitability?</div>
       </div>
     </div>
   </div>
