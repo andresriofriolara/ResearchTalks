@@ -241,6 +241,87 @@
   </div>
 </section>
 
+--
+<!-- .slide: class="slide-heading closer" -->
+## Why a Hassle Vector?
+
+<section>
+  <style>
+    .smart-wrap{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: clamp(10px, 2vw, 18px);
+    }
+    .smart-flow{
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+    .smart-card{
+      min-height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 22px 20px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, #ffffff, #f7fbf9);
+      border: 1px solid #dfe7e2;
+      box-shadow: 0 8px 24px rgba(0,0,0,.06);
+    }
+    .smart-card p{
+      margin: 0;
+      font-size: clamp(21px, 2.0vw, 28px);
+      line-height: 1.28;
+      font-weight: 800;
+      color: #123524;
+    }
+    .smart-arrow{
+      font-size: clamp(34px, 3vw, 48px);
+      font-weight: 900;
+      color: #0d5e3a;
+      line-height: 1;
+      opacity: .9;
+    }
+    @media (max-width: 980px){
+      .smart-flow{
+        grid-template-columns: 1fr;
+      }
+      .smart-arrow{
+        transform: rotate(90deg);
+        justify-self: center;
+      }
+      .smart-card{
+        min-height: 140px;
+      }
+    }
+    :root.dark .smart-card{
+      background: #0f141a;
+      border-color: #2a3441;
+    }
+    :root.dark .smart-card p{
+      color: #e5edf5;
+    }
+  </style>
+
+  <div class="smart-wrap">
+    <div class="smart-flow">
+      <div class="smart-card fragment" data-fragment-index="0">
+        <p>The literature usually models cross-country frictions as static host-country characteristics.</p>
+      </div>
+      <div class="smart-arrow fragment" data-fragment-index="1">➜</div>
+      <div class="smart-card fragment" data-fragment-index="1">
+        <p>The Hassle Factor has largely been used as a scalar country attribute.</p>
+      </div>
+      <div class="smart-arrow fragment" data-fragment-index="2">➜</div>
+      <div class="smart-card fragment" data-fragment-index="2">
+        <p>Firms evaluate host environments relative to their origin baseline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 ---
 
 <!-- .slide: class="slide-heading" -->
