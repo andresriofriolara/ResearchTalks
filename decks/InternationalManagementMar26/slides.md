@@ -75,7 +75,7 @@
     @media (max-width: 900px) {
       .rq-wrap { padding: 0 10px; }
       .rq-card { padding: 18px 18px 16px 24px; }
-      .rq-title { font-size: clamp(5px, 0.53vw, 8px); }
+      .rq-title { font-size: clamp(10px, 1.05vw, 15px); }
     }
   </style>
 
