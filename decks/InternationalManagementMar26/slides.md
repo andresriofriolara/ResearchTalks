@@ -33,7 +33,6 @@
       padding: clamp(14px, 2.2vw, 22px) clamp(16px, 2.4vw, 26px);
       box-shadow: 0 6px 20px rgba(0,0,0,.06);
     }
-    /* Number badge */
     .rq-badge {
       position: absolute; inset: -12px auto auto -12px;
       width: 40px; height: 40px; border-radius: 999px;
@@ -51,17 +50,14 @@
       color: #5b6573; font-size: clamp(16px, 1.8vw, 18px);
       line-height: 1.35; margin: 0;
     }
-    /* Light accent bar */
     .rq-card::after {
       content: ""; position: absolute; inset: auto 0 0 0; height: 6px;
       background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
       border-radius: 0 0 16px 16px; opacity: .85;
     }
-    /* Fragments: bottom-to-top reveal */
     .rq-card[data-fragment-index="0"] { z-index: 3; }
     .rq-card[data-fragment-index="1"] { z-index: 2; }
     .rq-card[data-fragment-index="2"] { z-index: 1; }
-    /* Dark-mode friendly tweak (optional) */
     :root.dark .rq-card { background:#0f141a; border-color:#2a3441; }
     :root.dark .rq-sub { color:#c7d1dd; }
     :root.dark .rq-card::after { opacity:.6; }
@@ -72,26 +68,26 @@
       <!-- Q3 -->
       <div class="rq-card fragment" data-fragment-index="2">
         <div class="rq-badge">3</div>
-        <h3 class="rq-title">Can the deviation from rationality be reconciled?</h3>
-        <p class="rq-sub">If biases exist, could incentive readjustments restore alignment with optimal lending?</p>
+        <h3 class="rq-title">Does moving toward a relatively lower-hassle environment improve subsidiary outcomes?</h3>
+        <p class="rq-sub">Test whether downward movement in hassle space is associated with lower exit hazard and higher profitability.</p>
       </div>
       <!-- Q2 -->
       <div class="rq-card fragment" data-fragment-index="1">
         <div class="rq-badge">2</div>
-        <h3 class="rq-title">Are we observing a systematic bias?</h3>
-        <p class="rq-sub">Focus on <em>loss aversion</em> and <em>present bias</em> in loan-decision-making.</p>
+        <h3 class="rq-title">Does moving into a relatively higher-hassle environment worsen subsidiary outcomes?</h3>
+        <p class="rq-sub">Test whether upward movement in hassle space is associated with higher exit hazard and lower profitability.</p>
       </div>
       <!-- Q1 -->
       <div class="rq-card fragment" data-fragment-index="0">
         <div class="rq-badge">1</div>
-        <h3 class="rq-title">To what degree are loan officers rational decision makers?</h3>
-        <p class="rq-sub">Benchmark observed choices against normative, information-consistent decisions.</p>
+        <h3 class="rq-title">Does directional movement in hassle space help explain multinational subsidiary survival and profitability?</h3>
+        <p class="rq-sub">The relevant empirical object is not host-country hassle in isolation, but the structured contrast between origin and host.</p>
       </div>
     </div>
   </div>
 </section>
 
-
 ---
+
 <!-- .slide: class="slide-heading" -->
 ## Q&A
