@@ -328,15 +328,15 @@
 
   <div class="smart-wrap">
     <div class="smart-flow">
-      <div class="smart-card fragment" data-fragment-index="0">
+      <div class="smart-card">
         <p>The literature usually models cross-country frictions as static host-country characteristics.</p>
       </div>
-      <div class="smart-arrow fragment" data-fragment-index="1">➜</div>
-      <div class="smart-card fragment" data-fragment-index="1">
+      <div class="smart-arrow">➜</div>
+      <div class="smart-card">
         <p>The Hassle Factor has largely been used as a scalar country attribute.</p>
       </div>
-      <div class="smart-arrow fragment" data-fragment-index="2">➜</div>
-      <div class="smart-card fragment" data-fragment-index="2">
+      <div class="smart-arrow">➜</div>
+      <div class="smart-card">
         <p>Firms evaluate host environments relative to their origin baseline.</p>
       </div>
     </div>
