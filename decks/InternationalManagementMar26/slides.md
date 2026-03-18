@@ -213,28 +213,29 @@
 <section>
   <style>
     .just-wrap{
-      max-width: 1150px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: clamp(8px, 1.8vw, 16px);
+      padding: 0 18px;
     }
     .just-grid{
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(16px, 2vw, 24px);
-      align-items: center;
+      gap: 18px;
+      align-items: start;
       justify-items: center;
     }
     .just-card{
       width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
-      overflow: hidden;
+      align-items: flex-start;
+      overflow: visible;
     }
     .just-card img{
-      width: 100%;
-      max-width: 520px;
-      max-height: 62vh;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 34vh;
       object-fit: contain;
       display: block;
       margin: 0 auto;
@@ -242,6 +243,9 @@
     @media (max-width: 900px){
       .just-grid{
         grid-template-columns: 1fr;
+      }
+      .just-card img{
+        max-height: 28vh;
       }
     }
   </style>
