@@ -224,7 +224,7 @@
 </div>
 
 --
-## Analytical Generalities
+## Analytical Generalities of the Individual Actor
 
 <div style="max-width:1240px; margin:0 auto; padding-top:0.2rem;">
 
@@ -345,9 +345,196 @@
 
 --
 
-## The Collective Decision-Making
+## From Individual to Collective Decision-Making
 
+<div style="max-width:1160px; margin:0 auto; padding-top:0.2rem;">
 
+  <div style="text-align:center; font-size:0.98em; color:#374151; margin:0 auto 0.9rem auto; max-width:940px; font-weight:600;">
+    The firm becomes a "collective-individual" not because internal frictions disappear, but because they are reorganized into coordinated decision structures.
+  </div>
+
+  <div style="max-width:930px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:0.75rem;">
+    <div style="border:1.5px solid #E7E4F2; border-radius:18px; padding:0.95rem 1.05rem; background:linear-gradient(180deg,#FCFBFE 0%,#F3EFF8 100%); box-shadow:0 6px 18px rgba(88,44,131,.07);">
+      <div style="font-size:1.02em; font-weight:800; color:var(--brand-primary); margin-bottom:0.35rem;">
+        1. Dynamic Incentives<sup>1</sup>
+      </div>
+      <div style="font-size:0.91em; line-height:1.38; color:#111827;">
+        Current effort and disclosure depend on <strong>continuation values</strong>, <strong>belief updating</strong>, and the intertemporal consequences of present performance.
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); line-height:1;">
+      ↓
+    </div>
+    <div style="border:1.5px solid #D8E7E1; border-radius:18px; padding:0.95rem 1.05rem; background:linear-gradient(180deg,#F8FCFA 0%,#EEF7F3 100%); box-shadow:0 6px 18px rgba(3,70,56,.07);">
+      <div style="font-size:1.02em; font-weight:800; color:var(--brand-primary); margin-bottom:0.35rem;">
+        2. Coalition Structures<sup>2</sup>
+      </div>
+      <div style="font-size:0.91em; line-height:1.38; color:#111827;">
+        Owners, managers, and employees remain <strong>differentiated actors</strong>; collective action depends on how heterogeneous interests are <strong>organized</strong>, not on their disappearance.
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); line-height:1;">
+      ↓
+    </div>
+    <div style="border:1.5px solid #ECE8D9; border-radius:18px; padding:0.95rem 1.05rem; background:linear-gradient(180deg,#FFFDFC 0%,#F8F4E8 100%); box-shadow:0 6px 18px rgba(120,93,19,.07);">
+      <div style="font-size:1.02em; font-weight:800; color:var(--brand-primary); margin-bottom:0.35rem;">
+        3. Managerial Mediation &amp; Relational Cooperation<sup>3</sup>
+      </div>
+      <div style="font-size:0.91em; line-height:1.38; color:#111827;">
+        Managers translate <strong>incomplete contracts</strong> into subordinate effort and execution, while coalition cooperation depends on <strong>credible disclosure</strong>, <strong>reciprocity</strong>, and <strong>relational signals</strong>.
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); line-height:1;">
+      ↓
+    </div>
+    <div style="border:1.5px solid #D9E6EF; border-radius:18px; padding:0.95rem 1.05rem; background:linear-gradient(180deg,#FBFDFF 0%,#EEF5FA 100%); box-shadow:0 6px 18px rgba(11,61,92,.07);">
+      <div style="font-size:1.02em; font-weight:800; color:var(--brand-primary); margin-bottom:0.35rem;">
+        4. Shared Frames &amp; Interpretation<sup>4</sup>
+      </div>
+      <div style="font-size:0.91em; line-height:1.38; color:#111827;">
+        Collective performance depends on a <strong>shared cognitive frame</strong> through which members classify the strategic environment and interpret what situation the firm is facing.
+      </div>
+    </div>
+
+  </div>
+
+  <div style="max-width:980px; margin:0.95rem auto 0 auto; border:2px solid var(--brand-primary); border-radius:20px; padding:1rem 1.15rem; background:linear-gradient(180deg,#F6FBF9 0%,#EAF5F1 100%); box-shadow:0 10px 22px rgba(3,70,56,.10); text-align:center;">
+    <div style="font-size:1.01em; line-height:1.4; color:#111827; font-weight:700;">
+      Thus, the firm is an <span style="color:var(--brand-primary);">emergent collective actor</span>:
+      a higher-order decision process built from incentives, coalition organization, managerial mediation, and shared interpretation -syndicate of syndicates-.
+    </div>
+  </div>
+
+  <div style="margin-top:0.72rem; font-size:0.58em; line-height:1.35; color:var(--muted); text-align:left;">
+    <sup>1</sup> Gibbons (1987); Gibbons and Murphy (1992).&nbsp;&nbsp;
+    <sup>2</sup> Simon (1947); Cohen (2007); Gavetti (2012).&nbsp;&nbsp;
+    <sup>3</sup> Rotemberg and Saloner (1989); Rotemberg (1994); Simon (1983); Rotemberg and Saloner (1993).&nbsp;&nbsp;
+    <sup>4</sup> Gibbons, LiCalzi, and Warglien (2021).
+  </div>
+
+</div>
+
+--
+## Analytical Generalities of the Collective Actor
+
+<div style="max-width:1220px; margin:0 auto; padding-top:0.15rem;">
+
+  <div style="text-align:center; font-size:0.96em; color:#374151; margin:0 auto 0.9rem auto; max-width:980px; font-weight:600;">
+    Once coalitions are representable as surrogate evaluative units, the firm becomes a syndicate of syndicates with a tractable collective utility and choice rule.<sup>1</sup>
+  </div>
+
+  <!-- top coalition layer -->
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; max-width:980px; margin:0 auto 0.55rem auto;">
+    <div style="border:1.5px solid #D1D5DB; border-radius:18px; padding:0.85rem 0.95rem; background:#ffffff; box-shadow:0 6px 16px rgba(0,0,0,.05); text-align:center;">
+      <div style="font-weight:800; color:var(--brand-primary); margin-bottom:0.3rem;">
+        Coalition \(g_1\)
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827;">
+        surrogate utility \(V_{g_1}(\cdot)\)
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827; margin-top:0.18rem;">
+        risk tolerance \(R_{g_1}(z)\)
+      </div>
+    </div>
+    <div style="border:1.5px solid #D1D5DB; border-radius:18px; padding:0.85rem 0.95rem; background:#ffffff; box-shadow:0 6px 16px rgba(0,0,0,.05); text-align:center;">
+      <div style="font-weight:800; color:var(--brand-primary); margin-bottom:0.3rem;">
+        Coalition \(g_2\)
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827;">
+        surrogate utility \(V_{g_2}(\cdot)\)
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827; margin-top:0.18rem;">
+        risk tolerance \(R_{g_2}(z)\)
+      </div>
+    </div>
+    <div style="border:1.5px solid #D1D5DB; border-radius:18px; padding:0.85rem 0.95rem; background:#ffffff; box-shadow:0 6px 16px rgba(0,0,0,.05); text-align:center;">
+      <div style="font-weight:800; color:var(--brand-primary); margin-bottom:0.3rem;">
+        Coalition \(g_3 \in \mathcal{G}\)
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827;">
+        surrogate utility \(V_{g_3}(\cdot)\)
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827; margin-top:0.18rem;">
+        risk tolerance \(R_{g_3}(z)\)
+      </div>
+    </div>
+
+  </div>
+
+  <!-- convergence -->
+  <div style="display:flex; justify-content:center; margin:0 0 0.25rem 0;">
+    <div style="width:72%; height:34px; background:linear-gradient(180deg, #DDEEE8 0%, #CFE4DC 100%); clip-path:polygon(0% 0%, 100% 0%, 62% 100%, 38% 100%); box-shadow:0 6px 14px rgba(3,70,56,.08);"></div>
+  </div>
+
+  <!-- center aggregation box -->
+  <div style="display:flex; justify-content:center; margin:0 0 0.45rem 0;">
+    <div style="width:min(720px, 82%); border:2px solid var(--brand-primary); border-radius:20px; padding:1rem 1.15rem; background:linear-gradient(180deg,#F6FBF9 0%,#EAF5F1 100%); box-shadow:0 10px 22px rgba(3,70,56,.10);">
+      <div style="text-align:center; font-size:1.08em; font-weight:800; color:var(--brand-primary); margin-bottom:0.4rem;">
+        Firm as Syndicate of Syndicates
+      </div>
+      <div style="text-align:center; font-size:0.84em; line-height:1.34; color:#111827; margin-bottom:0.42rem;">
+        Inter-coalition allocations satisfy
+      </div>
+      <div style="text-align:center; font-size:0.92em; margin-bottom:0.48rem;">
+        \[
+        \sum_{g\in\mathcal{G}} \Lambda_g(\mathcal{Y},\upsilon)=\mathcal{Y}
+        \]
+      </div>
+      <div style="text-align:center; font-size:0.84em; line-height:1.34; color:#111827; margin-bottom:0.32rem;">
+        Aggregate risk tolerance
+      </div>
+      <div style="text-align:center; font-size:0.9em;">
+        \[
+        R_{\mathcal F}(\mathcal{Y},\upsilon)=\sum_{g\in\mathcal{G}}R_g\!\bigl(\Lambda_g(\mathcal{Y},\upsilon)\bigr)
+        \]
+      </div>
+    </div>
+  </div>
+
+  <!-- downward connector -->
+  <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); margin:0.15rem 0 0.25rem 0;">
+    ↓
+  </div>
+
+  <!-- output layer -->
+  <div style="display:flex; justify-content:center;">
+    <div style="width:min(820px, 90%); border:1.5px solid #D1D5DB; border-radius:20px; padding:1rem 1.15rem; background:#ffffff; box-shadow:0 6px 18px rgba(0,0,0,.06);">
+      <div style="text-align:center; font-size:1.04em; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        Firm-Level Surrogate Utility and Collective Choice
+      </div>
+      <div style="text-align:center; font-size:0.84em; line-height:1.34; color:#111827; margin-bottom:0.22rem;">
+        Surrogate utility
+      </div>
+      <div style="text-align:center; font-size:0.9em; margin-bottom:0.48rem;">
+        \[
+        V_{\mathcal F}(\mathcal{Y})
+        =
+        A+B\int^{\mathcal{Y}}\exp\!\left(-\int^{t}\frac{ds}{R_{\mathcal F}(s)}\right)dt
+        \]
+      </div>
+      <div style="text-align:center; font-size:0.84em; line-height:1.34; color:#111827; margin-bottom:0.22rem;">
+        Collective choice rule
+      </div>
+      <div style="text-align:center; font-size:0.9em;">
+        \[
+        d_{\mathcal F}^* \in \arg\max_{d_{\mathcal F}} \;
+        \mathbb{E}_{\upsilon}\!\left[
+        V_{\mathcal F}\!\bigl(H(\upsilon,d_{\mathcal F})\bigr)
+        \right]
+        \]
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:980px; margin:0.75rem auto 0 auto; text-align:center; font-size:0.93em; color:#111827; font-weight:700;">
+    The collective actor of the firm is not primitive but emergent: unity of choice is obtained through coalition-level aggregation into a tractable surrogate objective.
+  </div>
+
+  <div style="margin-top:0.72rem; font-size:0.58em; line-height:1.35; color:var(--muted); text-align:left;">
+    <sup>1</sup> Wilson (1968).
+  </div>
+
+</div>
 
 ---
 
