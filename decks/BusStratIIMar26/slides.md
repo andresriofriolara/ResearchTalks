@@ -164,6 +164,7 @@
 
 ---
 
+<!-- .slide: class="slide-heading" -->
 ## The Individual Decision Maker
 
 <div style="display:flex; justify-content:center; align-items:center; width:100%;">
@@ -332,6 +333,21 @@
   </div>
 
 </div>
+
+---
+
+<!-- .slide: class="slide-heading" -->
+## The Collective Decision-Making
+
+<div style="display:flex; justify-content:center; align-items:center; width:100%;">
+  <img src="images/collective.png" alt="Collective - Who influence the outcome" style="max-width:78%; height:auto; display:block;">
+</div>
+
+--
+
+## The Collective Decision-Making
+
+
 
 ---
 
