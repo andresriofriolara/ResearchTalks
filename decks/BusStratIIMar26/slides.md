@@ -164,7 +164,174 @@
 
 ---
 
+## The Individual Decision Maker
 
+<div style="display:flex; justify-content:center; align-items:center; width:100%;">
+  <img src="images/individual.png" alt="Individual - The Assumption" style="max-width:78%; height:auto; display:block;">
+</div>
+
+--
+
+## The Individual Decision Maker
+
+<div style="max-width:1180px; margin:0 auto; padding-top:0.25rem;">
+
+  <div style="text-align:center; font-size:0.98em; color:#374151; margin:0 auto 1rem auto; max-width:900px; font-weight:600;">
+    Individual behavior inside the firm is a culturally mediated, incentive-sensitive, boundedly rational decision-maker.
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr; gap:0.8rem; max-width:920px; margin:0 auto;">
+    <div style="border:1.5px solid #D8E7E1; border-radius:18px; padding:1rem 1.1rem; background:linear-gradient(180deg,#F8FCFA 0%,#EEF7F3 100%); box-shadow:0 6px 18px rgba(3,70,56,.07);">
+      <div style="font-size:1.02em; font-weight:800; color:var(--brand-primary); margin-bottom:0.35rem;">
+        1. Culture<sup>1</sup>
+      </div>
+      <div style="font-size:0.92em; line-height:1.4; color:#111827;">
+        Shapes what the agent <strong>perceives</strong>, how actions are <strong>interpreted</strong>, and how outcomes are <strong>valued</strong> before choice occurs.
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); line-height:1;">
+      ↓
+    </div>
+    <div style="border:1.5px solid #E7E4F2; border-radius:18px; padding:1rem 1.1rem; background:linear-gradient(180deg,#FCFBFE 0%,#F3EFF8 100%); box-shadow:0 6px 18px rgba(88,44,131,.07);">
+      <div style="font-size:1.02em; font-weight:800; color:var(--brand-primary); margin-bottom:0.35rem;">
+        2. Incentives<sup>2</sup>
+      </div>
+      <div style="font-size:0.92em; line-height:1.4; color:#111827;">
+        Shape <strong>internal effort allocation</strong> within any candidate action, splitting attention between the <strong>firm-desired task</strong> and <strong>distracting or private-return activity</strong>.
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); line-height:1;">
+      ↓
+    </div>
+    <div style="border:1.5px solid #ECE8D9; border-radius:18px; padding:1rem 1.1rem; background:linear-gradient(180deg,#FFFDFC 0%,#F8F4E8 100%); box-shadow:0 6px 18px rgba(120,93,19,.07);">
+      <div style="font-size:1.02em; font-weight:800; color:var(--brand-primary); margin-bottom:0.35rem;">
+        3. Bounded Rationality<sup>3</sup>
+      </div>
+      <div style="font-size:0.92em; line-height:1.4; color:#111827;">
+        Replaces global optimization with <strong>aspiration-based search</strong>: the agent stops at the <strong>first satisfactory alternative</strong> rather than solving for the global optimum.
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:0.75rem; font-size:0.58em; line-height:1.35; color:var(--muted); text-align:left;">
+    <sup>1</sup> Martinez et al. (2015).&nbsp;&nbsp;
+    <sup>2</sup> Gibbons (1998).&nbsp;&nbsp;
+    <sup>3</sup> Simon (1955, 1987, 2000).
+  </div>
+
+</div>
+
+--
+## Analytical Generalities
+
+<div style="max-width:1240px; margin:0 auto; padding-top:0.2rem;">
+
+  <div style="text-align:center; font-size:0.96em; color:#374151; margin:0 auto 0.9rem auto; max-width:980px; font-weight:600;">
+    The unified individual-level object combines culturally mediated valuation, internal effort allocation, and aspiration-based choice.<sup>1,2,3</sup>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1.05fr 0.12fr 1.15fr 0.12fr 1.05fr; gap:10px; align-items:stretch;">
+    <!-- Block 1 -->
+    <div style="border:1.5px solid #D1D5DB; border-radius:18px; padding:0.9rem 1rem; background:#ffffff; box-shadow:0 6px 16px rgba(0,0,0,.05);">
+      <div style="text-align:center; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        1. Objective Inputs
+      </div>
+      <div style="font-size:0.84em; line-height:1.38; color:#111827;">
+        <div>\(a \in A_{it}^{\circ}(K_i)\): candidate action</div>
+        <div>\(s_t\): objective state</div>
+        <div>\(C_i=(R_i,K_i)\): culture</div>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent);">→</div>
+    <!-- Block 2 -->
+    <div style="border:1.5px solid #D8E7E1; border-radius:18px; padding:0.9rem 1rem; background:linear-gradient(180deg,#F8FCFA 0%,#EEF7F3 100%); box-shadow:0 6px 16px rgba(3,70,56,.07);">
+      <div style="text-align:center; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        2. Cultural Mediation
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827;">
+        <div style="margin-bottom:0.25rem;">Perceived state:</div>
+        <div style="text-align:center; margin-bottom:0.45rem;">\(\hat{s}_{it}=\mu_i(s_t;K_i)\)</div>
+        <div style="margin-bottom:0.25rem;">Interpreted action:</div>
+        <div style="text-align:center; margin-bottom:0.45rem;">\(\hat{a}_{it}=\gamma_i(a,\hat{s}_{it};K_i)\)</div>
+        <div style="margin-bottom:0.25rem;">Valuation:</div>
+        <div style="text-align:center;">\(U_i(\hat{a}_{it},\hat{s}_{it};R_i)\)</div>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent);">→</div>
+    <!-- Block 3 -->
+    <div style="border:1.5px solid #E7E4F2; border-radius:18px; padding:0.9rem 1rem; background:linear-gradient(180deg,#FCFBFE 0%,#F3EFF8 100%); box-shadow:0 6px 16px rgba(88,44,131,.07);">
+      <div style="text-align:center; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        3. Internal Effort Allocation
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827;">
+        <div>\(e_{1it}\): firm-desired effort</div>
+        <div>\(e_{2it}\): distracting/private-return effort</div>
+        <div style="margin-top:0.45rem; text-align:center;">
+          \(e_{1it}^*(a)=\dfrac{c_{2i}b_i-d_i\eta_i}{\Delta_i}\)
+        </div>
+        <div style="text-align:center; margin-top:0.25rem;">
+          \(e_{2it}^*(a)=\dfrac{c_{1i}\eta_i-d_i b_i}{\Delta_i}\)
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); margin:0.5rem 0;">
+    ↓
+  </div>
+
+  <div style="display:grid; grid-template-columns:1.2fr 0.12fr 1fr; gap:12px; align-items:stretch; max-width:1080px; margin:0 auto;">
+    <!-- Block 4 -->
+    <div style="border:2px solid var(--brand-primary); border-radius:20px; padding:1rem 1.1rem; background:linear-gradient(180deg,#F6FBF9 0%,#EAF5F1 100%); box-shadow:0 10px 22px rgba(3,70,56,.10);">
+      <div style="text-align:center; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        4. Indirect Behavioral Value Function
+      </div>
+      <div style="text-align:center; font-size:0.9em; line-height:1.35; color:#111827; margin-bottom:0.35rem;">
+        \(W_{it}(a;s_t,C_i)\)
+      </div>
+      <div style="font-size:0.8em; line-height:1.34; color:#374151; text-align:center;">
+        Measures the subjective value of candidate action \(a\) after
+        <strong>cultural mediation</strong> and
+        <strong>optimal internal effort allocation</strong>.
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent);">→</div>
+    <!-- Block 5 -->
+    <div style="border:1.5px solid #ECE8D9; border-radius:20px; padding:1rem 1.1rem; background:linear-gradient(180deg,#FFFDFC 0%,#F8F4E8 100%); box-shadow:0 6px 16px rgba(120,93,19,.07); position:relative;">
+      <div style="text-align:center; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        5. Aspiration-Based Choice
+      </div>
+      <div style="text-align:center; font-size:0.84em; line-height:1.35; color:#111827; margin-bottom:0.35rem;">
+        Select the first action such that
+      </div>
+      <div style="text-align:center; font-size:0.9em; margin-bottom:0.45rem;">
+        \(W_{it}(a_{ij};s_t,C_i)\geq k_{it}\)
+      </div>
+      <div style="font-size:0.79em; line-height:1.34; color:#374151; text-align:center;">
+        Search proceeds over the culturally mediated considered set,
+        and aspirations update with search feedback.
+      </div>
+    </div>
+
+  </div>
+
+  <div style="max-width:720px; margin:0.7rem auto 0 auto; border:1px dashed #D1D5DB; border-radius:14px; padding:0.65rem 0.9rem; background:#ffffff; text-align:center; font-size:0.8em; color:#374151;">
+    Aspiration dynamics: \(k_{i,t+1}=k_{it}+\phi_i(m_{it})\)
+  </div>
+
+  <div style="margin-top:0.7rem; text-align:center; font-size:0.93em; color:#111827; font-weight:700;">
+    Formally, individual behavior inside the firm is represented by an indirect behavioral value function coupled with an aspiration-based stopping rule.
+  </div>
+
+  <div style="margin-top:0.7rem; font-size:0.58em; line-height:1.35; color:var(--muted); text-align:left;">
+    <sup>1</sup> Martinez et al. (2015).&nbsp;&nbsp;
+    <sup>2</sup> Gibbons (1998).&nbsp;&nbsp;
+    <sup>3</sup> Simon (1955, 1987, 2000).
+  </div>
+
+</div>
 
 ---
 
