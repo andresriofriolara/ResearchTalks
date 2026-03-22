@@ -177,7 +177,7 @@
 <div style="max-width:1180px; margin:0 auto; padding-top:0.25rem;">
 
   <div style="text-align:center; font-size:0.98em; color:#374151; margin:0 auto 1rem auto; max-width:900px; font-weight:600;">
-    Individual behavior inside the firm is a culturally mediated, incentive-sensitive, boundedly rational decision-maker.
+    Individual behavior inside the firm is a culturally mediated, incentive-sensitive, boundedly-rational.
   </div>
 
   <div style="display:grid; grid-template-columns:1fr; gap:0.8rem; max-width:920px; margin:0 auto;">
