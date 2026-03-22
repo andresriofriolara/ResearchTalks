@@ -1,939 +1,1133 @@
 <!-- .slide: class="title-slide" -->
-# The Effects of Present Bias and Loss Aversion over Loan Granting.
+# The Institutional Decision Maker: An Artificial-Collective Approach.
 </section>
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading closer" -->
+## What does this research do?
+
+<div style="display:flex; justify-content:center; align-items:center; width:100%;">
+  <img src="images/blackbox.png" alt="Blackbox" style="max-width:78%; height:auto; display:block;">
+</div>
+
+--
+<!-- .slide: class="slide-heading closer" -->
+## But, how?
+
+<div style="display:flex; justify-content:center; align-items:center; width:100%;">
+  <img src="images/individual.png" alt="Individual - The Assumption" style="max-width:78%; height:auto; display:block;">
+</div>
+
+--
+<!-- .slide: class="slide-heading closer" -->
+## But, how?
+
+<div style="display:flex; justify-content:center; align-items:center; width:100%;">
+  <img src="images/collective.png" alt="Collective - Who influence the outcome" style="max-width:78%; height:auto; display:block;">
+</div>
+
+---
+<!-- .slide: class="slide-heading closer" -->
+## Justification
+
+<style>
+  .reveal section.slide-heading .just-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 18px;
+  }
+  .reveal section.slide-heading .just-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+    justify-items: center;
+  }
+  .reveal section.slide-heading .just-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+  }
+  .reveal section.slide-heading .just-card img{
+    width: 75% !important;
+    max-width: 75% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px){
+    .reveal section.slide-heading .just-grid{
+      grid-template-columns: 1fr;
+    }
+    .reveal section.slide-heading .just-card img{
+      width: 42% !important;
+      max-width: 42% !important;
+    }
+  }
+</style>
+
+<div class="just-wrap">
+  <div class="just-grid">
+    <div class="just-card">
+      <img src="images/similar.png" alt="Related literature or conceptual similarity figure">
+    </div>
+    <div class="just-card">
+      <img src="images/cited.png" alt="Citation or literature motivation figure">
+    </div>
+  </div>
+</div>
+
+---
+<!-- .slide: class="slide-heading closer" -->
 ## Research Questions
 
 <section>
   <style>
     .rq-wrap {
-      max-width: 1000px; margin: 0 auto;
-      padding: clamp(8px, 2vw, 18px);
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 18px;
     }
     .rq-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: clamp(12px, 2.2vw, 18px);
+      gap: 18px;
     }
     .rq-card {
       position: relative;
       background: linear-gradient(180deg, #ffffff, #fbfdff);
       border: 1px solid #e6eaef;
       border-radius: 16px;
-      padding: clamp(14px, 2.2vw, 22px) clamp(16px, 2.4vw, 26px);
+      padding: 22px 26px 20px 34px;
       box-shadow: 0 6px 20px rgba(0,0,0,.06);
     }
-    /* Number badge */
     .rq-badge {
-      position: absolute; inset: -12px auto auto -12px;
-      width: 40px; height: 40px; border-radius: 999px;
-      display: grid; place-items: center;
-      background: #0d5e3a; color: #fff; font-weight: 800;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: #0d5e3a;
+      color: #fff;
+      font-weight: 800;
       box-shadow: 0 8px 18px rgba(13,94,58,.25);
       font-size: 18px;
     }
     .rq-title {
-      font-size: clamp(22px, 2.6vw, 30px);
-      line-height: 1.2; margin: 0 0 6px 0; font-weight: 800;
-      letter-spacing: .2px;
+      margin: 0;
+      font-size: clamp(10px, 1.05vw, 15px);
+      line-height: 1.16;
+      font-weight: 800;
+      letter-spacing: 0;
+      color: #0b4f35;
+      word-break: normal;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
-    .rq-sub {
-      color: #5b6573; font-size: clamp(16px, 1.8vw, 18px);
-      line-height: 1.35; margin: 0;
-    }
-    /* Light accent bar */
     .rq-card::after {
-      content: ""; position: absolute; inset: auto 0 0 0; height: 6px;
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 5px;
       background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
-      border-radius: 0 0 16px 16px; opacity: .85;
+      border-radius: 0 0 16px 16px;
+      opacity: .85;
     }
-    /* Fragments: bottom-to-top reveal */
     .rq-card[data-fragment-index="0"] { z-index: 3; }
     .rq-card[data-fragment-index="1"] { z-index: 2; }
     .rq-card[data-fragment-index="2"] { z-index: 1; }
-    /* Dark-mode friendly tweak (optional) */
-    :root.dark .rq-card { background:#0f141a; border-color:#2a3441; }
-    :root.dark .rq-sub { color:#c7d1dd; }
-    :root.dark .rq-card::after { opacity:.6; }
+    @media (max-width: 900px) {
+      .rq-wrap { padding: 0 10px; }
+      .rq-card { padding: 18px 18px 16px 24px; }
+      .rq-title { font-size: clamp(10px, 1.05vw, 15px); }
+    }
   </style>
 
   <div class="rq-wrap">
     <div class="rq-grid">
-      <!-- Q3 -->
       <div class="rq-card fragment" data-fragment-index="2">
         <div class="rq-badge">3</div>
-        <h3 class="rq-title">Can the deviation from rationality be reconciled?</h3>
-        <p class="rq-sub">If biases exist, could incentive readjustments restore alignment with optimal lending?</p>
+        <div class="rq-title">Does moving toward a relatively lower-hassle environment improve subsidiary outcomes?</div>
       </div>
-      <!-- Q2 -->
       <div class="rq-card fragment" data-fragment-index="1">
         <div class="rq-badge">2</div>
-        <h3 class="rq-title">Are we observing a systematic bias?</h3>
-        <p class="rq-sub">Focus on <em>loss aversion</em> and <em>present bias</em> in loan-decision-making.</p>
+        <div class="rq-title">Does moving into a relatively higher-hassle environment worsen subsidiary outcomes?</div>
       </div>
-      <!-- Q1 -->
       <div class="rq-card fragment" data-fragment-index="0">
         <div class="rq-badge">1</div>
-        <h3 class="rq-title">To what degree are loan officers rational decision makers?</h3>
-        <p class="rq-sub">Benchmark observed choices against normative, information-consistent decisions.</p>
+        <div class="rq-title">Does directional movement in hassle space help explain multinational subsidiary survival and profitability?</div>
       </div>
     </div>
   </div>
 </section>
 
-
----
+--
 <!-- .slide: class="slide-heading closer" -->
-## What does this research do?
+## Hypotheses
 
-<section id="gif3cols">
-  <style>
-    #gif3cols .wrap{
-      --side-gutter: clamp(20px, 3.5vw, 40px);
-      --col-gap:     clamp(16px, 3vw, 28px);
-      box-sizing: border-box;
-      inline-size: 100%;
-      max-inline-size: 1200px;          /* optional hard cap */
-      margin-inline: auto;
-      padding-inline: var(--side-gutter);
-      /* Final safety against any 1px rounding */
-      overflow: clip;
-    }
-    #gif3cols .grid{
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      column-gap: var(--col-gap);
-      row-gap: var(--col-gap);
-      align-items: center;
-      justify-items: center;
-      /* Don’t allow the grid to grow past its container */
-      max-inline-size: 100%;
-      overflow: clip;
-      box-sizing: border-box;
-    }
-    #gif3cols .card{
-      inline-size: 100%;    /* fill its grid cell only */
-      aspect-ratio: 4 / 3;  /* equal visual height across columns */
-      border-radius: 14px;
-      background: #fff;
-      box-shadow: 0 2px 12px rgba(0,0,0,.12);
-      overflow: hidden;     /* in case GIF frames exceed */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #gif3cols .card img{
-      display: block;
-      inline-size: 100%;
-      block-size: 100%;
-      object-fit: contain;  /* use 'cover' to fill/crop instead */
-      background: #fff;
-    }
-    @media (max-width: 900px){
-      #gif3cols .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-    }
-    @media (max-width: 600px){
-      #gif3cols .grid{ grid-template-columns: 1fr; }
-    }
-  </style>
-  <div class="wrap">
-    <div class="grid">
-      <div class="card">
-        <img src="./images/homer-simpson.gif" alt="Homer 1">
-      </div>
-      <div class="card">
-        <img src="./images/homer-simpson-crayon.gif" alt="Homer 2">
-      </div>
-      <div class="card">
-        <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
-      </div>
+<div class="hyp-wrap">
+  <div class="hyp-grid">
+    <div class="hyp-card">
+      <div class="hyp-tag">Hypothesis 1</div>
+      <h3 class="hyp-title">Subsidiary Survival</h3>
+      <p class="hyp-text">
+        Greater hassle-space displacement between the origin country and the host country,
+        captured by <span class="hyp-em">Δ<sup>+</sup><sub>i,t</sub></span> and/or
+        <span class="hyp-em">Δ<sup>−</sup><sub>i,t</sub></span>,
+        is associated with a lower probability of subsidiary survival, allowing for asymmetric effects between upward and downward moves in hassle space.
+      </p>
     </div>
-  </div>
-</section>
-
----
-<!-- .slide: class="slide-heading closer" -->
-## Optimal Decisions Start at the First Line
-
-<section>
-  <!-- Funnel → Forked Outcomes (no title) -->
-  <div class="smart-funnel" aria-label="First-line process funnel with forked outcomes">
-    <div class="funnel">
-      <div class="band band-1 fragment" data-fragment-index="2">
-        <span>Can that deviation be reconciled?</span>
-      </div>
-      <div class="band band-2 fragment" data-fragment-index="1">
-        <span>Biased decision makers influence the portfolio mix.</span>
-      </div>
-      <div class="band band-3 fragment" data-fragment-index="0">
-        <span>Objective information input: hard &amp; soft information → loan decisions</span>
-      </div>
-      <div class="neck" aria-hidden="true"></div>
+    <div class="hyp-card">
+      <div class="hyp-tag">Hypothesis 2</div>
+      <h3 class="hyp-title">Subsidiary Profitability</h3>
+      <p class="hyp-text">
+        Greater hassle-space displacement between the origin country and the host country,
+        captured by <span class="hyp-em">Δ<sup>+</sup><sub>i,t</sub></span> and/or
+        <span class="hyp-em">Δ<sup>−</sup><sub>i,t</sub></span>,
+        is associated with lower subsidiary profitability, again allowing for asymmetric effects between upward and downward moves in hassle space.
+      </p>
     </div>
-    <div class="fork">
-      <div class="lane lane-good">
-        <div class="lane-track">
-          <div class="pill">Aligned incentives → prudent lending</div>
-          <div class="end-cap end-good" aria-hidden="true"></div>
-        </div>
-      </div>
-      <div class="lane lane-bad">
-        <div class="lane-track">
-          <div class="pill">Misaligned incentives → excessive lending</div>
-          <div class="pill">Credit risk materializes → bankruptcy</div>
-          <div class="badge-loss" role="note" aria-label="30 percent of loans unrecovered post-bankruptcy">
-            <strong>≈30%</strong><span> unrecovered<br>post-bankruptcy</span>
-          </div>
-          <div class="end-cap end-bad" aria-hidden="true"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
----
-<!-- .slide: class="slide-heading closer" -->
-## ~70% of your Banking Statement is being lent
-
-<div>
-  <div class="mini-sankey" role="group" aria-label="Deposits flow to loans and other uses">
-    <div class="sankey-col left">
-      <div class="node node-source"><div class="label">Deposits</div></div>
-      <div class="tile">
-        <div class="kpi">$5,400</div>
-        <div class="sub">median bank account balance</div>
-      </div>
-    </div>
-    <div class="sankey-diagram">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-        <g>
-          <path class="ribbon loans" d="M160 70 C280 70 540 40 660 40 L660 100 C540 100 280 120 160 120 Z"/>
-          <path class="ribbon other" d="M160 140 C280 140 540 160 660 160 L660 200 C540 200 280 190 160 190 Z"/>
-          <rect class="stub" x="140" y="70" width="20" height="120"/>
-          <rect class="dock loans" x="660" y="40" width="20" height="60"/>
-          <rect class="dock other" x="660" y="160" width="20" height="40"/>
-        </g>
-      </svg>
-    </div>
-    <div class="sankey-col right">
-      <div class="node node-dest loans">
-        <div><div class="label">Loans</div><div class="pct">71%</div></div>
-      </div>
-      <div class="node node-dest other">
-        <div><div class="label">Other uses</div><div class="pct">29%</div></div>
-      </div>
-      <div class="src right-src">Federal Reserve</div>
-    </div>
-    <div class="sources">Sources: Yahoo Finance · Federal Reserve</div>
   </div>
 </div>
 
+<style>
+  .hyp-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8px 18px;
+  }
+  .hyp-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+  }
+  .hyp-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 24px 24px 22px 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.07);
+    text-align: left;
+  }
+  .hyp-tag{
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .hyp-title{
+    margin: 0 0 10px 0;
+    font-size: clamp(20px, 2vw, 28px);
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .hyp-text{
+    margin: 0;
+    font-size: clamp(15px, 1.25vw, 19px);
+    line-height: 1.42;
+    color: #2f3844;
+  }
+  .hyp-em{
+    color: #0d5e3a;
+    font-weight: 800;
+  }
+  .hyp-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 6px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  @media (max-width: 900px){
+    .hyp-grid{ grid-template-columns: 1fr; }
+  }
+  :root.dark .hyp-card{
+    background: #0f141a;
+    border-color: #2a3441;
+  }
+  :root.dark .hyp-title{
+    color: #e5edf5;
+  }
+  :root.dark .hyp-text{
+    color: #d3dbe5;
+  }
+</style>
+
+
 ---
 <!-- .slide: class="slide-heading closer" -->
-## The "Rational" Banking process
+## The Hassle Factor
 
-<div class="media-xy">
-  <img data-src="./images/Figure1.png" class="img-sm" alt="Rational banking process diagram">
-</div>
+<style>
+  .hf-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px 18px 0 18px;
+  }
+  .hf-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .hf-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    text-align: left;
+    min-height: 170px;
+  }
+  .hf-card.accent{
+    background: linear-gradient(180deg, #f4fbf7, #eef8f2);
+    border-color: #cfe3d8;
+  }
+  .hf-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .hf-title{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .hf-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .hf-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  @media (max-width: 900px){
+    .hf-grid{
+      grid-template-columns: 1fr;
+    }
+    .hf-card{
+      min-height: auto;
+    }
+  }
+</style>
 
----
-<!-- .slide: class="slide-heading diagram closer" -->
-## Heuristics in the Banking Process (1/2)
-
-<div class="media-xy">
-  <img data-src="./images/Figure4.png" class="img-sm" alt="Heuristics in the banking process">
+<div class="hf-wrap">
+  <div class="hf-grid">
+    <div class="hf-card">
+      <div class="hf-label">Definition</div>
+      <div class="hf-title">What it is</div>
+      <p class="hf-text">
+        A country-attractiveness and business-friction measure developed to capture how burdensome it is to conduct business across countries.
+      </p>
+    </div>
+    <div class="hf-card">
+      <div class="hf-label">Dimensions</div>
+      <div class="hf-title">What it captures</div>
+      <p class="hf-text">
+        Eleven practical sources of business inconvenience, including safety, visas, transportation, hotels, hygiene, telecom, health risks, language, business facilitation, and climate.
+      </p>
+    </div>
+    <div class="hf-card">
+      <div class="hf-label">Construction</div>
+      <div class="hf-title">How it is built</div>
+      <p class="hf-text">
+        A comparable country-year scalar score constructed from weighted indicators within a confirmatory-factor framework.
+      </p>
+    </div>
+    <div class="hf-card accent">
+      <div class="hf-label">Role in this paper</div>
+      <div class="hf-title">Why it matters here</div>
+      <p class="hf-text">
+        The Hassle Factor provides the empirical raw material: each country-year score becomes the coordinate from which hassle space is later defined.
+      </p>
+    </div>
+  </div>
 </div>
 
 --
-<!-- .slide: class="slide-heading diagram closer" -->
-## Heuristics in the Banking Process (2/2)
+<!-- .slide: class="slide-heading closer" -->
+## The Hassle Vector
 
-<div class="media-xy">
-  <img data-src="./images/Figure6.png" class="img-sm" alt="Heuristics in the banking process, part 2">
+<style>
+  .hv-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px 18px 0 18px;
+  }
+  .hv-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .hv-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    text-align: left;
+    min-height: 180px;
+  }
+  .hv-card.accent{
+    background: linear-gradient(180deg, #f4fbf7, #eef8f2);
+    border-color: #cfe3d8;
+  }
+  .hv-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .hv-title{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .hv-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .hv-eqn{
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 1.25;
+    color: #123524;
+    font-weight: 700;
+  }
+  .hv-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  @media (max-width: 900px){
+    .hv-grid{
+      grid-template-columns: 1fr;
+    }
+    .hv-card{
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="hv-wrap">
+  <div class="hv-grid">
+    <div class="hv-card">
+      <div class="hv-label">Coordinate</div>
+      <div class="hv-title">Each country-year is a point in hassle space</div>
+      <p class="hv-text">
+        The Hassle Factor is no longer treated only as a scalar attribute, but as a coordinate in an abstract metric space.
+      </p>
+    </div>
+    <div class="hv-card">
+      <div class="hv-label">Comparison</div>
+      <div class="hv-title">The relevant contrast is origin versus host</div>
+      <p class="hv-text">
+        For subsidiary <em>i</em>, the relevant empirical comparison is not the host country in isolation, but the difference between host and origin environments.
+      </p>
+    </div>
+    <div class="hv-card">
+      <div class="hv-label">Displacement</div>
+      <div class="hv-title">The Hassle Vector is the signed difference</div>
+      <p class="hv-text">
+        It measures movement from the origin country to the host country in hassle space.
+      </p>
+      <div class="hv-eqn">
+        Δ<sub>i,t</sub> = H<sub>h<sub>i</sub>,t</sub> − H<sub>o<sub>i</sub>,t</sub>
+      </div>
+    </div>
+    <div class="hv-card accent">
+      <div class="hv-label">Asymmetry</div>
+      <div class="hv-title">The sign of movement matters</div>
+      <p class="hv-text">
+        The displacement is decomposed into two legs so the model distinguishes upward from downward movement in hassle space.
+      </p>
+      <div class="hv-eqn">
+        Δ<sup>+</sup><sub>i,t</sub> = max(Δ<sub>i,t</sub>, 0)
+        <br>
+        Δ<sup>−</sup><sub>i,t</sub> = max(−Δ<sub>i,t</sub>, 0)
+      </div>
+    </div>
+  </div>
 </div>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## The Utility Function
+## Methods
 
-<div id="util-eqn-src" style="display:none">
-\begin{aligned}
-U_t \;=\;
-\underbrace{\mathbb{E}_t^{\,w}\!\big[v(c_t\mid r_t)\big]}_{\text{within-period (decision-weighted)}}
-\;+\;
-\underbrace{\beta \sum_{\tau=t+1}^{T}\delta^{\,\tau-t}\,
-\mathbb{E}\!\Big[\mathbb{E}_\tau^{\,w}\!\big[v(c_\tau\mid r_\tau)\big]\Big]}_{\text{discounted continuation value}}
-\end{aligned}
+<style>
+  .m-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px 18px 0 18px;
+  }
+  .m-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .m-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    text-align: left;
+    min-height: 180px;
+  }
+  .m-card.accent{
+    background: linear-gradient(180deg, #f4fbf7, #eef8f2);
+    border-color: #cfe3d8;
+  }
+  .m-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .m-title{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .m-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .m-list{
+    margin: 8px 0 0 18px;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .m-list li{
+    margin: 4px 0;
+    text-align: left;
+  }
+  .m-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  @media (max-width: 900px){
+    .m-grid{
+      grid-template-columns: 1fr;
+    }
+    .m-card{
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="m-wrap">
+  <div class="m-grid">
+    <div class="m-card">
+      <div class="m-label">Data</div>
+      <div class="m-title">Sample and time coverage</div>
+      <p class="m-text">
+        The empirical analysis combines the TK panel of Japanese foreign subsidiaries with Hassle Factor country-year data for 2008–2018.
+      </p>
+    </div>
+    <div class="m-card">
+      <div class="m-label">Outcomes</div>
+      <div class="m-title">Subsidiary exit and profitability</div>
+      <ul class="m-list">
+        <li>Discrete subsidiary survival / exit outcome</li>
+        <li>Profitability proxied by log(1 + Revenue<sup>USD</sup><sub>i,t</sub>)</li>
+      </ul>
+    </div>
+    <div class="m-card">
+      <div class="m-label">Models</div>
+      <div class="m-title">Hazard and profitability specifications</div>
+      <ul class="m-list">
+        <li>Discrete-time hazard model for exit</li>
+        <li>Profitability regression for operating performance</li>
+        <li>Key regressors: H<sub>host</sub>, Δ<sup>+</sup>, Δ<sup>−</sup>, controls, fixed effects, and duration terms</li>
+      </ul>
+    </div>
+    <div class="m-card accent">
+      <div class="m-label">Inference</div>
+      <div class="m-title">Dependence is modeled in hassle-space-time</div>
+      <p class="m-text">
+        Inference relies on Conley-style robust standard errors, where dependence is defined over the metric space
+        (Δ, t) rather than only over physical geography.
+      </p>
+    </div>
+  </div>
 </div>
-<div id="util-eqn-render" class="katex-display util-eqn--big"></div>
 
---
+---
+<!-- .slide: class="slide-heading closer" -->
+## Results: Exit Hazard
 
-<div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
-  <table style="border-collapse:collapse; margin:auto;">
-    <thead>
-      <tr>
-        <th style="border:1px solid #ccc; padding:6px;">Symbol</th>
-        <th style="border:1px solid #ccc; padding:6px;">Meaning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$U_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Intertemporal utility at time $t$ (PT within-period via $v$, quasi-hyperbolic across time)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$v(c\mid r)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Within-period Prospect Theory value around reference $r$: $(c-r)_{+}^{\alpha_v}-\lambda\,(r-c)_{+}^{\beta_v}$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}_t^{\,w}[\cdot]$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Decision-weighted expectation at $t$ (rank-dependent); puts weight $w(p_t)$ on repay and $1-w(p_t)$ on default</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}[\cdot]$</td>
-          <td style="border:1px solid #ccc; padding:6px;">(Regular) expectation over future uncertainty conditional on information at $t$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$c_t^{\mathrm{repay}},\; c_t^{\mathrm{default}}$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Outcomes (payoffs) in repay vs. default state at time $t$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$r_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Reference point at time $t$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$p_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Objective probability of “repay” at time $t$ (Bernoulli prospect)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$w(\cdot)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function, $w\!:\![0,1]\to[0,1]$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$(x)_{+}$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Positive part: $(x)_{+}=\max\{x,0\}$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\alpha_v,\;\beta_v$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Value curvature in gains ($\alpha_v$) and losses ($\beta_v$), typically $\in(0,1]$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\lambda$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Loss aversion ($\lambda\ge 1$)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\beta\in(0,1]$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Present-bias factor (quasi-hyperbolic)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\delta\in(0,1)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Per-period exponential discount factor</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$T$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Time horizon (finite in the displayed sum)</
+<style>
+  .res-wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 4px 14px 0 14px;
+  }
+  .res-lead{
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    line-height: 1.28;
+    color: #2f3844;
+    text-align: left;
+  }
+  .res-note{
+    margin-top: 8px;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: left;
+  }
+  .res-card{
+    border: 1px solid #e6eaef;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    box-shadow: 0 6px 20px rgba(0,0,0,.05);
+    overflow: hidden;
+  }
+  .res-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    line-height: 1.25;
+  }
+  .res-table thead th{
+    background: #0d5e3a;
+    color: #ffffff;
+    padding: 10px 8px;
+    font-weight: 800;
+    text-align: center;
+    border-bottom: 1px solid #d8e1db;
+  }
+  .res-table td{
+    padding: 8px 8px;
+    border-bottom: 1px solid #edf1f4;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .res-table td:first-child,
+  .res-table th:first-child{
+    text-align: left;
+  }
+  .res-table tbody tr:nth-child(even){
+    background: #fafcfd;
+  }
+  .res-table .key-row{
+    background: #f2f8f4 !important;
+    font-weight: 700;
+  }
+  .res-takeaway{
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #eef8f2;
+    border: 1px solid #d7e8dd;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #123524;
+    text-align: left;
+  }
+  .res-tight td{ padding-top: 7px; padding-bottom: 7px; }
+</style>
 
---
+<div class="res-wrap">
+  <p class="res-lead">
+    Baseline discrete-time hazard model for subsidiary exit with Conley standard errors in hassle-space-time (cutoff <strong>b = 2.0</strong>).
+  </p>
 
-<!-- .slide: class="slide-heading" -->
-## The Decision Rule Our Decision Maker Follows
-
-Utility for each scenario is computed via Khaneman Tversky value $v(\cdot\mid r)$ for the corresponding outcomes.
-
-**Decision-weighted expected utilities:**
-
-$$\mathbb{E}\left[U\mid \text{Accept}\right] = w(p)U_1 + \bigl[1-w(p)\bigr]U_2$$
-
-$$\mathbb{E}\left[U\mid \text{Reject}\right] = w(p)U_3 + \bigl[1-w(p)\bigr]U_4$$
-
-<section>
-  <style>
-    .rw-matrix {
-      max-width: 900px; margin: 0 auto; font-size: clamp(18px, 2vw, 24px);
-    }
-    .rw-matrix table {
-      border-collapse: separate; border-spacing: 0; width: 100%;
-      box-shadow: 0 6px 20px rgba(0,0,0,.08); border-radius: 12px; overflow: hidden;
-    }
-    .rw-matrix th, .rw-matrix td {
-      padding: 14px 16px; text-align: center; vertical-align: middle;
-      border: 1px solid #e5e7eb; background: #fff;
-    }
-    .rw-matrix thead th {
-      background: #f8fafc; font-weight: 700;
-    }
-    .rw-matrix .stub { background: #f8fafc; font-weight: 700; width: 22%; }
-    .rw-matrix .right { background: #ecfdf5; }
-    .rw-matrix .wrong { background: #fef2f2; }
-    .rw-matrix .tag {
-      display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.85em;
-      background: #e5e7eb; font-weight: 700;
-    }
-    .rw-matrix .right .tag { background: #34d39922; }
-    .rw-matrix .wrong .tag { background: #f8717122; }
-    .rw-matrix small { display:block; opacity:.85; margin-top:4px; line-height:1.1; }
-  </style>
-
-  <div class="rw-matrix">
-    <table>
+  <div class="res-card">
+    <table class="res-table res-tight">
       <thead>
         <tr>
-          <th class="stub"></th>
-          <th><strong>Right</strong></th>
-          <th><strong>Wrong</strong></th>
+          <th>Variable</th>
+          <th>Coef.</th>
+          <th>S.E.</th>
+          <th>z</th>
+          <th>p-value</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="stub">Accept</th>
-          <td class="right">
-            <span class="tag">\(U_1\)</span>
-            <small>Accept a good loan (repay)</small>
-          </td>
-          <td class="wrong">
-            <span class="tag">\(U_2\)</span>
-            <small>Type II — accept a bad loan (default)</small>
-          </td>
+          <td>H<sub>host</sub></td>
+          <td>-1.3720</td>
+          <td>0.0592</td>
+          <td>-23.1671</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr class="key-row">
+          <td>Δ<sup>+</sup></td>
+          <td>1.2542</td>
+          <td>0.1865</td>
+          <td>6.7248</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr class="key-row">
+          <td>Δ<sup>−</sup></td>
+          <td>-1.1564</td>
+          <td>0.1567</td>
+          <td>-7.3798</td>
+          <td>&lt;0.001</td>
         </tr>
         <tr>
-          <th class="stub">Reject</th>
-          <td class="right">
-            <span class="tag">\(U_4\)</span>
-            <small>Reject a bad loan (default)</small>
-          </td>
-          <td class="wrong">
-            <span class="tag">\(U_3\)</span>
-            <small>Type I — reject a good loan (repay)</small>
-          </td>
+          <td>Japanese ownership share (%)</td>
+          <td>-0.0054</td>
+          <td>0.0006</td>
+          <td>-9.3042</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>log(1 + Capital)</td>
+          <td>-0.0458</td>
+          <td>0.0038</td>
+          <td>-12.1275</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>-0.0738</td>
+          <td>0.0157</td>
+          <td>-4.6911</td>
+          <td>&lt;0.001</td>
         </tr>
       </tbody>
     </table>
   </div>
-</section>
 
+  <div class="res-takeaway">
+    <strong>Interpretation:</strong> upward movement in hassle space increases exit hazard, while downward movement reduces it.
+  </div>
 
-In a multi-scenario task, rank by the expected value above (largest to smallest).
-
---
-
-<!-- .slide: class="slide-heading" -->
-## Intertemporal Choice Component (Laibson, 1997)
-
-$$
-U_t = V_t + \beta \sum_{\tau = t+1}^{T} \delta^{\,\tau - t}\, \mathbb{E}\!\left[V_\tau\right]
-$$
-
-Where,
-
-- $V_t$ : KKhaneman Tversky decision-weighted within-period value (relative to $r_t$)  
-- $\beta$ : present-bias parameter $\beta \in(0,1]$  
-- $\delta$ : discount factor $\delta\in(0,1)$  
-- $T$ : the time horizon
-
---
-
-<!-- .slide: class="slide-heading" -->
-## Reference Formation (Kőszegi & Rabin, 2006)
-
-We adopt expectations-based **reference formation** for $r_t$ (e.g., $r_t=\mathbb{E}_{t-1}[c_t]$ or partial adaptation).
-Within-period value follows Kahneman Tversky (1979) Prospect Theory (see “The Utility Function”).
-
---
-
-<!-- .slide: class="slide-heading" -->
-## Prospect Theory Value Around the Reference (Kahneman–Tversky, 1979)
-
-$$
-v(c_t\mid r_t)=
-\begin{cases}
-  (c_t-r_t)^{\alpha_v}, & c_t\ge r_t, \\\\[4pt]
-  -\lambda\,(r_t-c_t)^{\beta_v}, & c_t< r_t
-\end{cases}
-\qquad \alpha_v,\beta_v\in(0,1],\ \lambda\ge 1
-$$
-
-Decision weighting for a Bernoulli prospect (repay vs default):
-$$
-V_t = w(p_t)v\big(c_t^{\text{repay}}\mid r_t\big)
-      + \bigl[1-w(p_t)\bigr]v\big(c_t^{\text{default}}\mid r_t\big)
-$$
-
---
-
-<!-- .slide: class="slide-heading" -->
-## Hybrid Model (Present Bias + Prospect Theory + Attention)
-
-
-$$U_t= V_t + \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\left[V_\tau\right]$$
-
-$$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{default}}\mid r_t)$$
-
---
-
-<!-- .slide: class="slide-heading" -->
-## To be Consistent with De Clippel Ancillary Conditions
-
-- $A_t$: available menu
-- $F(A_t)$: feasible attention sets  
-- $S_t \subseteq A_t$: endogenous consideration set  
-
-**Feasible utility path:**
-
-<div id="feas-eqn-src" class="feas-src" style="display:none">
-\begin{aligned}
-\tilde U_t
-&= \max_{c_t\in S_t}\left\{
-  V_t(c_t\mid r_t)
-  {}+ \beta \sum_{\tau=t+1}^{T}\delta^{\tau-t}\,
-     \mathbb{E}_{S_\tau}\!\bigl[\,V_\tau(c_\tau\mid r_\tau)\,\bigr]
-\right\}
-\\[4pt]
-&\text{s.t.}\quad
-  S_t\in F(A_t),\qquad
-  V_t(c_t\mid r_t)\ge \theta_t
-\end{aligned}
+  <div class="res-note">
+    Selected coefficients from the baseline hazard specification reported in the paper; full model also includes year effects and duration terms.
+  </div>
 </div>
 
-<div id="feas-eqn-render" class="katex-display"></div>
+--
+<!-- .slide: class="slide-heading closer" -->
+## Results: Profitability
+
+<div class="res-wrap">
+  <p class="res-lead">
+    Baseline profitability model with Conley standard errors in hassle-space-time (cutoff <strong>b = 2.0</strong>). Profitability is proxied by <strong>log(1 + Revenue<sup>USD</sup><sub>i,t</sub>)</strong>.
+  </p>
+
+  <div class="res-card">
+    <table class="res-table res-tight">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Coef.</th>
+          <th>S.E.</th>
+          <th>z</th>
+          <th>p-value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>H<sub>host</sub></td>
+          <td>4.1227</td>
+          <td>0.0669</td>
+          <td>61.6683</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr class="key-row">
+          <td>Δ<sup>+</sup></td>
+          <td>-4.2938</td>
+          <td>0.0862</td>
+          <td>-49.8347</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr class="key-row">
+          <td>Δ<sup>−</sup></td>
+          <td>5.3087</td>
+          <td>0.1121</td>
+          <td>47.3522</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>Japanese ownership share (%)</td>
+          <td>-0.0037</td>
+          <td>0.0004</td>
+          <td>-10.3867</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>log(1 + Capital)</td>
+          <td>0.1635</td>
+          <td>0.0269</td>
+          <td>6.0810</td>
+          <td>&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>0.2679</td>
+          <td>0.0308</td>
+          <td>8.6861</td>
+          <td>&lt;0.001</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="res-takeaway">
+    <strong>Interpretation:</strong> upward movement in hassle space lowers profitability, while downward movement increases it.
+  </div>
+
+  <div class="res-note">
+    Selected coefficients from the baseline profitability specification reported in the paper; full model also includes year fixed effects.
+  </div>
+</div>
 
 --
+<!-- .slide: class="slide-heading closer" -->
+## Results: Robustness
 
-<!-- .slide: class="slide-heading" -->
-## The Complete Utility Function
+<div class="res-wrap">
+  <p class="res-lead">
+    The asymmetric directional pattern survives alternative specifications controlling for investment intensity and sector composition.
+  </p>
 
-<div class="media-xy">
-  <img data-src="./images/function.png" class="img-sm" alt="fullfunction">
+  <div class="res-card">
+    <table class="res-table res-tight">
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Specification</th>
+          <th>H<sub>host</sub></th>
+          <th>Δ<sup>+</sup></th>
+          <th>Δ<sup>−</sup></th>
+          <th>Joint legs χ²</th>
+          <th>Symmetry χ²</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hazard</td>
+          <td>Investment proxy</td>
+          <td>-1.537</td>
+          <td>1.437</td>
+          <td>-1.337</td>
+          <td>786.41</td>
+          <td>734.45</td>
+        </tr>
+        <tr>
+          <td>Hazard</td>
+          <td>Narrow industry FE</td>
+          <td>-1.278</td>
+          <td>1.168</td>
+          <td>-1.163</td>
+          <td>334.01</td>
+          <td>75.05</td>
+        </tr>
+        <tr>
+          <td>Hazard</td>
+          <td>Broad industry FE</td>
+          <td>-1.177</td>
+          <td>1.040</td>
+          <td>-1.066</td>
+          <td>220.17</td>
+          <td>128.81</td>
+        </tr>
+        <tr>
+          <td>Profitability</td>
+          <td>Investment proxy</td>
+          <td>4.276</td>
+          <td>-4.401</td>
+          <td>5.488</td>
+          <td>25349.87</td>
+          <td>24622.50</td>
+        </tr>
+        <tr>
+          <td>Profitability</td>
+          <td>Narrow industry FE</td>
+          <td>3.787</td>
+          <td>-4.009</td>
+          <td>5.077</td>
+          <td>2240.06</td>
+          <td>2219.04</td>
+        </tr>
+        <tr>
+          <td>Profitability</td>
+          <td>Broad industry FE</td>
+          <td>4.297</td>
+          <td>-4.435</td>
+          <td>5.743</td>
+          <td>4428.73</td>
+          <td>3159.69</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="res-takeaway">
+    <strong>Interpretation:</strong> the signs of Δ<sup>+</sup> and Δ<sup>−</sup> remain stable across all robustness checks, and both the joint and symmetry tests continue to be strongly rejected.
+  </div>
+
+  <div class="res-note">
+    Robustness values are taken directly from the paper’s hazard and profitability robustness tables.
+  </div>
+</div>
+
+--
+<!-- .slide: class="slide-heading closer" -->
+## Results: Graphical Evidence
+
+<style>
+  .reveal section.slide-heading .gimg-wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 18px;
+  }
+  .reveal section.slide-heading .gimg-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+    justify-items: center;
+  }
+  .reveal section.slide-heading .gimg-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+  }
+  .reveal section.slide-heading .gimg-card img{
+    width: 88% !important;
+    max-width: 88% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  .reveal section.slide-heading .gimg-cap{
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #6b7280;
+    text-align: center;
+  }
+  @media (max-width: 1000px){
+    .reveal section.slide-heading .gimg-grid{
+      grid-template-columns: 1fr;
+    }
+    .reveal section.slide-heading .gimg-card img{
+      width: 50% !important;
+      max-width: 50% !important;
+    }
+  }
+</style>
+
+<div class="gimg-wrap">
+  <div class="gimg-grid">
+    <div class="gimg-card">
+      <div>
+        <img src="images/hf_trajectories.png" alt="Hassle-space trajectories">
+        <div class="gimg-cap">Hassle-space trajectories</div>
+      </div>
+    </div>
+    <div class="gimg-card">
+      <div>
+        <img src="images/delta_distribution.png" alt="Distribution of delta">
+        <div class="gimg-cap">Distribution of Δ over time</div>
+      </div>
+    </div>
+    <div class="gimg-card">
+      <div>
+        <img src="images/conley_decay.png" alt="Dependence decay in hassle-space-time">
+        <div class="gimg-cap">Dependence decay in hassle-space-time</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## A Blur in the Perceived Feasibility Frontier
+## Conclusions and Contribution
 
-<div class="cols">
-  <img data-src="./images/frontier1.png" class="img-sm" alt="Frontier1">
-  <img data-src="./images/frontier2.png"   class="img-sm" alt="Frontier2">
-</div>
-
---
-<!-- .slide: class="slide-heading" -->
-## The effect of an Ancillary condition "d" (Clippel, Nd)
-
-- $\Psi$ : bias (present bias)
-- $\lambda$ : risk preference
-- Decision set:
-
-$$L=C(\{ x,y \}, \Psi, \lambda) \textnormal{ where, } (x,y)\in \mathbb{R}^2_+ $$
-
-And the frontier:
-
-$$y=\left(1-\left(\frac{x}{\psi}\right)^{1-\lambda}\right)^{1-\lambda}$$
-
---
-<!-- .slide: class="slide-heading" -->
-## The Frontier perception shift and inter-temporal effect
-
-- Distorded decision set:
-$$\psi_t=\psi(\psi_{t-1},A_t)$$
-- Inter-temporal effect of time dependency:
-$$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
-
-
----
-<!-- .slide: class="slide-heading" -->
-## Experimental Design
-
-<section data-background-color="transparent">
-  <style>
-    /* Segmented Toggle — Ivey-friendly */
-    .seg-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 80%;
+<style>
+  .cc-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px 18px 0 18px;
+  }
+  .cc-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .cc-card{
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border: 1px solid #e6eaef;
+    border-radius: 18px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    text-align: left;
+    min-height: 180px;
+  }
+  .cc-card.accent{
+    background: linear-gradient(180deg, #f4fbf7, #eef8f2);
+    border-color: #cfe3d8;
+  }
+  .cc-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: #0d5e3a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .cc-title{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0b4f35;
+  }
+  .cc-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #2f3844;
+  }
+  .cc-card::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0d5e3a 0%, #7fb18f 60%, #b9d7c8 100%);
+    border-radius: 0 0 18px 18px;
+    opacity: .9;
+  }
+  .cc-close{
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #f7faf8;
+    border: 1px solid #e3ebe6;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #5f6b66;
+    text-align: center;
+  }
+  @media (max-width: 900px){
+    .cc-grid{
+      grid-template-columns: 1fr;
     }
-    .seg-pill {
-      display: inline-flex;
-      border: 1px solid var(--seg-border, rgba(0,0,0,0.15));
-      border-radius: 999px;
-      overflow: hidden;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-      backdrop-filter: saturate(1.1);
-      font-weight: 600;
-      letter-spacing: 0.2px;
+    .cc-card{
+      min-height: auto;
     }
-    .seg {
-      padding: 14px 28px;
-      min-width: 220px;
-      text-align: center;
-      user-select: none;
-      transition: transform 220ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-      background: var(--seg-bg, rgba(255,255,255,0.65));
-      color: var(--seg-fg, #222);
-    }
-    .seg + .seg {
-      border-left: 1px solid var(--seg-divider, rgba(0,0,0,0.08));
-    }
-    /* Keep fragments visible; only the active one gets emphasis */
-    .seg.fragment { opacity: 1; }
-    .seg.fragment.current-fragment {
-      background: var(--ivey-green, #0d5e3a);
-      color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
-      transform: scale(1.02);
-    }
-    /* Hover/press polish (optional) */
-    .seg:hover { transform: translateY(-1px); }
-    .seg:active { transform: translateY(0); }
-    /* Title style (optional, matches Ivey minimalism) */
-    .seg-title {
-      text-align: center;
-      margin-bottom: 18px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      opacity: 0.9;
-    }
-    @media (max-width: 880px) {
-      .seg { min-width: 140px; padding: 12px 18px; }
-    }
-  </style>
+  }
+</style>
 
-  <div class="seg-wrap">
-    <div>
-      <div class="seg-title">Experiments:</div>
-      <div class="seg-pill">
-        <!-- Step 1 highlights LAB, Step 2 highlights FIELD -->
-        <div class="seg fragment" data-fragment-index="1">Lab Experiment</div>
-        <div class="seg fragment" data-fragment-index="2">Field Experiment</div>
-      </div>
+<div class="cc-wrap">
+  <div class="cc-grid">
+    <div class="cc-card accent">
+      <div class="cc-label">Main finding</div>
+      <div class="cc-title">Direction, not distance alone, organizes outcomes</div>
+      <p class="cc-text">
+        Subsidiary outcomes are structured by the direction of movement in hassle space: upward moves are associated with higher exit hazard and lower profitability, while downward moves are associated with lower exit hazard and higher profitability.
+      </p>
     </div>
-  </div>
-</section>
-
---
-<!-- .slide: class="slide-heading" -->
-## Experimental Design
-<div class="seg-toggle" aria-label="Experiments">
-  <div class="seg-pill">
-    <div class="seg is-active">Lab Experiment</div>
-    <div class="seg">Field Experiment</div>
-  </div>
-</div>
-
-<table style="border-collapse:collapse; margin:auto;">
-  <thead>
-    <tr>
-      <th style="border:1px solid #ccc; padding:6px;"></th>
-      <th colspan="2" style="border:1px solid #ccc; padding:6px; text-align:center;">Time Delay</th>
-    </tr>
-    <tr>
-      <th style="border:1px solid #ccc; padding:6px; text-align:left;">Incentive Adjustment</th>
-      <th style="border:1px solid #ccc; padding:6px; text-align:center;">Yes</th>
-      <th style="border:1px solid #ccc; padding:6px; text-align:center;">No</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;"><strong>Yes</strong></td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">Time Delay | Incentive Adjustment</td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | Incentive Adjustment</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;"><strong>No</strong></td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | Incentive Adjustment</td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | No Incentive Adjustment</td>
-    </tr>
-  </tbody>
-</table>
-
---
-<!-- .slide: class="slide-heading" -->
-## Experimental Design
-<div class="seg-toggle" aria-label="Experiments">
-  <div class="seg-pill">
-    <div class="seg is-active">Lab Experiment</div>
-    <div class="seg">Field Experiment</div>
-  </div>
-</div>
-
-<div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
-  <table style="border-collapse:collapse; margin:auto;">
-    <thead>
-      <tr>
-        <th style="border:1px solid #ccc; padding:6px;">Subject Measure</th>
-        <th style="border:1px solid #ccc; padding:6px;">Source</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Risk Aversion</td>
-          <td style="border:1px solid #ccc; padding:6px;">Holt and Laury, 2002</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Short-term Impatience</td>
-          <td style="border:1px solid #ccc; padding:6px;">Andreoni, 2012</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Risk Seekingness</td>
-          <td style="border:1px solid #ccc; padding:6px;">Eckel and Grossman, 2002</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">DOSPERT - Risk Taking</td>
-          <td style="border:1px solid #ccc; padding:6px;">Blais and Weber, 2006</td></tr>
-    </tbody>
-  </table>
-</div>
-
---
-<!-- .slide: class="slide-heading" -->
-## Experimental Design - A Decision Making Situation
-<div class="seg-toggle" aria-label="Experiments">
-  <div class="seg-pill">
-    <div class="seg is-active">Lab Experiment</div>
-    <div class="seg">Field Experiment</div>
-  </div>
-</div>
-
-- Loan Officer Training in 5 minutes
-- Decision making - rank from most to least chances of repayment (5 decisions)
-
-<section>
-<div class="panels">
-
-  <div class="panel">
-    <div class="panel-hd">CREDIT APPLICATION A</div>
-    <div class="panel-bd">
-      <table>
-        <tr><td>Amount Requested</td><td><strong>$10,000.00</strong></td></tr>
-        <tr><td>Term</td><td>36 periods</td></tr>
-        <tr><td>Payment Frequency</td><td>Monthly <span style="padding:2px 6px; border:1px solid #c9ced6; border-radius:4px; background:#eef3f8;">X</span></td></tr>
-        <tr><td>Installment (payment)</td><td><strong>$346.65</strong></td></tr>
-        <tr><td>Purpose of Credit</td><td>Consumer</td></tr>
-        <tr><td>Type of Collateral</td><td>Mortgage-backed</td></tr>
-        <tr><td>Source of Income</td><td>Private employee (5 years)</td></tr>
-        <tr><td>Score</td><td>AAA (950; positive bureau history – 10 years)</td></tr>
-        <tr><td>Total Consolidated Risk</td><td><strong>$10,000.00</strong></td></tr>
-      </table>
+    <div class="cc-card">
+      <div class="cc-label">Conceptual contribution</div>
+      <div class="cc-title">From scalar measure to relational construct</div>
+      <p class="cc-text">
+        The paper transforms the Hassle Factor from a static host-country scalar into a directional relational object defined by the contrast between origin and host environments.
+      </p>
+    </div>
+    <div class="cc-card">
+      <div class="cc-label">Methodological contribution</div>
+      <div class="cc-title">Inference in an abstract economic space</div>
+      <p class="cc-text">
+        Dependence-robust inference is defined in hassle-space-time, showing that the relevant covariance structure need not be based only on physical geography but can instead be built from an economically meaningful metric space.
+      </p>
+    </div>
+    <div class="cc-card">
+      <div class="cc-label">Broader implication</div>
+      <div class="cc-title">Firms evaluate host environments relatively</div>
+      <p class="cc-text">
+        Multinational subsidiaries appear to respond not only to absolute host-country burden, but to how burdensome the host environment is relative to the parent firm's origin baseline.
+      </p>
     </div>
   </div>
 
-  <div class="panel">
-    <div class="panel-hd">Payment Capacity Analysis</div>
-    <div class="panel-bd">
-      <table style="border-spacing:0 6px;">
-        <thead>
-          <tr>
-            <th>Assets</th><th style="text-align:right;">Value</th>
-            <th></th>
-            <th>Liabilities</th><th style="text-align:right;">Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Real Estate</td><td style="text-align:right;">$20,000.00</td><td></td><td>Secured Bank Debt</td><td style="text-align:right;">$19,120.89</td></tr>
-          <tr><td>Other Assets</td><td style="text-align:right;">$10,000.00</td><td></td><td>Short-Term Liabilities</td><td style="text-align:right;">$953.75</td></tr>
-        </tbody>
-        <thead>
-          <tr>
-            <th>Income / Expense</th><th style="text-align:right;">Amount</th>
-            <th></th>
-            <th>Income / Expense</th><th style="text-align:right;">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Income</td><td style="text-align:right;">$1,247.55</td><td></td><td>Financial Expenses</td><td style="text-align:right;">$459.80</td></tr>
-          <tr><td>Family Expenses</td><td style="text-align:right;">$98.00</td><td></td><td>Net Savings</td><td style="text-align:right;"><strong>$689.75</strong></td></tr>
-          <tr><td style="color:#5b6573;">Total Expenses</td><td style="text-align:right;">$557.80</td><td></td><td></td><td></td></tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="cc-close">
+    What matters is not only where firms operate, but whether they move upward or downward relative to their origin in hassle space.
   </div>
-
-</div>
-</section>
-
---
-<!-- .slide: class="slide-heading" -->
-## Experimental Design
-<div class="seg-toggle" aria-label="Experiments">
-  <div class="seg-pill">
-    <div class="seg">Lab Experiment</div>
-    <div class="seg is-active">Field Experiment</div>
-  </div>
-</div>
-
---
-
-<!-- .slide: class="slide-heading" -->
-## Experimental Design
-<div class="seg-toggle" aria-label="Experiments">
-  <div class="seg-pill">
-    <div class="seg">Lab Experiment</div>
-    <div class="seg is-active">Field Experiment</div>
-  </div>
-</div>
-
-<div class="vsteps-wrap">
-  <ul class="vsteps">
-    <li><span class="num">1</span>Loan Officers undergo a "regular" workshop.</li>
-    <li><span class="num">2</span>Fill surveys (behavioral traits).</li>
-    <li><span class="num">3</span>They have to make decision sets</li>
-    <li><span class="num">4</span>Start an unrelated training.</li>
-    <li><span class="num">5</span>HR provides Stimuli</li>
-    <li><span class="num">6</span>They have to make decisions sets</li>
-  </ul>
 </div>
 
 ---
-<!-- .slide: class="slide-heading" -->
-## Preliminary Results
 
-<!-- .slide: class="slide-heading" -->
-<h2>Design & Sample Summary</h2>
-
-<div style="max-width:900px; margin:0 auto; border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06);">
-  <div style="background:#0b3d5c; color:#fff; padding:10px 16px; font-weight:700; letter-spacing:.2px;">
-    Study Setup
-  </div>
-  <div style="background:#f7f9fb;">
-    <table style="width:100%; border-collapse:separate; border-spacing:0; font-size:1.02em;">
-      <tbody>
-        <tr>
-          <th style="width:32%; text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Participants (n)</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;"><strong>42 loan officers</strong></td>
-        </tr>
-        <tr style="background:#ffffff;">
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Age range</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">25–45 years</td>
-        </tr>
-        <tr>
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Gender</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">17 male, 25 female</td>
-        </tr>
-        <tr style="background:#ffffff;">
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Experience (role)</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">2 months – 10 years</td>
-        </tr>
-        <tr>
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Context</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">During a scheduled training</td>
-        </tr>
-        <tr style="background:#ffffff;">
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Instruments</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">DOSPERT test; Holt–Laury risk test</td>
-        </tr>
-        <tr>
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Decision sets</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">Based on current bank standards, pre &amp; post stimuli</td>
-        </tr>
-        <tr style="background:#ffffff;">
-          <th style="text-align:left; padding:10px 14px; color:#5b6573;">Stimulus</th>
-          <td style="padding:10px 14px;">HR announced a change to bonus calculation (vs. status quo)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-
---
-
-<div style="max-width:900px; margin:0 auto; border:1px solid #c9ced6; border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06);">
-  <div style="background:#0b3d5c; color:#fff; padding:10px 16px; font-weight:700; letter-spacing:.2px;">
-    Results & Interpretation
-  </div>
-  <div style="background:#f7f9fb;">
-    <table style="width:100%; border-collapse:separate; border-spacing:0; font-size:1.02em;">
-      <tbody>
-        <tr>
-          <th style="width:36%; text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Loan decision accuracy</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">
-            <strong>↑ 46% → 53%</strong> when present bias was deactivated
-          </td>
-        </tr>
-        <tr style="background:#ffffff;">
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Collective risk preferences</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">
-            Shifted in the very short term, then converged back toward baseline
-          </td>
-        </tr>
-        <tr>
-          <th style="text-align:left; padding:10px 14px; color:#5b6573;">Statistical power</th>
-          <td style="padding:10px 14px;">
-            Study underpowered; ~<strong>290</strong> participants estimated for statistical significance
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-
---
-<!-- .slide: class="slide-heading diagram closer" -->
-# Better Decision Makers
-
-<div class="media-xy">
-  <img data-src="./images/Accuracy_2.png" class="img-sm" alt="Accuracy figure">
-</div>
-
---
-<!-- .slide: class="slide-heading diagram closer" -->
-## Less willing to take risks (for a bit)
-
-<div class="media-xy">
-  <img data-src="./images/Risk_Preference_Trajectories.png" class="img-sm" alt="trajectories">
-</div>
-
----
-<!-- .slide: class="slide-heading" -->
-## Empirical Strategy Using MLE
-
-**From the Experiments**
-- Risk (Holt–Laury) $R^{HL}$
-- Eckel–Grossman $R^{EG}$
-- DOSPERT $R^{DOS}$
-- Impatience $S^{imp}$
-- Delay indicator $D$
-
---
-
-## From Theory to Econometrics (Ordered Probit)
-
-**Latent index** for trial $i$ (subject $g$):
-
-$$
-y_i^\ast = m_i'\theta + \varepsilon_i, \qquad \varepsilon_i \sim \mathcal{N}(0,1)
-$$
-
-Observed category $y_i \in \{1,\dots,J\}$ via cutpoints  
-$\mu_0=-\infty < \mu_1 < \dots < \mu_{J-1} < \mu_J=+\infty$:
-
-$$
-P(y_i=j) = \Phi(\mu_j - m_i'\theta) - \Phi(\mu_{j-1} - m_i'\theta)
-$$
-
-**Design of $m_i$:**
-- **Present bias:** $D_i$, $S^{imp}_g$, $D_i \times S^{imp}_g$
-- **Prospect Theory features:**
-  - Gain/loss indicator relative to $r_t$: $\mathbb{1}\{c_t \gtrless r_t\}$
-  - Magnitude terms: $|c_t-r_t|$ (and interactions for curvature proxies)
-  - Loss-side asymmetry proxy (for $\lambda$): $\mathbb{1}\{c_t<r_t\}\times |c_t-r_t|$
-  - Probability level $p_t$ and small/large-$p$ bins (for $w(\cdot)$ sensitivity)
-- **Attention / consideration set:** menu size, time pressure, salience flags, process-tracing counts (hover/time on collateral vs cash-flow)
-- **Controls:** stakes, variance, information load
-
-**Heteroskedasticity:**  
-$\mathrm{Var}(\varepsilon_i)=\sigma_i^2=\exp(w_i'\kappa)$  
-$\Rightarrow\; P(y_i=j)=\Phi\!\Big(\frac{\mu_j-m_i'\theta}{\sigma_i}\Big)-\Phi\!\Big(\frac{\mu_{j-1}-m_i'\theta}{\sigma_i}\Big)$
-
-**Panel heterogeneity:**  
-Random intercept $b_g\sim\mathcal{N}(0,\sigma_b^2)$  
-$$
-y_{ig}^\ast = m_{ig}'\theta + b_g + \varepsilon_{ig}.
-$$
-
-<!-- Note: using $\theta$ for the regression coefficients avoids collision with the present-bias parameter $\beta$ in the theory. -->
-
---
-
-## Estimation, Tests, and Extensions (MLE / QMLE)
-
-**Log-likelihood** (maximize over $\theta$, $\mu$, and optionally $\kappa$, $\sigma_b^2$):
-
-$$
-\ell = \sum_{i=1}^n \sum_{j=1}^J 
-\mathbf{1}\{y_i=j\} \,
-\log \Big[
-\Phi(\mu_j - m_i'\theta) - \Phi(\mu_{j-1} - m_i'\theta)
-\Big]
-$$
-
-- **Inference:** Fisher or observed information; robust (sandwich) SEs for QMLE.
-- **Identification:** ordered scale (fix $\mathrm{Var}(\varepsilon)=1$).
-
---
-
-**Key hypotheses:**
-
-- *Present bias:* $H_0:\; D=0,\; S^{imp}=0,\; D\times S^{imp}=0$
-- *Prospect Theory channels:* joint tests on gain/loss asymmetry and $p_t$-sensitivity terms (proxies for $\lambda$ and $w(\cdot)$)
-- *Attention/consideration:* menu size / salience / time pressure predictors jointly zero
-- *Panel heterogeneity:* $H_0:\; \sigma_b^2 = 0$
-
-**Extensions:**
-- **Correctness linkage:** bivariate (ordered probit + probit) with $\mathrm{Corr}(\varepsilon,\nu)=\rho$
-- **Ranked decisions:** Plackett–Luce (exploded logit) or composite *pairwise probit*
-- **Stopping / satisficing:** sequential block → threshold model for first-hit times (identifies $\theta_t$)
-- **Reporting:** marginal effects by delay/impatience; threshold plots; subject random effects; predictive accuracy.
-
----
 <!-- .slide: class="slide-heading" -->
 ## Q&A
