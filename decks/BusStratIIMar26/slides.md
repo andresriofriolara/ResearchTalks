@@ -350,7 +350,7 @@
 <div style="max-width:1160px; margin:0 auto; padding-top:0.2rem;">
 
   <div style="text-align:center; font-size:0.98em; color:#374151; margin:0 auto 0.9rem auto; max-width:940px; font-weight:600;">
-    The firm becomes a "collective-individual" not because internal frictions disappear, but because they are reorganized into coordinated decision structures.
+    The firm becomes a "collective-individual" not because internal frictions disappear, but because they are reorganized into coordinated decision structures (syndicate of syndicates).
   </div>
 
   <div style="max-width:930px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:0.75rem;">
@@ -396,13 +396,6 @@
       </div>
     </div>
 
-  </div>
-
-  <div style="max-width:980px; margin:0.95rem auto 0 auto; border:2px solid var(--brand-primary); border-radius:20px; padding:1rem 1.15rem; background:linear-gradient(180deg,#F6FBF9 0%,#EAF5F1 100%); box-shadow:0 10px 22px rgba(3,70,56,.10); text-align:center;">
-    <div style="font-size:1.01em; line-height:1.4; color:#111827; font-weight:700;">
-      Thus, the firm is an <span style="color:var(--brand-primary);">emergent collective actor</span>:
-      a higher-order decision process built from incentives, coalition organization, managerial mediation, and shared interpretation -syndicate of syndicates-.
-    </div>
   </div>
 
   <div style="margin-top:0.72rem; font-size:0.58em; line-height:1.35; color:var(--muted); text-align:left;">
