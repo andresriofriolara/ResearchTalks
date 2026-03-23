@@ -535,6 +535,15 @@
 
 ---
 
+<!-- .slide: class="slide-heading" -->
+## The Institutional-Individual Decision-Maker
+
+<div style="display:flex; justify-content:center; align-items:center; width:100%;">
+  <img src="images/artificial.png" alt="Artificial - Who influence the outcome" style="max-width:78%; height:auto; display:block;">
+</div>
+
+--
+
 
 
 ---
