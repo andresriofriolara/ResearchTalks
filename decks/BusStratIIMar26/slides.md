@@ -767,4 +767,139 @@
 ---
 
 <!-- .slide: class="slide-heading" -->
+## Conslusions
+
+<div style="max-width:1180px; margin:0 auto; padding-top:0.2rem;">
+
+  <div style="text-align:center; font-size:0.98em; color:#374151; margin:0 auto 0.95rem auto; max-width:980px; font-weight:600;">
+    The firm becomes individual-like not by ceasing to be plural, but by organizing plurality into coherent evaluation and coordinated choice.
+  </div>
+
+  <!-- top inputs -->
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; max-width:1050px; margin:0 auto 0.55rem auto;">
+    <div style="border:1.5px solid #D8E7E1; border-radius:18px; padding:0.95rem 1rem; background:linear-gradient(180deg,#F8FCFA 0%,#EEF7F3 100%); box-shadow:0 6px 16px rgba(3,70,56,.07); text-align:center;">
+      <div style="font-weight:800; color:var(--brand-primary); margin-bottom:0.32rem;">
+        Individuals Inside the Firm
+      </div>
+      <div style="font-size:0.83em; line-height:1.34; color:#111827;">
+        culturally mediated<br>
+        incentive-sensitive<br>
+        boundedly rational
+      </div>
+    </div>
+    <div style="border:1.5px solid #E7E4F2; border-radius:18px; padding:0.95rem 1rem; background:linear-gradient(180deg,#FCFBFE 0%,#F3EFF8 100%); box-shadow:0 6px 16px rgba(88,44,131,.07); text-align:center;">
+      <div style="font-weight:800; color:var(--brand-primary); margin-bottom:0.32rem;">
+        Coalitions Inside the Firm
+      </div>
+      <div style="font-size:0.83em; line-height:1.34; color:#111827;">
+        heterogeneous interests<br>
+        cooperation &amp; mediation<br>
+        shared frames
+      </div>
+    </div>
+    <div style="border:1.5px solid #D9E6EF; border-radius:18px; padding:0.95rem 1rem; background:linear-gradient(180deg,#FBFDFF 0%,#EEF5FA 100%); box-shadow:0 6px 16px rgba(11,61,92,.07); text-align:center;">
+      <div style="font-weight:800; color:var(--brand-primary); margin-bottom:0.32rem;">
+        Organizational Architecture
+      </div>
+      <div style="font-size:0.83em; line-height:1.34; color:#111827;">
+        distributed signals<br>
+        communication &amp; delegation<br>
+        reporting &amp; memory
+      </div>
+    </div>
+
+  </div>
+
+  <!-- convergence -->
+  <div style="display:flex; justify-content:center; margin:0 0 0.2rem 0;">
+    <div style="width:74%; height:36px; background:linear-gradient(180deg, #DDEEE8 0%, #CFE4DC 100%); clip-path:polygon(0% 0%, 100% 0%, 62% 100%, 38% 100%); box-shadow:0 6px 14px rgba(3,70,56,.08);"></div>
+  </div>
+
+  <div style="display:flex; justify-content:center; margin:0 0 0.45rem 0;">
+    <div style="width:140px; height:18px; background:linear-gradient(90deg, #B9D9CF 0%, #DDEEE8 50%, #B9D9CF 100%); border-radius:0 0 12px 12px;"></div>
+  </div>
+
+  <!-- synthesis -->
+  <div style="display:flex; justify-content:center;">
+    <div style="width:min(860px, 88%); border:2px solid var(--brand-primary); border-radius:22px; padding:1.15rem 1.25rem; background:linear-gradient(180deg,#F6FBF9 0%,#EAF5F1 100%); box-shadow:0 10px 22px rgba(3,70,56,.10);">
+      <div style="text-align:center; font-size:1.12em; font-weight:800; color:var(--brand-primary); margin-bottom:0.42rem;">
+        Strategic Result
+      </div>
+      <div style="text-align:center; font-size:0.93em; line-height:1.42; color:#111827; font-weight:600;">
+        The firm becomes individual-like when <strong>boundedly rational individuals</strong>,
+        <strong>coalition plurality</strong>, and <strong>organizational architecture</strong>
+        are transformed into a <strong>unified evaluative criterion</strong> and a
+        <strong>coordinated rule of choice</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:980px; margin:0.8rem auto 0 auto; text-align:center; font-size:0.93em; color:#111827; font-weight:700;">
+    The black box between individual cognition and firm performance is firm-organizational decision-making.
+  </div>
+
+</div>
+
+--
+## What This Adds to Strategy?
+
+<div style="max-width:1220px; margin:0 auto; padding-top:0.2rem;">
+
+  <div style="text-align:center; font-size:0.98em; color:#374151; margin:0 auto 0.95rem auto; max-width:980px; font-weight:600;">
+    Competitive advantage depends not only on what the firm has, but also on how the firm is organized to evaluate and choose.
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 0.16fr 1fr; gap:16px; align-items:stretch; max-width:1080px; margin:0 auto;">
+    <!-- Left column -->
+    <div style="border:1.5px solid #D1D5DB; border-radius:20px; padding:1rem 1.1rem; background:#ffffff; box-shadow:0 6px 18px rgba(0,0,0,.06);">
+      <div style="text-align:center; font-size:1.04em; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        Strategy Often Explains
+      </div>
+      <div style="display:grid; grid-template-columns:1fr; gap:0.55rem;">
+        <div style="border:1px solid #E5E7EB; border-radius:14px; padding:0.68rem 0.8rem; background:#FAFAFA; text-align:center;">Resources</div>
+        <div style="border:1px solid #E5E7EB; border-radius:14px; padding:0.68rem 0.8rem; background:#FAFAFA; text-align:center;">Capabilities</div>
+        <div style="border:1px solid #E5E7EB; border-radius:14px; padding:0.68rem 0.8rem; background:#FAFAFA; text-align:center;">Incentives</div>
+        <div style="border:1px solid #E5E7EB; border-radius:14px; padding:0.68rem 0.8rem; background:#FAFAFA; text-align:center;">Performance Differences</div>
+      </div>
+    </div>
+    <!-- Center arrow -->
+    <div style="display:flex; align-items:center; justify-content:center; font-size:2.4em; color:var(--brand-accent); font-weight:800;">
+      →
+    </div>
+    <!-- Right column -->
+    <div style="border:2px solid var(--brand-primary); border-radius:20px; padding:1rem 1.1rem; background:linear-gradient(180deg,#F6FBF9 0%,#EAF5F1 100%); box-shadow:0 10px 22px rgba(3,70,56,.10);">
+      <div style="text-align:center; font-size:1.04em; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        This Presentation Adds
+      </div>
+      <div style="display:grid; grid-template-columns:1fr; gap:0.55rem;">
+        <div style="border:1px solid #CFE4DC; border-radius:14px; padding:0.68rem 0.8rem; background:#ffffff; text-align:center;">Organizational Decision Machinery</div>
+        <div style="border:1px solid #CFE4DC; border-radius:14px; padding:0.68rem 0.8rem; background:#ffffff; text-align:center;">Evaluative Unity</div>
+        <div style="border:1px solid #CFE4DC; border-radius:14px; padding:0.68rem 0.8rem; background:#ffffff; text-align:center;">Decisional Unity</div>
+        <div style="border:1px solid #CFE4DC; border-radius:14px; padding:0.68rem 0.8rem; background:#ffffff; text-align:center;">Firm-Level Decision Quality</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- bottom implication band -->
+  <div style="max-width:1040px; margin:0.9rem auto 0 auto; border:1.5px dashed #D1D5DB; border-radius:18px; padding:0.85rem 1rem; background:#ffffff; text-align:center;">
+    <div style="font-size:0.97em; font-weight:800; color:var(--brand-primary); margin-bottom:0.2rem;">
+      Strategic Implication
+    </div>
+    <div style="font-size:0.88em; line-height:1.38; color:#111827;">
+      Persistent differences in firm performance may reflect differences not only in assets or incentives,
+      but also in <strong>interpretation</strong>, <strong>coordination</strong>,
+      <strong>information architecture</strong>, and <strong>organizational evaluation</strong>.
+    </div>
+  </div>
+
+  <div style="max-width:980px; margin:0.8rem auto 0 auto; text-align:center; font-size:0.93em; color:#111827; font-weight:700;">
+    Strategy should study not only study firm outcomes, but the machinery that produces firm-level choices.
+  </div>
+
+</div>
+
+---
+
+<!-- .slide: class="slide-heading" -->
 ## Q&A
