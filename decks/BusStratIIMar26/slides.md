@@ -544,7 +544,225 @@
 
 --
 
+## Evaluative Unity and Decisional Unity
 
+<div style="max-width:1180px; margin:0 auto; padding-top:0.2rem;">
+
+  <div style="text-align:center; font-size:0.98em; color:#374151; margin:0 auto 0.9rem auto; max-width:960px; font-weight:600;">
+    The firm becomes individual-like only when a unified evaluative criterion and a coordinated rule of choice coincide under a given organizational information structure.
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:stretch; max-width:1050px; margin:0 auto;">
+    <!-- Left pillar -->
+    <div style="border:2px solid #D8E7E1; border-radius:20px; padding:1.05rem 1.15rem; background:linear-gradient(180deg,#F8FCFA 0%,#EEF7F3 100%); box-shadow:0 8px 20px rgba(3,70,56,.08);">
+      <div style="text-align:center; font-size:1.08em; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        Evaluative Unity<sup>1</sup>
+      </div>
+      <div style="font-size:0.9em; line-height:1.4; color:#111827;">
+        <div style="margin-bottom:0.35rem;">• Coalition plurality is <strong>aggregated</strong> into a firm-level evaluative object.</div>
+        <div style="margin-bottom:0.35rem;">• The firm can <strong>rank outcomes</strong> through a surrogate utility.</div>
+        <div>• Internal heterogeneity is preserved, but translated into a <strong>common criterion of evaluation</strong>.</div>
+      </div>
+    </div>
+    <!-- Right pillar -->
+    <div style="border:2px solid #E7E4F2; border-radius:20px; padding:1.05rem 1.15rem; background:linear-gradient(180deg,#FCFBFE 0%,#F3EFF8 100%); box-shadow:0 8px 20px rgba(88,44,131,.08);">
+      <div style="text-align:center; font-size:1.08em; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        Decision Coordination<sup>2</sup>
+      </div>
+      <div style="font-size:0.9em; line-height:1.4; color:#111827;">
+        <div style="margin-bottom:0.35rem;">• Distributed positions hold <strong>fragmented signals</strong> and differentiated tasks.</div>
+        <div style="margin-bottom:0.35rem;">• The firm acts through a <strong>team decision rule</strong> over organizational histories.</div>
+        <div>• Organizational choice is induced by <strong>architecture</strong>, not by a literal single mind.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Convergence -->
+  <div style="display:flex; justify-content:center; margin:0.4rem 0 0.2rem 0;">
+    <div style="width:72%; height:34px; background:linear-gradient(180deg, #DDEEE8 0%, #CFE4DC 100%); clip-path:polygon(0% 0%, 100% 0%, 62% 100%, 38% 100%); box-shadow:0 6px 14px rgba(3,70,56,.08);"></div>
+  </div>
+
+  <div style="display:flex; justify-content:center; margin:0 0 0.45rem 0;">
+    <div style="width:140px; height:18px; background:linear-gradient(90deg, #B9D9CF 0%, #DDEEE8 50%, #B9D9CF 100%); border-radius:0 0 12px 12px;"></div>
+  </div>
+
+  <!-- Synthesis -->
+  <div style="display:flex; justify-content:center; margin-bottom:0.5rem;">
+    <div style="width:min(760px, 84%); border:2px solid var(--brand-primary); border-radius:22px; padding:1.1rem 1.2rem; background:linear-gradient(180deg,#F6FBF9 0%,#EAF5F1 100%); box-shadow:0 10px 22px rgba(3,70,56,.10);">
+      <div style="text-align:center; font-size:1.12em; font-weight:800; color:var(--brand-primary); margin-bottom:0.42rem;">
+        Firm as Individual-Like Decision-Maker
+      </div>
+      <div style="text-align:center; font-size:0.92em; line-height:1.4; color:#111827; font-weight:600;">
+        The firm-level act is neither the choice of a single mind nor an unstructured coalition compromise:
+        it is a coordinated organizational act evaluated by a unified firm-level criterion.
+      </div>
+    </div>
+  </div>
+
+  <!-- Architecture band -->
+  <div style="max-width:980px; margin:0.35rem auto 0 auto; border:1.5px dashed #D1D5DB; border-radius:16px; padding:0.72rem 0.9rem; background:#ffffff; text-align:center;">
+    <div style="font-size:0.95em; font-weight:800; color:var(--brand-primary); margin-bottom:0.18rem;">
+      Information Architecture<sup>2,3</sup>
+    </div>
+    <div style="font-size:0.83em; color:#374151; line-height:1.35;">
+      observation • communication • delegation • reporting • memory
+    </div>
+  </div>
+
+  <div style="max-width:980px; margin:0.7rem auto 0 auto; text-align:center; font-size:0.93em; color:#111827; font-weight:700;">
+    Internal plurality is transformed, not eliminated.
+  </div>
+
+  <div style="margin-top:0.72rem; font-size:0.58em; line-height:1.35; color:var(--muted); text-align:left;">
+    <sup>1</sup> Wilson (1968).&nbsp;&nbsp;
+    <sup>2</sup> Marschak and Radner (1972).&nbsp;&nbsp;
+    <sup>3</sup> Cyert and March (1963, chs. 4, 6, 9).
+  </div>
+
+</div>
+
+--
+## Analytical Generalities of the Firm-Individual
+
+<div style="max-width:1240px; margin:0 auto; padding-top:0.15rem;">
+
+  <div style="text-align:center; font-size:0.96em; color:#374151; margin:0 auto 0.9rem auto; max-width:980px; font-weight:600;">
+    A firm is representable as an individual decision-maker when a unified surrogate utility evaluates a best team decision rule induced by the organization’s information structure.<sup>1,2</sup>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 0.12fr 1.15fr 0.12fr 1fr; gap:10px; align-items:stretch;">
+    <!-- Stage 1 -->
+    <div style="border:1.5px solid #D9E6EF; border-radius:18px; padding:0.9rem 1rem; background:linear-gradient(180deg,#FBFDFF 0%,#EEF5FA 100%); box-shadow:0 6px 16px rgba(11,61,92,.07);">
+      <div style="text-align:center; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        1. Architecture &amp; Histories<sup>2,3</sup>
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827;">
+        <div style="margin-bottom:0.2rem;">organizational architecture:</div>
+        <div style="text-align:center; margin-bottom:0.45rem;">\(\mathfrak{A}_t=(\mathfrak{F}_t,\mathfrak{C}_t,\mathfrak{D}_t,\mathfrak{P}_t)\)</div>
+        <div style="margin-bottom:0.2rem;">admissible histories:</div>
+        <div style="text-align:center; margin-bottom:0.45rem;">\(h_t\in\mathcal{H}_t(\mathfrak{A}^t)\)</div>
+        <div>distributed signals are filtered through observation, reporting, and communication.</div>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent);">→</div>
+    <!-- Stage 2 -->
+    <div style="border:2px solid var(--brand-primary); border-radius:20px; padding:0.95rem 1.05rem; background:linear-gradient(180deg,#F6FBF9 0%,#EAF5F1 100%); box-shadow:0 10px 22px rgba(3,70,56,.10);">
+      <div style="text-align:center; font-weight:800; color:var(--brand-primary); margin-bottom:0.42rem;">
+        2. Coordinated Team Rule<sup>2</sup>
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827; text-align:center; margin-bottom:0.35rem;">
+        firm-level decision function
+      </div>
+      <div style="text-align:center; font-size:0.9em; margin-bottom:0.45rem;">
+        \[
+        \delta_t:\mathcal H_t(\mathfrak A^t)\to \mathcal D_t^{\mathcal F}(\mathfrak A_t)
+        \]
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827; text-align:center; margin-bottom:0.2rem;">
+        realized firm act
+      </div>
+      <div style="text-align:center; font-size:0.9em; margin-bottom:0.45rem;">
+        \[
+        d_t^{\mathcal F}=\delta_t(h_t)
+        \]
+      </div>
+      <div style="font-size:0.8em; line-height:1.34; color:#374151; text-align:center;">
+        The firm acts through an admissible organizational rule over distributed information.
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent);">→</div>
+    <!-- Stage 3 -->
+    <div style="border:1.5px solid #E7E4F2; border-radius:18px; padding:0.9rem 1rem; background:linear-gradient(180deg,#FCFBFE 0%,#F3EFF8 100%); box-shadow:0 6px 16px rgba(88,44,131,.07);">
+      <div style="text-align:center; font-weight:800; color:var(--brand-primary); margin-bottom:0.45rem;">
+        3. Firm-Level Evaluation<sup>1</sup>
+      </div>
+      <div style="font-size:0.82em; line-height:1.34; color:#111827; text-align:center; margin-bottom:0.25rem;">
+        evaluative object
+      </div>
+      <div style="text-align:center; font-size:0.9em; margin-bottom:0.45rem;">
+        \[
+        V_{\mathcal F}\!\bigl(H(\upsilon_t,d_t^{\mathcal F})\bigr)
+        \]
+      </div>
+      <div style="font-size:0.8em; line-height:1.34; color:#374151; text-align:center;">
+        A unified surrogate utility ranks the outcomes produced by the coordinated firm act.
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); margin:0.45rem 0 0.25rem 0;">
+    ↓
+  </div>
+
+  <!-- Unification step -->
+  <div style="display:flex; justify-content:center;">
+    <div style="width:min(930px, 92%); border:1.5px solid #D1D5DB; border-radius:20px; padding:1rem 1.15rem; background:#ffffff; box-shadow:0 6px 18px rgba(0,0,0,.06);">
+      <div style="text-align:center; font-size:1.04em; font-weight:800; color:var(--brand-primary); margin-bottom:0.42rem;">
+        Unification: Best Firm-Level Team Decision Function
+      </div>
+      <div style="text-align:center; font-size:0.9em; margin-bottom:0.35rem;">
+        \[
+        \delta_t^*
+        \in
+        \arg\max_{\delta_t\in\mathcal T_t(\mathfrak A^t)}
+        \mathbb E\!\left[
+        V_{\mathcal F}\!\bigl(H(\upsilon_t,\delta_t(h_t))\bigr)
+        \,\middle|\,
+        h_t,\mathfrak A_t
+        \right]
+        \]
+      </div>
+      <div style="text-align:center; font-size:0.81em; line-height:1.34; color:#374151;">
+        This is the point at which <strong>evaluative unity</strong> and <strong>decisional unity</strong> coincide.
+      </div>
+    </div>
+  </div>
+
+  <!-- Supporting modules -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:980px; margin:0.65rem auto 0 auto;">
+    <div style="border:1.5px dashed #D1D5DB; border-radius:16px; padding:0.75rem 0.9rem; background:#ffffff;">
+      <div style="font-size:0.92em; font-weight:800; color:var(--brand-primary); margin-bottom:0.22rem; text-align:center;">
+        Person-by-Person Satisfactoriness<sup>2</sup>
+      </div>
+      <div style="font-size:0.8em; line-height:1.34; color:#374151; text-align:center;">
+        If \(\delta_t=(\delta_{pt})_{p\in\mathcal P}\), no admissible unilateral deviation by any position improves expected firm-level evaluation.
+      </div>
+    </div>
+    <div style="border:1.5px dashed #D1D5DB; border-radius:16px; padding:0.75rem 0.9rem; background:#ffffff;">
+      <div style="font-size:0.92em; font-weight:800; color:var(--brand-primary); margin-bottom:0.22rem; text-align:center;">
+        Dynamic Extension<sup>2,3</sup>
+      </div>
+      <div style="text-align:center; font-size:0.84em; margin-bottom:0.2rem;">
+        \[
+        h_t=\Psi_t(h_{t-1},m_t;\mathfrak A_t)
+        \]
+      </div>
+      <div style="text-align:center; font-size:0.84em;">
+        \[
+        \hat{\upsilon}_{t+1\mid t}^{\mathcal F}
+        =
+        \mathbb E\!\left[
+        \upsilon_{t+1}\mid h_t,\mathfrak A_t
+        \right]
+        \]
+      </div>
+    </div>
+
+  </div>
+
+  <div style="max-width:980px; margin:0.72rem auto 0 auto; text-align:center; font-size:0.93em; color:#111827; font-weight:700;">
+    Formally, the firm becomes an individual entity when a unified surrogate utility evaluates a coordinated team rule induced by the organization’s information structure.
+  </div>
+
+  <div style="margin-top:0.72rem; font-size:0.58em; line-height:1.35; color:var(--muted); text-align:left;">
+    <sup>1</sup> Wilson (1968).&nbsp;&nbsp;
+    <sup>2</sup> Marschak and Radner (1972).&nbsp;&nbsp;
+    <sup>3</sup> Cyert and March (1963, chs. 4, 6, 9).
+  </div>
+
+</div>
 
 ---
 
