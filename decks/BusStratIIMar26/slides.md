@@ -488,9 +488,11 @@
   <div style="display:flex; justify-content:center; align-items:center; font-size:1.8em; color:var(--brand-accent); margin:0.15rem 0 0.25rem 0;">
     ↓
   </div>
+</div>
 
 --
 
+</div>
   <!-- output layer -->
   <div style="display:flex; justify-content:center;">
     <div style="width:min(820px, 90%); border:1.5px solid #D1D5DB; border-radius:20px; padding:1rem 1.15rem; background:#ffffff; box-shadow:0 6px 18px rgba(0,0,0,.06);">
