@@ -1,6 +1,5 @@
 <!-- .slide: class="title-slide" -->
 # The Effects of Present Bias and Loss Aversion over Loan Granting.
-</section>
 
 ---
 <!-- .slide: class="slide-heading" -->
@@ -88,66 +87,68 @@
 <!-- .slide: class="slide-heading closer" -->
 ## What does this research do?
 
-<section id="gif3cols">
+<section id="paper-roadmap">
   <style>
-    #gif3cols .wrap{
-      --side-gutter: clamp(20px, 3.5vw, 40px);
-      --col-gap:     clamp(16px, 3vw, 28px);
-      box-sizing: border-box;
-      inline-size: 100%;
-      max-inline-size: 1200px;          /* optional hard cap */
-      margin-inline: auto;
-      padding-inline: var(--side-gutter);
-      /* Final safety against any 1px rounding */
-      overflow: clip;
+    #paper-roadmap .wrap{
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: clamp(8px, 2vw, 18px);
     }
-    #gif3cols .grid{
+    #paper-roadmap .grid{
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      column-gap: var(--col-gap);
-      row-gap: var(--col-gap);
-      align-items: center;
-      justify-items: center;
-      /* Don’t allow the grid to grow past its container */
-      max-inline-size: 100%;
-      overflow: clip;
-      box-sizing: border-box;
+      gap: clamp(14px, 2.5vw, 24px);
     }
-    #gif3cols .card{
-      inline-size: 100%;    /* fill its grid cell only */
-      aspect-ratio: 4 / 3;  /* equal visual height across columns */
-      border-radius: 14px;
+    #paper-roadmap .card{
       background: #fff;
-      box-shadow: 0 2px 12px rgba(0,0,0,.12);
-      overflow: hidden;     /* in case GIF frames exceed */
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border: 1px solid #e6eaef;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.07);
+      padding: clamp(16px, 2.2vw, 24px);
+      min-height: 230px;
     }
-    #gif3cols .card img{
-      display: block;
-      inline-size: 100%;
-      block-size: 100%;
-      object-fit: contain;  /* use 'cover' to fill/crop instead */
-      background: #fff;
+    #paper-roadmap .num{
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: #0d5e3a;
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    #paper-roadmap h3{
+      margin: 0 0 8px 0;
+      font-size: clamp(20px, 2.1vw, 26px);
+      line-height: 1.15;
+    }
+    #paper-roadmap p{
+      margin: 0;
+      color: #536071;
+      font-size: clamp(16px, 1.65vw, 18px);
+      line-height: 1.35;
     }
     @media (max-width: 900px){
-      #gif3cols .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-    }
-    @media (max-width: 600px){
-      #gif3cols .grid{ grid-template-columns: 1fr; }
+      #paper-roadmap .grid{ grid-template-columns: 1fr; }
     }
   </style>
   <div class="wrap">
     <div class="grid">
       <div class="card">
-        <img src="./images/homer-simpson.gif" alt="Homer 1">
+        <div class="num">1</div>
+        <h3>Builds the mechanism</h3>
+        <p>Models lending decisions with reference-dependent valuation, probability weighting, quasi-hyperbolic discounting, and bounded attention.</p>
       </div>
       <div class="card">
-        <img src="./images/homer-simpson-crayon.gif" alt="Homer 2">
+        <div class="num">2</div>
+        <h3>Tests the channel</h3>
+        <p>Uses lab and field designs where incentive readjustments alter timing, loss exposure, and the perceived value of approval.</p>
       </div>
       <div class="card">
-        <img src="./images/the-simpsons-homer-simpson.gif" alt="Homer 3">
+        <div class="num">3</div>
+        <h3>Interprets preliminary evidence</h3>
+        <p>Finds mechanism-consistent descriptive movement, while emphasizing limited power and the need for cautious causal interpretation.</p>
       </div>
     </div>
   </div>
@@ -182,9 +183,9 @@
       <div class="lane lane-bad">
         <div class="lane-track">
           <div class="pill">Misaligned incentives → excessive lending</div>
-          <div class="pill">Credit risk materializes → bankruptcy</div>
-          <div class="badge-loss" role="note" aria-label="30 percent of loans unrecovered post-bankruptcy">
-            <strong>≈30%</strong><span> unrecovered<br>post-bankruptcy</span>
+          <div class="pill">Credit risk materializes → bank bears losses</div>
+          <div class="badge-loss" role="note" aria-label="Default risk creates an incentive for careful lending">
+            <strong>Risk</strong><span> concentration<br>and exposure</span>
           </div>
           <div class="end-cap end-bad" aria-hidden="true"></div>
         </div>
@@ -195,132 +196,114 @@
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## ~70% of your Banking Statement is being lent
+## Why mortgage lending is the object of study
 
-<div>
-  <div class="mini-sankey" role="group" aria-label="Deposits flow to loans and other uses">
-    <div class="sankey-col left">
-      <div class="node node-source"><div class="label">Deposits</div></div>
-      <div class="tile">
-        <div class="kpi">$5,400</div>
-        <div class="sub">median bank account balance</div>
-      </div>
-    </div>
-    <div class="sankey-diagram">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-        <g>
-          <path class="ribbon loans" d="M160 70 C280 70 540 40 660 40 L660 100 C540 100 280 120 160 120 Z"/>
-          <path class="ribbon other" d="M160 140 C280 140 540 160 660 160 L660 200 C540 200 280 190 160 190 Z"/>
-          <rect class="stub" x="140" y="70" width="20" height="120"/>
-          <rect class="dock loans" x="660" y="40" width="20" height="60"/>
-          <rect class="dock other" x="660" y="160" width="20" height="40"/>
-        </g>
-      </svg>
-    </div>
-    <div class="sankey-col right">
-      <div class="node node-dest loans">
-        <div><div class="label">Loans</div><div class="pct">71%</div></div>
-      </div>
-      <div class="node node-dest other">
-        <div><div class="label">Other uses</div><div class="pct">29%</div></div>
-      </div>
-      <div class="src right-src">Federal Reserve</div>
-    </div>
-    <div class="sources">Sources: Yahoo Finance · Federal Reserve</div>
-  </div>
-</div>
+- The paper isolates lending decision-making by assuming one asset class: mortgages.
+- Collateral is treated as a key information channel in loan granting.
+- The central behavioral channel is not that collateral mechanically changes true repayment risk.
+- The question is whether collateral changes the officer's perceived repayment probability and decision weight.
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## The "Rational" Banking process
+## Financial Intermediation Toy Model
 
 <div class="media-xy">
-  <img data-src="./images/Figure1.png" class="img-sm" alt="Rational banking process diagram">
+  <img data-src="./images/Figure1.png" class="img-sm" alt="Financial intermediation toy model baseline">
 </div>
 
 ---
 <!-- .slide: class="slide-heading diagram closer" -->
-## Heuristics in the Banking Process (1/2)
+## Maturity Gap-Driven Modification
 
 <div class="media-xy">
-  <img data-src="./images/Figure4.png" class="img-sm" alt="Heuristics in the banking process">
+  <img data-src="./images/Figure2.png" class="img-sm" alt="Financial intermediation toy model with maturity gap modification and collateral influence">
 </div>
 
 --
 <!-- .slide: class="slide-heading diagram closer" -->
-## Heuristics in the Banking Process (2/2)
+## Conceptual Framework at the Bank Level
 
 <div class="media-xy">
-  <img data-src="./images/Figure6.png" class="img-sm" alt="Heuristics in the banking process, part 2">
+  <img data-src="./images/Figure3.png" class="img-sm" alt="Conceptual framework at a bank level">
+</div>
+
+--
+<!-- .slide: class="slide-heading diagram closer" -->
+## Individual Decision-Maker Channel
+
+<div class="media-xy">
+  <img data-src="./images/Figure4.png" class="img-sm" alt="Conceptual framework for the individual decision-maker">
 </div>
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## The Utility Function
+## The Behavioral Model
 
-<div id="util-eqn-src" style="display:none">
-\begin{aligned}
-U_t \;=\;
-\underbrace{\mathbb{E}_t^{\,w}\!\big[v(c_t\mid r_t)\big]}_{\text{within-period (decision-weighted)}}
-\;+\;
-\underbrace{\beta \sum_{\tau=t+1}^{T}\delta^{\,\tau-t}\,
-\mathbb{E}\!\Big[\mathbb{E}_\tau^{\,w}\!\big[v(c_\tau\mid r_\tau)\big]\Big]}_{\text{discounted continuation value}}
-\end{aligned}
-</div>
-<div id="util-eqn-render" class="katex-display util-eqn--big"></div>
+$$
+\Omega_i
+\longrightarrow
+\hat p_i
+\longrightarrow
+w_{\gamma}(\hat p_i)
+\longrightarrow
+U_{i,a,t}
+$$
 
---
-
-<div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
-  <table style="border-collapse:collapse; margin:auto;">
-    <thead>
-      <tr>
-        <th style="border:1px solid #ccc; padding:6px;">Symbol</th>
-        <th style="border:1px solid #ccc; padding:6px;">Meaning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$U_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Intertemporal utility at time $t$ (PT within-period via $v$, quasi-hyperbolic across time)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$v(c\mid r)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Within-period Prospect Theory value around reference $r$: $(c-r)_{+}^{\alpha_v}-\lambda\,(r-c)_{+}^{\beta_v}$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}_t^{\,w}[\cdot]$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Decision-weighted expectation at $t$ (rank-dependent); puts weight $w(p_t)$ on repay and $1-w(p_t)$ on default</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\mathbb{E}[\cdot]$</td>
-          <td style="border:1px solid #ccc; padding:6px;">(Regular) expectation over future uncertainty conditional on information at $t$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$c_t^{\mathrm{repay}},\; c_t^{\mathrm{default}}$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Outcomes (payoffs) in repay vs. default state at time $t$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$r_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Reference point at time $t$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$p_t$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Objective probability of “repay” at time $t$ (Bernoulli prospect)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$w(\cdot)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Probability-weighting function, $w\!:\![0,1]\to[0,1]$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$(x)_{+}$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Positive part: $(x)_{+}=\max\{x,0\}$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\alpha_v,\;\beta_v$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Value curvature in gains ($\alpha_v$) and losses ($\beta_v$), typically $\in(0,1]$</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\lambda$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Loss aversion ($\lambda\ge 1$)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\beta\in(0,1]$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Present-bias factor (quasi-hyperbolic)</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$\delta\in(0,1)$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Per-period exponential discount factor</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">$T$</td>
-          <td style="border:1px solid #ccc; padding:6px;">Time horizon (finite in the displayed sum)</
+- The loan officer observes loan information $\Omega_i$.
+- That information forms a perceived repayment probability $\hat p_i$.
+- Probability weighting and time-discounted reference-dependent valuation generate the behavioral value of each action.
 
 --
-
 <!-- .slide: class="slide-heading" -->
-## The Decision Rule Our Decision Maker Follows
+## Information and Perceived Risk
 
-Utility for each scenario is computed via Khaneman Tversky value $v(\cdot\mid r)$ for the corresponding outcomes.
+$$
+\Omega_i=\{S_i,PMT_i,L_i,V^{asset}_i,Z_i\}
+$$
 
-**Decision-weighted expected utilities:**
+$$
+p_i=\Pr(R_i=1),
+\qquad
+\hat p_i=\Pr(R_i=1\mid \Omega_i)
+$$
 
-$$\mathbb{E}\left[U\mid \text{Accept}\right] = w(p)U_1 + \bigl[1-w(p)\bigr]U_2$$
+$$
+\hat p_i=m(\Omega_i)
+$$
 
-$$\mathbb{E}\left[U\mid \text{Reject}\right] = w(p)U_3 + \bigl[1-w(p)\bigr]U_4$$
+- $p_i$ is the true repayment probability.
+- $\hat p_i$ is the officer's perceived repayment probability.
+- Collateral overweighting enters through $\hat p_i$, not by mechanically changing true risk.
+
+--
+<!-- .slide: class="slide-heading" -->
+## Reference-Adjusted Payoffs
+
+For each action-state pair $(a,s)$:
+
+$$
+x_{i,a,s,t}=c_{i,a,s,t}-r_t
+$$
+
+$$
+v(x)=
+\begin{cases}
+x^{\alpha}, & x\geq 0,\\[4pt]
+-\lambda(-x)^{\alpha}, & x<0
+\end{cases}
+$$
+
+$$
+\alpha\in(0,1],
+\qquad
+\lambda\geq 1
+$$
+
+$\alpha$ captures diminishing sensitivity. $\lambda$ captures loss aversion. $\beta$ is reserved for present bias.
+
+--
+<!-- .slide: class="slide-heading" -->
+## Outcome Regions Are Not Primitive Utilities
 
 <section>
   <style>
@@ -355,31 +338,31 @@ $$\mathbb{E}\left[U\mid \text{Reject}\right] = w(p)U_3 + \bigl[1-w(p)\bigr]U_4$$
       <thead>
         <tr>
           <th class="stub"></th>
-          <th><strong>Right</strong></th>
-          <th><strong>Wrong</strong></th>
+          <th><strong>Repay</strong></th>
+          <th><strong>Default</strong></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="stub">Accept</th>
+          <th class="stub">Approve</th>
           <td class="right">
-            <span class="tag">\(U_1\)</span>
-            <small>Accept a good loan (repay)</small>
+            <span class="tag">\(v_1\)</span>
+            <small>Approval of a good loan</small>
           </td>
           <td class="wrong">
-            <span class="tag">\(U_2\)</span>
-            <small>Type II — accept a bad loan (default)</small>
+            <span class="tag">\(v_2\)</span>
+            <small>Approval of a bad loan</small>
           </td>
         </tr>
         <tr>
           <th class="stub">Reject</th>
-          <td class="right">
-            <span class="tag">\(U_4\)</span>
-            <small>Reject a bad loan (default)</small>
-          </td>
           <td class="wrong">
-            <span class="tag">\(U_3\)</span>
-            <small>Type I — reject a good loan (repay)</small>
+            <span class="tag">\(v_3\)</span>
+            <small>Rejection of a good loan</small>
+          </td>
+          <td class="right">
+            <span class="tag">\(v_4\)</span>
+            <small>Rejection of a bad loan</small>
           </td>
         </tr>
       </tbody>
@@ -387,131 +370,230 @@ $$\mathbb{E}\left[U\mid \text{Reject}\right] = w(p)U_3 + \bigl[1-w(p)\bigr]U_4$$
   </div>
 </section>
 
-
-In a multi-scenario task, rank by the expected value above (largest to smallest).
-
---
-
-<!-- .slide: class="slide-heading" -->
-## Intertemporal Choice Component (Laibson, 1997)
-
-$$
-U_t = V_t + \beta \sum_{\tau = t+1}^{T} \delta^{\,\tau - t}\, \mathbb{E}\!\left[V_\tau\right]
-$$
-
-Where,
-
-- $V_t$ : KKhaneman Tversky decision-weighted within-period value (relative to $r_t$)  
-- $\beta$ : present-bias parameter $\beta \in(0,1]$  
-- $\delta$ : discount factor $\delta\in(0,1)$  
-- $T$ : the time horizon
+Each region is valued through the same behavioral value function $v(x)$.
 
 --
-
 <!-- .slide: class="slide-heading" -->
-## Reference Formation (Kőszegi & Rabin, 2006)
-
-We adopt expectations-based **reference formation** for $r_t$ (e.g., $r_t=\mathbb{E}_{t-1}[c_t]$ or partial adaptation).
-Within-period value follows Kahneman Tversky (1979) Prospect Theory (see “The Utility Function”).
-
---
-
-<!-- .slide: class="slide-heading" -->
-## Prospect Theory Value Around the Reference (Kahneman–Tversky, 1979)
+## Probability Weighting and Timing
 
 $$
-v(c_t\mid r_t)=
+w_{\gamma}(p)=
+\frac{p^{\gamma}}
+{\left[p^{\gamma}+(1-p)^{\gamma}\right]^{1/\gamma}},
+\qquad
+\gamma>0
+$$
+
+$$
+D(t)=
 \begin{cases}
-  (c_t-r_t)^{\alpha_v}, & c_t\ge r_t, \\\\[4pt]
-  -\lambda\,(r_t-c_t)^{\beta_v}, & c_t< r_t
+1, & t=0,\\[4pt]
+\beta\delta^t, & t>0
 \end{cases}
-\qquad \alpha_v,\beta_v\in(0,1],\ \lambda\ge 1
 $$
 
-Decision weighting for a Bernoulli prospect (repay vs default):
 $$
-V_t = w(p_t)v\big(c_t^{\text{repay}}\mid r_t\big)
-      + \bigl[1-w(p_t)\bigr]v\big(c_t^{\text{default}}\mid r_t\big)
+\beta\in(0,1],
+\qquad
+\delta\in(0,1]
+$$
+
+Present bias changes the valuation of delayed compensation without changing the true risk of the loan.
+
+--
+<!-- .slide: class="slide-heading" -->
+## Approval and Rejection Values
+
+$$
+U_{i,\mathrm{Approve},t}
+=
+w_{\gamma}(\hat p_i)
+D(t_{\mathrm{Approve},R})
+v(x_{i,\mathrm{Approve},R,t})
++
+\left[1-w_{\gamma}(\hat p_i)\right]
+D(t_{\mathrm{Approve},D})
+v(x_{i,\mathrm{Approve},D,t})
+$$
+
+$$
+U_{i,\mathrm{Reject},t}
+=
+w_{\gamma}(\hat p_i)
+D(t_{\mathrm{Reject},R})
+v(x_{i,\mathrm{Reject},R,t})
++
+\left[1-w_{\gamma}(\hat p_i)\right]
+D(t_{\mathrm{Reject},D})
+v(x_{i,\mathrm{Reject},D,t})
 $$
 
 --
-
 <!-- .slide: class="slide-heading" -->
-## Hybrid Model (Present Bias + Prospect Theory + Attention)
+## Decision Rule and Ranking
 
+$$
+\Delta U_{i,t}
+=
+U_{i,\mathrm{Approve},t}
+-
+U_{i,\mathrm{Reject},t}
+$$
 
-$$U_t= V_t + \beta \sum_{\tau=t+1}^{T} \delta^{\tau-t}\,\mathbb{E}\left[V_\tau\right]$$
+Approve when $\Delta U_{i,t}>0$; reject when $\Delta U_{i,t}<0$.
 
-$$V_t = w(p_t)v(c_t^{\text{repay}}\mid r_t)+\bigl[1-w(p_t)\bigr]v(c_t^{\text{default}}\mid r_t)$$
+$$
+\Pr(\mathrm{Approve}_i)
+=
+\frac{\exp\left(\mu \Delta U_{i,t}\right)}
+{1+\exp\left(\mu \Delta U_{i,t}\right)}
+$$
+
+For ranking tasks, loans are ordered from highest to lowest $\Delta U_{i,t}$.
 
 --
-
 <!-- .slide: class="slide-heading" -->
-## To be Consistent with De Clippel Ancillary Conditions
+## Rank-Order Logit Representation
 
-- $A_t$: available menu
-- $F(A_t)$: feasible attention sets  
-- $S_t \subseteq A_t$: endogenous consideration set  
+If the observed ranking is $i_1 \succ i_2 \succ \cdots \succ i_J$:
 
-**Feasible utility path:**
+$$
+\Pr(i_1 \succ i_2 \succ \cdots \succ i_J)
+=
+\prod_{j=1}^{J}
+\frac{
+\exp\left(\mu \Delta U_{i_j,t}\right)
+}{
+\sum_{\ell=j}^{J}
+\exp\left(\mu \Delta U_{i_\ell,t}\right)
+}
+$$
 
-<div id="feas-eqn-src" class="feas-src" style="display:none">
-\begin{aligned}
-\tilde U_t
-&= \max_{c_t\in S_t}\left\{
-  V_t(c_t\mid r_t)
-  {}+ \beta \sum_{\tau=t+1}^{T}\delta^{\tau-t}\,
-     \mathbb{E}_{S_\tau}\!\bigl[\,V_\tau(c_\tau\mid r_\tau)\,\bigr]
+The approval and ranking tasks are generated by the same latent behavioral valuation process.
+
+--
+<!-- .slide: class="slide-heading" -->
+## Incentive Structure
+
+Let $B_i$ be the bonus and $\kappa_t$ the degree to which inaccurate approval is penalized.
+
+$$
+c_{i,\mathrm{Approve},R,t}=B_i
+$$
+
+$$
+c_{i,\mathrm{Approve},D,t}=B_i-\kappa_t L_i
+$$
+
+$$
+c_{i,\mathrm{Reject},R,t}=0,
+\qquad
+c_{i,\mathrm{Reject},D,t}=0
+$$
+
+In the unadjusted condition, $\kappa_t=0$. In the incentive-adjusted condition, $\kappa_t>0$.
+
+--
+<!-- .slide: class="slide-heading" -->
+## Bounded Attention and Satisficing
+
+- $A_t$: available menu of loan-action prospects
+- $F(A_t)$: feasible family of attention sets
+- $S_t\subseteq A_t$: consideration set
+- $z\in S_t$: loan-action prospect
+
+$$
+U_t(z)\geq \theta_t
+\Rightarrow
+\textnormal{stop}
+$$
+
+$$
+W_t=
+\max_{S_t\in F(A_t)}
+\left\{
+\max_{z\in S_t}
+\left[U_t(z)-\mathcal{C}(S_t)\right],
+\;
+D(1)\mathbb{E}\left[W_{t+1}\mid S_t\right]
 \right\}
-\\[4pt]
-&\text{s.t.}\quad
-  S_t\in F(A_t),\qquad
-  V_t(c_t\mid r_t)\ge \theta_t
-\end{aligned}
-</div>
-
-<div id="feas-eqn-render" class="katex-display"></div>
+$$
 
 --
-
 <!-- .slide: class="slide-heading" -->
-## The Complete Utility Function
+## Objective and Perceived Frontiers
 
-<div class="media-xy">
-  <img data-src="./images/function.png" class="img-sm" alt="fullfunction">
-</div>
+$$
+\mathcal{F}_t
+=
+\left\{
+(q_1,q_2):
+q_2=
+\left[
+1-
+\left(
+\frac{q_1}{\psi_t}
+\right)^{1-\lambda_f}
+\right]^{1-\lambda_f},
+\;
+q_1\in[0,\psi_t]
+\right\}
+$$
+
+$$
+\lambda_f\in(0,1),
+\qquad
+\psi_t=\psi(\psi_{t-1},I_t)
+$$
+
+The perceived frontier is:
+
+$$
+\widetilde{\mathcal{F}}_t
+=
+\widetilde{\mathcal{F}}_t(\Psi,I_t,\Omega_i),
+\qquad
+\Psi=(\alpha,\lambda,\gamma,\beta,\delta,\mu)
+$$
+
+--
+<!-- .slide: class="slide-heading" -->
+## Treatment Mapping
+
+<table style="border-collapse:collapse; margin:auto;">
+  <thead>
+    <tr>
+      <th style="border:1px solid #ccc; padding:6px;">Condition</th>
+      <th style="border:1px solid #ccc; padding:6px;">Model implication</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border:1px solid #ccc; padding:6px;">Baseline</td>
+        <td style="border:1px solid #ccc; padding:6px;">$t=0,\;D(t)=1,\;\kappa_t=0$</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">Delayed payment</td>
+        <td style="border:1px solid #ccc; padding:6px;">$t>0,\;D(t)=\beta\delta^t$</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">Incentive adjustment</td>
+        <td style="border:1px solid #ccc; padding:6px;">$\kappa_t>0$</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">Combined condition</td>
+        <td style="border:1px solid #ccc; padding:6px;">$t>0,\;D(t)=\beta\delta^t,\;\kappa_t>0$</td></tr>
+  </tbody>
+</table>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Hypotheses
+
+**H1:** Risk preferences and behavioral distortions moderate the effect of present-biased incentives on loan decisions.
+
+**H2:** Incentive readjustments reshape effective indifference curves in the short term by changing reference-adjusted payoff, loss exposure, and compensation timing.
 
 ---
 <!-- .slide: class="slide-heading closer" -->
-## A Blur in the Perceived Feasibility Frontier
+## Optimal Choice Frontier With Distortions
 
-<div class="cols">
-  <img data-src="./images/frontier1.png" class="img-sm" alt="Frontier1">
-  <img data-src="./images/frontier2.png"   class="img-sm" alt="Frontier2">
+<div class="media-xy">
+  <img data-src="./images/Figure6.png" class="img-sm" alt="Optimal choice frontier in set S universe with distortions">
 </div>
-
---
-<!-- .slide: class="slide-heading" -->
-## The effect of an Ancillary condition "d" (Clippel, Nd)
-
-- $\Psi$ : bias (present bias)
-- $\lambda$ : risk preference
-- Decision set:
-
-$$L=C(\{ x,y \}, \Psi, \lambda) \textnormal{ where, } (x,y)\in \mathbb{R}^2_+ $$
-
-And the frontier:
-
-$$y=\left(1-\left(\frac{x}{\psi}\right)^{1-\lambda}\right)^{1-\lambda}$$
-
---
-<!-- .slide: class="slide-heading" -->
-## The Frontier perception shift and inter-temporal effect
-
-- Distorded decision set:
-$$\psi_t=\psi(\psi_{t-1},A_t)$$
-- Inter-temporal effect of time dependency:
-$$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 
 
 ---
@@ -613,11 +695,11 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
       <td style="border:1px solid #ccc; padding:6px; text-align:center;">Time Delay | Incentive Adjustment</td>
       <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | Incentive Adjustment</td>
     </tr>
-    <tr>
-      <td style="border:1px solid #ccc; padding:6px;"><strong>No</strong></td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | Incentive Adjustment</td>
-      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | No Incentive Adjustment</td>
-    </tr>
+	    <tr>
+	      <td style="border:1px solid #ccc; padding:6px;"><strong>No</strong></td>
+	      <td style="border:1px solid #ccc; padding:6px; text-align:center;">Time Delay | No Incentive Adjustment</td>
+	      <td style="border:1px solid #ccc; padding:6px; text-align:center;">No Time Delay | No Incentive Adjustment</td>
+	    </tr>
   </tbody>
 </table>
 
@@ -640,14 +722,12 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
       </tr>
     </thead>
     <tbody>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Risk Aversion</td>
-          <td style="border:1px solid #ccc; padding:6px;">Holt and Laury, 2002</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Short-term Impatience</td>
-          <td style="border:1px solid #ccc; padding:6px;">Andreoni, 2012</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Risk Seekingness</td>
-          <td style="border:1px solid #ccc; padding:6px;">Eckel and Grossman, 2002</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">DOSPERT - Risk Taking</td>
-          <td style="border:1px solid #ccc; padding:6px;">Blais and Weber, 2006</td></tr>
+	      <tr><td style="border:1px solid #ccc; padding:6px;">DOSPERT risk profile</td>
+	          <td style="border:1px solid #ccc; padding:6px;">Weber et al., 2002</td></tr>
+	      <tr><td style="border:1px solid #ccc; padding:6px;">Holt-Laury risk task</td>
+	          <td style="border:1px solid #ccc; padding:6px;">Holt and Laury, 2002</td></tr>
+	      <tr><td style="border:1px solid #ccc; padding:6px;">Demographic controls</td>
+	          <td style="border:1px solid #ccc; padding:6px;">Age, gender, education, income, role tenure, banking tenure</td></tr>
     </tbody>
   </table>
 </div>
@@ -662,8 +742,10 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
   </div>
 </div>
 
-- Loan Officer Training in 5 minutes
-- Decision making - rank from most to least chances of repayment (5 decisions)
+- Holt-Laury and DOSPERT are completed before the loan task.
+- Participants complete a short loan-officer training.
+- Incentive condition is disclosed before the decision set.
+- Participants rank five loan profiles from strongest to weakest granting case.
 
 <section>
 <div class="panels">
@@ -729,6 +811,11 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
   </div>
 </div>
 
+- Preliminary field experiment with a local bank during scheduled officer training.
+- $N=42$ loan officers.
+- Pre-treatment and post-treatment loan decisions used matched-risk profiles.
+- No consequential payoffs; the treatment was presented as a bonus-structure readjustment.
+
 --
 
 <!-- .slide: class="slide-heading" -->
@@ -740,16 +827,17 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
   </div>
 </div>
 
-<div class="vsteps-wrap">
-  <ul class="vsteps">
-    <li><span class="num">1</span>Loan Officers undergo a "regular" workshop.</li>
-    <li><span class="num">2</span>Fill surveys (behavioral traits).</li>
-    <li><span class="num">3</span>They have to make decision sets</li>
-    <li><span class="num">4</span>Start an unrelated training.</li>
-    <li><span class="num">5</span>HR provides Stimuli</li>
-    <li><span class="num">6</span>They have to make decisions sets</li>
-  </ul>
-</div>
+	<div class="vsteps-wrap">
+	  <ul class="vsteps">
+	    <li><span class="num">1</span>Scheduled loan-officer workshop.</li>
+	    <li><span class="num">2</span>Envelope 1: five loan decisions.</li>
+	    <li><span class="num">3</span>DOSPERT and socio-demographic survey.</li>
+	    <li><span class="num">4</span>HR announces bonus-structure stimulus.</li>
+	    <li><span class="num">5</span>Envelope 2: matched-risk loan decisions.</li>
+	    <li><span class="num">6</span>Holt-Laury, disclosure, acknowledgement.</li>
+	    <li><span class="num">7</span>Follow-up Holt-Laury at training end.</li>
+	  </ul>
+	</div>
 
 ---
 <!-- .slide: class="slide-heading" -->
@@ -778,24 +866,28 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
           <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">17 male, 25 female</td>
         </tr>
         <tr style="background:#ffffff;">
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Education</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">Approximately 81% with at least a university degree</td>
+        </tr>
+        <tr>
           <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Experience (role)</th>
           <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">2 months – 10 years</td>
         </tr>
-        <tr>
+        <tr style="background:#ffffff;">
           <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Context</th>
           <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">During a scheduled training</td>
         </tr>
-        <tr style="background:#ffffff;">
+        <tr>
           <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Instruments</th>
           <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">DOSPERT test; Holt–Laury risk test</td>
         </tr>
-        <tr>
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Decision sets</th>
-          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">Based on current bank standards, pre &amp; post stimuli</td>
-        </tr>
         <tr style="background:#ffffff;">
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Decision sets</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">Pre &amp; post stimulus profiles with matched risk characteristics</td>
+        </tr>
+        <tr>
           <th style="text-align:left; padding:10px 14px; color:#5b6573;">Stimulus</th>
-          <td style="padding:10px 14px;">HR announced a change to bonus calculation (vs. status quo)</td>
+          <td style="padding:10px 14px;">HR announced a bonus calculation readjustment</td>
         </tr>
       </tbody>
     </table>
@@ -815,19 +907,25 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
         <tr>
           <th style="width:36%; text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Loan decision accuracy</th>
           <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">
-            <strong>↑ 46% → 53%</strong> when present bias was deactivated
+            <strong>46% → 53%</strong> after the incentive-readjustment stimulus
           </td>
         </tr>
         <tr style="background:#ffffff;">
-          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Collective risk preferences</th>
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Inference</th>
           <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">
-            Shifted in the very short term, then converged back toward baseline
+            Descriptive movement is mechanism-consistent, but not conclusive causal evidence
           </td>
         </tr>
         <tr>
+          <th style="text-align:left; padding:10px 14px; color:#5b6573; border-bottom:1px solid #e6eaef;">Risk posture</th>
+          <td style="padding:10px 14px; border-bottom:1px solid #e6eaef;">
+            Holt scores move immediately after the stimulus, then return toward baseline
+          </td>
+        </tr>
+        <tr style="background:#ffffff;">
           <th style="text-align:left; padding:10px 14px; color:#5b6573;">Statistical power</th>
           <td style="padding:10px 14px;">
-            Study underpowered; ~<strong>290</strong> participants estimated for statistical significance
+            Preliminary study underpowered; approximately <strong>290</strong> participants required
           </td>
         </tr>
       </tbody>
@@ -838,7 +936,7 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 
 --
 <!-- .slide: class="slide-heading diagram closer" -->
-# Better Decision Makers
+# Descriptive Accuracy Movement
 
 <div class="media-xy">
   <img data-src="./images/Accuracy_2.png" class="img-sm" alt="Accuracy figure">
@@ -846,7 +944,15 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 
 --
 <!-- .slide: class="slide-heading diagram closer" -->
-## Less willing to take risks (for a bit)
+## Incentive Readjustment by Risk Quartile
+
+<div class="media-xy">
+  <img data-src="./images/Adjustment_E1.png" class="img-sm" alt="Predicted probability by incentive readjustment and risk quartile">
+</div>
+
+--
+<!-- .slide: class="slide-heading diagram closer" -->
+## Short-Term Movement in Revealed Risk Posture
 
 <div class="media-xy">
   <img data-src="./images/Risk_Preference_Trajectories.png" class="img-sm" alt="trajectories">
@@ -854,85 +960,104 @@ $$\text{where, } x\in [0,\psi_t] \text{ and, } \lambda \in (0,1)$$
 
 ---
 <!-- .slide: class="slide-heading" -->
-## Empirical Strategy Using MLE
+## Empirical Strategy and Diagnostics
 
-**From the Experiments**
-- Risk (Holt–Laury) $R^{HL}$
-- Eckel–Grossman $R^{EG}$
-- DOSPERT $R^{DOS}$
-- Impatience $S^{imp}$
-- Delay indicator $D$
-
---
-
-## From Theory to Econometrics (Ordered Probit)
-
-**Latent index** for trial $i$ (subject $g$):
-
-$$
-y_i^\ast = m_i'\theta + \varepsilon_i, \qquad \varepsilon_i \sim \mathcal{N}(0,1)
-$$
-
-Observed category $y_i \in \{1,\dots,J\}$ via cutpoints  
-$\mu_0=-\infty < \mu_1 < \dots < \mu_{J-1} < \mu_J=+\infty$:
-
-$$
-P(y_i=j) = \Phi(\mu_j - m_i'\theta) - \Phi(\mu_{j-1} - m_i'\theta)
-$$
-
-**Design of $m_i$:**
-- **Present bias:** $D_i$, $S^{imp}_g$, $D_i \times S^{imp}_g$
-- **Prospect Theory features:**
-  - Gain/loss indicator relative to $r_t$: $\mathbb{1}\{c_t \gtrless r_t\}$
-  - Magnitude terms: $|c_t-r_t|$ (and interactions for curvature proxies)
-  - Loss-side asymmetry proxy (for $\lambda$): $\mathbb{1}\{c_t<r_t\}\times |c_t-r_t|$
-  - Probability level $p_t$ and small/large-$p$ bins (for $w(\cdot)$ sensitivity)
-- **Attention / consideration set:** menu size, time pressure, salience flags, process-tracing counts (hover/time on collateral vs cash-flow)
-- **Controls:** stakes, variance, information load
-
-**Heteroskedasticity:**  
-$\mathrm{Var}(\varepsilon_i)=\sigma_i^2=\exp(w_i'\kappa)$  
-$\Rightarrow\; P(y_i=j)=\Phi\!\Big(\frac{\mu_j-m_i'\theta}{\sigma_i}\Big)-\Phi\!\Big(\frac{\mu_{j-1}-m_i'\theta}{\sigma_i}\Big)$
-
-**Panel heterogeneity:**  
-Random intercept $b_g\sim\mathcal{N}(0,\sigma_b^2)$  
-$$
-y_{ig}^\ast = m_{ig}'\theta + b_g + \varepsilon_{ig}.
-$$
-
-<!-- Note: using $\theta$ for the regression coefficients avoids collision with the present-bias parameter $\beta$ in the theory. -->
+**From the field experiment**
+- Loan-decision accuracy before and after the stimulus
+- DOSPERT profile
+- Baseline Holt-Laury risk score
+- Holt-score trajectory across three moments
+- Gender, age, education, income, loan-officer tenure, banking tenure
 
 --
 
-## Estimation, Tests, and Extensions (MLE / QMLE)
-
-**Log-likelihood** (maximize over $\theta$, $\mu$, and optionally $\kappa$, $\sigma_b^2$):
+## Accuracy Pre-Post Specification
 
 $$
-\ell = \sum_{i=1}^n \sum_{j=1}^J 
-\mathbf{1}\{y_i=j\} \,
-\log \Big[
-\Phi(\mu_j - m_i'\theta) - \Phi(\mu_{j-1} - m_i'\theta)
-\Big]
+Accuracy_{it}
+=
+\theta_0
++
+\theta_1 Post_t
++
+\theta_2 Dospert_i
++
+\theta_3 Holt_{i,0}
++
+\theta_4(Post_t \times Dospert_i)
++
+\theta_5(Post_t \times Holt_{i,0})
++
+\varepsilon_{it}
 $$
 
-- **Inference:** Fisher or observed information; robust (sandwich) SEs for QMLE.
-- **Identification:** ordered scale (fix $\mathrm{Var}(\varepsilon)=1$).
+Because the model includes interactions, $\theta_1$ is conditional on $Dospert_i=0$ and $Holt_{i,0}=0$.
+
+<table style="border-collapse:collapse; margin:auto;">
+  <tbody>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$Post_t$</td><td style="border:1px solid #ccc; padding:6px;">$\hat\theta_1=-0.172,\;p=0.241$</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$Post_t\times Dospert_i$</td><td style="border:1px solid #ccc; padding:6px;">$\hat\theta_4=-0.223,\;p=0.168$</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">$Post_t\times Holt_{i,0}$</td><td style="border:1px solid #ccc; padding:6px;">$\hat\theta_5=0.214,\;p=0.276$</td></tr>
+    <tr><td style="border:1px solid #ccc; padding:6px;">Model fit</td><td style="border:1px solid #ccc; padding:6px;">$F=1.216,\;p=0.309,\;\text{adjusted }R^2=0.013$</td></tr>
+  </tbody>
+</table>
 
 --
 
-**Key hypotheses:**
+## Holt-Score Trajectory Models
 
-- *Present bias:* $H_0:\; D=0,\; S^{imp}=0,\; D\times S^{imp}=0$
-- *Prospect Theory channels:* joint tests on gain/loss asymmetry and $p_t$-sensitivity terms (proxies for $\lambda$ and $w(\cdot)$)
-- *Attention/consideration:* menu size / salience / time pressure predictors jointly zero
-- *Panel heterogeneity:* $H_0:\; \sigma_b^2 = 0$
+$$
+HoltScore_{it}
+=
+\alpha_0
++
+\alpha_1 Timepoint_t
++
+\alpha_2 Dospert_i
++
+X_i'\Gamma
++
+u_{it}
+$$
 
-**Extensions:**
-- **Correctness linkage:** bivariate (ordered probit + probit) with $\mathrm{Corr}(\varepsilon,\nu)=\rho$
-- **Ranked decisions:** Plackett–Luce (exploded logit) or composite *pairwise probit*
-- **Stopping / satisficing:** sequential block → threshold model for first-hit times (identifies $\theta_t$)
-- **Reporting:** marginal effects by delay/impatience; threshold plots; subject random effects; predictive accuracy.
+- $Timepoint_t$: $\hat\alpha_1=0.001,\;p=0.963$
+- $Timepoint_t\times Dospert_i$: $\hat\alpha=-0.065,\;p=0.462$
+- Gender, time as a loan officer, time in banking, and the age-45 category are statistically associated with Holt scores.
+- Mixed-effects model: officer random-intercept variance $0.051$; residual variance $0.023$.
+
+--
+
+## Interpretation of Field Evidence
+
+- Average accuracy moved from $46\%$ to $53\%$ after the stimulus.
+- The movement is directionally consistent with $H_1$.
+- Holt-score trajectories are directionally consistent with $H_2$.
+- Inferential models do not reach conventional statistical significance.
+- The study is preliminary, mechanism-consistent field evidence rather than definitive causal identification.
+
+--
+
+## Simulation Diagnostics
+
+The appendix evaluates whether the behavioral model can generate non-degenerate choices and where lending mistakes concentrate.
+
+$$
+\Psi=(\alpha,\lambda,\gamma,\beta,\delta,\mu)
+$$
+
+- Parameter recovery is feasible in some regions and unstable in others.
+- The hardest saved-run parameters to recover are $\gamma$ and $\beta$.
+- The loan-problem simulation uses $10{,}000$ loan problems and $200$ simulated decision-makers.
+- Mistakes concentrate near the repayment threshold $\rho=0.70$.
+
+--
+
+## Simulation Interpretation
+
+- High-error regions differ by incentive regime.
+- The most problematic simulated loans often combine high collateral values with repayment probabilities near the acceptance cutoff.
+- The simulations support the computational plausibility of the mechanism.
+- They also explain why the preliminary field sample of $42$ officers is underpowered for precise structural identification.
 
 ---
 <!-- .slide: class="slide-heading" -->
