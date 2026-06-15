@@ -85,8 +85,16 @@
 
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading clear-logo" -->
 ## What does this research do?
+
+<style>
+  .reveal .clear-logo > h2{
+    max-width: 82%;          /* right edge stops before the logo */
+    margin-inline: auto;     /* stay centered */
+    padding-top: 0.45em;     /* drop below the logo band */
+  }
+</style>
 
 <section id="gif3cols">
   <style>
@@ -154,7 +162,7 @@
 </section>
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading clear-logo" -->
 ## Optimal Decisions Start at the First Line
 
 <section>
@@ -194,7 +202,7 @@
 </section>
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading clear-logo" -->
 ## The "Rational" Banking process
 
 <div class="media-xy">
@@ -202,7 +210,7 @@
 </div>
 
 ---
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading clear-logo" -->
 ## Heuristics in the Banking Process (1/2)
 
 <div class="media-xy">
@@ -210,7 +218,7 @@
 </div>
 
 --
-<!-- .slide: class="slide-heading" -->
+<!-- .slide: class="slide-heading clear-logo" -->
 ## Heuristics in the Banking Process (2/2)
 
 <div class="media-xy">
