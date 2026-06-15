@@ -85,7 +85,7 @@
 
 
 ---
-<!-- .slide: class="slide-heading closer" -->
+<!-- .slide: class="slide-heading" -->
 ## What does this research do?
 
 <section id="gif3cols">
@@ -154,7 +154,7 @@
 </section>
 
 ---
-<!-- .slide: class="slide-heading closer" -->
+<!-- .slide: class="slide-heading" -->
 ## Optimal Decisions Start at the First Line
 
 <section>
@@ -194,7 +194,7 @@
 </section>
 
 ---
-<!-- .slide: class="slide-heading closer" -->
+<!-- .slide: class="slide-heading" -->
 ## The "Rational" Banking process
 
 <div class="media-xy">
@@ -202,7 +202,7 @@
 </div>
 
 ---
-<!-- .slide: class="slide-heading diagram closer" -->
+<!-- .slide: class="slide-heading" -->
 ## Heuristics in the Banking Process (1/2)
 
 <div class="media-xy">
@@ -210,7 +210,7 @@
 </div>
 
 --
-<!-- .slide: class="slide-heading diagram closer" -->
+<!-- .slide: class="slide-heading" -->
 ## Heuristics in the Banking Process (2/2)
 
 <div class="media-xy">
@@ -719,3 +719,4 @@
 <!-- .slide: class="slide-heading" -->
 
 ## Thank you. 
+
