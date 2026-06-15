@@ -202,15 +202,28 @@
 </section>
 
 ---
-<!-- .slide: class="slide-heading clear-logo" -->
+<!-- .slide: class="slide-heading logo-safe fit-figure" -->
 ## The "Rational" Banking process
+
+<style>
+  .reveal .fit-figure .media-xy{
+    display:flex; justify-content:center; align-items:center; width:100%;
+  }
+  .reveal .fit-figure .media-xy img{
+    display:block; margin:0 auto;
+    width:auto; height:auto;
+    max-width:88%;        /* stay inside the left/right margins */
+    max-height:54vh;      /* stay above the footer line */
+    object-fit:contain;
+  }
+</style>
 
 <div class="media-xy">
   <img data-src="./images/Figure1.png" class="img-sm" alt="Rational banking process diagram">
 </div>
 
 ---
-<!-- .slide: class="slide-heading clear-logo" -->
+<!-- .slide: class="slide-heading logo-safe fit-figure" -->
 ## Heuristics in the Banking Process (1/2)
 
 <div class="media-xy">
@@ -218,7 +231,7 @@
 </div>
 
 --
-<!-- .slide: class="slide-heading clear-logo" -->
+<!-- .slide: class="slide-heading logo-safe fit-figure" -->
 ## Heuristics in the Banking Process (2/2)
 
 <div class="media-xy">
