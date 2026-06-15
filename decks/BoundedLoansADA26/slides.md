@@ -242,13 +242,9 @@
 
 <p style="text-align:center; color:#5b6573; max-width:1000px; margin:.1em auto .5em;">For loan \(i\), the value of action \(a\in\{\text{Approve},\text{Reject}\}\) folds <strong>three behavioral channels</strong> into one number:</p>
 
-$$
-U_{i,a,t}=
-\underbrace{w_{\gamma}(\hat p_i)}_{\text{weighting}}\;
-\underbrace{D(t_{a,R})}_{\text{timing}}\;
-\underbrace{v\!\big(x_{i,a,R,t}\big)}_{\text{value}}
-\;+\;\big[1-w_{\gamma}(\hat p_i)\big]\,D(t_{a,D})\,v\!\big(x_{i,a,D,t}\big)
-$$
+<div style="text-align:center; margin:.4em auto .2em;">
+\(\displaystyle U_{i,a,t}=\underbrace{w_{\gamma}(\hat p_i)}_{\text{weighting}}\;\underbrace{D(t_{a,R})}_{\text{timing}}\;\underbrace{v\!\big(x_{i,a,R,t}\big)}_{\text{value}}\;+\;\big[1-w_{\gamma}(\hat p_i)\big]\,D(t_{a,D})\,v\!\big(x_{i,a,D,t}\big)\)
+</div>
 
 <div id="bvalue">
   <div class="row">
@@ -298,12 +294,9 @@ $$
 
 <p style="text-align:center; color:#5b6573; max-width:1000px; margin:.1em auto .4em;">The officer approves when approval dominates rejection; observed choice follows a logit:</p>
 
-$$
-\Pr(\text{Approve}_i)=
-\frac{\exp(\mu\,\Delta U_{i,t})}{1+\exp(\mu\,\Delta U_{i,t})},
-\qquad
-\Delta U_{i,t}=U_{i,\text{Approve},t}-U_{i,\text{Reject},t}
-$$
+<div style="text-align:center; margin:.4em auto .2em;">
+\(\displaystyle \Pr(\text{Approve}_i)=\frac{\exp(\mu\,\Delta U_{i,t})}{1+\exp(\mu\,\Delta U_{i,t})},\qquad \Delta U_{i,t}=U_{i,\text{Approve},t}-U_{i,\text{Reject},t}\)
+</div>
 
 <div id="vchoice">
   <p class="note">Approve iff \(\Delta U_{i,t}>0\) &nbsp;·&nbsp; \(\mu\) = choice consistency &nbsp;·&nbsp; <strong>Ranking task:</strong> order loans by \(\Delta U_{i,t}\) (rank-order logit)</p>
@@ -705,9 +698,10 @@ $$
       </tbody>
     </table>
   </div>
-  <p class="foot">\(\beta\) and \(\gamma\) are hardest to recover in small samples — the field study is underpowered by design. Mistakes peak at the decision threshold \(\rho=0.70\); their <em>composition</em> shifts with the incentive regime (conservative Type I errors under <em>bonus if repaid</em> vs. mixed errors under <em>bonus on accept</em>).</p>
+  <p class="foot">\(\beta\) and \(\gamma\) are hardest to recover in small samples — the field study is underpowered by design. Mistakes peak at the decision threshold \(\rho=0.70\).</p>
 </div>
 
 ---
 <!-- .slide: class="slide-heading" -->
-## Q&A
+
+## Thank you.
