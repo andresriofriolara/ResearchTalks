@@ -661,6 +661,52 @@ $$
 </div>
 
 ---
+<!-- .slide: class="slide-heading" -->
+## What the Simulations Show
+
+<style>
+  #simres{ --ivey:#0d5e3a; --blue:#0b3d5c; --ink:#5b6573; }
+  #simres .wrap{ max-width:1040px; margin:.3em auto 0; border:1px solid #c9ced6;
+    border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+  #simres .hd{ background:var(--blue); color:#fff; padding:10px 16px; font-weight:700;
+    display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  #simres .hd small{ font-weight:500; opacity:.85; font-size:.74em; }
+  #simres table{ width:100%; border-collapse:separate; border-spacing:0;
+    font-size:clamp(13px,1.5vw,17px); background:#f7f9fb; }
+  #simres th, #simres td{ padding:9px 14px; border-bottom:1px solid #e6eaef; text-align:left; }
+  #simres td.num, #simres th.num{ text-align:right; font-variant-numeric:tabular-nums; }
+  #simres .sec td{ background:#eef3f7; color:var(--blue); font-weight:800; font-size:.9em; }
+  #simres .good{ color:var(--ivey); font-weight:700; }
+  #simres .warn{ color:#b4532a; font-weight:700; }
+  #simres .foot{ text-align:center; color:#7a8694; font-size:clamp(11px,1.3vw,13px);
+    margin:.7em auto 0; max-width:1000px; line-height:1.4; }
+</style>
+
+<div id="simres">
+  <div class="wrap">
+    <div class="hd"><span>Simulation Evidence</span><small>recovery: 9 scenarios · mistake bank: 10,000 loans × 200 decision-makers</small></div>
+    <table>
+      <tbody>
+        <tr class="sec"><td>A · Parameter recovery — share of scenarios with \(|\hat\psi-\psi|<0.1\)</td><td class="num">Recovered</td><td class="num">Rate</td></tr>
+        <tr><td>\(\alpha\) — value curvature</td><td class="num">5 / 9</td><td class="num good">56%</td></tr>
+        <tr><td>\(\lambda\) — loss aversion</td><td class="num">5 / 9</td><td class="num good">56%</td></tr>
+        <tr><td>\(\delta\) — long-run patience</td><td class="num">4 / 9</td><td class="num">44%</td></tr>
+        <tr><td>\(\gamma\) — probability weighting</td><td class="num">3 / 9</td><td class="num warn">33%</td></tr>
+        <tr><td>\(\beta\) — present bias</td><td class="num">3 / 9</td><td class="num warn">33%</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <tbody>
+        <tr class="sec"><td>B · Where mistakes concentrate (by incentive regime)</td><td class="num">bonus&nbsp;if&nbsp;repaid</td><td class="num">bonus&nbsp;on&nbsp;accept</td></tr>
+        <tr><td>Error rate — 50 worst problems</td><td class="num warn">0.73</td><td class="num">0.55</td></tr>
+        <tr><td>Worst-cluster error rate</td><td class="num">0.27</td><td class="num">0.13</td></tr>
+        <tr><td>Error split (Type I / Type II)</td><td class="num">0.73 / 0.00</td><td class="num">0.25 / 0.30</td></tr>
+        <tr><td>Mistakes peak at</td><td class="num">\(P^{\text{true}}\!\approx\!0.70\)</td><td class="num">\(P^{\text{true}}\!\approx\!0.70\)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="foot">\(\beta\) and \(\gamma\) are hardest to recover in small samples — the field study is underpowered by design. Mistakes peak at the decision threshold \(\rho=0.70\); their <em>composition</em> shifts with the incentive regime (conservative Type I errors under <em>bonus if repaid</em> vs. mixed errors under <em>bonus on accept</em>).</p>
+</div>
 
 ---
 <!-- .slide: class="slide-heading" -->
