@@ -240,7 +240,7 @@
   @media (max-width:900px){ #bvalue .times{ display:none; } }
 </style>
 
-<p style="text-align:center; color:#5b6573; max-width:1000px; margin:.1em auto .5em;">For loan \(i\), the value of action \(a\in\{\text{Approve},\text{Reject}\}\) folds <strong>three behavioral channels</strong> into one number:</p>
+<p style="text-align:center; color:#5b6573; max-width:1000px; margin:.1em auto .5em;">For loan \(i\), the value of action \(a\in\{\text{Approve},\text{Reject}\}\) folds <strong>three behavioral channels</strong> into one utility value:</p>
 
 <div style="text-align:center; margin:.4em auto .2em;">
 \(\displaystyle U_{i,a,t}=\underbrace{w_{\gamma}(\hat p_i)}_{\text{weighting}}\;\underbrace{D(t_{a,R})}_{\text{timing}}\;\underbrace{v\!\big(x_{i,a,R,t}\big)}_{\text{value}}\;+\;\big[1-w_{\gamma}(\hat p_i)\big]\,D(t_{a,D})\,v\!\big(x_{i,a,D,t}\big)\)
@@ -677,11 +677,11 @@
 </style>
 <div id="simres">
   <div class="wrap">
-    <div class="hd"><span>Simulated profiles map onto the four treatments</span><small>one calibrated agent per profile · 100 choices each</small></div>
+    <div class="hd"><span>Simulated profiles map onto the four treatments</span><small>one calibrated agent per profile · 100 choices each · 10,000 simulations</small></div>
     <table>
       <thead>
         <tr>
-          <th>Treatment cell</th>
+          <th>Condition</th>
           <th>Behavioral profile</th>
           <th class="num">Present bias \(\beta\)</th>
           <th class="num">Loss aversion \(\lambda\)</th>
