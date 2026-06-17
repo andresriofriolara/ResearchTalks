@@ -306,7 +306,7 @@
 <style>
   #bvalue, #vchoice { --ivey:#0d5e3a; --ivey2:#7fb18f; --blue:#0b3d5c; --ink:#5b6573; }
   /* per-channel watercolor palette (reused on the measures/treatments slides) */
-  #bvalue .card.c-w{ --c:#2b4acb; --wash:#eef1fd; }   /* probability weighting */
+  #bvalue .card.c-w{ --c:#7a8694; --wash:#f5f7f9; }   /* weighting — modeled, not measured */
   #bvalue .card.c-d{ --c:#b06a06; --wash:#fdf3e6; }   /* present-biased timing  */
   #bvalue .card.c-v{ --c:#b0234a; --wash:#fdedf1; }   /* reference-dependent value */
   #bvalue .row{ display:flex; gap:clamp(8px,1.4vw,16px); align-items:stretch;
@@ -329,7 +329,7 @@
 <p style="text-align:center; color:#5b6573; max-width:1000px; margin:.1em auto .5em;">For loan \(i\), the value of action \(a\in\{\text{Approve},\text{Reject}\}\) folds <strong>three behavioral channels</strong> into one utility value:</p>
 
 <div style="text-align:center; margin:.4em auto .2em;">
-\(\displaystyle U_{i,a,t}=\underbrace{\textcolor{#2b4acb}{w_{\gamma}(\hat p_i)}}_{\textcolor{#2b4acb}{\text{weighting}}}\;\underbrace{\textcolor{#b06a06}{D(t_{a,R})}}_{\textcolor{#b06a06}{\text{timing}}}\;\underbrace{\textcolor{#b0234a}{v\!\big(x_{i,a,R,t}\big)}}_{\textcolor{#b0234a}{\text{value}}}\;+\;\big[1-\textcolor{#2b4acb}{w_{\gamma}(\hat p_i)}\big]\,\textcolor{#b06a06}{D(t_{a,D})}\,\textcolor{#b0234a}{v\!\big(x_{i,a,D,t}\big)}\)
+\(\displaystyle U_{i,a,t}=\underbrace{w_{\gamma}(\hat p_i)}_{\text{weighting}}\;\underbrace{\textcolor{#b06a06}{D(t_{a,R})}}_{\textcolor{#b06a06}{\text{timing}}}\;\underbrace{\textcolor{#b0234a}{v\!\big(x_{i,a,R,t}\big)}}_{\textcolor{#b0234a}{\text{value}}}\;+\;\big[1-w_{\gamma}(\hat p_i)\big]\,\textcolor{#b06a06}{D(t_{a,D})}\,\textcolor{#b0234a}{v\!\big(x_{i,a,D,t}\big)}\)
 </div>
 
 <div id="bvalue">
@@ -413,9 +413,8 @@
 
 <style>
   #measures{ --blue:#0b3d5c; --ink:#5b6573; }
-  #measures tr.m-w{ --c:#2b4acb; --wash:#eef1fd; }   /* weighting */
   #measures tr.m-d{ --c:#b06a06; --wash:#fdf3e6; }   /* timing / present bias */
-  #measures tr.m-v{ --c:#b0234a; --wash:#fdedf1; }   /* value / loss aversion */
+  #measures tr.m-v{ --c:#b0234a; --wash:#fdedf1; }   /* value / risk attitude */
   #measures .wrap{ max-width:1040px; margin:.3em auto 0; border:1px solid #c9ced6;
     border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
   #measures .hd{ background:var(--blue); color:#fff; padding:10px 16px; font-weight:700;
@@ -460,15 +459,15 @@
           <td class="src">Eckel &amp; Grossman, 2002</td>
           <td><span class="var">\(\alpha\) — value curvature</span></td>
         </tr>
-        <tr class="m-w">
+        <tr class="m-v">
           <td>DOSPERT — Risk Taking</td>
           <td class="src">Blais &amp; Weber, 2006</td>
-          <td><span class="var">\(\gamma\) — probability weighting</span></td>
+          <td><span class="var">\(\alpha,\lambda\) — risk attitude</span></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p class="foot">Colors match the three channels of \(U_{i,a,t}\): <span style="color:#2b4acb;font-weight:700;">weighting</span> · <span style="color:#b06a06;font-weight:700;">timing</span> · <span style="color:#b0234a;font-weight:700;">value</span>.</p>
+  <p class="foot">Colors match the channels of \(U_{i,a,t}\): <span style="color:#b06a06;font-weight:700;">timing (\(\beta\))</span> and <span style="color:#b0234a;font-weight:700;">value (\(\alpha,\lambda\))</span> are elicited; weighting (\(\gamma\)) is modeled but not separately measured.</p>
 </div>
 
 --
