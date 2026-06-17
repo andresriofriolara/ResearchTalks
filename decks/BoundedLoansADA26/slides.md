@@ -800,22 +800,22 @@
       <tbody>
         <tr class="t-none">
           <td class="cell">Control</td>
-          <td>Risk-averse, <span class="pb">present-biased</span></td>
+          <td><span class="la">Risk-averse</span>, <span class="pb">present-biased</span></td>
           <td class="num pb">0.30</td><td class="num la">0.01</td><td class="num">54%</td>
         </tr>
         <tr class="t-d">
           <td class="cell">Delay only</td>
-          <td>Risk-averse, <span class="pb">patient</span></td>
+          <td><span class="la">Risk-averse</span>, <span class="pb">patient</span></td>
           <td class="num pb">0.70</td><td class="num la">0.01</td><td class="num">54%</td>
         </tr>
         <tr class="t-v">
           <td class="cell">Incentive only</td>
-          <td>Risk-seeking, <span class="pb">present-biased</span></td>
+          <td><span class="la">Risk-seeking</span>, <span class="pb">present-biased</span></td>
           <td class="num pb">0.10</td><td class="num la">2.0</td><td class="num">59%</td>
         </tr>
         <tr class="t-both">
           <td class="cell">Delay + incentive</td>
-          <td>Risk-averse, <span class="pb">patient</span>, <span class="la">loss-averse</span></td>
+          <td><span class="la">Risk-averse</span>, <span class="pb">patient</span>, <span class="la">loss-averse</span></td>
           <td class="num pb">0.80</td><td class="num la">2.0</td><td class="num">58%</td>
         </tr>
       </tbody>
