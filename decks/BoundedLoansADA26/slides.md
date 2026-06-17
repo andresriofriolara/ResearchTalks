@@ -632,16 +632,6 @@
 </section>
 
 --
-<!-- .slide: class="slide-heading" -->
-## Experimental Design
-<div class="seg-toggle" aria-label="Experiments">
-  <div class="seg-pill">
-    <div class="seg">Lab Experiment</div>
-    <div class="seg is-active">Field Experiment</div>
-  </div>
-</div>
-
---
 
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design
