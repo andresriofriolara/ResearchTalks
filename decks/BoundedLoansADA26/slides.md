@@ -201,6 +201,62 @@
   </div>
 </section>
 
+--
+
+<section>
+<div class="panels">
+
+  <div class="panel">
+    <div class="panel-hd">CREDIT APPLICATION A</div>
+    <div class="panel-bd">
+      <table>
+        <tr><td>Amount Requested</td><td><strong>$10,000.00</strong></td></tr>
+        <tr><td>Term</td><td>36 periods</td></tr>
+        <tr><td>Payment Frequency</td><td>Monthly <span style="padding:2px 6px; border:1px solid #c9ced6; border-radius:4px; background:#eef3f8;">X</span></td></tr>
+        <tr><td>Installment (payment)</td><td><strong>$346.65</strong></td></tr>
+        <tr><td>Purpose of Credit</td><td>Consumer</td></tr>
+        <tr><td>Type of Collateral</td><td>Mortgage-backed</td></tr>
+        <tr><td>Source of Income</td><td>Private employee (5 years)</td></tr>
+        <tr><td>Score</td><td>AAA (950; positive bureau history – 10 years)</td></tr>
+        <tr><td>Total Consolidated Risk</td><td><strong>$10,000.00</strong></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-hd">Payment Capacity Analysis</div>
+    <div class="panel-bd">
+      <table style="border-spacing:0 6px;">
+        <thead>
+          <tr>
+            <th>Assets</th><th style="text-align:right;">Value</th>
+            <th></th>
+            <th>Liabilities</th><th style="text-align:right;">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Real Estate</td><td style="text-align:right;">$20,000.00</td><td></td><td>Secured Bank Debt</td><td style="text-align:right;">$19,120.89</td></tr>
+          <tr><td>Other Assets</td><td style="text-align:right;">$10,000.00</td><td></td><td>Short-Term Liabilities</td><td style="text-align:right;">$953.75</td></tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th>Income / Expense</th><th style="text-align:right;">Amount</th>
+            <th></th>
+            <th>Income / Expense</th><th style="text-align:right;">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Income</td><td style="text-align:right;">$1,247.55</td><td></td><td>Financial Expenses</td><td style="text-align:right;">$459.80</td></tr>
+          <tr><td>Family Expenses</td><td style="text-align:right;">$98.00</td><td></td><td>Net Savings</td><td style="text-align:right;"><strong>$689.75</strong></td></tr>
+          <tr><td style="color:#5b6573;">Total Expenses</td><td style="text-align:right;">$557.80</td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+</section>
+
 ---
 <!-- .slide: class="slide-heading logo-safe diagram closer" -->
 ## The "Rational" Banking process
