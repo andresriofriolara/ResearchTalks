@@ -302,19 +302,23 @@
 
 <style>
   #bvalue, #vchoice { --ivey:#0d5e3a; --ivey2:#7fb18f; --blue:#0b3d5c; --ink:#5b6573; }
+  /* per-channel watercolor palette (reused on the measures/treatments slides) */
+  #bvalue .card.c-w{ --c:#2b4acb; --wash:#eef1fd; }   /* probability weighting */
+  #bvalue .card.c-d{ --c:#b06a06; --wash:#fdf3e6; }   /* present-biased timing  */
+  #bvalue .card.c-v{ --c:#b0234a; --wash:#fdedf1; }   /* reference-dependent value */
   #bvalue .row{ display:flex; gap:clamp(8px,1.4vw,16px); align-items:stretch;
     justify-content:center; max-width:1120px; margin:.4em auto 0; flex-wrap:wrap; }
   #bvalue .card{ position:relative; flex:1 1 0; min-width:230px;
-    background:linear-gradient(180deg,#fff,#fbfdff); border:1px solid #e6eaef;
+    background:linear-gradient(180deg,#fff,var(--wash,#fbfdff)); border:1px solid #e6eaef;
     border-radius:14px; padding:16px 16px 18px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
   #bvalue .card .badge{ position:absolute; top:-15px; left:-15px; width:38px; height:38px;
-    border-radius:999px; background:var(--ivey); color:#fff; display:grid; place-items:center;
-    box-shadow:0 6px 14px rgba(13,94,58,.28); }
-  #bvalue .card h4{ margin:.1em 0 .4em; font-size:clamp(15px,1.6vw,18px); font-weight:800; }
+    border-radius:999px; background:var(--c,var(--ivey)); color:#fff; display:grid; place-items:center;
+    box-shadow:0 6px 14px rgba(0,0,0,.18); }
+  #bvalue .card h4{ margin:.1em 0 .4em; font-size:clamp(15px,1.6vw,18px); font-weight:800; color:var(--c,#111); }
   #bvalue .card p{ margin:0; color:var(--ink); font-size:clamp(13px,1.35vw,15px); line-height:1.35; }
   #bvalue .card::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
-    border-radius:0 0 14px 14px; background:linear-gradient(90deg,var(--ivey),var(--ivey2)); }
-  #bvalue .times{ align-self:center; font-size:26px; color:var(--ivey); font-weight:700; }
+    border-radius:0 0 14px 14px; background:var(--c,var(--ivey)); }
+  #bvalue .times{ align-self:center; font-size:26px; color:#9aa3ad; font-weight:700; }
   #bvalue .foot{ text-align:center; color:#7a8694; font-size:clamp(12px,1.3vw,14px); margin-top:.9em; }
   @media (max-width:900px){ #bvalue .times{ display:none; } }
 </style>
@@ -322,24 +326,24 @@
 <p style="text-align:center; color:#5b6573; max-width:1000px; margin:.1em auto .5em;">For loan \(i\), the value of action \(a\in\{\text{Approve},\text{Reject}\}\) folds <strong>three behavioral channels</strong> into one utility value:</p>
 
 <div style="text-align:center; margin:.4em auto .2em;">
-\(\displaystyle U_{i,a,t}=\underbrace{w_{\gamma}(\hat p_i)}_{\text{weighting}}\;\underbrace{D(t_{a,R})}_{\text{timing}}\;\underbrace{v\!\big(x_{i,a,R,t}\big)}_{\text{value}}\;+\;\big[1-w_{\gamma}(\hat p_i)\big]\,D(t_{a,D})\,v\!\big(x_{i,a,D,t}\big)\)
+\(\displaystyle U_{i,a,t}=\underbrace{\textcolor{#2b4acb}{w_{\gamma}(\hat p_i)}}_{\textcolor{#2b4acb}{\text{weighting}}}\;\underbrace{\textcolor{#b06a06}{D(t_{a,R})}}_{\textcolor{#b06a06}{\text{timing}}}\;\underbrace{\textcolor{#b0234a}{v\!\big(x_{i,a,R,t}\big)}}_{\textcolor{#b0234a}{\text{value}}}\;+\;\big[1-\textcolor{#2b4acb}{w_{\gamma}(\hat p_i)}\big]\,\textcolor{#b06a06}{D(t_{a,D})}\,\textcolor{#b0234a}{v\!\big(x_{i,a,D,t}\big)}\)
 </div>
 
 <div id="bvalue">
   <div class="row">
-    <div class="card">
+    <div class="card c-w">
       <div class="badge">\(w\)</div>
       <h4>Probability weighting</h4>
       <p>\(w_{\gamma}(p)=\dfrac{p^{\gamma}}{[\,p^{\gamma}+(1-p)^{\gamma}\,]^{1/\gamma}}\), on the <em>perceived</em> repayment \(\hat p_i=m(\Omega_i)\). Collateral overweighting enters here.</p>
     </div>
     <div class="times">×</div>
-    <div class="card">
+    <div class="card c-d">
       <div class="badge">\(D\)</div>
       <h4>Present-biased timing</h4>
       <p>\(D(t)=\beta\delta^{t}\) with \(D(0)=1\). Present bias \(\beta\in(0,1]\), long-run patience \(\delta\in(0,1]\).</p>
     </div>
     <div class="times">×</div>
-    <div class="card">
+    <div class="card c-v">
       <div class="badge">\(v\)</div>
       <h4>Reference-dependent value</h4>
       <p>\(v(x)=x^{\alpha}\) for \(x\ge0\), else \(-\lambda(-x)^{\alpha}\); \(\alpha\in(0,1]\), \(\lambda\ge1\). Payoffs \(x=c-r_t\).</p>
@@ -348,7 +352,7 @@
   <p class="foot">Evaluated within a satisficing consideration set \(S_t\subseteq A_t\) (De Clippel ancillary conditions).</p>
 </div>
 
----
+--
 <!-- .slide: class="slide-heading" -->
 ## From Value to Choice — and the Treatment Lever
 
@@ -395,77 +399,7 @@
 </div>
 
 ---
-<!-- .slide: class="slide-heading" -->
-## Experimental Design
 
-<section data-background-color="transparent">
-  <style>
-    /* Segmented Toggle — Ivey-friendly */
-    .seg-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 80%;
-    }
-    .seg-pill {
-      display: inline-flex;
-      border: 1px solid var(--seg-border, rgba(0,0,0,0.15));
-      border-radius: 999px;
-      overflow: hidden;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-      backdrop-filter: saturate(1.1);
-      font-weight: 600;
-      letter-spacing: 0.2px;
-    }
-    .seg {
-      padding: 14px 28px;
-      min-width: 220px;
-      text-align: center;
-      user-select: none;
-      transition: transform 220ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-      background: var(--seg-bg, rgba(255,255,255,0.65));
-      color: var(--seg-fg, #222);
-    }
-    .seg + .seg {
-      border-left: 1px solid var(--seg-divider, rgba(0,0,0,0.08));
-    }
-    /* Keep fragments visible; only the active one gets emphasis */
-    .seg.fragment { opacity: 1; }
-    .seg.fragment.current-fragment {
-      background: var(--ivey-green, #0d5e3a);
-      color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 4px 14px rgba(13,94,58,0.35);
-      transform: scale(1.02);
-    }
-    /* Hover/press polish (optional) */
-    .seg:hover { transform: translateY(-1px); }
-    .seg:active { transform: translateY(0); }
-    /* Title style (optional, matches Ivey minimalism) */
-    .seg-title {
-      text-align: center;
-      margin-bottom: 18px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      opacity: 0.9;
-    }
-    @media (max-width: 880px) {
-      .seg { min-width: 140px; padding: 12px 18px; }
-    }
-  </style>
-
-  <div class="seg-wrap">
-    <div>
-      <div class="seg-title">Experiments:</div>
-      <div class="seg-pill">
-        <!-- Step 1 highlights LAB, Step 2 highlights FIELD -->
-        <div class="seg fragment" data-fragment-index="1">Lab Experiment</div>
-        <div class="seg fragment" data-fragment-index="2">Field Experiment</div>
-      </div>
-    </div>
-  </div>
-</section>
-
---
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design
 <div class="seg-toggle" aria-label="Experiments">
