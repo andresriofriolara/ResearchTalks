@@ -213,12 +213,27 @@
 <!-- .slide: class="slide-heading logo-safe diagram closer" -->
 ## Heuristics in the Banking Process (1/2)
 
+<style>
+  .reveal .spot-stage{ position:relative; display:inline-block; overflow:hidden; line-height:0; }
+  .reveal .spot-stage img{ display:block; }
+  .reveal .spot-frame{
+    position:absolute;
+    left:29%; top:3%; width:40%; height:93%;   /* Gupta "Credit Granting Decision" frame */
+    border:3px solid #0d5e3a; border-radius:8px;
+    box-shadow: 0 0 20px 3px rgba(13,94,58,.45), 0 0 0 9999px rgba(255,255,255,.82);
+    z-index:2; pointer-events:none;
+  }
+</style>
+
 <div class="media-xy">
-  <img data-src="./images/Figure4.png" class="img-sm" alt="Heuristics in the banking process">
+  <div class="spot-stage">
+    <img data-src="./images/Figure4.png" class="img-sm" alt="Heuristics in the banking process">
+    <div class="spot-frame fragment" data-fragment-index="0"></div>
+  </div>
 </div>
 
 --
-<!-- .slide: class="slide-heading logo-safe diagram closer" -->
+<!-- .slide: class="slide-heading logo-safe diagram closer" data-transition="zoom" -->
 ## Heuristics in the Banking Process (2/2)
 
 <div class="media-xy">
