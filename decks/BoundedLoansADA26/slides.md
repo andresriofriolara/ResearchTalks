@@ -758,7 +758,9 @@
 <!-- .slide: class="slide-heading" -->
 ## What the Simulations Show
 <style>
-  #simres{ --ivey:#0d5e3a; --blue:#0b3d5c; --ink:#5b6573; }
+  #simres{ --blue:#0b3d5c; --ink:#5b6573;
+    --amber:#b06a06; --amber-wash:#fdf3e6;
+    --rose:#b0234a;  --rose-wash:#fdedf1; }
   #simres .wrap{ max-width:1120px; margin:.3em auto 0; border:1px solid #c9ced6;
     border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
   #simres .hd{ background:var(--blue); color:#fff; padding:10px 16px; font-weight:700;
@@ -768,11 +770,17 @@
     font-size:clamp(13px,1.5vw,17px); background:#f7f9fb; }
   #simres th, #simres td{ padding:10px 14px; border-bottom:1px solid #e6eaef; text-align:left; }
   #simres thead th{ background:#eef3f7; color:var(--blue); font-weight:800; font-size:.9em; }
+  #simres th.h-b{ color:var(--amber); }
+  #simres th.h-l{ color:var(--rose); }
   #simres td.num, #simres th.num{ text-align:center; font-variant-numeric:tabular-nums; }
-  #simres .cell{ font-weight:800; color:var(--ivey); }
-  #simres .pb{ color:#b4532a; font-weight:700; }
-  #simres .pat{ color:var(--ivey); font-weight:700; }
-  #simres tr.target td{ background:#eafaf1; }
+  #simres .cell{ font-weight:800; color:#2a3340; }
+  #simres .pb{ color:var(--amber); font-weight:700; }   /* present bias / β  */
+  #simres .la{ color:var(--rose);  font-weight:700; }   /* loss aversion / λ */
+  #simres tr.t-none td.cell{ border-left:5px solid #cfd6dd; }
+  #simres tr.t-d   td.cell{ border-left:5px solid var(--amber); }
+  #simres tr.t-v   td.cell{ border-left:5px solid var(--rose); }
+  #simres tr.t-both td.cell{ border-left:5px solid transparent;
+    border-image:linear-gradient(180deg,var(--amber),var(--rose)) 1; }
   #simres .foot{ text-align:center; color:#7a8694; font-size:clamp(11px,1.3vw,13px);
     margin:.7em auto 0; max-width:1040px; line-height:1.4; }
 </style>
@@ -784,36 +792,36 @@
         <tr>
           <th>Condition</th>
           <th>Behavioral profile</th>
-          <th class="num">Present bias \(\beta\)</th>
-          <th class="num">Loss aversion \(\lambda\)</th>
+          <th class="num h-b">Present bias \(\beta\)</th>
+          <th class="num h-l">Loss aversion \(\lambda\)</th>
           <th class="num">Risk-taking</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="t-none">
           <td class="cell">Control</td>
           <td>Risk-averse, <span class="pb">present-biased</span></td>
-          <td class="num pb">0.30</td><td class="num">0.01</td><td class="num">54%</td>
+          <td class="num pb">0.30</td><td class="num la">0.01</td><td class="num">54%</td>
         </tr>
-        <tr>
+        <tr class="t-d">
           <td class="cell">Delay only</td>
-          <td>Risk-averse, <span class="pat">patient</span></td>
-          <td class="num pat">0.70</td><td class="num">0.01</td><td class="num">54%</td>
+          <td>Risk-averse, <span class="pb">patient</span></td>
+          <td class="num pb">0.70</td><td class="num la">0.01</td><td class="num">54%</td>
         </tr>
-        <tr>
+        <tr class="t-v">
           <td class="cell">Incentive only</td>
           <td>Risk-seeking, <span class="pb">present-biased</span></td>
-          <td class="num pb">0.10</td><td class="num">2.0</td><td class="num">59%</td>
+          <td class="num pb">0.10</td><td class="num la">2.0</td><td class="num">59%</td>
         </tr>
-        <tr class="target">
+        <tr class="t-both">
           <td class="cell">Delay + incentive</td>
-          <td>Risk-averse, <span class="pat">patient</span>, loss-averse</td>
-          <td class="num pat">0.80</td><td class="num">2.0</td><td class="num">58%</td>
+          <td>Risk-averse, <span class="pb">patient</span>, <span class="la">loss-averse</span></td>
+          <td class="num pb">0.80</td><td class="num la">2.0</td><td class="num">58%</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p class="foot">Risk-taking = share choosing the risky option across 100 simulated choices. Each treatment toggles present bias (via \(\beta\), the delay channel) and loss aversion (via \(\lambda\), the incentive channel); \(\alpha\) and \(\delta\) are held in the background.</p>
+  <p class="foot">Risk-taking = share choosing the risky option across 100 simulated choices. <span style="color:#b06a06;font-weight:700;">\(\beta\) (timing)</span> is toggled by the delay, <span style="color:#b0234a;font-weight:700;">\(\lambda\) (value)</span> by the incentive adjustment; \(\alpha\) and \(\delta\) are held in the background.</p>
 </div>
 
 ---
