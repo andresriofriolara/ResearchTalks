@@ -402,6 +402,76 @@
 </div>
 
 ---
+<!-- .slide: class="slide-heading" -->
+## Experimental Design
+<div class="seg-toggle" aria-label="Experiments">
+  <div class="seg-pill">
+    <div class="seg is-active">Lab Experiment</div>
+    <div class="seg is-active">Field Experiment</div>
+  </div>
+</div>
+
+<style>
+  #measures{ --blue:#0b3d5c; --ink:#5b6573; }
+  #measures tr.m-w{ --c:#2b4acb; --wash:#eef1fd; }   /* weighting */
+  #measures tr.m-d{ --c:#b06a06; --wash:#fdf3e6; }   /* timing / present bias */
+  #measures tr.m-v{ --c:#b0234a; --wash:#fdedf1; }   /* value / loss aversion */
+  #measures .wrap{ max-width:1040px; margin:.3em auto 0; border:1px solid #c9ced6;
+    border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+  #measures .hd{ background:var(--blue); color:#fff; padding:10px 16px; font-weight:700;
+    display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  #measures .hd small{ font-weight:500; opacity:.85; font-size:.74em; }
+  #measures table{ width:100%; border-collapse:separate; border-spacing:0;
+    font-size:clamp(14px,1.6vw,19px); background:#f7f9fb; }
+  #measures th, #measures td{ padding:11px 16px; border-bottom:1px solid #e6eaef; text-align:left; }
+  #measures thead th{ background:#eef3f7; color:var(--blue); font-weight:800; font-size:.85em; }
+  #measures tbody tr td{ background:var(--wash,#f7f9fb); }
+  #measures tbody tr td:first-child{ border-left:5px solid var(--c,transparent); font-weight:700; }
+  #measures .var{ color:var(--c); font-weight:800; white-space:nowrap; }
+  #measures .src{ color:var(--ink); }
+  #measures .foot{ text-align:center; color:#7a8694; font-size:clamp(11px,1.3vw,13px);
+    margin:.7em auto 0; max-width:1000px; line-height:1.4; }
+</style>
+
+<div id="measures">
+  <div class="wrap">
+    <div class="hd"><span>Each measure pins down one channel of the equation</span><small>collected for every participant · lab &amp; field</small></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject measure</th>
+          <th>Source</th>
+          <th>Identifies in \(U_{i,a,t}\)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="m-v">
+          <td>Risk Aversion</td>
+          <td class="src">Holt &amp; Laury, 2002</td>
+          <td><span class="var">\(\lambda\) — loss aversion</span></td>
+        </tr>
+        <tr class="m-d">
+          <td>Short-term Impatience</td>
+          <td class="src">Andreoni, 2012</td>
+          <td><span class="var">\(\beta\) — present bias</span></td>
+        </tr>
+        <tr class="m-v">
+          <td>Risk Seekingness</td>
+          <td class="src">Eckel &amp; Grossman, 2002</td>
+          <td><span class="var">\(\alpha\) — value curvature</span></td>
+        </tr>
+        <tr class="m-w">
+          <td>DOSPERT — Risk Taking</td>
+          <td class="src">Blais &amp; Weber, 2006</td>
+          <td><span class="var">\(\gamma\) — probability weighting</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="foot">Colors match the three channels of \(U_{i,a,t}\): <span style="color:#2b4acb;font-weight:700;">weighting</span> · <span style="color:#b06a06;font-weight:700;">timing</span> · <span style="color:#b0234a;font-weight:700;">value</span>.</p>
+</div>
+
+--
 
 <!-- .slide: class="slide-heading" -->
 ## Experimental Design
@@ -438,36 +508,6 @@
   </tbody>
 </table>
 
---
-<!-- .slide: class="slide-heading" -->
-## Experimental Design
-<div class="seg-toggle" aria-label="Experiments">
-  <div class="seg-pill">
-    <div class="seg is-active">Lab Experiment</div>
-    <div class="seg">Field Experiment</div>
-  </div>
-</div>
-
-<div class="r-stretch" style="display:flex; align-items:center; justify-content:center; overflow:auto;">
-  <table style="border-collapse:collapse; margin:auto;">
-    <thead>
-      <tr>
-        <th style="border:1px solid #ccc; padding:6px;">Subject Measure</th>
-        <th style="border:1px solid #ccc; padding:6px;">Source</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Risk Aversion</td>
-          <td style="border:1px solid #ccc; padding:6px;">Holt and Laury, 2002</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Short-term Impatience</td>
-          <td style="border:1px solid #ccc; padding:6px;">Andreoni, 2012</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">Risk Seekingness</td>
-          <td style="border:1px solid #ccc; padding:6px;">Eckel and Grossman, 2002</td></tr>
-      <tr><td style="border:1px solid #ccc; padding:6px;">DOSPERT - Risk Taking</td>
-          <td style="border:1px solid #ccc; padding:6px;">Blais and Weber, 2006</td></tr>
-    </tbody>
-  </table>
-</div>
 
 --
 <!-- .slide: class="slide-heading" -->
