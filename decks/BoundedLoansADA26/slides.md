@@ -201,10 +201,18 @@
   </div>
 </section>
 
---
-<!-- .slide: class="slide-heading" -->
-##      
+---
+<!-- .slide: class="slide-heading logo-safe diagram closer" -->
+## The "Rational" Banking process
 
+<div class="media-xy">
+  <img data-src="./images/Figure1.png" class="img-sm" alt="Rational banking process diagram">
+</div>
+
+---
+
+<!-- .slide: class="slide-heading" -->
+## An Information Set Preceeds all
 
 <section>
 <div class="panels">
@@ -260,15 +268,8 @@
 </div>
 </section>
 
----
-<!-- .slide: class="slide-heading logo-safe diagram closer" -->
-## The "Rational" Banking process
+--
 
-<div class="media-xy">
-  <img data-src="./images/Figure1.png" class="img-sm" alt="Rational banking process diagram">
-</div>
-
----
 <!-- .slide: class="slide-heading logo-safe diagram closer" -->
 ## Heuristics in the Banking Process (1/2)
 
