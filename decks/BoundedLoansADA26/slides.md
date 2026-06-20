@@ -268,7 +268,7 @@
 </div>
 </section>
 
---
+---
 
 <!-- .slide: class="slide-heading logo-safe diagram closer" -->
 ## Heuristics in the Banking Process (1/2)
