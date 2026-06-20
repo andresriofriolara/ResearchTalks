@@ -476,91 +476,73 @@
 <div class="seg-toggle" aria-label="Experiments">
   <div class="seg-pill">
     <div class="seg is-active">Lab Experiment</div>
-    <div class="seg">Field Experiment</div>
+    <div class="seg is-active">Field Experiment</div>
   </div>
 </div>
 
 <style>
-  #treat{ --blue:#0b3d5c; --ink:#5b6573;
-    --amber:#b06a06; --amber-wash:#fdf3e6;
-    --rose:#b0234a;  --rose-wash:#fdedf1; }
-  #treat .wrap{ max-width:1040px; margin:.3em auto 0; border:1px solid #c9ced6;
+  #measures{ --blue:#0b3d5c; --ink:#5b6573; }
+  #measures tr.m-d{ --c:#b06a06; --wash:#fdf3e6; }   /* timing / present bias */
+  #measures tr.m-v{ --c:#b0234a; --wash:#fdedf1; }   /* value / risk attitude */
+  #measures .wrap{ max-width:1040px; margin:.3em auto 0; border:1px solid #c9ced6;
     border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
-  #treat .hd{ background:var(--blue); color:#fff; padding:10px 16px; font-weight:700;
+  #measures .hd{ background:var(--blue); color:#fff; padding:10px 16px; font-weight:700;
     display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
-  #treat .hd small{ font-weight:500; opacity:.85; font-size:.74em; }
-  #treat table{ width:100%; border-collapse:separate; border-spacing:0; background:#f7f9fb;
-    font-size:clamp(13px,1.5vw,18px); }
-  #treat th, #treat td{ border:1px solid #e6eaef; }
-  #treat thead th{ background:#eef3f7; color:var(--blue); font-weight:800; padding:9px 14px; text-align:center; }
-  #treat th.rowhd{ background:#eef3f7; color:var(--blue); font-weight:800; padding:9px 14px; text-align:center; width:18%; }
-  #treat td{ padding:0; }
-  #treat .tile{ padding:16px 12px; min-height:92px; display:flex; flex-direction:column;
-    align-items:center; justify-content:center; gap:9px; text-align:center; }
-  #treat .name{ font-weight:800; color:#2a3340; }
-  #treat .chips{ display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
-  #treat .chip{ font-weight:800; border-radius:999px; padding:2px 11px; font-size:.82em; border:1.5px solid; }
-  #treat .chip.b{ color:var(--amber); border-color:var(--amber); background:var(--amber-wash); }
-  #treat .chip.l{ color:var(--rose);  border-color:var(--rose);  background:var(--rose-wash); }
-  #treat .chip.n{ color:#7a8694; border-color:#cfd6dd; background:#fff; }
-  #treat .c-amber{ background:var(--amber-wash); }
-  #treat .c-rose{  background:var(--rose-wash); }
-  #treat .c-both{  background:linear-gradient(135deg, var(--amber-wash) 0 50%, var(--rose-wash) 50% 100%); }
-  #treat .c-none{  background:#f4f6f8; }
-  #treat .foot{ text-align:center; color:#7a8694; font-size:clamp(11px,1.3vw,13px);
+  #measures .hd small{ font-weight:500; opacity:.85; font-size:.74em; }
+  #measures table{ width:100%; border-collapse:separate; border-spacing:0;
+    font-size:clamp(14px,1.6vw,19px); background:#f7f9fb; }
+  #measures th, #measures td{ padding:11px 16px; border-bottom:1px solid #e6eaef; text-align:left; }
+  #measures thead th{ background:#eef3f7; color:var(--blue); font-weight:800; font-size:.85em; }
+  #measures tbody tr td{ background:var(--wash,#f7f9fb); }
+  #measures tbody tr td:first-child{ border-left:5px solid var(--c,transparent); font-weight:700; }
+  #measures .var{ color:var(--c); font-weight:800; white-space:nowrap; }
+  #measures .src{ color:var(--ink); }
+  #measures .eqn{ text-align:center; margin:.2em auto .55em; font-size:.92em; }
+  #measures .foot{ text-align:center; color:#7a8694; font-size:clamp(11px,1.3vw,13px);
     margin:.7em auto 0; max-width:1000px; line-height:1.4; }
 </style>
 
-<div id="treat">
+<div id="measures">
+
+  <div class="eqn">
+  \(\displaystyle U_{i,a,t}=\underbrace{w_{\gamma}(\hat p_i)}_{\text{weighting}}\;\underbrace{\textcolor{#b06a06}{D(t_{a,R})}}_{\textcolor{#b06a06}{\text{timing}}}\;\underbrace{\textcolor{#b0234a}{v\!\big(x_{i,a,R,t}\big)}}_{\textcolor{#b0234a}{\text{value}}}\;+\;\big[1-w_{\gamma}(\hat p_i)\big]\,\textcolor{#b06a06}{D(t_{a,D})}\,\textcolor{#b0234a}{v\!\big(x_{i,a,D,t}\big)}\)
+  </div>
+
   <div class="wrap">
-    <div class="hd"><span>Each cell switches on a behavioral channel</span><small>delay → \(\beta\) present bias · incentive → \(\lambda\) loss aversion</small></div>
+    <div class="hd"><span>Each measure pins down one channel of the equation</span><small>collected for every participant · lab &amp; field</small></div>
     <table>
       <thead>
         <tr>
-          <th></th>
-          <th colspan="2">Time Delay</th>
-        </tr>
-        <tr>
-          <th class="rowhd">Incentive Adjustment</th>
-          <th>Yes</th>
-          <th>No</th>
+          <th>Subject measure</th>
+          <th>Source</th>
+          <th>Identifies in \(U_{i,a,t}\)</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th class="rowhd">Yes</th>
-          <td class="c-both">
-            <div class="tile">
-              <div class="name">Combined</div>
-              <div class="chips"><span class="chip b">\(\beta\) present bias</span><span class="chip l">\(\lambda\) loss aversion</span></div>
-            </div>
-          </td>
-          <td class="c-rose">
-            <div class="tile">
-              <div class="name">Incentive only</div>
-              <div class="chips"><span class="chip l">\(\lambda\) loss aversion</span></div>
-            </div>
-          </td>
+        <tr class="m-v">
+          <td>Risk Aversion</td>
+          <td class="src">Holt &amp; Laury, 2002</td>
+          <td><span class="var">\(\lambda\) — loss aversion</span></td>
         </tr>
-        <tr>
-          <th class="rowhd">No</th>
-          <td class="c-amber">
-            <div class="tile">
-              <div class="name">Delay only</div>
-              <div class="chips"><span class="chip b">\(\beta\) present bias</span></div>
-            </div>
-          </td>
-          <td class="c-none">
-            <div class="tile">
-              <div class="name">Control</div>
-              <div class="chips"><span class="chip n">baseline</span></div>
-            </div>
-          </td>
+        <tr class="m-d">
+          <td>Short-term Impatience</td>
+          <td class="src">Andreoni, 2012</td>
+          <td><span class="var">\(\beta\) — present bias</span></td>
+        </tr>
+        <tr class="m-v">
+          <td>Risk Seekingness</td>
+          <td class="src">Eckel &amp; Grossman, 2002</td>
+          <td><span class="var">\(\alpha\) — value curvature</span></td>
+        </tr>
+        <tr class="m-v">
+          <td>DOSPERT — Risk Taking</td>
+          <td class="src">Blais &amp; Weber, 2006</td>
+          <td><span class="var">\(\alpha,\lambda\) — risk attitude</span></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p class="foot">Colors carry over from the model: <span style="color:#b06a06;font-weight:700;">timing / \(\beta\)</span> is toggled by the delay, <span style="color:#b0234a;font-weight:700;">value / \(\lambda\)</span> by the incentive adjustment. <span style="color:#2b4acb;font-weight:700;">Weighting / \(\gamma\)</span> is measured but not manipulated.</p>
+  <p class="foot">Colors match the channels of \(U_{i,a,t}\): <span style="color:#b06a06;font-weight:700;">timing (\(\beta\))</span> and <span style="color:#b0234a;font-weight:700;">value (\(\alpha,\lambda\))</span> are elicited; weighting (\(\gamma\)) is modeled but not separately measured.</p>
 </div>
 
 --
