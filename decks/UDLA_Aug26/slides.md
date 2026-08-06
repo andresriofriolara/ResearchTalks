@@ -97,22 +97,24 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 
 --
 <!-- .slide: class="slide-heading logo-safe diagram closer" -->
-## ¿Una Apuesta?
+## La Misma Apuesta.
 
-<div style="text-align:center; margin-bottom:1.4em;">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sequoia_Capital_logo.svg" style="max-width:380px; width:70%;" alt="Sequoia Capital">
-</div>
+<section>
+  <div style="text-align:center; margin-bottom:1.4em;">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sequoia_Capital_logo.svg" style="max-width:380px; width:70%;" alt="Sequoia Capital">
+  </div>
 
-<div class="fragment" style="display:flex; justify-content:center; align-items:center; gap:clamp(40px,7vw,100px); flex-wrap:wrap;">
-  <div style="text-align:center;">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Instagram_2010.svg" style="max-width:170px; width:65%;" alt="Instagram, 2010">
-    <p style="margin-top:.5em; font-weight:700; color:#5b6573;">2010</p>
+  <div class="fragment" data-fragment-index="0" style="display:flex; justify-content:center; align-items:center; gap:clamp(40px,7vw,100px); flex-wrap:wrap;">
+    <div style="text-align:center;">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Instagram_2010.svg" style="max-width:170px; width:65%;" alt="Instagram, 2010">
+      <p style="margin-top:.5em; font-weight:700; color:#5b6573;">2010</p>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-family:Helvetica,Arial,sans-serif; font-weight:300; font-size:clamp(34px,5.5vw,50px); letter-spacing:-1px; color:#2a3340;">color.</div>
+      <p style="margin-top:.5em; font-weight:700; color:#5b6573;">2011</p>
+    </div>
   </div>
-  <div style="text-align:center;">
-    <div style="font-family:Helvetica,Arial,sans-serif; font-weight:300; font-size:clamp(34px,5.5vw,50px); letter-spacing:-1px; color:#2a3340;">color.</div>
-    <p style="margin-top:.5em; font-weight:700; color:#5b6573;">2011</p>
-  </div>
-</div>
+</section>
 
 ---
 <!-- .slide: class="slide-heading" -->
