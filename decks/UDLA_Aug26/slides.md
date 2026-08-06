@@ -31,7 +31,7 @@
       </div>
       <div class="lane lane-bad">
         <div class="lane-track">
-          <div class="pill">75% de startups VC-backed nunca devuelven el capital (Harvard)</div>
+          <div class="pill">75% de startups VC-backed nunca devuelven el capital (HBP)</div>
           <div class="pill">30–40% liquidan el 100% de sus activos</div>
           <div class="pill">65% de las inversiones devuelve menos de lo invertido</div>
           <div class="badge-loss" role="note" aria-label="0.4 por ciento de los deals concentra mas de la mitad del retorno">
@@ -92,6 +92,25 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 <div style="max-width:640px; margin:1.2em auto 0;">
   <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'>
     <iframe sandbox='allow-popups allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/aldktjk4y1whcqdirb2296rsyivhtmyk/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe>
+  </div>
+</div>
+
+--
+<!-- .slide: class="slide-heading logo-safe diagram closer" -->
+## ¿Una Apuesta?
+
+<div style="text-align:center; margin-bottom:1.4em;">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sequoia_Capital_logo.svg" style="max-width:380px; width:70%;" alt="Sequoia Capital">
+</div>
+
+<div class="fragment" style="display:flex; justify-content:center; align-items:center; gap:clamp(40px,7vw,100px); flex-wrap:wrap;">
+  <div style="text-align:center;">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Instagram_2010.svg" style="max-width:170px; width:65%;" alt="Instagram, 2010">
+    <p style="margin-top:.5em; font-weight:700; color:#5b6573;">2010</p>
+  </div>
+  <div style="text-align:center;">
+    <div style="font-family:Helvetica,Arial,sans-serif; font-weight:300; font-size:clamp(34px,5.5vw,50px); letter-spacing:-1px; color:#2a3340;">color.</div>
+    <p style="margin-top:.5em; font-weight:700; color:#5b6573;">2011</p>
   </div>
 </div>
 
