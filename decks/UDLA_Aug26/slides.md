@@ -209,9 +209,6 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
     Nadie puede.
   </p>
 
-  <p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.5em; font-weight:800; color:#0d5e3a; max-width:820px; margin:1em auto 0;">
-    Los voy a re-enseñar a pensar en finanzas de la forma más intuitiva posible.
-  </p>
 </section>
 
 ---
