@@ -97,7 +97,7 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 
 --
 <!-- .slide: class="slide-heading logo-safe diagram closer" -->
-## La Misma Apuesta.
+## La Apuesta.
 
 <section>
   <div style="text-align:center; margin-bottom:1.4em;">
@@ -118,7 +118,7 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 
 ---
 <!-- .slide: class="slide-heading" -->
-## La Tesis Central
+## ¿Finanzas?
 
 <section>
   <p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.3em; color:#5b6573; font-style:italic; max-width:780px; margin:0 auto 0.8em;">
@@ -151,7 +151,7 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 
 <section>
   <p style="text-align:center; font-size:1.3em; color:#2a3340; max-width:820px; margin:0 auto 1em;">
-    Todo número financiero describe una <strong>distribución de resultados posibles</strong>, no un hecho. El trabajo de una empresa es moldear esa distribución a su favor.
+    Todo número en finanzas describe una <strong>distribución de resultados posibles</strong>, no un hecho. El trabajo de una empresa es moldear esa distribución a su favor.
   </p>
 
   <style>
@@ -174,7 +174,6 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
     <p style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:0 auto 0.8em;">
       ¿Qué determina si una empresa puede moldear esa distribución, en lugar de solo sufrirla?
     </p>
-
     <div id="capacity-cards">
       <div class="row">
         <div class="card c-sense">
@@ -191,7 +190,6 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
         </div>
       </div>
     </div>
-
     <p style="text-align:center; font-size:1.1em; color:#2a3340; max-width:760px; margin:0.8em auto 0;">
       Las finanzas son cómo esa capacidad se mide, se financia y se disciplina.
     </p>
@@ -212,7 +210,7 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
   </p>
 
   <p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.5em; font-weight:800; color:#0d5e3a; max-width:820px; margin:1em auto 0;">
-    Los voy a re-enseñar a pensar en finanzas de la única forma honesta que existe.
+    Los voy a re-enseñar a pensar en finanzas de la forma más intuitiva posible.
   </p>
 </section>
 
