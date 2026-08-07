@@ -151,7 +151,7 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 
 <section>
   <p style="text-align:center; font-size:1.3em; color:#2a3340; max-width:820px; margin:0 auto 1em;">
-    Todo número en finanzas describe una <strong>distribución de resultados posibles</strong>, no un hecho. El trabajo de una empresa es moldear esa distribución a su favor.
+    Todo número en finanzas describe una <strong>distribución de resultados posibles</strong>, no un hecho. El trabajo de una empresa es moldear esa distribución en base a sus necesidadesz.
   </p>
 
   <style>
@@ -169,7 +169,6 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
     #capacity-cards .c-seize{ --c:#b06a06; }
     #capacity-cards .c-reconf{ --c:#b0234a; }
   </style>
-
   <div class="fragment" data-fragment-index="0">
     <p style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:0 auto 0.8em;">
       ¿Qué determina si una empresa puede moldear esa distribución, en lugar de solo sufrirla?
@@ -196,20 +195,7 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
   </div>
 </section>
 
---
-<!-- .slide: class="slide-heading" -->
-## Antes de Seguir.
 
-<section>
-  <p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.6em; font-weight:700; color:#2a3340; max-width:760px; margin:0.4em auto;">
-    No les voy a enseñar a predecir el futuro.
-  </p>
-
-  <p class="fragment" data-fragment-index="1" style="text-align:center; font-size:1.6em; font-weight:700; color:#5b6573; max-width:760px; margin:0.4em auto;">
-    Nadie puede.
-  </p>
-
-</section>
 
 ---
 <!-- .slide: class="slide-heading" -->
