@@ -121,28 +121,16 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 ## ¿Finanzas?
 
 <section>
-  <p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.3em; color:#5b6573; font-style:italic; max-width:780px; margin:0 auto 0.8em;">
-    ¿Para qué sirven las finanzas, si ni Sequoia puede predecir el futuro con ellas?
-  </p>
-
-  <p class="fragment" data-fragment-index="1" style="text-align:center; font-size:2em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.6em auto;">
-    Las finanzas nunca fueron la meta.
-  </p>
-
-  <p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.25em; color:#2a3340; max-width:760px; margin:0.6em auto;">
-    No son un oráculo que les dice qué va a pasar.
-  </p>
-
-  <p class="fragment" data-fragment-index="3" style="text-align:center; font-size:1.25em; color:#2a3340; max-width:760px; margin:0.6em auto 1.2em;">
-    Son la respuesta estructurada y planificada de una empresa a lo que necesita.
-  </p>
-
-  <div class="seg-toggle fragment" data-fragment-index="4" aria-label="Herramienta vs Regla">
-    <div class="seg-pill">
-      <div class="seg is-active">Herramienta al servicio de una estrategia</div>
-      <div class="seg">Regla que hay que obedecer</div>
-    </div>
-  </div>
+<p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.3em; color:#5b6573; font-style:italic; max-width:780px; margin:0 auto 0.8em;">¿Para qué sirven las finanzas, si ni Sequoia puede predecir el futuro con ellas?</p>
+<p class="fragment" data-fragment-index="1" style="text-align:center; font-size:2em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.6em auto;">Las finanzas nunca fueron la meta.</p>
+<p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.25em; color:#2a3340; max-width:760px; margin:0.6em auto;">No son un oráculo que les dice qué va a pasar.</p>
+<p class="fragment" data-fragment-index="3" style="text-align:center; font-size:1.25em; color:#2a3340; max-width:760px; margin:0.6em auto 1.2em;">Son la respuesta estructurada y planificada de una empresa a lo que necesita.</p>
+<div class="seg-toggle fragment" data-fragment-index="4" aria-label="Herramienta vs Regla">
+<div class="seg-pill">
+<div class="seg is-active">Herramienta al servicio de una estrategia</div>
+<div class="seg">Regla que hay que obedecer</div>
+</div>
+</div>
 </section>
 
 --
@@ -150,52 +138,41 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 ## Distribución, No Predicción
 
 <section>
-  <p style="text-align:center; font-size:1.3em; color:#2a3340; max-width:820px; margin:0 auto 1em;">
-    Todo número en finanzas describe una <strong>distribución de resultados posibles</strong>, no un hecho. El trabajo de una empresa es moldear esa distribución en base a sus necesidadesz.
-  </p>
+<p style="text-align:center; font-size:1.3em; color:#2a3340; max-width:820px; margin:0 auto 1em;">Todo número en finanzas describe una <strong>distribución de resultados posibles</strong>, no un hecho. El trabajo de una empresa es moldear esa distribución en base a sus necesidades.</p>
 
-  <style>
-    #capacity-cards{ --ink:#5b6573; }
-    #capacity-cards .row{ display:flex; gap:clamp(10px,1.8vw,18px); align-items:stretch;
-      justify-content:center; max-width:1080px; margin:0.6em auto 0.8em; flex-wrap:wrap; }
-    #capacity-cards .card{ position:relative; flex:1 1 0; min-width:220px;
-      background:linear-gradient(180deg,#fff,var(--wash,#fbfdff)); border:1px solid #e6eaef;
-      border-radius:14px; padding:18px 16px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
-    #capacity-cards .card h4{ margin:.1em 0 .4em; font-size:clamp(15px,1.6vw,18px); font-weight:800; color:var(--c,#111); }
-    #capacity-cards .card p{ margin:0; color:var(--ink); font-size:clamp(13px,1.35vw,15px); line-height:1.35; }
-    #capacity-cards .card::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
-      border-radius:0 0 14px 14px; background:var(--c,#0d5e3a); }
-    #capacity-cards .c-sense{ --c:#0b3d5c; }
-    #capacity-cards .c-seize{ --c:#b06a06; }
-    #capacity-cards .c-reconf{ --c:#b0234a; }
-  </style>
-  <div class="fragment" data-fragment-index="0">
-    <p style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:0 auto 0.8em;">
-      ¿Qué determina si una empresa puede moldear esa distribución, en lugar de solo sufrirla?
-    </p>
-    <div id="capacity-cards">
-      <div class="row">
-        <div class="card c-sense">
-          <h4>Sensing</h4>
-          <p>Detectar lo que está cambiando antes de que sea obvio.</p>
-        </div>
-        <div class="card c-seize">
-          <h4>Seizing</h4>
-          <p>Movilizar recursos para capturar la oportunidad.</p>
-        </div>
-        <div class="card c-reconf">
-          <h4>Reconfiguring</h4>
-          <p>Reconfigurarse cuando lo que funcionaba deja de funcionar.</p>
-        </div>
-      </div>
-    </div>
-    <p style="text-align:center; font-size:1.1em; color:#2a3340; max-width:760px; margin:0.8em auto 0;">
-      Las finanzas son cómo esa capacidad se mide, se financia y se disciplina.
-    </p>
-  </div>
+<style>
+#capacity-cards{ --ink:#5b6573; }
+#capacity-cards .row{ display:flex; gap:clamp(10px,1.8vw,18px); align-items:stretch; justify-content:center; max-width:1080px; margin:0.6em auto 0.8em; flex-wrap:wrap; }
+#capacity-cards .card{ position:relative; flex:1 1 0; min-width:220px; background:linear-gradient(180deg,#fff,var(--wash,#fbfdff)); border:1px solid #e6eaef; border-radius:14px; padding:18px 16px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+#capacity-cards .card h4{ margin:.1em 0 .4em; font-size:clamp(15px,1.6vw,18px); font-weight:800; color:var(--c,#111); }
+#capacity-cards .card p{ margin:0; color:var(--ink); font-size:clamp(13px,1.35vw,15px); line-height:1.35; }
+#capacity-cards .card::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:5px; border-radius:0 0 14px 14px; background:var(--c,#0d5e3a); }
+#capacity-cards .c-sense{ --c:#0b3d5c; }
+#capacity-cards .c-seize{ --c:#b06a06; }
+#capacity-cards .c-reconf{ --c:#b0234a; }
+</style>
+
+<div class="fragment" data-fragment-index="0">
+<p style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:0 auto 0.8em;">¿Qué determina si una empresa puede moldear esa distribución, en lugar de solo sufrirla?</p>
+<div id="capacity-cards">
+<div class="row">
+<div class="card c-sense">
+<h4>Sensing</h4>
+<p>Detectar lo que está cambiando antes de que sea obvio.</p>
+</div>
+<div class="card c-seize">
+<h4>Seizing</h4>
+<p>Movilizar recursos para capturar la oportunidad.</p>
+</div>
+<div class="card c-reconf">
+<h4>Reconfiguring</h4>
+<p>Reconfigurarse cuando lo que funcionaba deja de funcionar.</p>
+</div>
+</div>
+</div>
+<p style="text-align:center; font-size:1.1em; color:#2a3340; max-width:760px; margin:0.8em auto 0;">Las finanzas son cómo esa capacidad se mide, se financia y se disciplina.</p>
+</div>
 </section>
-
-
 
 ---
 <!-- .slide: class="slide-heading" -->
