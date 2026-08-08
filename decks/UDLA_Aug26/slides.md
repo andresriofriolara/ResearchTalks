@@ -219,49 +219,17 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 <div id="theta-split">
 <div class="row">
 <div class="card c-amber">
-<h4>p(s ∣ Ω, θ) — Sensing + Seizing</h4>
+<h4>p(s ∣ Ω, θ) — Detección + Captura</h4>
 <p>Una empresa con más capacidad no predice mejor el estado. Mueve la probabilidad hacia los estados favorables.</p>
 </div>
 <div class="card c-rose">
-<h4>R(s, θ) — Reconfiguring</h4>
+<h4>R(s, θ) — Reconfiguración</h4>
 <p>Dado el mismo estado del mundo, una empresa con más capacidad extrae más valor de él.</p>
 </div>
 </div>
 </div>
 
 <p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.1em auto 0;">Por eso dos empresas con el mismo Ω pueden tener un E[R] completamente distinto.</p>
-</section>
-
---
-<!-- .slide: class="slide-heading" -->
-## El Mismo Ω, Dos θ
-
-<section>
-<style>
-#theta-example{ --ink:#5b6573; }
-#theta-example .row{ display:flex; max-width:980px; margin:0.6em auto 0; border:1px solid #e6eaef; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
-#theta-example .col{ flex:1 1 0; padding:22px 22px; }
-#theta-example .col + .col{ border-left:1px solid #e6eaef; }
-#theta-example .col h4{ margin:0 0 .5em; font-size:1.2em; font-weight:800; }
-#theta-example .col p{ margin:0; color:var(--ink); font-size:0.95em; line-height:1.45; }
-#theta-example .c-win h4{ color:#0d5e3a; }
-#theta-example .c-lose h4{ color:#8a8f98; }
-</style>
-
-<div id="theta-example">
-<div class="row">
-<div class="col c-win">
-<h4>Instagram</h4>
-<p>Ocho personas. Pivotaron de check-ins a fotos en semanas cuando la información entrante lo pidió. θ alto actuando sobre p(s ∣ Ω, θ): movieron la probabilidad hacia el estado favorable.</p>
-</div>
-<div class="col c-lose">
-<h4>Color Labs</h4>
-<p>160 personas, $41M, y no lograron reconfigurarse cuando el lanzamiento falló. θ bajo en R(s, θ): el mismo estado del mundo, mucho menos valor extraído de él.</p>
-</div>
-</div>
-</div>
-
-<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1em auto 0;">Ω casi idéntico. θ completamente distinto. Por eso el resultado no era una moneda al aire — solo lo parecía desde afuera.</p>
 </section>
 
 --
