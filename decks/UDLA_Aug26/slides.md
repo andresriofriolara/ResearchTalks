@@ -156,15 +156,15 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 <div id="capacity-cards">
 <div class="row">
 <div class="card c-sense">
-<h4>Sensing</h4>
+<h4>Detección</h4>
 <p>Detectar lo que está cambiando antes de que sea obvio.</p>
 </div>
 <div class="card c-seize">
-<h4>Seizing</h4>
+<h4>Captura</h4>
 <p>Movilizar recursos para capturar la oportunidad.</p>
 </div>
 <div class="card c-reconf">
-<h4>Reconfiguring</h4>
+<h4>Reconfigurar</h4>
 <p>Reconfigurarse cuando lo que funcionaba deja de funcionar.</p>
 </div>
 </div>
