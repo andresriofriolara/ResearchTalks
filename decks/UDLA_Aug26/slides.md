@@ -138,11 +138,12 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 ## Distribución, No Predicción
 
 <section>
-<p style="text-align:center; font-size:1.3em; color:#2a3340; max-width:820px; margin:0 auto 1em;">Todo número en finanzas describe una <strong>distribución de resultados posibles</strong>, no un hecho. El trabajo de una empresa es moldear esa distribución en base a sus necesidades.</p>
+<p style="text-align:center; font-size:1.25em; color:#2a3340; max-width:900px; margin:0 auto 0.6em; hyphens:none; -webkit-hyphens:none;">Todo número en finanzas describe una <strong>distribución de resultados posibles</strong>, no un hecho. El trabajo de una empresa es moldear esa distribución en base a sus necesidades.</p>
+<p style="text-align:center; font-size:1.1em; color:#5b6573; max-width:820px; margin:0 auto 1em; hyphens:none; -webkit-hyphens:none;">¿Qué determina si una empresa puede moldear esa distribución, en lugar de solo sufrirla?</p>
 
 <style>
 #capacity-cards{ --ink:#5b6573; }
-#capacity-cards .row{ display:flex; gap:clamp(10px,1.8vw,18px); align-items:stretch; justify-content:center; max-width:1080px; margin:0.6em auto 0.8em; flex-wrap:wrap; }
+#capacity-cards .row{ display:flex; gap:clamp(10px,1.8vw,18px); align-items:stretch; justify-content:center; max-width:1080px; margin:0.4em auto 0.9em; flex-wrap:wrap; }
 #capacity-cards .card{ position:relative; flex:1 1 0; min-width:220px; background:linear-gradient(180deg,#fff,var(--wash,#fbfdff)); border:1px solid #e6eaef; border-radius:14px; padding:18px 16px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
 #capacity-cards .card h4{ margin:.1em 0 .4em; font-size:clamp(15px,1.6vw,18px); font-weight:800; color:var(--c,#111); }
 #capacity-cards .card p{ margin:0; color:var(--ink); font-size:clamp(13px,1.35vw,15px); line-height:1.35; }
@@ -152,8 +153,6 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 #capacity-cards .c-reconf{ --c:#b0234a; }
 </style>
 
-<div class="fragment" data-fragment-index="0">
-<p style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:0 auto 0.8em;">¿Qué determina si una empresa puede moldear esa distribución, en lugar de solo sufrirla?</p>
 <div id="capacity-cards">
 <div class="row">
 <div class="card c-sense">
@@ -170,9 +169,9 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 </div>
 </div>
 </div>
-<p style="text-align:center; font-size:1.1em; color:#2a3340; max-width:760px; margin:0.8em auto 0;">Las finanzas son cómo esa capacidad se mide, se financia y se disciplina.</p>
-</div>
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:760px; margin:0.9em auto 0;">Las finanzas son cómo esa capacidad se mide, se financia y se disciplina.</p>
 </section>
+
 
 ---
 <!-- .slide: class="slide-heading" -->
