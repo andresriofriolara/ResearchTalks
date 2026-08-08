@@ -172,6 +172,107 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 <p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:760px; margin:0.9em auto 0;">Las finanzas son cómo esa capacidad se mide, se financia y se disciplina.</p>
 </section>
 
+---
+<!-- .slide: class="slide-heading" -->
+## Ingresos, olvidemos la contabilidad.
+
+<section>
+<p style="text-align:center; font-size:1.1em; color:#5b6573; max-width:820px; margin:0 auto 1em;">Vuelvan al pitch del inicio. Lo que les mostré no era R. Era apenas una parte de esta ecuación:</p>
+
+<div style="text-align:center; margin:0.6em auto 1em; font-size:1.3em;">$$E[R \mid \Omega] = \sum_{s} p(s \mid \Omega) \cdot R(s)$$</div>
+
+<style>
+#legend-1{ --ink:#5b6573; max-width:640px; margin:0 auto; }
+#legend-1 .row{ display:flex; align-items:baseline; gap:14px; padding:7px 4px; border-bottom:1px solid #e6eaef; }
+#legend-1 .sym{ font-weight:800; color:#0d5e3a; min-width:64px; font-size:1.15em; text-align:right; }
+#legend-1 .desc{ color:var(--ink); font-size:0.95em; }
+</style>
+
+<div id="legend-1">
+<div class="row"><div class="sym">R</div><div class="desc">Ingresos — una variable aleatoria, no un número fijo</div></div>
+<div class="row"><div class="sym">Ω</div><div class="desc">La información disponible al momento de decidir</div></div>
+<div class="row"><div class="sym">s</div><div class="desc">Un estado posible del mundo — despega, crece moderado, fracasa</div></div>
+<div class="row"><div class="sym">p(s∣Ω)</div><div class="desc">Qué tan probable es cada estado, dado Ω</div></div>
+<div class="row"><div class="sym">R(s)</div><div class="desc">El ingreso realizado en ese estado</div></div>
+</div>
+</section>
+
+--
+<!-- .slide: class="slide-heading" -->
+## θ Entra Dos Veces
+
+<section>
+<div style="text-align:center; margin:0.4em auto 1.2em; font-size:1.3em;">$$E[R \mid \Omega, \theta] = \sum_{s} \textcolor{#b06a06}{p(s \mid \Omega, \theta)} \cdot \textcolor{#b0234a}{R(s, \theta)}$$</div>
+
+<style>
+#theta-split{ --ink:#5b6573; }
+#theta-split .row{ display:flex; gap:clamp(14px,2.4vw,26px); justify-content:center; max-width:1000px; margin:0 auto; flex-wrap:wrap; }
+#theta-split .card{ flex:1 1 0; min-width:260px; border-radius:14px; padding:18px 20px; box-shadow:0 6px 18px rgba(0,0,0,.06); border:1px solid #e6eaef; }
+#theta-split .card h4{ margin:0 0 .4em; font-size:1.1em; font-weight:800; }
+#theta-split .card p{ margin:0; color:var(--ink); font-size:0.95em; line-height:1.4; }
+#theta-split .c-amber{ background:linear-gradient(180deg,#fff,#fdf3e6); }
+#theta-split .c-amber h4{ color:#b06a06; }
+#theta-split .c-rose{ background:linear-gradient(180deg,#fff,#fdedf1); }
+#theta-split .c-rose h4{ color:#b0234a; }
+</style>
+
+<div id="theta-split">
+<div class="row">
+<div class="card c-amber">
+<h4>p(s ∣ Ω, θ) — Sensing + Seizing</h4>
+<p>Una empresa con más capacidad no predice mejor el estado. Mueve la probabilidad hacia los estados favorables.</p>
+</div>
+<div class="card c-rose">
+<h4>R(s, θ) — Reconfiguring</h4>
+<p>Dado el mismo estado del mundo, una empresa con más capacidad extrae más valor de él.</p>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.1em auto 0;">Por eso dos empresas con el mismo Ω pueden tener un E[R] completamente distinto.</p>
+</section>
+
+--
+<!-- .slide: class="slide-heading" -->
+## El Mismo Ω, Dos θ
+
+<section>
+<style>
+#theta-example{ --ink:#5b6573; }
+#theta-example .row{ display:flex; max-width:980px; margin:0.6em auto 0; border:1px solid #e6eaef; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+#theta-example .col{ flex:1 1 0; padding:22px 22px; }
+#theta-example .col + .col{ border-left:1px solid #e6eaef; }
+#theta-example .col h4{ margin:0 0 .5em; font-size:1.2em; font-weight:800; }
+#theta-example .col p{ margin:0; color:var(--ink); font-size:0.95em; line-height:1.45; }
+#theta-example .c-win h4{ color:#0d5e3a; }
+#theta-example .c-lose h4{ color:#8a8f98; }
+</style>
+
+<div id="theta-example">
+<div class="row">
+<div class="col c-win">
+<h4>Instagram</h4>
+<p>Ocho personas. Pivotaron de check-ins a fotos en semanas cuando la información entrante lo pidió. θ alto actuando sobre p(s ∣ Ω, θ): movieron la probabilidad hacia el estado favorable.</p>
+</div>
+<div class="col c-lose">
+<h4>Color Labs</h4>
+<p>160 personas, $41M, y no lograron reconfigurarse cuando el lanzamiento falló. θ bajo en R(s, θ): el mismo estado del mundo, mucho menos valor extraído de él.</p>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1em auto 0;">Ω casi idéntico. θ completamente distinto. Por eso el resultado no era una moneda al aire — solo lo parecía desde afuera.</p>
+</section>
+
+--
+<!-- .slide: class="slide-heading" -->
+## La Pregunta Correcta
+
+<section>
+<p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.5em; font-weight:700; color:#2a3340; max-width:780px; margin:0.5em auto;">Ya no pregunten: "¿es correcto este número?"</p>
+<p class="fragment" data-fragment-index="1" style="text-align:center; font-size:1.5em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.5em auto;">Pregunten: "¿condicionado a qué Ω, y con qué θ?"</p>
+<p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:1.2em auto 0;">Pero conocer E[R] no basta. Falta la otra mitad: ¿cuánta varianza alrededor de esa expectativa están dispuestos a tolerar?</p>
+</section>
 
 ---
 <!-- .slide: class="slide-heading" -->
