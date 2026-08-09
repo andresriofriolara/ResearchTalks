@@ -237,9 +237,9 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 ## La Pregunta Correcta
 
 <section>
-<p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.5em; font-weight:700; color:#2a3340; max-width:780px; margin:0.5em auto;">Ya no pregunten: "¿es correcto este número?"</p>
-<p class="fragment" data-fragment-index="1" style="text-align:center; font-size:1.5em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.5em auto;">Pregunten: "¿condicionado a qué Ω, y con qué θ?"</p>
-<p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:1.2em auto 0;">Pero conocer E[R] no basta. Falta la otra mitad: ¿cuánta varianza alrededor de esa expectativa están dispuestos a tolerar?</p>
+<p style="text-align:center; font-size:1.3em; font-weight:700; color:#2a3340; max-width:780px; margin:0.4em auto;">Ya no pregunten: "¿es correcto este número?"</p>
+<p style="text-align:center; font-size:1.4em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.4em auto;">Pregunten: "¿condicionado a qué Ω, y con qué θ?"</p>
+<p style="text-align:center; font-size:1.05em; color:#5b6573; max-width:760px; margin:1em auto 0;">Pero conocer E[R] no basta. Falta la otra mitad: ¿cuánta varianza están dispuestos a tolerar?</p>
 </section>
 
 ---
