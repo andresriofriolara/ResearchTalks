@@ -765,6 +765,168 @@ Mismo comentario. Mismo grupo. Mismo momento.
 
 ---
 <!-- .slide: class="slide-heading" -->
+## Volvamos al Poll
+
+<style>
+#poll-callback{ --ink:#5b6573; }
+#poll-callback .row{ display:flex; gap:18px; max-width:1040px; margin:0.8em auto 0; flex-wrap:wrap; justify-content:center; }
+#poll-callback .card{ flex:1 1 280px; border-radius:16px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.08); border:1px solid #e6eaef; }
+#poll-callback .top{ padding:14px 16px; background:#f7f9fb; }
+#poll-callback .top .letter{ font-weight:800; font-size:1.3em; color:#8a8f98; }
+#poll-callback .top .txt{ font-size:0.85em; color:var(--ink); margin-top:4px; }
+#poll-callback .bottom{ padding:14px 16px; }
+#poll-callback .bottom .lbl{ font-size:0.72em; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px; }
+#poll-callback .bottom .txt{ font-size:0.9em; color:#2a3340; line-height:1.35; }
+#poll-callback .c-a .bottom{ background:linear-gradient(180deg,#fff,#fdf3e6); }
+#poll-callback .c-a .lbl{ color:#b06a06; }
+#poll-callback .c-b .bottom{ background:linear-gradient(180deg,#fff,#fdedf1); }
+#poll-callback .c-b .lbl{ color:#b0234a; }
+#poll-callback .c-c .bottom{ background:linear-gradient(180deg,#fff,#eaf3de); }
+#poll-callback .c-c .lbl{ color:#3b6d11; }
+</style>
+
+<div id="poll-callback">
+<div class="row">
+<div class="card c-a">
+<div class="top"><div class="letter">A</div><div class="txt">Apostar por el crecimiento de ingresos</div></div>
+<div class="bottom"><div class="lbl">Ahora</div><div class="txt">Misma E[R|Ω] que B — solo pesaba distinto el mismo Ω</div></div>
+</div>
+<div class="card c-b">
+<div class="top"><div class="letter">B</div><div class="txt">Apostar por el retorno "garantizado"</div></div>
+<div class="bottom"><div class="lbl">Ahora</div><div class="txt">Mismo σ que A — solo lo disfrazaba de certeza</div></div>
+</div>
+<div class="card c-c">
+<div class="top"><div class="letter">C</div><div class="txt">Prefiero lanzar una moneda</div></div>
+<div class="bottom"><div class="lbl">Ahora</div><div class="txt">La única respuesta que admitía cuánta Ω realmente tenían</div></div>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:0.8em; color:#8a8f98; max-width:700px; margin:0.8em auto 0;">Ω = información disponible &nbsp;·&nbsp; σ = riesgo (la medida)</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## La Cadena, No la Lista
+
+<style>
+#chain-flow{ --ink:#5b6573; }
+#chain-flow .flow{ display:flex; align-items:center; justify-content:center; gap:0; max-width:1080px; margin:0.9em auto 0; flex-wrap:wrap; }
+#chain-flow .node{ background:#fff; border:2px solid #0b3d5c; border-radius:14px; padding:14px 16px; text-align:center; box-shadow:0 6px 16px rgba(0,0,0,.06); min-width:190px; max-width:220px; }
+#chain-flow .node .t{ font-weight:800; color:#0b3d5c; font-size:0.88em; margin-bottom:4px; }
+#chain-flow .node .s{ font-size:0.76em; color:var(--ink); }
+#chain-flow .link{ width:34px; height:16px; position:relative; }
+#chain-flow .link::before, #chain-flow .link::after{ content:""; position:absolute; top:50%; width:16px; height:16px; border:3px solid #8a8f98; border-radius:50%; transform:translateY(-50%); }
+#chain-flow .link::before{ left:0; }
+#chain-flow .link::after{ left:14px; }
+</style>
+
+<div id="chain-flow">
+<div class="flow">
+<div class="node">
+<div class="t">E[R|Ωₜ]</div>
+<div class="s">retorno esperado, dado lo que se sabe en t</div>
+</div>
+<div class="link"></div>
+<div class="node">
+<div class="t">Ω (información) se pelea y crece</div>
+<div class="s">framing contests + filtración</div>
+</div>
+<div class="link"></div>
+<div class="node">
+<div class="t">Mismo σ (riesgo), distinto CE</div>
+<div class="s">según θ (capacidad)</div>
+</div>
+<div class="link"></div>
+<div class="node">
+<div class="t">θ decide si LLN protege</div>
+<div class="s">diversificar es una capacidad</div>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.3em auto 0;">No fueron cinco temas. Fue la misma pregunta, vista desde cuatro ángulos distintos.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Así Se Llama Esto
+
+<style>
+#dc-buckets{ --ink:#5b6573; }
+#dc-buckets .row{ display:flex; gap:18px; max-width:1040px; margin:0.8em auto 0; flex-wrap:wrap; justify-content:center; }
+#dc-buckets .bucket{ flex:1 1 300px; border-radius:16px; padding:16px 18px; box-shadow:0 6px 18px rgba(0,0,0,.07); }
+#dc-buckets .bucket h4{ margin:0 0 10px; font-weight:800; font-size:1.05em; }
+#dc-buckets .chip{ display:block; background:#fff; border-radius:10px; padding:8px 12px; font-size:0.82em; color:var(--ink); margin-bottom:8px; box-shadow:0 2px 6px rgba(0,0,0,.05); }
+#dc-buckets .b-sense{ background:linear-gradient(180deg,#fff,#eaf3de); border:1px solid #d7e6c4; }
+#dc-buckets .b-sense h4{ color:#3b6d11; }
+#dc-buckets .b-seize{ background:linear-gradient(180deg,#fff,#fdf3e6); border:1px solid #f2ddb8; }
+#dc-buckets .b-seize h4{ color:#b06a06; }
+#dc-buckets .b-recon{ background:linear-gradient(180deg,#fff,#fdedf1); border:1px solid #f2ccd6; }
+#dc-buckets .b-recon h4{ color:#b0234a; }
+</style>
+
+<div id="dc-buckets">
+<div class="row">
+<div class="bucket b-sense">
+<h4>Detección</h4>
+<span class="chip">Observar Ω (información disponible)</span>
+<span class="chip">Reconocer que Ω se pelea (framing contests)</span>
+<span class="chip">Ver Ωₜ crecer con el tiempo</span>
+</div>
+<div class="bucket b-seize">
+<h4>Aprovechamiento</h4>
+<span class="chip">Separar σ (riesgo, medida) de CE (preferencia)</span>
+<span class="chip">Decidir: comprometerse o esperar (opción real)</span>
+</div>
+<div class="bucket b-recon">
+<h4>Reconfiguración</h4>
+<span class="chip">θ (capacidad) — para sostener riesgo</span>
+<span class="chip">Diversificar para que LLN proteja</span>
+</div>
+</div>
+</div>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Tres Preguntas
+
+<style>
+#three-q{ --ink:#5b6573; }
+#three-q .row{ display:flex; gap:22px; max-width:980px; margin:1em auto 0; flex-wrap:wrap; justify-content:center; }
+#three-q .note{ flex:1 1 260px; background:#fffdf0; border:1px solid #ece4b8; border-radius:6px; padding:20px 18px; box-shadow:0 8px 16px rgba(0,0,0,.10); font-size:0.95em; color:#2a3340; line-height:1.4; }
+#three-q .note:nth-child(1){ transform:rotate(-2.5deg); }
+#three-q .note:nth-child(2){ transform:rotate(1.5deg); margin-top:14px; }
+#three-q .note:nth-child(3){ transform:rotate(-1deg); }
+#three-q .note .num{ display:block; font-weight:800; font-size:1.6em; color:#c9b458; margin-bottom:6px; }
+</style>
+
+<div id="three-q">
+<div class="row">
+<div class="note"><span class="num">1</span>¿Cuál es mi Ω (información disponible) — y la de quien piensa distinto a mí?</div>
+<div class="note"><span class="num">2</span>¿Estoy confundiendo σ (riesgo, la medida) con CE (mi preferencia)?</div>
+<div class="note"><span class="num">3</span>¿Tengo θ (la capacidad) para sostener esta apuesta — o necesito diversificar primero?</div>
+</div>
+</div>
+
+--
+<!-- .slide: class="slide-heading" -->
+## La Respuesta Que Ya Tenían
+
+<style>
+#final-close{ --ink:#5b6573; }
+#final-close .quote{ max-width:820px; margin:1em auto 0; text-align:center; }
+#final-close .quote .big{ font-size:1.8em; font-weight:800; color:#0d5e3a; line-height:1.3; }
+#final-close .quote .tag{ font-size:1em; color:var(--ink); margin-top:1em; }
+</style>
+
+<div id="final-close">
+<div class="quote">
+<div class="big">"Prefiero lanzar una moneda."</div>
+<div class="tag">No era la respuesta ingenua. Era la de alguien que entendió que medir el riesgo y decidir sobre el riesgo son dos actos distintos.</div>
+</div>
+</div>
+
+---
+<!-- .slide: class="slide-heading" -->
 
 ## Gracias. 
 
