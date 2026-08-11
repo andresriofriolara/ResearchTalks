@@ -404,7 +404,7 @@ Mismo comentario. Mismo grupo. Mismo momento.
 </div>
 </div>
 
-<p style="text-align:center; font-size:1em; color:#2a3340; max-width:780px; margin:1.2em auto 0;">Ω (información disponible) nunca llega neutral. Sensing es político, no técnico.</p>
+<p style="text-align:center; font-size:1em; color:#2a3340; max-width:780px; margin:1.2em auto 0;">Ω (información disponible) nunca llega neutral. La detección es política, no técnica.</p>
 
 --
 <!-- .slide: class="slide-heading" -->
@@ -413,6 +413,165 @@ Mismo comentario. Mismo grupo. Mismo momento.
 <p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.4em; font-weight:700; color:#2a3340; max-width:780px; margin:0.4em auto;">σ (riesgo), CE, y el marco que gana — nada de eso es fijo.</p>
 <p class="fragment" data-fragment-index="1" style="text-align:center; font-size:1.4em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.4em auto;">Todo se actualiza conforme llega información nueva.</p>
 <p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:1em auto 0;">¿Qué significa exactamente "conforme llega información nueva"?</p>
+
+---
+<!-- .slide: class="slide-heading" -->
+## Ω (información disponible) No Es Una Foto, Es Una Película
+
+<style>
+#filtration-nest{ --ink:#5b6573; }
+#filtration-nest .r2{ max-width:720px; margin:0.6em auto 0; border-radius:20px; border:2px solid #8a8f98; background:rgba(138,143,152,.05); padding:18px; box-sizing:border-box; }
+#filtration-nest .r1{ border-radius:18px; border:2px solid #0b3d5c; background:rgba(11,61,92,.06); padding:16px; margin-top:30px; box-sizing:border-box; }
+#filtration-nest .r0{ border-radius:16px; border:2px solid #0d5e3a; background:rgba(13,94,58,.08); padding:26px 16px; margin-top:30px; box-sizing:border-box; }
+#filtration-nest .tag{ font-weight:800; font-size:0.95em; }
+#filtration-nest .r2 > .tag{ color:#8a8f98; }
+#filtration-nest .r1 > .tag{ color:#0b3d5c; }
+#filtration-nest .r0 .tag{ color:#0d5e3a; }
+</style>
+
+<div id="filtration-nest">
+<div class="r2">
+<div class="tag">Ω₂ — información disponible en t=2</div>
+<div class="r1">
+<div class="tag">Ω₁ — información disponible en t=1</div>
+<div class="r0">
+<div class="tag">Ω₀ — información disponible al inicio</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="text-align:center; margin:0.9em auto 0.2em; font-size:1.15em;">$$\Omega_0 \subseteq \Omega_1 \subseteq \Omega_2 \subseteq \dots$$</div>
+<p style="text-align:center; font-size:0.95em; color:#5b6573; max-width:760px; margin:0.3em auto 0;">Nunca sabes menos mañana que hoy — solo se acumula. Eso es una filtración.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## La Apuesta Que Se Repite
+
+<style>
+#sense-loop{ --ink:#5b6573; }
+#sense-loop .flow{ display:flex; align-items:center; justify-content:center; gap:10px; max-width:1040px; margin:0.8em auto 0; flex-wrap:wrap; }
+#sense-loop .node{ background:#fff; border:1px solid #e6eaef; border-radius:14px; padding:14px 18px; text-align:center; box-shadow:0 6px 16px rgba(0,0,0,.06); min-width:180px; }
+#sense-loop .node .n-title{ font-weight:800; color:#0b3d5c; font-size:0.95em; margin-bottom:4px; }
+#sense-loop .node .n-sub{ font-size:0.8em; color:var(--ink); }
+#sense-loop .arrow{ font-size:1.4em; color:#8a8f98; }
+#sense-loop .loop{ border:2px dashed #639922; background:rgba(99,153,34,.06); }
+#sense-loop .loop .n-title{ color:#3b6d11; }
+</style>
+
+<div id="sense-loop">
+<div class="flow">
+<div class="node">
+<div class="n-title">Observar Ωₜ (información en t)</div>
+<div class="n-sub">lo que se sabe hasta ahora</div>
+</div>
+<div class="arrow">→</div>
+<div class="node">
+<div class="n-title"><em>Recalcular E[R|Ωₜ]</em></div>
+<div class="n-sub">retorno esperado, dado lo que se sabe en t</div>
+</div>
+<div class="arrow">→</div>
+<div class="node">
+<div class="n-title">Decidir</div>
+<div class="n-sub">actuar, esperar, abandonar</div>
+</div>
+<div class="arrow">→</div>
+<div class="node loop">
+<div class="n-title">t → t+1</div>
+<div class="n-sub">vuelve al inicio, con más información</div>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.2em auto 0;">No es un diagnóstico único. Es Detección — el mismo ciclo, corriendo todo el tiempo.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Esperar También Es Una Decisión
+
+<style>
+#wait-option{ --ink:#5b6573; }
+#wait-option .topwrap{ text-align:center; }
+#wait-option .top{ font-weight:800; color:#2a3340; background:#f7f9fb; border:1px solid #e6eaef; border-radius:12px; padding:10px 20px; display:inline-block; }
+#wait-option .down{ text-align:center; font-size:1.6em; color:#8a8f98; margin:4px 0; }
+#wait-option .fork{ display:flex; gap:20px; max-width:900px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+#wait-option .lane{ flex:1 1 320px; border-radius:16px; padding:18px 20px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+#wait-option .lane h4{ margin:0 0 8px; font-weight:800; }
+#wait-option .lane .out{ display:flex; justify-content:space-between; gap:10px; font-size:0.85em; padding:6px 0; border-top:1px dashed rgba(0,0,0,.08); }
+#wait-option .lane .out:first-of-type{ border-top:none; }
+#wait-option .l-commit{ background:linear-gradient(180deg,#fff,#fdedf1); border:1px solid #f2ccd6; }
+#wait-option .l-commit h4{ color:#b0234a; }
+#wait-option .l-wait{ background:linear-gradient(180deg,#fff,#eaf3de); border:1px solid #d7e6c4; }
+#wait-option .l-wait h4{ color:#3b6d11; }
+</style>
+
+<div id="wait-option">
+<div class="topwrap"><div class="top">Ω₀ (información inicial)</div></div>
+<div class="down">⌄</div>
+<div class="fork">
+<div class="lane l-commit">
+<h4>Comprometerse Ahora</h4>
+<div class="out"><span>Si sale bien</span><span>ganas todo</span></div>
+<div class="out"><span>Si sale mal</span><span>pierdes todo lo invertido</span></div>
+</div>
+<div class="lane l-wait">
+<h4>Esperar (opción real)</h4>
+<div class="out"><span>Si la nueva información mejora</span><span>entras, conservas el upside</span></div>
+<div class="out"><span>Si la nueva información empeora</span><span>no entras, no pierdes más</span></div>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:0.85em; color:#8a8f98; max-width:700px; margin:0.7em auto 0;">Ω₁ = información disponible un periodo después de Ω₀</p>
+<p style="text-align:center; font-size:1em; color:#2a3340; max-width:820px; margin:0.6em auto 0;"><strong>Opción real</strong>: el derecho, no la obligación, de actuar una vez que Ωₜ (la información en t) resuelve más incertidumbre. <span style="color:#8a8f98; font-size:0.85em;">(Myers, 1977; McGrath, 1997)</span></p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Color Labs Compró Su Opción de Golpe
+
+<style>
+#staged-timeline{ --ink:#5b6573; }
+#staged-timeline .row{ max-width:980px; margin:1em auto 0; }
+#staged-timeline .row-label{ font-weight:800; margin-bottom:10px; font-size:1em; }
+#staged-timeline .steps{ display:flex; align-items:flex-start; gap:14px; flex-wrap:wrap; }
+#staged-timeline .step{ display:flex; flex-direction:column; align-items:center; width:150px; }
+#staged-timeline .dot{ border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; box-shadow:0 6px 14px rgba(0,0,0,.15); }
+#staged-timeline .cap{ margin-top:8px; font-size:0.78em; color:var(--ink); text-align:center; line-height:1.3; }
+#staged-timeline .arrow{ font-size:1.3em; color:#8a8f98; margin-top:28px; }
+#staged-timeline .s1 .dot{ width:56px; height:56px; font-size:0.75em; background:#a9cf7c; }
+#staged-timeline .s2 .dot{ width:76px; height:76px; font-size:0.8em; background:#639922; }
+#staged-timeline .s3 .dot{ width:100px; height:100px; font-size:0.85em; background:#3b6d11; }
+#staged-timeline .s-big .dot{ width:110px; height:110px; font-size:0.85em; background:#8a8f98; }
+</style>
+
+<div id="staged-timeline">
+<div class="row">
+<div class="row-label" style="color:#0d5e3a;">Instagram — capital por etapas</div>
+<div class="steps">
+<div class="step s1"><div class="dot">\$0.5M</div><div class="cap">semilla, antes de lanzar</div></div>
+<div class="arrow">→</div>
+<div class="step s2"><div class="dot">\$7M</div><div class="cap">1M usuarios en ~2 meses</div></div>
+<div class="arrow">→</div>
+<div class="step s3"><div class="dot">\$50M</div><div class="cap">tracción sostenida, Sequoia entra</div></div>
+</div>
+</div>
+<div class="row">
+<div class="row-label" style="color:#8a8f98;">Color Labs — todo de una vez</div>
+<div class="steps">
+<div class="step s-big"><div class="dot">\$41M</div><div class="cap">antes del lanzamiento, sin señal de mercado todavía</div></div>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:800px; margin:1.3em auto 0;">Escalonar preserva la opción. Comprometer todo antes de que llegue Ω₁ (la siguiente actualización de información) la destruye.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Hacia Dónde Va Ωₜ (información disponible)
+
+<p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.4em; font-weight:700; color:#2a3340; max-width:780px; margin:0.4em auto;">Ωₜ sigue creciendo.</p>
+<p class="fragment" data-fragment-index="1" style="text-align:center; font-size:1.4em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.4em auto;">¿Pero hacia un patrón — o hacia ruido?</p>
+<p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:1em auto 0;">Esa es la pregunta que responde la Ley de los Grandes Números.</p>
 
 ---
 <!-- .slide: class="slide-heading" -->
