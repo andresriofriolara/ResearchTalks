@@ -375,7 +375,7 @@ Mismo comentario. Mismo grupo. Mismo momento.
 
 --
 <!-- .slide: class="slide-heading" -->
-## El Contest de Interpretación
+## El Concurso de Interpretación
 
 <style>
 #frame-contest{ --ink:#5b6573; }
@@ -404,13 +404,13 @@ Mismo comentario. Mismo grupo. Mismo momento.
 </div>
 </div>
 
-<p style="text-align:center; font-size:1em; color:#2a3340; max-width:780px; margin:1.2em auto 0;">Ω nunca llega neutral. Sensing es político, no técnico.</p>
+<p style="text-align:center; font-size:1em; color:#2a3340; max-width:780px; margin:1.2em auto 0;">Ω (información disponible) nunca llega neutral. Sensing es político, no técnico.</p>
 
 --
 <!-- .slide: class="slide-heading" -->
 ## Lo Que Falta
 
-<p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.4em; font-weight:700; color:#2a3340; max-width:780px; margin:0.4em auto;">σ, CE, y el marco que gana — nada de eso es fijo.</p>
+<p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.4em; font-weight:700; color:#2a3340; max-width:780px; margin:0.4em auto;">σ (riesgo), CE, y el marco que gana — nada de eso es fijo.</p>
 <p class="fragment" data-fragment-index="1" style="text-align:center; font-size:1.4em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.4em auto;">Todo se actualiza conforme llega información nueva.</p>
 <p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:1em auto 0;">¿Qué significa exactamente "conforme llega información nueva"?</p>
 
