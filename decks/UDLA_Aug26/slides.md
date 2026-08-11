@@ -339,7 +339,7 @@ Mismo comentario. Mismo grupo. Mismo momento.
 
 --
 <!-- .slide: class="slide-heading" -->
-## Mismo σ, Distinto CE
+## Mismo σ (Riesgo), Distinto CE
 
 <div style="text-align:center; margin:0.4em auto 0.3em; font-size:1.25em;">$$U(CE) = E[U(R)]$$</div>
 <p style="text-align:center; font-size:0.9em; color:#8a8f98; margin:0 auto 1em;">CE = equivalente de certeza — el monto seguro que da la misma satisfacción que la apuesta</p>
@@ -349,7 +349,8 @@ Mismo comentario. Mismo grupo. Mismo momento.
 #ce-theta .row{ display:flex; max-width:980px; margin:0.6em auto 0; border:1px solid #e6eaef; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
 #ce-theta .col{ flex:1 1 0; padding:20px 22px; }
 #ce-theta .col + .col{ border-left:1px solid #e6eaef; }
-#ce-theta .col h4{ margin:0 0 .5em; font-size:1.1em; font-weight:800; }
+#ce-theta .col h4{ margin:0 0 .3em; font-size:1.1em; font-weight:800; }
+#ce-theta .col .sub{ font-size:0.75em; font-weight:600; color:#8a8f98; margin-bottom:.6em; }
 #ce-theta .col p{ margin:0; color:var(--ink); font-size:0.92em; line-height:1.4; }
 #ce-theta .c-win h4{ color:#0d5e3a; }
 #ce-theta .c-lose h4{ color:#8a8f98; }
@@ -359,16 +360,18 @@ Mismo comentario. Mismo grupo. Mismo momento.
 <div class="row">
 <div class="col c-win">
 <h4>Instagram — θ alto</h4>
+<div class="sub">θ = capacidad dinámica</div>
 <p>Ocho personas. Podía sostener más riesgo del que su tamaño sugería, porque podía absorber y corregir rápido.</p>
 </div>
 <div class="col c-lose">
 <h4>Color Labs — θ bajo</h4>
-<p>160 personas, estructura rígida. Menos capacidad de sostener el mismo σ, aunque tuviera más dinero.</p>
+<div class="sub">θ = capacidad dinámica</div>
+<p>160 personas, estructura rígida. Menos capacidad de sostener el mismo σ (riesgo), aunque tuviera más dinero.</p>
 </div>
 </div>
 </div>
 
-<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.1em auto 0;">Mismo σ. CE completamente distinto — porque CE es función de θ (capacidad).</p>
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.1em auto 0;">Mismo σ (riesgo). CE completamente distinto — porque CE es función de θ (capacidad).</p>
 
 --
 <!-- .slide: class="slide-heading" -->
