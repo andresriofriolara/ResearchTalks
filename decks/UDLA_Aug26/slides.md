@@ -9,9 +9,6 @@
 <section>
   <div class="smart-funnel" aria-label="Premisa: analista evaluando un pitch de inversión">
     <div class="funnel">
-      <div class="band band-1 fragment" data-fragment-index="2">
-        <span>El expediente apunta con la misma fuerza en dos direcciones.</span>
-      </div>
       <div class="band band-2 fragment" data-fragment-index="1">
         <span>Hoy reciben un pitch. El comité los espera a las 3pm.</span>
       </div>
