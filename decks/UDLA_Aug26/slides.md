@@ -575,6 +575,196 @@ Mismo comentario. Mismo grupo. Mismo momento.
 
 ---
 <!-- .slide: class="slide-heading" -->
+## Una Apuesta vs. Muchas Apuestas
+
+<style>
+#converge{ --ink:#5b6573; }
+#converge .stage{ position:relative; max-width:900px; height:230px; margin:1em auto 0; }
+#converge .ref{ position:absolute; left:0; right:0; top:50%; border-top:2px dashed #0d5e3a; z-index:1; }
+#converge .ref .lbl{ position:absolute; right:0; top:-22px; font-size:0.8em; color:#0d5e3a; font-weight:800; background:#fff; padding:0 6px; }
+#converge .cols{ position:relative; display:flex; justify-content:space-between; height:230px; z-index:2; }
+#converge .col{ flex:1; position:relative; }
+#converge .col .cap{ position:absolute; bottom:-32px; left:50%; transform:translateX(-50%); font-size:0.85em; color:var(--ink); font-weight:700; white-space:nowrap; }
+#converge .dot{ position:absolute; left:50%; width:12px; height:12px; border-radius:50%; background:#b0234a; transform:translateX(-50%); box-shadow:0 2px 6px rgba(0,0,0,.15); }
+</style>
+
+<div id="converge">
+<div class="stage">
+<div class="ref"><div class="lbl">E[R] — retorno esperado</div></div>
+<div class="cols">
+<div class="col">
+<div class="dot" style="top:8%"></div>
+<div class="dot" style="top:28%"></div>
+<div class="dot" style="top:50%"></div>
+<div class="dot" style="top:68%"></div>
+<div class="dot" style="top:90%"></div>
+<div class="cap">n = 1</div>
+</div>
+<div class="col">
+<div class="dot" style="top:25%"></div>
+<div class="dot" style="top:38%"></div>
+<div class="dot" style="top:50%"></div>
+<div class="dot" style="top:60%"></div>
+<div class="dot" style="top:75%"></div>
+<div class="cap">n = 5</div>
+</div>
+<div class="col">
+<div class="dot" style="top:38%"></div>
+<div class="dot" style="top:45%"></div>
+<div class="dot" style="top:50%"></div>
+<div class="dot" style="top:54%"></div>
+<div class="dot" style="top:60%"></div>
+<div class="cap">n = 20</div>
+</div>
+<div class="col">
+<div class="dot" style="top:47%"></div>
+<div class="dot" style="top:49%"></div>
+<div class="dot" style="top:50%"></div>
+<div class="dot" style="top:51%"></div>
+<div class="dot" style="top:53%"></div>
+<div class="cap">n = 100</div>
+</div>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:2.2em auto 0;">Cada punto es el promedio de un experimento repetido. Un solo promedio puede caer en cualquier parte. Muchos, convergen.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## La Ley de los Grandes Números
+
+<div style="text-align:center; margin:0.4em auto 0.3em; font-size:1.2em;">$$\frac{1}{n}\sum_{i=1}^{n} R_i \;\to\; E[R] \quad \text{cuando } n \to \infty$$</div>
+
+<style>
+#portfolio-grid{ --ink:#5b6573; }
+#portfolio-grid .wrap{ display:flex; align-items:center; justify-content:center; gap:26px; max-width:1000px; margin:0.9em auto 0; flex-wrap:wrap; }
+#portfolio-grid .grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:8px; width:280px; }
+#portfolio-grid .chip{ width:38px; height:38px; border-radius:8px; background:#e6eaef; }
+#portfolio-grid .chip.color{ background:#d9748c; }
+#portfolio-grid .chip.ig{ background:#639922; }
+#portfolio-grid .arrow{ font-size:1.8em; color:#8a8f98; }
+#portfolio-grid .badge{ background:linear-gradient(180deg,#fff,#eaf3de); border:2px solid #639922; border-radius:16px; padding:20px 26px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+#portfolio-grid .badge .big{ font-weight:800; color:#0d5e3a; font-size:1.05em; }
+#portfolio-grid .badge .small{ font-size:0.78em; color:var(--ink); margin-top:4px; }
+#portfolio-grid .legend{ text-align:center; font-size:0.8em; color:var(--ink); margin-top:10px; }
+</style>
+
+<div id="portfolio-grid">
+<div class="wrap">
+<div class="grid">
+<div class="chip"></div><div class="chip"></div><div class="chip color"></div><div class="chip"></div><div class="chip"></div><div class="chip"></div>
+<div class="chip"></div><div class="chip"></div><div class="chip"></div><div class="chip ig"></div><div class="chip"></div><div class="chip"></div>
+<div class="chip"></div><div class="chip"></div><div class="chip"></div><div class="chip"></div><div class="chip"></div><div class="chip"></div>
+<div class="chip"></div><div class="chip"></div><div class="chip"></div><div class="chip"></div><div class="chip"></div><div class="chip"></div>
+</div>
+<div class="arrow">→</div>
+<div class="badge">
+<div class="big">Retorno del fondo ≈ E[R]</div>
+<div class="small">se estabiliza aunque cada empresa no lo haga</div>
+</div>
+</div>
+<div class="legend">■ Color Labs &nbsp; ■ Instagram &nbsp; ■ ~20 empresas más del mismo fondo</div>
+</div>
+
+<p style="text-align:center; font-size:1em; color:#2a3340; max-width:780px; margin:1em auto 0;">Sequoia nunca apostó a una sola. Por eso el fondo sobrevive aunque una posición colapse.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Lo Que la Normalidad No Cubre
+
+<style>
+#dist-compare{ --ink:#5b6573; }
+#dist-compare .panels{ display:flex; gap:26px; max-width:960px; margin:0.8em auto 0; flex-wrap:wrap; justify-content:center; }
+#dist-compare .panel{ flex:1 1 380px; border-radius:16px; padding:18px 20px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+#dist-compare .panel h4{ margin:0 0 4px; font-weight:800; }
+#dist-compare .panel .sub{ font-size:0.78em; color:var(--ink); margin-bottom:12px; }
+#dist-compare .bars{ display:flex; align-items:flex-end; gap:5px; height:110px; }
+#dist-compare .bar{ flex:1; border-radius:4px 4px 0 0; }
+#dist-compare .p-single{ background:linear-gradient(180deg,#fff,#fdedf1); border:1px solid #f2ccd6; }
+#dist-compare .p-single h4{ color:#b0234a; }
+#dist-compare .p-single .bar{ background:#d9748c; }
+#dist-compare .p-portfolio{ background:linear-gradient(180deg,#fff,#eaf3de); border:1px solid #d7e6c4; }
+#dist-compare .p-portfolio h4{ color:#3b6d11; }
+#dist-compare .p-portfolio .bar{ background:#639922; }
+</style>
+
+<div id="dist-compare">
+<div class="panels">
+<div class="panel p-single">
+<h4>Una sola apuesta</h4>
+<div class="sub">cola pesada — como los datos de Correlation Ventures</div>
+<div class="bars">
+<div class="bar" style="height:70%"></div>
+<div class="bar" style="height:45%"></div>
+<div class="bar" style="height:25%"></div>
+<div class="bar" style="height:15%"></div>
+<div class="bar" style="height:10%"></div>
+<div class="bar" style="height:8%"></div>
+<div class="bar" style="height:6%"></div>
+<div class="bar" style="height:100%"></div>
+</div>
+</div>
+<div class="panel p-portfolio">
+<h4>El promedio del fondo</h4>
+<div class="sub">se aproxima a una normal — pero solo el promedio</div>
+<div class="bars">
+<div class="bar" style="height:15%"></div>
+<div class="bar" style="height:35%"></div>
+<div class="bar" style="height:60%"></div>
+<div class="bar" style="height:85%"></div>
+<div class="bar" style="height:100%"></div>
+<div class="bar" style="height:85%"></div>
+<div class="bar" style="height:60%"></div>
+<div class="bar" style="height:35%"></div>
+<div class="bar" style="height:15%"></div>
+</div>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:0.95em; color:#2a3340; max-width:820px; margin:1.1em auto 0;">Y esto asume independencia. Un shock que golpea a todas las empresas del fondo a la vez — una crisis, un mercado que se cierra — rompe la convergencia.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## ¿Quién Puede Aprovechar Esto? — θ (capacidad)
+
+<style>
+#capacity-gauge{ --ink:#5b6573; }
+#capacity-gauge .row{ max-width:820px; margin:1em auto 0; }
+#capacity-gauge .row-top{ display:flex; justify-content:space-between; font-weight:800; margin-bottom:6px; font-size:0.95em; }
+#capacity-gauge .track{ width:100%; height:22px; border-radius:11px; background:#eef1f4; overflow:hidden; }
+#capacity-gauge .fill{ height:100%; border-radius:11px; }
+#capacity-gauge .fund .fill{ width:88%; background:linear-gradient(90deg,#a9cf7c,#3b6d11); }
+#capacity-gauge .firm .fill{ width:18%; background:linear-gradient(90deg,#f2ccd6,#b0234a); }
+#capacity-gauge .row-cap{ font-size:0.8em; color:var(--ink); margin-top:6px; }
+</style>
+
+<div id="capacity-gauge">
+<div class="row fund">
+<div class="row-top"><span style="color:#3b6d11;">Fondo VC</span><span>θ alto</span></div>
+<div class="track"><div class="fill"></div></div>
+<div class="row-cap">20–30+ posiciones simultáneas — puede sostener que una colapse</div>
+</div>
+<div class="row firm">
+<div class="row-top"><span style="color:#b0234a;">Firma operativa</span><span>θ bajo</span></div>
+<div class="track"><div class="fill"></div></div>
+<div class="row-cap">una entrada a mercado, un producto — es una sola posición</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.2em auto 0;">La Ley de los Grandes Números no está disponible para todos por igual. Diversificar es, en sí, una capacidad (θ).</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Lo Que Queda Por Decidir
+
+<p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.25em; font-weight:700; color:#2a3340; max-width:820px; margin:0.4em auto;">Ingresos como probabilidad condicional. Riesgo como medida y preferencia. Ω (información disponible) creciendo en el tiempo. Lo que se estabiliza y lo que no.</p>
+<p class="fragment" data-fragment-index="1" style="text-align:center; font-size:1.4em; font-weight:800; color:#0d5e3a; max-width:780px; margin:0.5em auto;">Todo eso ya está sobre la mesa.</p>
+<p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.2em; color:#5b6573; max-width:760px; margin:1em auto 0;">¿Cómo decide una firma, sosteniendo todo esto a la vez?</p>
+
+---
+<!-- .slide: class="slide-heading" -->
 
 ## Gracias. 
 
