@@ -199,16 +199,16 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 
 --
 <!-- .slide: class="slide-heading" -->
-## θ Entra Dos Veces
+## θ (Capacidad) Entra Dos Veces
 
-<section>
-<div style="text-align:center; margin:0.4em auto 1.2em; font-size:1.3em;">$$E[R \mid \Omega, \theta] = \sum_{s} \textcolor{#b06a06}{p(s \mid \Omega, \theta)} \cdot \textcolor{#b0234a}{R(s, \theta)}$$</div>
+<div style="text-align:center; margin:0.4em auto 0.3em; font-size:1.3em;">$$E[R \mid \Omega, \theta] = \sum_{s} \textcolor{#b06a06}{p(s \mid \Omega, \theta)} \cdot \textcolor{#b0234a}{R(s, \theta)}$$</div>
+<p style="text-align:center; font-size:0.9em; color:#8a8f98; margin:0 auto 1em;">Ω = información disponible &nbsp;·&nbsp; θ = capacidad de la firma</p>
 
 <style>
 #theta-split{ --ink:#5b6573; }
 #theta-split .row{ display:flex; gap:clamp(14px,2.4vw,26px); justify-content:center; max-width:1000px; margin:0 auto; flex-wrap:wrap; }
 #theta-split .card{ flex:1 1 0; min-width:260px; border-radius:14px; padding:18px 20px; box-shadow:0 6px 18px rgba(0,0,0,.06); border:1px solid #e6eaef; }
-#theta-split .card h4{ margin:0 0 .4em; font-size:1.1em; font-weight:800; }
+#theta-split .card h4{ margin:0 0 .4em; font-size:1.05em; font-weight:800; }
 #theta-split .card p{ margin:0; color:var(--ink); font-size:0.95em; line-height:1.4; }
 #theta-split .c-amber{ background:linear-gradient(180deg,#fff,#fdf3e6); }
 #theta-split .c-amber h4{ color:#b06a06; }
@@ -219,25 +219,23 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 <div id="theta-split">
 <div class="row">
 <div class="card c-amber">
-<h4>p(s ∣ Ω, θ) — Detección + Captura</h4>
+<h4>p(s ∣ Ω (información), θ (capacidad)) — Detección + Captura</h4>
 <p>Una empresa con más capacidad no predice mejor el estado. Mueve la probabilidad hacia los estados favorables.</p>
 </div>
 <div class="card c-rose">
-<h4>R(s, θ) — Reconfiguración</h4>
+<h4>R(s, θ (capacidad)) — Reconfiguración</h4>
 <p>Dado el mismo estado del mundo, una empresa con más capacidad extrae más valor de él.</p>
 </div>
 </div>
 </div>
-
-<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.1em auto 0;">Por eso dos empresas con el mismo Ω pueden tener un E[R] completamente distinto.</p>
-</section>
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.1em auto 0;">Por eso dos empresas con el mismo Ω (información) pueden tener un E[R] completamente distinto.</p>
 
 --
 <!-- .slide: class="slide-heading" -->
 ## La Pregunta Correcta
 
 <p style="text-align:center; font-size:1.3em; font-weight:700; color:#2a3340; max-width:780px; margin:0.4em auto;">Ya no pregunten: "¿es correcto este número?"</p>
-<p style="text-align:center; font-size:1.4em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.4em auto;">Pregunten: "¿condicionado a qué Ω, y con qué θ?"</p>
+<p style="text-align:center; font-size:1.4em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.4em auto;">Pregunten: "¿condicionado a qué Ω (información), y con qué θ (capacidad)?"</p>
 <p style="text-align:center; font-size:1.05em; color:#5b6573; max-width:760px; margin:1em auto 0;">Pero conocer E[R] no basta. Falta la otra mitad: ¿cuánta varianza están dispuestos a tolerar?</p>
 
 ---
