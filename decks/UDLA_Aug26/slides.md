@@ -240,6 +240,179 @@ El comité quiere su recomendación. Elijan una de las tres alternativas:
 
 ---
 <!-- .slide: class="slide-heading" -->
+## El Riesgo Es Una Medida
+
+<p style="text-align:center; font-size:1.1em; color:#5b6573; max-width:820px; margin:0 auto 0.8em;">Conocer E[R] no basta. Todavía no saben si deberían tomar la apuesta.</p>
+
+<div style="text-align:center; margin:0.4em auto 0.8em; font-size:1.3em;">$$\sigma = \sqrt{\mathrm{Var}(R)} = \sqrt{E[(R-E[R])^2]}$$</div>
+
+<style>
+#risk-legend{ --ink:#5b6573; }
+#risk-legend .row{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; max-width:900px; margin:0.6em auto 0; }
+#risk-legend .chip{ background:#f7f9fb; border:1px solid #e6eaef; border-radius:999px; padding:8px 16px; font-size:0.9em; color:var(--ink); }
+#risk-legend .chip strong{ color:#0d5e3a; }
+</style>
+
+<div id="risk-legend">
+<div class="row">
+<div class="chip"><strong>σ</strong> — desviación estándar</div>
+<div class="chip"><strong>Var(R)</strong> — varianza de los ingresos</div>
+<div class="chip">Un número. Objetivo. Todos calculan el mismo.</div>
+</div>
+</div>
+
+--
+<!-- .slide: class="slide-heading" -->
+## El Mismo Riesgo, Dos Percepciones
+
+<style>
+#mirror-risk{ --ink:#5b6573; }
+#mirror-risk .stage{ display:flex; align-items:center; justify-content:center; gap:0; max-width:1040px; margin:0.8em auto 0; flex-wrap:wrap; }
+#mirror-risk .persona{ flex:1 1 0; min-width:230px; border-radius:16px; padding:20px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+#mirror-risk .persona .tag{ display:inline-block; font-weight:800; font-size:0.85em; padding:5px 14px; border-radius:999px; margin-bottom:10px; }
+#mirror-risk .persona p{ margin:0; color:var(--ink); font-size:0.95em; line-height:1.4; }
+#mirror-risk .p-act{ background:linear-gradient(180deg,#fff,#eaf3de); border:1px solid #d7e6c4; }
+#mirror-risk .p-act .tag{ background:#639922; color:#fff; }
+#mirror-risk .p-silent{ background:linear-gradient(180deg,#fff,#fdedf1); border:1px solid #f2ccd6; }
+#mirror-risk .p-silent .tag{ background:#b0234a; color:#fff; }
+#mirror-risk .center-node{ flex:0 0 auto; width:120px; text-align:center; font-weight:700; color:#2a3340; font-size:0.9em; padding:0 10px; }
+#mirror-risk .center-node .dot{ width:14px; height:14px; border-radius:50%; background:#8a8f98; margin:0 auto 8px; }
+</style>
+
+<div id="mirror-risk">
+<div class="stage">
+<div class="persona p-act">
+<div class="tag">Actúa</div>
+<p>Confronta el comentario. Percibe: riesgo bajo — "se aclara y ya."</p>
+</div>
+<div class="center-node">
+<div class="dot"></div>
+Mismo comentario. Mismo grupo. Mismo momento.
+</div>
+<div class="persona p-silent">
+<div class="tag">No Actúa</div>
+<p>Se queda callado. Percibe: riesgo altísimo — "esto puede romper la amistad."</p>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.2em auto 0;">La preferencia no solo cambia qué tan dispuestos están a actuar. Cambia cuánto riesgo <em>perciben</em> que hay.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Cómo Se Mide Esto
+
+<style>
+#instruments{ --ink:#5b6573; }
+#instruments .wrap{ max-width:1080px; margin:0.6em auto 0; display:flex; gap:20px; flex-wrap:wrap; align-items:stretch; justify-content:center; }
+#instruments .card{ flex:1 1 320px; border-radius:16px; padding:20px 22px; box-shadow:0 6px 18px rgba(0,0,0,.06); border:1px solid #e6eaef; background:linear-gradient(180deg,#fff,#fbfdff); }
+#instruments .card h4{ margin:0 0 6px; font-size:1.1em; font-weight:800; color:#0b3d5c; }
+#instruments .card .cite{ font-size:0.8em; color:#8a8f98; margin-bottom:10px; }
+#instruments .card p{ margin:0; color:var(--ink); font-size:0.92em; line-height:1.4; }
+#instruments .domains{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+#instruments .domains span{ background:#eef3f7; color:#0b3d5c; border-radius:999px; padding:5px 12px; font-size:0.8em; font-weight:700; }
+</style>
+
+<div id="instruments">
+<div class="wrap">
+<div class="card">
+<h4>Holt &amp; Laury</h4>
+<div class="cite">2002</div>
+<p>Loterías pagadas de verdad. Miden cuánto necesita alguien en el lado seguro antes de soltar la apuesta arriesgada.</p>
+</div>
+<div class="card">
+<h4>DOSPERT</h4>
+<div class="cite">Blais &amp; Weber, 2006</div>
+<p>Separa cuánto riesgo alguien toma de cuánto riesgo alguien percibe — por dominio.</p>
+<div class="domains">
+<span>Financiero</span>
+<span>Social</span>
+<span>Salud</span>
+<span>Recreativo</span>
+<span>Ético</span>
+</div>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1em; color:#2a3340; max-width:780px; margin:1.1em auto 0;">La misma persona puede ser conservadora invirtiendo y temeraria confrontando a un amigo. La preferencia es específica al dominio.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Mismo σ, Distinto CE
+
+<div style="text-align:center; margin:0.4em auto 0.3em; font-size:1.25em;">$$U(CE) = E[U(R)]$$</div>
+<p style="text-align:center; font-size:0.9em; color:#8a8f98; margin:0 auto 1em;">CE = equivalente de certeza — el monto seguro que da la misma satisfacción que la apuesta</p>
+
+<style>
+#ce-theta{ --ink:#5b6573; }
+#ce-theta .row{ display:flex; max-width:980px; margin:0.6em auto 0; border:1px solid #e6eaef; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+#ce-theta .col{ flex:1 1 0; padding:20px 22px; }
+#ce-theta .col + .col{ border-left:1px solid #e6eaef; }
+#ce-theta .col h4{ margin:0 0 .5em; font-size:1.1em; font-weight:800; }
+#ce-theta .col p{ margin:0; color:var(--ink); font-size:0.92em; line-height:1.4; }
+#ce-theta .c-win h4{ color:#0d5e3a; }
+#ce-theta .c-lose h4{ color:#8a8f98; }
+</style>
+
+<div id="ce-theta">
+<div class="row">
+<div class="col c-win">
+<h4>Instagram — θ alto</h4>
+<p>Ocho personas. Podía sostener más riesgo del que su tamaño sugería, porque podía absorber y corregir rápido.</p>
+</div>
+<div class="col c-lose">
+<h4>Color Labs — θ bajo</h4>
+<p>160 personas, estructura rígida. Menos capacidad de sostener el mismo σ, aunque tuviera más dinero.</p>
+</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1.05em; color:#2a3340; max-width:780px; margin:1.1em auto 0;">Mismo σ. CE completamente distinto — porque CE es función de θ (capacidad).</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## El Contest de Interpretación
+
+<style>
+#frame-contest{ --ink:#5b6573; }
+#frame-contest .frames{ position:relative; max-width:700px; margin:0.8em auto 1.4em; height:140px; }
+#frame-contest .frame{ position:absolute; top:10px; width:280px; border-radius:14px; padding:16px 18px; box-shadow:0 8px 20px rgba(0,0,0,.10); font-weight:700; text-align:center; }
+#frame-contest .frame-a{ left:0; background:linear-gradient(180deg,#fff,#fdf3e6); border:1px solid #f2ddb8; color:#b06a06; transform:rotate(-4deg); }
+#frame-contest .frame-b{ right:0; background:linear-gradient(180deg,#fff,#fdedf1); border:1px solid #f2ccd6; color:#b0234a; transform:rotate(4deg); z-index:2; }
+#frame-contest .frame-b span{ display:block; font-weight:400; font-size:0.8em; margin-top:4px; }
+#frame-contest .frame-a span{ display:block; font-weight:400; font-size:0.8em; margin-top:4px; }
+#frame-contest .vs{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-weight:800; color:#8a8f98; font-size:0.9em; z-index:3; background:#fff; border-radius:50%; width:34px; height:34px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,.12); }
+#frame-contest .outcomes{ display:flex; gap:14px; justify-content:center; max-width:800px; margin:0 auto; flex-wrap:wrap; }
+#frame-contest .outcome{ flex:1 1 260px; border-radius:14px; padding:14px 18px; font-size:0.9em; }
+#frame-contest .o-win{ background:#eaf3de; color:#3b6d11; }
+#frame-contest .o-lose{ background:#fdedf1; color:#791f1f; }
+</style>
+
+<div id="frame-contest">
+<div class="frames">
+<div class="frame frame-a">Amenaza<span>"El mercado se cierra, retirémonos"</span></div>
+<div class="vs">VS</div>
+<div class="frame frame-b">Oportunidad<span>"Los demás fallan, es nuestro momento"</span></div>
+</div>
+<div class="outcomes">
+<div class="outcome o-win">Instagram — dos fundadores, contest resuelto en semanas</div>
+<div class="outcome o-lose">Color Labs — 160 personas, caos interno, contest nunca resuelto</div>
+</div>
+</div>
+
+<p style="text-align:center; font-size:1em; color:#2a3340; max-width:780px; margin:1.2em auto 0;">Ω nunca llega neutral. Sensing es político, no técnico.</p>
+
+--
+<!-- .slide: class="slide-heading" -->
+## Lo Que Falta
+
+<p class="fragment" data-fragment-index="0" style="text-align:center; font-size:1.4em; font-weight:700; color:#2a3340; max-width:780px; margin:0.4em auto;">σ, CE, y el marco que gana — nada de eso es fijo.</p>
+<p class="fragment" data-fragment-index="1" style="text-align:center; font-size:1.4em; font-weight:800; color:#0d5e3a; max-width:820px; margin:0.4em auto;">Todo se actualiza conforme llega información nueva.</p>
+<p class="fragment" data-fragment-index="2" style="text-align:center; font-size:1.15em; color:#5b6573; max-width:760px; margin:1em auto 0;">¿Qué significa exactamente "conforme llega información nueva"?</p>
+
+---
+<!-- .slide: class="slide-heading" -->
 
 ## Gracias. 
 
