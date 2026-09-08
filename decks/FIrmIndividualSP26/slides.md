@@ -397,6 +397,587 @@ question; it does not test firm individuality.
 
 ---
 
+<!-- .slide: class="slide-heading fi-examples" -->
+
+<style>
+  .reveal section.fi-examples > h2 {
+    max-width: 840px;
+    margin: 24px auto 26px;
+    font-size: 40px;
+    line-height: 1.12;
+    color: #034638;
+    text-transform: none;
+  }
+  .fi-examples .b2-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #17251f;
+  }
+  .fi-examples .b2-context {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #53635b;
+  }
+  .fi-examples .b2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .fi-examples .b2-card {
+    padding: 22px 20px;
+    border: 1px solid #dce7e1;
+    border-top: 5px solid #034638;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(3,70,56,.07);
+    text-align: center;
+  }
+  .fi-examples .b2-purple-card {
+    border-top-color: #582c83;
+  }
+  .fi-examples .b2-label {
+    margin-bottom: 14px;
+    font-size: 17px;
+    font-weight: 750;
+    letter-spacing: .07em;
+    color: #034638;
+  }
+  .fi-examples .b2-purple-card .b2-label {
+    color: #582c83;
+  }
+  .fi-examples .b2-main {
+    font-size: 27px;
+    font-weight: 700;
+  }
+  .fi-examples .b2-number {
+    margin: 12px 0;
+    font-size: 44px;
+    font-weight: 800;
+    color: #034638;
+  }
+  .fi-examples .b2-purple-card .b2-number {
+    color: #582c83;
+  }
+  .fi-examples .b2-sub {
+    margin-top: 10px;
+    font-size: 19px;
+    color: #53635b;
+  }
+  .fi-examples .b2-band {
+    margin-top: 20px;
+    padding: 18px 22px;
+    border: 1px solid #dce7e1;
+    border-radius: 13px;
+    background: #edf5f1;
+    font-size: 25px;
+    text-align: center;
+    color: #034638;
+  }
+  .fi-examples .b2-purple-band {
+    border-color: #dfd1eb;
+    background: #f3edf8;
+    color: #582c83;
+  }
+  .fi-examples .b2-question {
+    margin-top: 24px;
+    font-size: 27px;
+    font-weight: 650;
+    text-align: center;
+    color: #034638;
+  }
+  .fi-examples .b2-source {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: left;
+    color: #53635b;
+  }
+  .reveal .fi-examples .b2-table {
+    width: 100%;
+    margin: 22px auto 0;
+    border-collapse: collapse;
+    font-size: 21px;
+  }
+  .reveal .fi-examples .b2-table th,
+  .reveal .fi-examples .b2-table td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #dce7e1;
+    text-align: right;
+  }
+  .reveal .fi-examples .b2-table th {
+    font-size: 17px;
+    color: #53635b;
+  }
+  .reveal .fi-examples .b2-table th:first-child,
+  .reveal .fi-examples .b2-table td:first-child {
+    text-align: left;
+  }
+  .fi-examples .b2-highlight {
+    background: #edf5f1;
+    font-weight: 700;
+  }
+  .fi-examples .b2-person {
+    display: inline-grid;
+    place-items: center;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: #034638;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .fi-examples .b2-person-b {
+    background: #582c83;
+  }
+  .fi-examples .b2-swap {
+    display: grid;
+    margin-top: 18px;
+  }
+  .fi-examples .b2-swap > div {
+    grid-area: 1 / 1;
+  }
+  .fi-examples .b2-person-cell {
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    color: #53635b;
+  }
+  .fi-examples .b2-equation {
+    padding: 18px 10px;
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .fi-examples .b2-green {
+    color: #034638;
+  }
+  .fi-examples .b2-purple {
+    color: #582c83;
+  }
+  .fi-examples .b2-arrow {
+    margin: 12px 0;
+    font-size: 30px;
+    text-align: center;
+    color: #8b9e94;
+  }
+</style>
+
+## What would the owner choose in a classical newsvendor problem?
+
+<div class="b2-wrap">
+  <div class="b2-context">
+    A firm chooses <strong>price p</strong> and
+    <strong>inventory q</strong> before demand is realized.
+  </div>
+  <div class="b2-grid">
+    <div class="b2-card">
+      <div class="b2-label">INTEGRATED OWNER</div>
+      <div class="b2-main">Controls both levers</div>
+      <div class="b2-sub">Maximizes total expected profit</div>
+      <div class="b2-number">236.2</div>
+      <div class="b2-sub">
+        Price <strong>11.82</strong>
+        · Inventory <strong>48.81</strong>
+      </div>
+    </div>
+    <div class="b2-card b2-purple-card fragment" data-fragment-index="0">
+      <div class="b2-label">DIVIDED FIRM</div>
+      <div class="b2-main">Two roles choose simultaneously</div>
+      <div class="b2-sub">Each optimizes its assigned objective</div>
+      <div class="b2-number">106.1</div>
+      <div class="b2-sub">
+        Price <strong>14.20</strong>
+        · Inventory <strong>19.00</strong>
+      </div>
+    </div>
+  </div>
+  <div class="b2-band fragment" data-fragment-index="1">
+    <strong>55.1% less expected profit</strong><br>
+    with fully rational roleholders.
+  </div>
+  <div class="b2-question fragment" data-fragment-index="2">
+    Where does the gap come from?
+  </div>
+  <div class="b2-source">
+    D = 100 − 5p + ε; ε uniform on [−20, 20].
+    Production cost 4; stockout cost 6; holding cost 2.
+    Source: Section 4.1 and Table 2.
+  </div>
+</div>
+
+
+--
+
+<!-- .slide: class="slide-heading fi-examples" -->
+
+## What changes if we swap the people?
+
+<div class="b2-wrap">
+  <div class="b2-context">
+    Two identical, fully rational roleholders.
+    Objectives and decision rights belong to the roles.
+  </div>
+  <div class="b2-grid">
+    <div class="b2-card">
+      <div class="b2-label">SALES CONTROLS PRICE</div>
+      <div class="b2-main">Maximize revenue</div>
+      <div class="b2-sub">Costs fall outside its objective.</div>
+    </div>
+    <div class="b2-card b2-purple-card">
+      <div class="b2-label">PRODUCTION CONTROLS INVENTORY</div>
+      <div class="b2-main">Minimize costs</div>
+      <div class="b2-sub">Sales revenue falls outside its objective.</div>
+    </div>
+  </div>
+  <div class="b2-swap">
+    <div class="b2-grid fragment fade-out" data-fragment-index="0">
+      <div class="b2-person-cell">
+        <div class="b2-person">A</div>
+        <div>Rational roleholder</div>
+      </div>
+      <div class="b2-person-cell">
+        <div class="b2-person b2-person-b">B</div>
+        <div>Rational roleholder</div>
+      </div>
+    </div>
+    <div class="b2-grid fragment fade-in" data-fragment-index="0">
+      <div class="b2-person-cell">
+        <div class="b2-person b2-person-b">B</div>
+        <div>Same sales objective</div>
+      </div>
+      <div class="b2-person-cell">
+        <div class="b2-person">A</div>
+        <div>Same production objective</div>
+      </div>
+    </div>
+  </div>
+  <div class="b2-band fragment" data-fragment-index="1">
+    The role-defined optimization problems remain.<br>
+    <strong>Swapping identical people does not remove the gap.</strong>
+  </div>
+  <div class="b2-question fragment" data-fragment-index="2">
+    Does this performance loss mean<br>
+    the firm cannot be an individual?
+  </div>
+  <div class="b2-source">
+    Personnel-invariance intuition: Section 4.1.
+    The swap assumes identical roleholders.
+  </div>
+</div>
+
+
+--
+
+<!-- .slide: class="slide-heading fi-examples" -->
+
+## What would the owner do with this credit?
+
+<div class="b2-wrap">
+  <div class="b2-context">
+    A hypothetical bank evaluates a <strong>$6 million credit</strong>.
+    Begin with the rational, risk-neutral owner.
+  </div>
+  <div class="b2-grid">
+    <div class="b2-card">
+      <div class="b2-label">BELIEF IN THE GOOD STATE (REPAYMENT)</div>
+      <div class="b2-number">0.730</div>
+      <div class="b2-sub">Equal-weight geometric belief benchmark</div>
+    </div>
+    <div class="b2-card">
+      <div class="b2-label">RISK-NEUTRAL APPROVAL HURDLE</div>
+      <div class="b2-number">0.600</div>
+      <div class="b2-sub">Break-even success probability</div>
+    </div>
+  </div>
+  <div class="fragment" data-fragment-index="0">
+    <div class="b2-arrow" aria-hidden="true">↓</div>
+    <div class="b2-equation">
+      0.730 − 0.600 = +0.130
+    </div>
+    <div class="b2-band">
+      <strong>Approve the credit.</strong><br>
+      The belief exceeds the hurdle by 13 percentage points.
+    </div>
+  </div>
+  <div class="b2-question fragment" data-fragment-index="1">
+    What happens when the bank makes the decision?
+  </div>
+  <div class="b2-source">
+    Approval margin is belief minus hurdle.
+  </div>
+</div>
+
+--
+
+<!-- .slide: class="slide-heading fi-examples" -->
+
+## How does the bank compare?
+
+<div class="b2-wrap">
+  <table class="b2-table">
+    <thead>
+      <tr>
+        <th>Evaluator</th>
+        <th>Belief</th>
+        <th>Hurdle</th>
+        <th>Approval margin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Risk-neutral owner</td>
+        <td>0.730</td>
+        <td>0.600</td>
+        <td>+0.130</td>
+      </tr>
+      <tr class="b2-highlight fragment" data-fragment-index="0">
+        <td>Bank as built</td>
+        <td>0.675</td>
+        <td>0.639</td>
+        <td>+0.036</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="b2-band fragment" data-fragment-index="1">
+    Both approve, but the bank has<br>
+    <strong>a lower belief and a higher hurdle.</strong>
+  </div>
+  <div class="fragment" data-fragment-index="2">
+    <div class="b2-arrow" aria-hidden="true">↓</div>
+    <div class="b2-grid">
+      <div class="b2-card">
+        <div class="b2-label">LOAN PRODUCTION</div>
+        <div class="b2-main">Belief: 0.857</div>
+        <div class="b2-sub">Risk tolerance: 3</div>
+      </div>
+      <div class="b2-card b2-purple-card">
+        <div class="b2-label">RISK MANAGEMENT</div>
+        <div class="b2-main">Belief: 0.550</div>
+        <div class="b2-sub">Risk tolerance: 6</div>
+      </div>
+    </div>
+  </div>
+  <div class="b2-question fragment" data-fragment-index="3">
+    How do these two coalitions<br>
+    produce the bank’s evaluation?
+  </div>
+  <div class="b2-source">
+    Source: Section 4.3 and Table 3. Displayed values are rounded.
+  </div>
+</div>
+
+Note:
+The bank's exact hurdle is 0.639468.
+Its belief is approximately 0.675.
+
+The belief wedge is approximately 0.055.
+The risk wedge is approximately 0.039.
+
+--
+
+<!-- .slide: class="slide-heading fi-examples" -->
+
+## How much risk can the bank bear?
+
+<div class="b2-wrap">
+  <div class="b2-context">
+    First, aggregate the coalitions’ risk-bearing capacity (tolerance).
+  </div>
+  <div class="b2-grid">
+    <div class="b2-card">
+      <div class="b2-label">LOAN PRODUCTION</div>
+      <div class="b2-number">3</div>
+      <div class="b2-sub">Risk tolerance</div>
+    </div>
+    <div class="b2-card b2-purple-card">
+      <div class="b2-label">RISK MANAGEMENT</div>
+      <div class="b2-number">6</div>
+      <div class="b2-sub">Risk tolerance</div>
+    </div>
+  </div>
+  <div class="fragment" data-fragment-index="0">
+    <div class="b2-arrow" aria-hidden="true">↓</div>
+    <div class="b2-equation">
+      κ<sub>F</sub> =
+      <span class="b2-green">3</span> +
+      <span class="b2-purple">6</span> = 9
+    </div>
+    <div class="b2-band">
+      The bank is more risk tolerant<br>
+      than either coalition inside it.
+    </div>
+  </div>
+  <div class="b2-purple-band b2-band fragment" data-fragment-index="1">
+    Bank hurdle: <strong>0.639</strong>
+    &nbsp; · &nbsp;
+    Risk-neutral hurdle: <strong>0.600</strong>
+  </div>
+  <div class="b2-question fragment" data-fragment-index="2">
+    As total tolerance grows,<br>
+    the risk-neutral benchmark gets closer.
+  </div>
+  <div class="b2-source">
+    CARA calibration under linear and determinate sharing.
+    Exact risk neutrality requires unbounded tolerance.
+    Source: Section 4.3.
+  </div>
+</div>
+
+Note:
+Risk tolerance adds: 3 + 6 = 9.
+Aggregation makes the bank more willing to bear risk than either desk.
+
+Scaling both tolerances proportionally increases total tolerance
+while preserving their relative weights and the bank's belief.
+The risk wedge then narrows.
+
+With finite total tolerance the bank remains risk averse.
+Geometric belief pooling is a separate mechanism.
+
+--
+
+<!-- .slide: class="slide-heading fi-examples" -->
+
+## Whose belief becomes the bank’s?
+
+<div class="b2-wrap">
+  <div class="b2-context">
+    Next, use each coalition’s share of risk-bearing capacity (tolerance)
+    to weight its belief.
+  </div>
+  <div class="b2-grid">
+    <div class="b2-card">
+      <div class="b2-label">LOAN PRODUCTION</div>
+      <div class="b2-main">Belief: 6/7 ≈ 0.857</div>
+      <div class="b2-sub">Odds: 6</div>
+      <div class="b2-sub">
+        <strong>Tolerance weight: 3/9 = ⅓</strong>
+      </div>
+    </div>
+    <div class="b2-card b2-purple-card">
+      <div class="b2-label">RISK MANAGEMENT</div>
+      <div class="b2-main">Belief: 0.550</div>
+      <div class="b2-sub">Odds: 11/9 ≈ 1.222</div>
+      <div class="b2-sub">
+        <strong>Tolerance weight: 6/9 = ⅔</strong>
+      </div>
+    </div>
+  </div>
+  <div class="fragment" data-fragment-index="0">
+    <div class="b2-arrow" aria-hidden="true">↓</div>
+    <div class="b2-equation">
+      <span class="b2-green">6<sup>⅓</sup></span>
+      ×
+      <span class="b2-purple">(11/9)<sup>⅔</sup></span>
+      ≈ 2.077
+    </div>
+    <div class="b2-band b2-purple-band">
+      Bank belief:
+      <strong>2.077 / (1 + 2.077) ≈ 0.675</strong>
+    </div>
+  </div>
+  <div class="b2-question fragment" data-fragment-index="1">
+    The more cautious coalition bears more risk<br>
+    and receives more weight.
+  </div>
+  <div class="b2-source">
+    Tolerance-weighted geometric pooling under linear and determinate
+    sharing. Source: Section 4.3.
+  </div>
+</div>
+
+Note:
+Convert each probability into odds, combine the odds geometrically
+using the capacity weights, then convert the result back into a
+probability.
+
+Risk management receives two-thirds of the weight.
+The resulting bank belief lies between the coalition beliefs.
+
+Equal-weight geometric pooling gives 0.730, the owner's benchmark.
+The arithmetic mean is approximately 0.704.
+
+--
+
+<!-- .slide: class="slide-heading fi-examples" -->
+
+## What if we move the capacity?
+
+<div class="b2-wrap">
+  <div class="b2-context">
+    Keep total risk tolerance at <strong>9</strong>.
+    Keep both coalitions’ beliefs fixed.
+  </div>
+  <table class="b2-table">
+    <thead>
+      <tr>
+        <th>Tolerance allocation</th>
+        <th>Bank belief</th>
+        <th>Hurdle</th>
+        <th>Margin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>More with risk management</td>
+        <td>0.675</td>
+        <td>0.639</td>
+        <td>+0.036</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="0">
+        <td>Even split</td>
+        <td>0.730</td>
+        <td>0.639</td>
+        <td>+0.091</td>
+      </tr>
+      <tr class="b2-highlight fragment" data-fragment-index="1">
+        <td>More with loan production</td>
+        <td>0.779</td>
+        <td>0.639</td>
+        <td>+0.140</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="b2-band fragment" data-fragment-index="2">
+    Owner’s approval margin: <strong>+0.130</strong><br>
+    Reallocating tolerance can bring the bank close to it.
+  </div>
+  <div class="b2-grid fragment" data-fragment-index="3" style="margin-top:20px;">
+    <div class="b2-card">
+      <div class="b2-label">TOTAL TOLERANCE</div>
+      <div class="b2-main">Shapes risk tolerance</div>
+    </div>
+    <div class="b2-card b2-purple-card">
+      <div class="b2-label">DISTRIBUTION OF TOLERANCE</div>
+      <div class="b2-main">Shapes the belief</div>
+    </div>
+  </div>
+  <div class="b2-question fragment" data-fragment-index="4">
+    When do these internal parts<br>
+    constitute one individual?
+  </div>
+  <div class="b2-source">
+    Source: Table 4. The owner’s belief is 0.730 and hurdle is 0.600.
+    Displayed values are rounded.
+  </div>
+</div>
+
+Note:
+At the even split, the bank reaches the owner's belief benchmark
+but retains its risk wedge.
+
+With more capacity assigned to loan production, optimism offsets
+the risk wedge. The bank's approval margin approaches the owner's
+without the bank becoming risk neutral.
+
+These comparisons assume that the evaluative construction and
+coordinated implementation hold. Proximity to the owner and firm
+individuality remain separate properties.
 
 ---
 <!-- .slide: class="slide-heading" -->
