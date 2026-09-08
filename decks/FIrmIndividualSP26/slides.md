@@ -1209,6 +1209,9 @@ individuality remain separate properties.
       </div>
     </div>
   </div>
+
+--
+
   <div class="b3-band fragment" data-fragment-index="4">
     <strong>Budget balance: the allocations exhaust firm payoff.</strong>
     <div class="b3-equation">
@@ -1241,8 +1244,6 @@ In the CARA example, the marginal share equals the coalition's
 share of total risk tolerance.
 
 --
-
-<!-- .slide: class="slide-heading fi-model" -->
 
 <!-- .slide: class="slide-heading fi-model" -->
 
@@ -1303,6 +1304,9 @@ share of total risk tolerance.
       </div>
     </div>
   </div>
+</div>
+--
+</div>
   <div class="b3-band fragment" data-fragment-index="2">
     <strong>In the CARA bank:</strong>
     <div class="b3-grid" style="margin-top:10px;">
@@ -1401,6 +1405,9 @@ The bank has κF = 9 and weights 1/3 and 2/3.
     Linear and determinate sharing makes the coalitions<br>
     rank firm acts identically.
   </div>
+</div>
+--
+</div>
   <div class="b3-purple-band b3-band fragment" data-fragment-index="2">
     Different beliefs and information can remain.<br>
     <strong>The induced ranking of firm acts is shared.</strong>
@@ -1430,8 +1437,6 @@ by all coalitions. Private costs outside shared output will create
 a separate issue later in this block.
 
 --
-
-<!-- .slide: class="slide-heading fi-model" -->
 
 <!-- .slide: class="slide-heading fi-model" -->
 
@@ -1512,6 +1517,9 @@ a separate issue later in this block.
       </div>
     </div>
   </div>
+</div>
+--
+</div>
   <div class="b3-band fragment" data-fragment-index="1">
     <strong>Decisional unity:</strong>
     the organization implements an optimal admissible rule<br>
