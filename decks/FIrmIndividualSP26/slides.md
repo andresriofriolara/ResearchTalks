@@ -297,6 +297,106 @@ its strongest supported register. This motivates the theoretical
 question; it does not test firm individuality.
 
 --
+<!-- .slide: class="slide-heading fi-research-questions" -->
+
+## Research Questions
+
+<style>
+  .reveal section.fi-research-questions > h2 {
+    margin: 24px auto 30px;
+    font-size: 42px;
+    line-height: 1.1;
+    color: #034638;
+    text-transform: none;
+  }
+  .fi-research-questions .fir-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 12px 20px;
+  }
+  .fi-research-questions .fir-grid {
+    display: grid;
+    gap: 26px;
+  }
+  .fi-research-questions .fir-card {
+    position: relative;
+    padding: 24px 26px 26px 36px;
+    background: linear-gradient(180deg, #fff, #f8fbf9);
+    border: 1px solid #dce7e1;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+    text-align: left;
+  }
+  .fi-research-questions .fir-badge {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #034638;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    box-shadow: 0 6px 16px rgba(3, 70, 56, .22);
+  }
+  .reveal .fi-research-questions .fir-title {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 750;
+    line-height: 1.2;
+    color: #034638;
+    text-transform: none;
+  }
+  .fi-research-questions .fir-sub {
+    font-size: 20px;
+    line-height: 1.35;
+    color: #53635b;
+  }
+  .fi-research-questions .fir-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    border-radius: 0 0 16px 16px;
+    background: linear-gradient(90deg, #034638, #8fc6bc);
+  }
+</style>
+
+<div class="fir-wrap">
+  <div class="fir-grid">
+    <div class="fir-card fragment" data-fragment-index="0">
+      <div class="fir-badge">1</div>
+      <h3 class="fir-title">When is a firm an individual?</h3>
+      <div class="fir-sub">
+        When does an internally plural organization constitute
+        an individual decision-maker?
+      </div>
+    </div>
+    <div class="fir-card fragment" data-fragment-index="1">
+      <div class="fir-badge">2</div>
+      <h3 class="fir-title">Which conditions must hold?</h3>
+      <div class="fir-sub">
+        Under what organizational conditions can the firm’s choices
+        be represented as those of one individual?
+      </div>
+    </div>
+    <div class="fir-card fragment" data-fragment-index="2">
+      <div class="fir-badge">3</div>
+      <h3 class="fir-title">When does firm individuality fail?</h3>
+      <div class="fir-sub">
+        What happens when the conditions supporting it are violated?
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
 
 ---
 <!-- .slide: class="slide-heading" -->
