@@ -980,9 +980,6 @@ coordinated implementation hold. Proximity to the owner and firm
 individuality remain separate properties.
 
 ---
-
-<!-- .slide: class="slide-heading fi-model" -->
-
 <style>
   .reveal section.fi-model > h2 {
     max-width: 840px;
@@ -1209,10 +1206,16 @@ individuality remain separate properties.
       </div>
     </div>
   </div>
+</div>
 
 --
 
-  <div class="b3-band fragment" data-fragment-index="4">
+<!-- .slide: class="slide-heading fi-model" -->
+
+## Budget balance: allocations exhaust firm payoff
+
+<div class="b3-wrap">
+<div class="b3-band fragment" data-fragment-index="0">
     <strong>Budget balance: the allocations exhaust firm payoff.</strong>
     <div class="b3-equation">
       \[
@@ -1305,9 +1308,15 @@ share of total risk tolerance.
     </div>
   </div>
 </div>
+
 --
-</div>
-  <div class="b3-band fragment" data-fragment-index="2">
+
+<!-- .slide: class="slide-heading fi-model" -->
+
+## The CARA bank: risk tolerance and belief weights
+
+<div class="b3-wrap">
+<div class="b3-band fragment" data-fragment-index="0">
     <strong>In the CARA bank:</strong>
     <div class="b3-grid" style="margin-top:10px;">
       <div>
@@ -1358,6 +1367,7 @@ In the CARA calibration, tolerances and coalition stocks are constant.
 The bank has κF = 9 and weights 1/3 and 2/3.
 
 --
+
 <!-- .slide: class="slide-heading fi-model" -->
 
 ## Which sharing conditions must hold?
@@ -1406,9 +1416,15 @@ The bank has κF = 9 and weights 1/3 and 2/3.
     rank firm acts identically.
   </div>
 </div>
+
 --
-</div>
-  <div class="b3-purple-band b3-band fragment" data-fragment-index="2">
+
+<!-- .slide: class="slide-heading fi-model" -->
+
+## Unanimity: a shared ranking of firm acts
+
+<div class="b3-wrap">
+<div class="b3-purple-band b3-band fragment" data-fragment-index="0">
     Different beliefs and information can remain.<br>
     <strong>The induced ranking of firm acts is shared.</strong>
   </div>
@@ -1518,9 +1534,15 @@ a separate issue later in this block.
     </div>
   </div>
 </div>
+
 --
-</div>
-  <div class="b3-band fragment" data-fragment-index="1">
+
+<!-- .slide: class="slide-heading fi-model" -->
+
+## Decisional unity: implementing the firm’s criterion
+
+<div class="b3-wrap">
+<div class="b3-band fragment" data-fragment-index="0">
     <strong>Decisional unity:</strong>
     the organization implements an optimal admissible rule<br>
     according to its own firm-level criterion.
@@ -1822,6 +1844,7 @@ The inconsistent embedded plot in Figure 8 is not reproduced here.
 Transition to Block 4:
 How can the experiments distinguish failure to construct a stable
 evaluator from failure to implement its preferred rule?
+
 
 ---
 <!-- .slide: class="slide-heading" -->
