@@ -1845,6 +1845,750 @@ Transition to Block 4:
 How can the experiments distinguish failure to construct a stable
 evaluator from failure to implement its preferred rule?
 
+---
+
+<!-- .slide: class="slide-heading fi-experiments" -->
+
+<style>
+  .reveal section.fi-experiments > h2 {
+    max-width: 840px;
+    margin: 24px auto 24px;
+    font-size: 38px;
+    line-height: 1.12;
+    color: #034638;
+    text-transform: none;
+  }
+  .fi-experiments .b4-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #17251f;
+  }
+  .fi-experiments .b4-context {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #53635b;
+  }
+  .fi-experiments .b4-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .fi-experiments .b4-card {
+    padding: 20px 18px;
+    border: 1px solid #dce7e1;
+    border-top: 5px solid #034638;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(3,70,56,.07);
+    text-align: center;
+  }
+  .fi-experiments .b4-purple-card {
+    border-top-color: #582c83;
+  }
+  .fi-experiments .b4-orange-card {
+    border-top-color: #b96b19;
+  }
+  .fi-experiments .b4-label {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 750;
+    letter-spacing: .06em;
+    color: #034638;
+  }
+  .fi-experiments .b4-purple-card .b4-label {
+    color: #582c83;
+  }
+  .fi-experiments .b4-orange-card .b4-label {
+    color: #965313;
+  }
+  .fi-experiments .b4-main {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .fi-experiments .b4-sub {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #53635b;
+  }
+  .fi-experiments .b4-band {
+    margin-top: 20px;
+    padding: 17px 22px;
+    border: 1px solid #dce7e1;
+    border-radius: 13px;
+    background: #edf5f1;
+    font-size: 23px;
+    text-align: center;
+    color: #034638;
+  }
+  .fi-experiments .b4-purple-band {
+    border-color: #dfd1eb;
+    background: #f3edf8;
+    color: #582c83;
+  }
+  .fi-experiments .b4-orange-band {
+    border-color: #ecd8bf;
+    background: #fff5e9;
+    color: #965313;
+  }
+  .fi-experiments .b4-equation {
+    margin: 14px 0;
+    font-size: 28px;
+    text-align: center;
+  }
+  .fi-experiments .b4-equation .katex-display {
+    margin: .45em 0;
+  }
+  .fi-experiments .b4-caption {
+    margin-top: 8px;
+    font-size: 17px;
+    line-height: 1.35;
+    color: #6b7280;
+    text-align: center;
+  }
+  .fi-experiments .b4-model {
+    margin-bottom: 20px;
+    padding: 12px 18px;
+    border-left: 5px solid #582c83;
+    border-radius: 0 10px 10px 0;
+    background: #f5f1f8;
+    font-size: 19px;
+    color: #582c83;
+    text-align: left;
+  }
+  .fi-experiments .b4-source {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #53635b;
+    text-align: left;
+  }
+  .reveal .fi-experiments .b4-table {
+    width: 100%;
+    margin: 18px auto 0;
+    border-collapse: collapse;
+    font-size: 20px;
+  }
+  .reveal .fi-experiments .b4-table th,
+  .reveal .fi-experiments .b4-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #dce7e1;
+    text-align: left;
+    vertical-align: top;
+  }
+  .reveal .fi-experiments .b4-table th {
+    font-size: 16px;
+    color: #53635b;
+  }
+  .fi-experiments .b4-step {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-top: 12px;
+    padding: 14px 18px;
+    border: 1px solid #dce7e1;
+    border-radius: 12px;
+    background: #fff;
+    text-align: left;
+    font-size: 21px;
+  }
+  .fi-experiments .b4-number {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #034638;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+  }
+</style>
+
+## 5 Experiments
+
+<div class="b4-wrap">
+  <div class="b4-context">
+    Proposed experimental program
+  </div>
+  <table class="b4-table">
+    <thead>
+      <tr>
+        <th>Study</th>
+        <th>Question</th>
+        <th>Connection to the model</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1 · Primitives</strong></td>
+        <td>What do individuals bring into the firm?</td>
+        <td>Risk tolerance, beliefs, and individual stake-dependence</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="0">
+        <td><strong>2 · Aggregation</strong></td>
+        <td>Do the sharing conditions produce the predicted evaluator?</td>
+        <td>Additive risk tolerance and geometric belief pooling</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="1">
+        <td><strong>3 · Evaluative failure</strong></td>
+        <td>When does the stable evaluator fail?</td>
+        <td>A binding loss floor changes marginal sharing</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="2">
+        <td><strong>4 · Decisional unity</strong></td>
+        <td>When does the firm fail to implement its own criterion?</td>
+        <td>Information architecture and private blame incentives</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="3">
+        <td><strong>5 · Governance</strong></td>
+        <td>Do firms build and preserve these conditions?</td>
+        <td>Chosen contracts, enforcement, and environmental change</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="b4-band fragment" data-fragment-index="4">
+    <strong>Construct the evaluator → test its failure → test implementation.</strong>
+  </div>
+  <div class="b4-source">
+    Study 1 supplies the measurements.
+    Study 5 extends the theory to endogenous governance.
+  </div>
+</div>
+
+Note:
+These are proposed designs, not completed experimental results.
+
+Studies 2 and 3 examine evaluative unity and its failure.
+Study 4 examines decisional unity and its failure.
+Study 1 supplies the instruments and individual baselines.
+Study 5 asks whether organizations choose arrangements that preserve
+the relevant properties.
+
+--
+
+<!-- .slide: class="slide-heading fi-experiments" -->
+
+## Study 1: what do individuals bring into the firm?
+
+<div class="b4-wrap">
+  <div class="b4-model">
+    <strong>Toy-model connection:</strong>
+    measure the individual inputs before composing the experimental firms.
+  </div>
+  <table class="b4-table">
+    <thead>
+      <tr>
+        <th>Individual task</th>
+        <th>What varies?</th>
+        <th>What it measures</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>50–50 lottery versus sure amounts</td>
+        <td>Three stake scales</td>
+        <td>Risk tolerance and scale sensitivity</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="0">
+        <td>Urn with noisy signals</td>
+        <td>Signal histories</td>
+        <td>Posterior beliefs and updating bias</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="1">
+        <td>Subjective-event bet versus objective lottery</td>
+        <td>Two prize levels</td>
+        <td>Individual stake-dependence</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="fragment" data-fragment-index="2">
+    <div class="b4-equation">
+      \[
+        \Delta_i
+        =q_i^*(\text{high prize})-q_i^*(\text{low prize})
+      \]
+    </div>
+    <div class="b4-caption">
+      Δ<sub>i</sub> (delta) is individual i’s change in implied probability.
+      q<sub>i</sub><sup>*</sup> is the objective winning probability
+      at the switch between bets paying the same prize.
+    </div>
+  </div>
+  <div class="b4-band fragment" data-fragment-index="3">
+    <strong>Use the measurements twice:</strong><br>
+    compose firms using estimated risk tolerances;<br>
+    carry individual stake-dependence into Study 3.
+  </div>
+  <div class="b4-source">
+    Individual measurement battery.
+    A separate random-incentive versus pay-all arm checks instrument validity.
+    Source: Experimental Protocol, Study 1.
+  </div>
+</div>
+
+Note:
+Study 1 is primarily measurement, not a treatment test of the theory.
+
+Risk tolerance is estimated using adaptive certainty-equivalent lists.
+Composition uses an interval or latent estimate with a reliability
+threshold rather than a single switching row.
+
+The matched-bet task compares the same prize paid on a subjective
+event with that prize paid by an objective lottery.
+Its switching probability is the implied weight.
+
+Here q denotes an objective winning probability, not the inventory
+quantity used in the newsvendor.
+
+The payment-protocol comparison is a separate validity arm.
+The protocol also includes convergent risk measures and retests.
+
+--
+
+<!-- .slide: class="slide-heading fi-experiments" -->
+
+## Study 2: does risk tolerance add?
+
+<div class="b4-wrap">
+  <div class="b4-model">
+    <strong>Toy-model connection:</strong>
+    the bank’s risk tolerance is the sum of its coalitions’ tolerances.
+    Each participant occupies one coalition position.
+  </div>
+  <div class="b4-grid">
+    <div class="b4-card">
+      <div class="b4-label">ASSIGNED SHARING RULE</div>
+      <div class="b4-main">Linear sharing<br>with side bets</div>
+      <div class="b4-sub">
+        Includes state-contingent transfers supporting efficient sharing.
+      </div>
+    </div>
+    <div class="b4-card b4-purple-card">
+      <div class="b4-label">CONTROL SHARING RULE</div>
+      <div class="b4-main">Proportional sharing<br>without side bets</div>
+      <div class="b4-sub">
+        Removes the state-contingent side-bet mechanism.
+      </div>
+    </div>
+  </div>
+  <div class="b4-band fragment" data-fragment-index="0">
+    Both groups choose over an <strong>objective 50–50 firm lottery</strong>.<br>
+    Both members agree on its probabilities.
+  </div>
+  <div class="fragment" data-fragment-index="1">
+    <div class="b4-equation">
+      \[
+        \kappa_F=\kappa_1+\kappa_2
+      \]
+    </div>
+    <div class="b4-caption">
+      κ (kappa) denotes constant risk tolerance.
+      Compare the firm’s revealed κ<sub>F</sub> with the sum of
+      its members’ separately measured κ<sub>1</sub> and κ<sub>2</sub>.
+    </div>
+  </div>
+  <div class="b4-purple-band b4-band fragment" data-fragment-index="2">
+    Under agreement, the side-bet manipulation is inert.<br>
+    <strong>This task tests additivity and provides a placebo contrast.</strong>
+  </div>
+  <div class="b4-source">
+    Two-person firms; sharing rule assigned between firms.
+    Additivity is evaluated against a preregistered equivalence margin.
+    Source: Experimental Protocol, Study 2.
+  </div>
+</div>
+
+Note:
+Both condition groups complete both the risk and belief tasks.
+
+In the risk task, probabilities are objective and common.
+Efficient proportional shares are set from premeasured tolerances.
+There is no belief disagreement requiring a side bet.
+
+Consequently, a difference between sharing-rule groups is not the
+predicted risk-task result. The primary question is whether firm risk
+tolerance is equivalent to the sum of member tolerances.
+
+Support for equivalence requires an interval relative to a specified
+negligible difference; a nonsignificant difference is insufficient.
+
+--
+
+<!-- .slide: class="slide-heading fi-experiments" -->
+
+## Study 2: do beliefs pool as the model predicts?
+
+<div class="b4-wrap">
+  <div class="b4-model">
+    <strong>Toy-model connection:</strong>
+    the bank combines different coalition beliefs using
+    risk-tolerance-based weights.
+  </div>
+  <div class="b4-grid">
+    <div class="b4-card">
+      <div class="b4-label">CREATE BELIEF DISAGREEMENT</div>
+      <div class="b4-main">Assign private signal histories</div>
+      <div class="b4-sub">
+        Members observe different evidence about the same uncertain state.
+      </div>
+    </div>
+    <div class="b4-card b4-purple-card fragment" data-fragment-index="0">
+      <div class="b4-label">OBSERVE THE FIRM’S CHOICE</div>
+      <div class="b4-main">Same prize, two ways to win</div>
+      <div class="b4-sub">
+        Bet on the uncertain event or on an objective lottery.
+        Vary the lottery’s winning probability.
+      </div>
+    </div>
+  </div>
+  <div class="fragment" data-fragment-index="1">
+    <div class="b4-equation">
+      \[
+        \frac{q^*}{1-q^*}
+        =
+        \left(\frac{p_1}{1-p_1}\right)^{\sigma_1}
+        \left(\frac{p_2}{1-p_2}\right)^{\sigma_2}
+      \]
+    </div>
+    <div class="b4-caption">
+      Under the model’s conditions, the firm’s switching probability
+      q<sup>*</sup> has geometrically pooled odds.
+      p<sub>1</sub> and p<sub>2</sub> are member beliefs;
+      σ<sub>i</sub> (sigma) is member i’s share of total risk tolerance.
+    </div>
+  </div>
+  <div class="b4-band fragment" data-fragment-index="2">
+    <strong>Test the geometric prediction against alternative pools.</strong><br>
+    Repeat at two prizes to test prize-independence.
+  </div>
+  <div class="b4-source">
+    Retain the two assigned sharing-rule groups from the previous slide.
+    Record private choices before communication.
+    Source: Experimental Protocol, Study 2.
+  </div>
+</div>
+
+Note:
+The point prediction belongs to the linear-with-side-bets condition.
+The proportional-without-side-bets control is a behavioral comparison;
+the protocol does not give it the same derived point prediction.
+
+Contract inputs come from assigned types, not the belief report
+being evaluated. Reports cannot improve the participant's contract.
+
+The primary continuous outcome is the firm's implied weight.
+A discrete even-odds choice also distinguishes geometric and arithmetic
+pooling for the assigned belief configurations.
+
+Each member enters the proposed firm act privately. Agreement and
+disagreement are recorded before chat; post-chat behavior is descriptive.
+
+Identification checks must establish that the planned design can
+distinguish geometric pooling from the alternative aggregator set.
+
+--
+
+<!-- .slide: class="slide-heading fi-experiments" -->
+
+## Study 3: does a binding floor break evaluative unity?
+
+<div class="b4-wrap">
+  <div class="b4-model">
+    <strong>Toy-model connection:</strong>
+    a loss floor changes marginal sharing when it binds,
+    making the firm’s revealed belief depend on the stake.
+  </div>
+  <table class="b4-table">
+    <thead>
+      <tr>
+        <th>Assigned floor</th>
+        <th>Below all floors</th>
+        <th>At the focal stake</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>No floor</strong></td>
+        <td>No constraint</td>
+        <td>No constraint</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="0">
+        <td><strong>Shallow floor</strong></td>
+        <td>Slack</td>
+        <td>Binds</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="0">
+        <td><strong>Deep floor</strong></td>
+        <td>Slack</td>
+        <td>Still slack</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="b4-band fragment" data-fragment-index="1">
+    Hold each firm’s floor fixed.<br>
+    <strong>Vary the stake and measure the implied probability at each level.</strong>
+  </div>
+  <div class="b4-step fragment" data-fragment-index="2">
+    <div class="b4-number">1</div>
+    <div>
+      Compare shallow-floor and deep-floor firms
+      <strong>at the same focal stake</strong>.
+    </div>
+  </div>
+  <div class="b4-step fragment" data-fragment-index="2">
+    <div class="b4-number">2</div>
+    <div>
+      Subtract their difference at a stake
+      <strong>below both binding thresholds</strong>.
+    </div>
+  </div>
+  <div class="b4-source">
+    Three floor conditions between firms × multiple stakes within firms.
+    Record implied probabilities and deadlocks.
+    Source: Experimental Protocol, Study 3.
+  </div>
+</div>
+
+Note:
+The contract caps one member's losses while the other absorbs
+the residual. The floor remains fixed across the stake ladder.
+
+The confirmatory test is the floor-by-stake interaction contrast:
+the shallow-minus-deep difference at the focal stake, relative to
+that same difference below all floors.
+
+This tests whether moving the binding threshold moves the outcome.
+It is more specific than observing generic sensitivity to stakes.
+
+Individual stake-dependence from Study 1 enters as a covariate.
+The assigned same-stake floor comparison carries the causal contrast.
+
+The implied probability is the outcome, not a mediator.
+Studies 2 and 3 use separate sessions.
+
+--
+
+<!-- .slide: class="slide-heading fi-experiments" -->
+
+## Study 4: does the firm implement its available optimum?
+
+<div class="b4-wrap">
+  <div class="b4-model">
+    <strong>Toy-model connection:</strong>
+    keep the evaluator’s sharing structure fixed;
+    change what the decision positions can observe.
+  </div>
+  <div class="b4-grid">
+    <div class="b4-card">
+      <div class="b4-label">POOLED ARCHITECTURE</div>
+      <div class="b4-main">Both positions see both signals</div>
+      <div class="b4-sub">Joint information is available.</div>
+    </div>
+    <div class="b4-card b4-purple-card">
+      <div class="b4-label">MUTED ARCHITECTURE</div>
+      <div class="b4-main">Each sees only its own signal</div>
+      <div class="b4-sub">The interface prevents chat.</div>
+    </div>
+  </div>
+  <div class="b4-band fragment" data-fragment-index="0">
+    Positions choose actions in a repeated coordination game.<br>
+    <strong>Vary the cost of a mismatch at two levels.</strong>
+  </div>
+  <div class="b4-grid fragment" data-fragment-index="1" style="margin-top:20px;">
+    <div class="b4-card">
+      <div class="b4-label">COMPUTE THE BENCHMARK</div>
+      <div class="b4-main">Best rule under each architecture</div>
+    </div>
+    <div class="b4-card b4-orange-card">
+      <div class="b4-label">MEASURE THE RESIDUAL</div>
+      <div class="b4-main">Available optimum minus realized performance</div>
+    </div>
+  </div>
+  <div class="b4-purple-band b4-band fragment" data-fragment-index="2">
+    A lower muted optimum is an architecture loss.<br>
+    <strong>Falling short of that optimum is an implementation failure.</strong>
+  </div>
+  <div class="b4-source">
+    Architecture and coordination cost vary within firms.
+    Linear sharing with side bets remains fixed.
+    Source: Experimental Protocol, Study 4.
+  </div>
+</div>
+
+Note:
+The full design crosses two blame-allocation rules between firms
+with two architectures and two coordination-cost levels within firms.
+
+A hidden state generates private noisy signals.
+Firm payoff depends on state matching and coordination.
+The mismatch cost is charged once to firm total payoff and then shared.
+
+Score performance against the optimum computed for the relevant
+architecture and cost condition. Do not interpret a simple pooled-minus-
+muted performance difference as pure decisional failure.
+
+Record position-level decision rules, mismatches, and realized efficiency.
+Authority valuation is measured at intake as a covariate.
+
+The task has two decision positions. The protocol leaves the conversion
+between positions, participant seats, and session capacity unresolved.
+
+--
+
+<!-- .slide: class="slide-heading fi-experiments" -->
+
+## Study 4: can the coalitions agree against the firm?
+
+<div class="b4-wrap">
+  <div class="b4-model">
+    <strong>Toy-model connection:</strong>
+    private blame incentives can change the implemented rule
+    while the firm’s evaluator remains intact.
+  </div>
+  <div class="b4-grid">
+    <div class="b4-card">
+      <div class="b4-label">CONSEQUENCE FOLLOWS ABSORBED LOSS</div>
+      <div class="b4-main">Blame follows payoff shares</div>
+      <div class="b4-equation">
+        \[
+          b_g=\sigma_g
+        \]
+      </div>
+      <div class="b4-caption">
+        b<sub>g</sub> is coalition g’s share of blame cost.
+        σ<sub>g</sub> (sigma) is its marginal payoff share.
+        The two shares coincide.
+      </div>
+    </div>
+    <div class="b4-card b4-orange-card">
+      <div class="b4-label">CONSEQUENCE FOLLOWS ORIGINATION</div>
+      <div class="b4-main">Blame follows the originating position</div>
+      <div class="b4-equation">
+        \[
+          b_g\ne\sigma_g
+        \]
+      </div>
+      <div class="b4-caption">
+        The assigned rule separates blame-cost shares
+        from marginal payoff shares.
+      </div>
+    </div>
+  </div>
+  <div class="b4-band fragment" data-fragment-index="0">
+    Run the deviation phase under <strong>pooled information</strong>.<br>
+    Measure departures, overrides, and private-choice disagreement.
+  </div>
+  <div class="b4-purple-band b4-band fragment" data-fragment-index="1">
+    <strong>Predicted signature when costs induce departure:</strong><br>
+    loss-based blame → unanimous departure;<br>
+    origination-based blame → sectional departure and disagreement.
+  </div>
+  <div class="b4-source">
+    The private deduction is nontransferable, nonrebated,
+    and outside shared firm payoff Y.
+    Substudy 0 validates the attribution manipulation before fielding.
+    Source: Experimental Protocol, Substudy 0 and Study 4.
+  </div>
+</div>
+
+Note:
+The assigned blame rule is the between-firm manipulation.
+
+Distinguish the two costs:
+the coordination mismatch cost enters total firm payoff;
+the private blame deduction sits outside that shared total.
+
+The deviation phase uses pooled information, so an architecture loss
+does not explain the departure.
+
+Under proportional blame, the coalitions retain a common ranking.
+Under origination-based blame, the originating position is predicted
+to depart first.
+
+Substudy 0 checks that the announced deduction rule moves perceived
+attribution in the intended direction, is understood, and has room
+to move attribution relative to baseline.
+
+Exit attribution measures provide mechanism evidence.
+They do not replace the assigned-rule comparison.
+
+--
+
+<!-- .slide: class="slide-heading fi-experiments" -->
+
+## Study 5: do firms build conditions that survive change?
+
+<div class="b4-wrap">
+  <div class="b4-model">
+    <strong>Toy-model connection:</strong>
+    make the sharing arrangement a choice,
+    then ask whether governance preserves prize-independence.
+  </div>
+  <div class="b4-step">
+    <div class="b4-number">1</div>
+    <div>
+      Assign one of two levels of <strong>member heterogeneity</strong>.
+    </div>
+  </div>
+  <div class="b4-step fragment" data-fragment-index="0">
+    <div class="b4-number">2</div>
+    <div>
+      Members negotiate and lock a contract:
+      <strong>shares, optional side payments, and a loss floor</strong>.
+    </div>
+  </div>
+  <div class="b4-step fragment" data-fragment-index="1">
+    <div class="b4-number">3</div>
+    <div>
+      Assign enforcement <strong>after the contract is locked</strong>.
+    </div>
+  </div>
+  <div class="b4-grid fragment" data-fragment-index="1" style="margin-top:16px;">
+    <div class="b4-card">
+      <div class="b4-label">BINDING ENFORCEMENT</div>
+      <div class="b4-main">Software executes the transfers</div>
+    </div>
+    <div class="b4-card b4-purple-card">
+      <div class="b4-label">RELATIONAL ENFORCEMENT</div>
+      <div class="b4-main">Both members must honor them</div>
+    </div>
+  </div>
+  <div class="b4-band fragment" data-fragment-index="2">
+    Matched-bet battery → environmental shock → same battery<br>
+    <strong>Which enforcement regime preserves prize-independence?</strong>
+  </div>
+  <div class="b4-source">
+    Two heterogeneity levels × two enforcement regimes between firms;
+    pre/post shock within firms. Contract choices are descriptive.
+    Source: Experimental Protocol, Study 5.
+  </div>
+</div>
+
+Note:
+The enforcement assignment follows contract lock, with that timing
+announced beforehand. Participants cannot tailor their initial contract
+to a known assigned enforcement regime.
+
+The shock changes stakes and refreshes the belief environment.
+Repeat the matched-bet battery at two prizes before and after it.
+
+The confirmatory comparison concerns retention of prize-independence
+across the shock under binding versus relational enforcement.
+
+Contract form, deliberation coding, clarity, and transfer honoring
+provide descriptive evidence. Chosen contract differences do not carry
+the causal interpretation of assigned enforcement.
+
+This study extends the organizational question to endogenous governance;
+it does not directly discharge a theorem condition.
+
+Transition to Block 5:
+Use the calibrated toy environment to show what each measurement
+should recover and which changes should expose each failure.
 
 ---
 <!-- .slide: class="slide-heading" -->
