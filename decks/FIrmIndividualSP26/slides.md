@@ -2590,6 +2590,669 @@ Use the calibrated toy environment to show what each measurement
 should recover and which changes should expose each failure.
 
 ---
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+<style>
+  .reveal section.fi-calibration > h2 {
+    max-width: 860px;
+    margin: 22px auto;
+    font-size: 36px;
+    line-height: 1.12;
+    color: #034638;
+    text-transform: none;
+  }
+  .fi-calibration .b5-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #17251f;
+  }
+  .fi-calibration .b5-context {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #53635b;
+  }
+  .fi-calibration .b5-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  .fi-calibration .b5-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 460px;
+    min-width: 0;
+  }
+  .reveal section.fi-calibration img.b5-figure {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 460px;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: none;
+    object-fit: contain;
+  }
+  .fi-calibration .b5-side {
+    min-width: 0;
+    font-size: 21px;
+    text-align: left;
+  }
+  .fi-calibration .b5-label {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 750;
+    letter-spacing: .07em;
+    color: #034638;
+  }
+  .fi-calibration .b5-text {
+    margin-bottom: 22px;
+    font-size: 21px;
+    line-height: 1.35;
+  }
+  .fi-calibration .b5-caption {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 1.35;
+    color: #6b7280;
+  }
+  .fi-calibration .b5-result {
+    margin-top: 20px;
+    padding: 16px;
+    border-left: 5px solid #034638;
+    border-radius: 0 12px 12px 0;
+    background: #edf5f1;
+    font-size: 23px;
+    font-weight: 650;
+    color: #034638;
+  }
+  .fi-calibration .b5-purple {
+    border-left-color: #582c83;
+    background: #f3edf8;
+    color: #582c83;
+  }
+  .fi-calibration .b5-orange {
+    border-left-color: #b96b19;
+    background: #fff5e9;
+    color: #965313;
+  }
+  .fi-calibration .b5-equation {
+    margin: 14px 0;
+    font-size: 25px;
+    text-align: center;
+  }
+  .fi-calibration .b5-equation .katex-display {
+    margin: .5em 0;
+  }
+  .fi-calibration .b5-source {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #53635b;
+    text-align: left;
+  }
+  .fi-calibration .b5-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+  .fi-calibration .b5-card {
+    padding: 22px;
+    border: 1px solid #dce7e1;
+    border-top: 5px solid #034638;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(3,70,56,.07);
+    text-align: left;
+  }
+  .reveal .fi-calibration .b5-table {
+    width: 100%;
+    margin: 22px auto;
+    border-collapse: collapse;
+    font-size: 22px;
+  }
+  .reveal .fi-calibration .b5-table th,
+  .reveal .fi-calibration .b5-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #dce7e1;
+    text-align: left;
+  }
+  .reveal .fi-calibration .b5-table th {
+    font-size: 17px;
+    color: #53635b;
+  }
+</style>
+
+## Simulations as a calibration exercise for the Experiments
+
+<div class="b5-wrap">
+  <div class="b5-context">
+    Give the model numerical inputs and examine
+    the organizational behavior they imply.
+  </div>
+  <div class="b5-grid">
+    <div class="b5-card">
+      <div class="b5-label">SPECIFY</div>
+      <div class="b5-text">
+        Coalition beliefs and risk tolerances
+      </div>
+      <div class="b5-text">
+        Sharing rules and loss protection
+      </div>
+      <div class="b5-text" style="margin-bottom:0;">
+        Information architecture and private costs
+      </div>
+    </div>
+    <div class="b5-card fragment" data-fragment-index="0">
+      <div class="b5-label">DERIVE</div>
+      <div class="b5-text">
+        The firm’s evaluator and decision rule
+      </div>
+      <div class="b5-text">
+        Distance from the owner’s benchmark
+      </div>
+      <div class="b5-text" style="margin-bottom:0;">
+        Observable signatures of the two failures
+      </div>
+    </div>
+  </div>
+  <div class="b5-result fragment" data-fragment-index="1">
+    Establish a coherent baseline.<br>
+    Then change the feature responsible for each mechanism.
+  </div>
+  <div class="b5-source">
+    Model-implied numerical exercises from the main paper.
+    These are not estimates from the proposed experiments.
+    Source: Section 4.
+  </div>
+</div>
+
+Note:
+The exercises show what the specified model produces.
+
+Begin with the organizational benchmark and the representable baseline.
+Then examine the belief wedge, risk wedge, evaluative failure,
+and decisional failure.
+
+The numerical inputs are illustrative calibrations.
+They are not parameter estimates obtained from the experimental program.
+
+--
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+## Calibrating the organizational performance gap - The newsvendor setting
+
+<div class="b5-wrap">
+  <div class="b5-layout">
+    <div class="b5-media">
+      <img
+        class="b5-figure"
+        src="./images/0b_Decisional_map_five_arrangements.png"
+        alt="Newsvendor price and inventory choices under integrated and divided organizational arrangements.">
+    </div>
+    <div class="b5-side">
+      <div class="b5-label">HOLD ECONOMIC PRIMITIVES FIXED</div>
+      <div class="b5-text">
+        Change the allocation of objectives
+        and the timing of decisions.
+      </div>
+      <div class="b5-caption">
+        p is price; q is inventory.<br>
+        BR means best response.<br>
+        Gray contours show the integrated owner’s expected profit.
+      </div>
+      <div class="b5-result fragment" data-fragment-index="0">
+        Integrated profit: 236.2<br>
+        Simultaneous profit: 106.1<br>
+        Shortfall: 55.1%
+      </div>
+      <div class="b5-caption fragment" data-fragment-index="1">
+        The size of this loss alone does not establish
+        failure of firm individuality.
+      </div>
+    </div>
+  </div>
+  <div class="b5-source">
+    Source: Figure 1 and Table 2.
+    The inventory-leading arrangement has no interior solution.
+  </div>
+</div>
+
+Note:
+Start with the integrated principal's point.
+
+Then compare the simultaneous, independent, and price-leading
+arrangements. Their economic primitives are identical, but the
+organizational arrangements produce different choices.
+
+The inventory-leading arrangement drives inventory toward zero
+and is therefore not plotted as an interior solution.
+
+The simultaneous calibration is close to the local integrability locus.
+A large profit loss is not itself a test of nonrepresentability.
+
+--
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+## The baseline coherent firm
+
+<div class="b5-wrap">
+  <div class="b5-layout">
+    <div class="b5-media">
+      <img
+        class="b5-figure"
+        src="./images/S2_CARA_bent_map_belief_slope_tolerance_curvature.png"
+        alt="The aggregate firm's certainty-equivalent contour coincides with that of a single reference individual.">
+    </div>
+    <div class="b5-side">
+      <div class="b5-label">BASELINE CALIBRATION</div>
+      <div class="b5-text">
+        Common belief: 0.60.<br>
+        Linear and determinate sharing.<br>
+        Pooled architecture.
+      </div>
+      <div class="b5-equation">
+        \[
+          \kappa_F=3+6=9
+        \]
+      </div>
+      <div class="b5-caption">
+        κ (kappa) is constant risk tolerance.
+        The firm’s tolerance equals the sum of the two coalitions’.
+      </div>
+      <div class="b5-result fragment" data-fragment-index="0">
+        The firm and the reference individual have coincident contours.
+      </div>
+      <div class="b5-caption">
+        x and y are good- and bad-state payoffs.
+        In this figure, p denotes the common belief.
+      </div>
+    </div>
+  </div>
+  <div class="b5-source">
+    Source: Figure 2.
+    CARA means constant absolute risk aversion.
+  </div>
+</div>
+
+Note:
+This agreement baseline uses belief 0.60, not the heterogeneous
+bank's pooled belief of 0.675.
+
+The reference individual has the same belief and risk tolerance
+as the aggregate firm. It is a representability benchmark,
+not the risk-neutral owner.
+
+The green firm contour and dashed reference contour coincide.
+This gives a numerical baseline for the aggregation tested in Study 2.
+
+--
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+## What should a stable belief look like?
+
+<div class="b5-wrap">
+  <div class="b5-layout">
+    <div class="b5-media">
+      <img
+        class="b5-figure"
+        src="./images/S2_Representability_belief_is_flat_in_the_stake_Savage_IV.png"
+        alt="The representable baseline firm reveals a constant belief of 0.60 across anchor payoffs.">
+    </div>
+    <div class="b5-side">
+      <div class="b5-label">VARY THE STAKE</div>
+      <div class="b5-text">
+        Keep information and the baseline sharing structure fixed.
+      </div>
+      <div class="b5-caption">
+        z<sub>0</sub> is the anchor payoff indexing the stake.
+        The vertical axis is the probability revealed by firm choices.
+      </div>
+      <div class="b5-result fragment" data-fragment-index="0">
+        Revealed belief remains at 0.60.
+      </div>
+      <div class="b5-caption fragment" data-fragment-index="0">
+        Reported numerical drift:
+        2.5 × 10<sup>−12</sup>.
+      </div>
+      <div class="b5-result b5-purple fragment" data-fragment-index="1">
+        Study 2 asks whether this prize-independence survives in behavior.
+      </div>
+    </div>
+  </div>
+  <div class="b5-source">
+    Source: Figure 3.
+    This is the agreement baseline.
+  </div>
+</div>
+
+Note:
+The figure supplies the numerical null for stake-dependence.
+
+The tiny reported drift reflects numerical precision in the
+calibrated reconstruction. It is not an experimental effect estimate
+or an equivalence margin.
+
+The experiment must assess prize-independence with its own
+measurement uncertainty and preregistered equivalence criterion.
+
+--
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+## Redistributing risk tolerance moves the belief
+
+<div class="b5-wrap">
+  <div class="b5-layout">
+    <div class="b5-media">
+      <img
+        class="b5-figure"
+        src="./images/S3_The_split_lever_wedge_sign_follows_the_capital.png"
+        alt="The belief wedge changes sign as the optimistic coalition's share of total risk tolerance increases.">
+    </div>
+    <div class="b5-side">
+      <div class="b5-label">HOLD TOTAL RISK TOLERANCE FIXED</div>
+      <div class="b5-text">
+        Total tolerance remains 9.
+        Coalition beliefs remain fixed.
+      </div>
+      <div class="b5-equation">
+        \[
+          \sigma_1=\frac{\kappa_1}{\kappa_F}
+        \]
+      </div>
+      <div class="b5-caption">
+        σ<sub>1</sub> (sigma) is coalition 1’s share of total
+        risk tolerance. κ (kappa) denotes risk tolerance.
+        Coalition 1 is the more optimistic coalition.
+      </div>
+      <div class="b5-result fragment" data-fragment-index="0">
+        The belief wedge vanishes at the even split.
+      </div>
+      <div class="b5-caption">
+        Vertical axis: equal-weight geometric belief minus firm belief.
+        Positive values indicate a more pessimistic firm.
+      </div>
+    </div>
+  </div>
+  <div class="b5-source">
+    Source: Figure 4 and Table 4.
+    The original plot uses “capital”; its horizontal axis is
+    the share of total risk tolerance.
+  </div>
+</div>
+
+Note:
+Begin at the bank's one-third weight on loan production.
+Its belief wedge is approximately 0.055.
+
+Moving toward equal weights eliminates the belief wedge.
+Moving further toward the optimistic coalition reverses its sign.
+
+The analytical crossing is the even split; the numerical scan reports
+a crossing near 0.502.
+
+This changes the belief without changing aggregate risk tolerance
+or the bank's risk hurdle.
+
+--
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+## Risk aversion creates a separate distance
+
+<div class="b5-wrap">
+  <div class="b5-layout">
+    <div class="b5-media">
+      <img
+        class="b5-figure"
+        src="./images/S4_Risk_wedge_firm_bends_risk_neutral_owner_is_straight.png"
+        alt="With a common belief, the firm's curved contour differs from the risk-neutral owner's straight contour.">
+    </div>
+    <div class="b5-side">
+      <div class="b5-label">ALIGN BELIEFS TO ISOLATE RISK ATTITUDE</div>
+      <div class="b5-text">
+        Everyone in this comparison uses belief 0.675.
+      </div>
+      <div class="b5-caption">
+        x and y are good- and bad-state payoffs.
+        κ (kappa) denotes risk tolerance.
+        “inf” denotes the risk-neutral limit.
+      </div>
+      <div class="b5-equation">
+        \[
+          0.639-0.600\approx0.039
+        \]
+      </div>
+      <div class="b5-caption">
+        On the worked credit, the firm’s approval hurdle exceeds
+        the risk-neutral hurdle by approximately 3.9 percentage points.
+      </div>
+      <div class="b5-result fragment" data-fragment-index="0">
+        The firm remains coherent while carrying a risk wedge.
+      </div>
+    </div>
+  </div>
+  <div class="b5-source">
+    Source: Figure 5.
+    This comparison holds beliefs equal to isolate curvature.
+  </div>
+</div>
+
+Note:
+The straight dashed contour belongs to the risk-neutral owner.
+The curved green contour belongs to the aggregate firm.
+
+This figure deliberately aligns beliefs at 0.675.
+It is therefore different from the full owner comparison using
+the equal-weight geometric belief benchmark of 0.730.
+
+The different curvature isolates the risk-attitude channel.
+It is not a failure of evaluative unity.
+
+--
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+## A binding floor changes the revealed belief
+
+<div class="b5-wrap">
+  <div class="b5-layout">
+    <div class="b5-media">
+      <img
+        class="b5-figure"
+        src="./images/S7_Savage_signature_belief_drifts_with_the_anchor.png"
+        alt="The firm's revealed belief changes across anchor payoffs as a loss floor binds in different states.">
+    </div>
+    <div class="b5-side">
+      <div class="b5-label">KEEP THE LOSS FLOOR FIXED</div>
+      <div class="b5-text">
+        Move the certainty anchor through the regions
+        where the floor becomes binding.
+      </div>
+      <div class="b5-caption">
+        z<sub>0</sub> is the certainty anchor, in millions of dollars.
+        G and B denote the good and bad states.
+      </div>
+      <div class="b5-result b5-orange fragment" data-fragment-index="0">
+        Moving left:<br>
+        0.675 → changing belief → 0.550.
+      </div>
+      <div class="b5-caption fragment" data-fragment-index="0">
+        The floor binds first in B near −3.92,
+        then in both states near −13.46.
+      </div>
+      <div class="b5-result b5-purple fragment" data-fragment-index="1">
+        Study 3 tests whether assigned floors move this signature.
+      </div>
+    </div>
+  </div>
+  <div class="b5-source">
+    Source: Figure 6.
+    This figure follows the certainty ray, not the credit-exposure ray.
+  </div>
+</div>
+
+Note:
+Read this graph from right to left as the certainty anchor falls.
+
+The original representation holds while the floor is slack.
+Between the thresholds, marginal sharing differs across states
+and the revealed probability changes with the payoff position.
+
+The diagnostic is the absence of one stable utility–belief pair
+across the relevant acts.
+
+Do not use the credit-ray limit of 0.4128 to describe this graph.
+On this certainty ray, the left-hand region reveals belief 0.55.
+
+--
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+## Information changes the committee’s decision
+
+<div class="b5-wrap">
+  <div class="b5-layout">
+    <div class="b5-media">
+      <img
+        class="b5-figure"
+        src="./images/S5_Committee_map_pooled_uses_the_joint_mute_the_per_seat_signal.png"
+        alt="Pooled and muted committees differ on split-signal profiles relative to the bank's approval hurdle.">
+    </div>
+    <div class="b5-side">
+      <div class="b5-label">KEEP THE BANK’S EVALUATOR FIXED</div>
+      <div class="b5-text">
+        Change whether each position can condition on both signals
+        or only its own.
+      </div>
+      <div class="b5-caption">
+        GG and BB mean two good or two bad signals.
+        “Split” means one of each.
+        The dashed line is the approval hurdle, approximately 0.639.
+      </div>
+      <div class="b5-result fragment" data-fragment-index="0">
+        On split signals:<br>
+        pooled rule approves;<br>
+        muted veto rule declines.
+      </div>
+      <div class="b5-caption">
+        Split profiles occur with probability 0.42
+        in this calibration.
+      </div>
+      <div class="b5-result b5-purple fragment" data-fragment-index="1">
+        Study 4 separates architecture loss from implementation failure.
+      </div>
+    </div>
+  </div>
+  <div class="b5-source">
+    Source: Figure 7 and Table 5.
+    The muted veto rule is not the optimal muted rule.
+  </div>
+</div>
+
+Note:
+Pooled posteriors are approximately 0.919 after two good signals,
+0.675 after a split, and 0.276 after two bad signals.
+
+With only its own signal, a position has posterior 0.829 after a
+good signal and 0.471 after a bad signal.
+
+The displayed pooled-to-veto difference combines architecture loss
+and a coordination residual. Only the residual relative to the best
+muted rule diagnoses decisional failure.
+
+The experimental design computes the appropriate optimum for
+each architecture rather than treating the entire gap as failure.
+
+--
+
+<!-- .slide: class="slide-heading fi-calibration" -->
+
+## Private blame costs generate unanimous departure
+
+<div class="b5-wrap">
+  <div class="b5-context">
+    Return to pooled information.
+    Allocate blame in proportion to marginal payoff shares.
+  </div>
+  <div class="b5-equation">
+    \[
+      b_g=\sigma_g,
+      \qquad
+      \theta^*=\frac{0.0483}{0.2457}\approx0.1966
+    \]
+  </div>
+  <div class="b5-caption">
+    b<sub>g</sub> is coalition g’s blame-cost share;
+    σ<sub>g</sub> (sigma) is its marginal payoff share.<br>
+    θ* (theta-star) is the blame-cost intensity at which incremental
+    blame cost offsets the firm’s incremental value from approval.
+  </div>
+  <table class="b5-table">
+    <thead>
+      <tr>
+        <th>Blame-cost intensity</th>
+        <th>Implemented rule</th>
+        <th>Firm value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Below θ*</td>
+        <td>Team optimum</td>
+        <td>0.3672</td>
+      </tr>
+      <tr class="fragment" data-fragment-index="0">
+        <td>Above θ*</td>
+        <td>Both coalitions veto the split profile</td>
+        <td>0.3189</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="b5-result b5-orange fragment" data-fragment-index="1">
+    The evaluator remains intact.<br>
+    Agreement survives, but the implemented rule loses 0.0483.
+  </div>
+  <div class="b5-result b5-purple fragment" data-fragment-index="2">
+    Study 4 tests the departure mechanism through assigned blame rules.
+  </div>
+  <div class="b5-source">
+    Source: Section 4.5 numerical discussion.
+    Values follow the blame-cost calibration.
+  </div>
+</div>
+
+Note:
+The threshold divides incremental firm value, 0.0483,
+by incremental blame exposure, 0.2457.
+
+The proportional allocation makes coalition criteria positive multiples
+of one common expression. They continue to agree with one another.
+
+Above the threshold, that common ranking favors a rule below the
+optimum of the original firm criterion.
+
+Below the threshold, the reported result concerns the tremble-robust
+rule. The threshold equality itself is not assigned a unique rule here.
+
+This table uses the main text's numerical discussion.
+The inconsistent embedded Figure 8 is not reproduced.
+
+The exercises establish distinct model-implied signatures:
+a stable evaluator, a belief that changes with stakes,
+and a stable evaluator whose preferred rule is not implemented.
+
+---
 <!-- .slide: class="slide-heading" -->
 
 ## Thank you. 
