@@ -1415,6 +1415,11 @@ The bank has κF = 9 and weights 1/3 and 2/3.
     Linear and determinate sharing makes the coalitions<br>
     rank firm acts identically.
   </div>
+  <div class="b3-source">
+    This unanimity result concerns the baseline sharing construction,
+    before adding private blame costs.
+    Source: Section 3.2 and Definition 3.
+  </div>
 </div>
 
 --
@@ -1427,12 +1432,6 @@ The bank has κF = 9 and weights 1/3 and 2/3.
 <div class="b3-purple-band b3-band fragment" data-fragment-index="0">
     Different beliefs and information can remain.<br>
     <strong>The induced ranking of firm acts is shared.</strong>
-  </div>
-  <div class="b3-source">
-    ∂ denotes a partial derivative.
-    This unanimity result concerns the baseline sharing construction,
-    before adding private blame costs.
-    Source: Section 3.2 and Definition 3.
   </div>
 </div>
 
@@ -1531,6 +1530,11 @@ a separate issue later in this block.
         expectation under the firm’s beliefs, given the architecture;
         <strong>t</strong> indexes time.
       </div>
+      <div class="b3-source">
+      “∈ arg max” means the selected rule belongs to the set of
+      maximizing rules; the optimum need not be unique.
+      Source: Section 3.3.
+      </div>
     </div>
   </div>
 </div>
@@ -1546,11 +1550,6 @@ a separate issue later in this block.
     <strong>Decisional unity:</strong>
     the organization implements an optimal admissible rule<br>
     according to its own firm-level criterion.
-  </div>
-  <div class="b3-source">
-    “∈ arg max” means the selected rule belongs to the set of
-    maximizing rules; the optimum need not be unique.
-    Source: Section 3.3.
   </div>
 </div>
 
